@@ -3,7 +3,9 @@
       create: true
       relink: true
 - link:
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/nvim/init.lua: nvim/init.lua
-    ~/.Brewfile: brew/Brewfile
+    ~/.config/fish: fish
+    ~/.config/nvim: nvim
     ~/.config/omf: omf
+    ~/.config/karabiner: karabiner
+    ~/.hammerspoon: hammerspoon
+    ~/.Brewfile: brew/Brewfile
