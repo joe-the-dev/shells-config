@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- link:
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/nvim/init.lua: nvim/init.lua
+    ~/.Brewfile: brew/Brewfile
+    ~/.config/omf: omf
