@@ -11,6 +11,8 @@
     ~/.Brewfile: brew/Brewfile
     ~/.asdfrc: asdf/.asdfrc
     ~/.tool-versions: asdf/.tool-versions
+    ~/.bashrc: bash/.bashrc
+    ~/.zshrc: zsh/.zshrc
 
 - shell:
     - description: "Installing asdf plugins"

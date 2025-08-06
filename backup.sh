@@ -19,7 +19,7 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
@@ -41,6 +41,40 @@ for tool in "${TOOLS[@]}"; do
       # Backup plugin list
       echo "📋 Backing up asdf plugin list"
       asdf plugin list > "$dst/plugins.txt" 2>/dev/null || echo "# No plugins installed yet" > "$dst/plugins.txt"
+      continue
+      ;;
+    bash)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+      # Copy bash config files from home directory
+      if [ -f "$HOME/.bashrc" ]; then
+        cp "$HOME/.bashrc" "$dst/"
+      fi
+      if [ -f "$HOME/.bash_profile" ]; then
+        cp "$HOME/.bash_profile" "$dst/"
+      fi
+      if [ -f "$HOME/.profile" ]; then
+        cp "$HOME/.profile" "$dst/"
+      fi
+      continue
+      ;;
+    zsh)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+      # Copy zsh config files from home directory
+      if [ -f "$HOME/.zshrc" ]; then
+        cp "$HOME/.zshrc" "$dst/"
+      fi
+      if [ -f "$HOME/.zprofile" ]; then
+        cp "$HOME/.zprofile" "$dst/"
+      fi
+      if [ -f "$HOME/.zshenv" ]; then
+        cp "$HOME/.zshenv" "$dst/"
+      fi
       continue
       ;;
     *)
