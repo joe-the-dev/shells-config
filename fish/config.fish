@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 eval (/opt/homebrew/bin/brew shellenv)
+#eval (env _AWS_COMPLETE=fish_source aws)
 source (brew --prefix asdf)/libexec/asdf.fish
 set fish_greeting
 
@@ -76,3 +77,12 @@ end
 set --erase _asdf_shims
 
 
+function ecs-cluster
+    set cluster (aws ecs list-clusters --query 'clusterArns[]' --output text --profile $argv[1] | sed 's#.*/##' | fzf)
+    if test -n "$cluster"
+        echo $cluster
+    end
+end
+
+# Created by `pipx` on 2025-08-06 07:17:37
+set PATH $PATH /Users/joe.ta/.local/bin
