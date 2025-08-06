@@ -39,6 +39,27 @@ docker-compose.override.yml
 !docker-compose.template.yml
 !docker-compose.*.template.yml
 
+# Docker generated files and folders
+.docker/
+docker-data/
+volumes/
+data/
+postgres-data/
+mysql-data/
+redis-data/
+mongo-data/
+elasticsearch-data/
+
+# Docker volume mounts
+db-data/
+cache-data/
+logs-data/
+uploads/
+
+# Docker build context
+.dockerbuild/
+docker-build/
+
 # Local development services
 /services/*/docker-compose.yml
 /services/*/docker-compose.override.yml
