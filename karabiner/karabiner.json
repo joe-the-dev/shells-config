@@ -14,6 +14,43 @@
                             "to": [{ "apple_vendor_keyboard_key_code": "language" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 51723,
+                        "vendor_id": 3
+                    },
+                    "ignore_vendor_events": true,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        }
+                    ],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 51723,
+                        "vendor_id": 3
+                    },
+                    "ignore": true,
+                    "ignore_vendor_events": true,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        }
+                    ]
+                }
+            ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f6" },
+                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
                 }
             ],
             "name": "Default profile",

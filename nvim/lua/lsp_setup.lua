@@ -5,7 +5,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
-    "tsserver",
+    "ts_ls",
     "html",
     "cssls",
     "jsonls",
@@ -45,7 +45,7 @@ local servers = {
       },
     },
   },
-  tsserver = {},
+  ts_ls = {},
   html = {},
   cssls = {},
   jsonls = {},
