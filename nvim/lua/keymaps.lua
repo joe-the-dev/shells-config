@@ -125,10 +125,29 @@ map('v', '<A-Down>', ":m '>+1<CR>gv=gv", opts)                  -- Move selectio
 -- SELECTION & CLIPBOARD
 -- ========================================
 map('n', '<C-a>', 'ggVG', opts)                                 -- IntelliJ: Ctrl+A (Select All)
-map('v', '<C-c>', '"+y', opts)                                  -- IntelliJ: Ctrl+C (Copy)
+map('v', '<C-c>', '"+y<Esc>', opts)                             -- IntelliJ: Ctrl+C (Copy and return to normal mode)
 map('n', '<C-v>', '"+p', opts)                                  -- IntelliJ: Ctrl+V (Paste)
 map('i', '<C-v>', '<C-o>"+p', opts)                             -- Paste in insert mode
 map('v', '<C-x>', '"+x', opts)                                  -- IntelliJ: Ctrl+X (Cut)
+
+-- Traditional Vim clipboard operations (still work)
+-- y, yy, p, P, etc. now automatically use system clipboard due to clipboard=unnamedplus
+-- Esc still works normally to exit insert/visual mode
+
+-- ========================================
+-- MODE SWITCHING (Traditional Vim)
+-- ========================================
+-- Ensure Esc works properly to exit insert mode
+map('i', '<Esc>', '<Esc>', opts)                                -- Explicitly map Esc in insert mode
+map('i', '<C-c>', '<Esc>', opts)                                -- Ctrl+C as alternative to Esc
+map('v', '<Esc>', '<Esc>', opts)                                -- Ensure Esc works in visual mode
+map('c', '<Esc>', '<C-c>', opts)                                -- Esc in command mode
+
+-- Note: Esc key behavior is preserved and works as expected:
+-- - Insert mode: Esc → Normal mode
+-- - Visual mode: Esc → Normal mode
+-- - Command mode: Esc → Normal mode
+-- - Ctrl+C also works as alternative to Esc (traditional Vim behavior)
 
 -- ========================================
 -- QUICK ACTIONS & TOOLS

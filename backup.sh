@@ -12,12 +12,29 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
     hammerspoon)
       src="$HOME/.hammerspoon"
+      ;;
+    asdf)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+      # Copy asdf config files individually since they're in home directory
+      if [ -f "$HOME/.asdfrc" ]; then
+        cp "$HOME/.asdfrc" "$dst/"
+      fi
+      if [ -f "$HOME/.tool-versions" ]; then
+        cp "$HOME/.tool-versions" "$dst/"
+      fi
+      # Backup plugin list
+      echo "📋 Backing up asdf plugin list"
+      asdf plugin list > "$dst/plugins.txt" 2>/dev/null || echo "# No plugins installed yet" > "$dst/plugins.txt"
+      continue
       ;;
     *)
       src="$HOME/.config/$tool"

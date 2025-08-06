@@ -1,5 +1,5 @@
 local ENGLISH = "com.apple.keylayout.ABC"
-local VIETNAMESE = "com.apple.inputmethod.VNI"
+local VIETNAMESE = "com.apple.inputmethod.VietnameseIM.VietnameseVNI"
 
 local inputSources = {
     ["com.google.Chrome"] = VIETNAMESE,
