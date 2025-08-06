@@ -86,3 +86,10 @@ end
 
 # Created by `pipx` on 2025-08-06 07:17:37
 set PATH $PATH /Users/joe.ta/.local/bin
+
+# pnpm
+set -gx PNPM_HOME "/Users/joe.ta/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
