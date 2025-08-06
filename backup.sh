@@ -76,7 +76,32 @@ if [[ "$SYNC_TO_GIT" == true ]]; then
     exit 1
   fi
 
-  # Check for changes
+  # Update main branch first
+  echo "📥 Updating main branch from remote..."
+
+  # Check current branch
+  CURRENT_BRANCH=$(git branch --show-current)
+
+  # If not on main, switch to main
+  if [[ "$CURRENT_BRANCH" != "main" ]]; then
+    echo "🔀 Switching from $CURRENT_BRANCH to main branch"
+    git checkout main || {
+      echo "❌ Failed to switch to main branch"
+      exit 1
+    }
+  fi
+
+  # Pull latest changes
+  echo "⬇️  Pulling latest changes from origin/main..."
+  if git pull origin main; then
+    echo "✅ Successfully updated main branch"
+  else
+    echo "❌ Failed to pull from origin main"
+    echo "💡 You may need to resolve conflicts manually"
+    exit 1
+  fi
+
+  # Check for changes after pull
   if git diff --quiet && git diff --cached --quiet; then
     echo "ℹ️  No changes detected, nothing to commit"
     exit 0
