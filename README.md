@@ -1,102 +1,199 @@
-#Backup & Restore Joe-The-Dev config for Development
-```md
-# MacOS Development Environment Setup Script
+# 🔧 Joe-The-Dev's Development Environment Configuration
 
-This script automates the installation of essential tools and the restoration of your development environment configuration, including:
-- **Homebrew**
-- **Fish Shell** with **Oh My Fish**
-- **Neovim**
-- Restoring configurations for Fish and Neovim from a private Git repository.
+A comprehensive dotfiles management system using [dotbot](https://github.com/anishathalye/dotbot) to backup, version, and restore development environment configurations across macOS machines.
 
-## Features
-- Installs **Homebrew**, **Fish shell**, **Oh My Fish**, and **Neovim** automatically.
-- Sets Fish shell as the default shell.
-- Restores your **Fish** and **Neovim** configuration from a backup repository.
-- Optionally restores `.env` files.
+## 🚀 Quick Start
 
-## Prerequisites
-Before running the script, ensure you have:
-1. **macOS** with **Xcode Command Line Tools** installed (the script will prompt you to install it if necessary).
-2. A **private Git repository** containing backups of your Fish, Neovim configurations, and optionally a `.env` file.
-3. **SSH keys** set up and added to your GitHub or GitLab account for authentication.
-
-## Backup Repository Structure
-Your backup repository should have the following structure:
-```
-config_backup/
-├── fish/      # Fish shell configuration (e.g., ~/.config/fish)
-├── nvim/      # Neovim configuration (e.g., ~/.config/nvim)
-└── .env       # Optional .env file
+### New Machine Setup
+```bash
+git clone --recurse-submodules <your-repo-url>
+cd shells-config
+./install.sh
 ```
 
-## Installation
-
-1. Clone this repository (or copy the `init.sh` script to your local machine).
-2. Open the `init.sh` script and replace the `REPO_URL` with your private backup repository's SSH URL:
-
-   ```bash
-   REPO_URL="git@your-repo-url.git"
-   ```
-
-3. Make the script executable:
-
-   ```bash
-   chmod +x init.sh
-   ```
-
-4. Run the script:
-
-   ```bash
-   ./init.sh
-   ```
-
-The script will:
-- Install the necessary tools (Homebrew, Fish, Oh My Fish, and Neovim).
-- Clone your configuration from the backup repository.
-- Restore your Fish and Neovim configurations.
-- Start Fish shell as the default shell.
-
-## Usage
-
-### Running the Script
-
-To set up your development environment on a new macOS machine:
-
-1. Open a terminal.
-2. Navigate to the directory where the script is stored.
-3. Run the script as follows:
-
-   ```bash
-   ./init.sh
-   ```
-
-The script will handle the installation and restoration of your environment automatically.
-
-### Restoring Your Environment
-If you need to restore your configuration after migration (e.g., on a new laptop), just run the script again. It will:
-- Clone (or update) your backup repository.
-- Restore your Fish and Neovim configurations.
-- Restore your `.env` file, if present.
-
-## Customization
-You can customize the script to include more tools or specific configurations by modifying the `init.sh` script:
-- Add more **Homebrew** packages or tools you need.
-- Customize the **Fish** and **Neovim** settings based on your preferences.
-
-## Troubleshooting
-
-- **Homebrew is already installed:** If you already have Homebrew installed, the script will skip the installation step.
-- **Fish shell not set as default:** If Fish is not set as the default shell after the script runs, ensure that Fish has been added to the list of allowed shells by running:
-
-  ```bash
-  echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-  chsh -s /usr/local/bin/fish
-  ```
-
-- **SSH authentication failed:** Ensure your SSH keys are correctly configured and added to your GitHub/GitLab account for private repository access.
-
-## License
-This project is licensed under the MIT License.
+### Backup Current Configuration
+```bash
+./backup.sh
 ```
 
-This version is ready for use as your `README.md` file. Let me know if you need any further changes! jdd-cfg
+## 📁 What's Included
+
+This configuration manages the following tools and their settings:
+
+- **🐚 Fish Shell** - Modern shell with auto-suggestions and syntax highlighting
+- **⚡ Oh My Fish (OMF)** - Fish shell framework and theme manager
+- **📝 Neovim** - Modern Vim-based editor with LSP support
+- **⌨️ Karabiner-Elements** - Keyboard customization for macOS
+- **🔨 Hammerspoon** - macOS automation and window management
+- **🍺 Homebrew** - Package manager with Brewfile for dependencies
+- **🔀 asdf** - Version manager for multiple programming languages
+
+## 🏗️ Project Structure
+
+```
+shells-config/
+├── install.sh              # Main installation script
+├── backup.sh               # Backup current configs to repo
+├── install.conf.yaml       # Dotbot configuration
+├── fish/                   # Fish shell configuration
+├── nvim/                   # Neovim configuration  
+├── omf/                    # Oh My Fish configuration
+├── karabiner/              # Karabiner-Elements settings
+├── hammerspoon/            # Hammerspoon scripts
+├── brew/                   # Homebrew Brewfile
+├── asdf/                   # asdf configuration
+│   ├── .asdfrc            # asdf settings
+│   ├── .tool-versions     # Global tool versions
+│   └── plugins.txt        # List of installed plugins
+└── dotbot/                 # Dotbot submodule
+```
+
+## 🔄 Usage
+
+### Installing on a New Machine
+
+1. **Clone the repository:**
+   ```bash
+   git clone --recurse-submodules <your-repo-url>
+   cd shells-config
+   ```
+
+2. **Run the installer:**
+   ```bash
+   ./install.sh
+   ```
+
+   This will:
+   - Create symlinks for all configuration files
+   - Install asdf plugins (if asdf is installed)
+   - Install tool versions from `.tool-versions`
+
+### Backing Up Current Configuration
+
+When you make changes to your configs, backup them to the repo:
+
+```bash
+./backup.sh
+```
+
+This captures:
+- All configuration files from their respective locations
+- Current asdf plugin list
+- Tool versions
+
+### Installing Prerequisites
+
+Before running the installer, ensure you have:
+
+1. **Xcode Command Line Tools:**
+   ```bash
+   xcode-select --install
+   ```
+
+2. **Homebrew** (optional, for managing packages):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. **asdf** (optional, for version management):
+   ```bash
+   # Install asdf first, then run the installer
+   # The installer will automatically set up your plugins and tools
+   ```
+
+## ⚙️ Configuration Details
+
+### Fish Shell
+- Custom functions and aliases
+- Syntax highlighting and auto-suggestions
+- Oh My Fish theme and plugins
+- Auto-completion configurations
+
+### Neovim
+- Modern Lua-based configuration
+- LSP support for multiple languages
+- Plugin management with lazy.nvim
+- Custom keymaps and settings
+
+### asdf Version Management
+- Automatically installs and restores plugins
+- Manages tool versions globally via `.tool-versions`
+- Supports legacy version files (`.nvmrc`, `.python-version`, etc.)
+
+### Karabiner-Elements
+- Custom keyboard mappings
+- Complex modifications for enhanced productivity
+
+### Hammerspoon
+- Window management automation
+- Custom Lua scripts for macOS integration
+
+## 🔧 Customization
+
+### Adding New Tools
+
+1. **Add to backup script:**
+   ```bash
+   # Edit backup.sh and add your tool to TOOLS array
+   TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "your-tool")
+   ```
+
+2. **Add to dotbot config:**
+   ```yaml
+   # Edit install.conf.yaml
+   - link:
+       ~/.config/your-tool: your-tool
+   ```
+
+### Managing asdf Plugins
+
+The system automatically handles asdf plugins:
+- **Backup:** `./backup.sh` captures current plugins to `asdf/plugins.txt`
+- **Restore:** `./install.sh` installs plugins and tool versions automatically
+
+To manually manage:
+```bash
+# Add a new plugin
+asdf plugin add nodejs
+asdf install nodejs latest
+asdf global nodejs latest
+
+# Backup the changes
+./backup.sh
+```
+
+## 🛠️ Troubleshooting
+
+### Permission Issues
+```bash
+# Make scripts executable
+chmod +x install.sh backup.sh
+```
+
+### Dotbot Submodule Issues
+```bash
+# Update submodules
+git submodule update --init --recursive
+```
+
+### asdf Not Found
+```bash
+# Install asdf first, then run installer
+# The installer will skip asdf setup if not found
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test with `./install.sh` on a clean environment
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Happy coding!** 🚀

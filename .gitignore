@@ -1,0 +1,142 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Personal/Local files
+.env
+.env.local
+.env.*.local
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+.dockerignore
+
+# But keep templates
+!docker-compose.template.yml
+!docker-compose.*.template.yml
+
+# Local development services
+/services/*/docker-compose.yml
+/services/*/docker-compose.override.yml
+
+# But keep service templates
+!/services/*/docker-compose.template.yml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Temporary folders
+node_modules/
+.tmp/
+.temp/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Local configuration overrides
+config.local.*
+settings.local.*
+
+# SSH keys (in case accidentally placed here)
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# GPG keys
+*.gpg
+*.asc
+
+# Secrets and credentials
+secrets/
+credentials/
+*.secret
+*.credential
+
+# Fish shell local history (if it exists)
+fish_history
+
+# asdf local tool versions (keep global)
+.tool-versions.local
+
+# Hammerspoon local configs
+hammerspoon/local/
+
+# Karabiner local backups (keep templates)
+karabiner/automatic_backups/*.json
+!karabiner/automatic_backups/.gitkeep
+
+# Local scripts and utilities
+local/
+*.local.sh
+
+# Test files
+test/
+tests/local/
+
+# Temporary downloads
+downloads/
+tmp/
+
+# Local services directory structure
+/local-services/
+/dev-services/
+
+# But keep example/template services
+!/local-services/examples/
+!/local-services/templates/
+!/dev-services/examples/
+!/dev-services/templates/
