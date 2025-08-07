@@ -15,28 +15,13 @@
     ~/.zshrc: zsh/.zshrc
 
 - shell:
+    - description: "Installing Homebrew packages"
+      command: bash ./scripts/install_brew_packages.sh
+      stdout: true
+      stderr: true
+      quiet: false
     - description: "Installing asdf plugins"
-      command: |
-        if command -v asdf >/dev/null 2>&1 && [ -f "asdf/plugins.txt" ]; then
-          echo "🔌 Installing asdf plugins..."
-          while IFS= read -r plugin || [ -n "$plugin" ]; do
-            if [[ -z "$plugin" || "$plugin" =~ ^[[:space:]]*# ]]; then
-              continue
-            fi
-            echo "📦 Installing plugin: $plugin"
-            if asdf plugin list | grep -q "^$plugin$"; then
-              echo "⚠️  Plugin $plugin is already installed, skipping"
-            else
-              asdf plugin add "$plugin" || echo "❌ Failed to install plugin: $plugin"
-            fi
-          done < "asdf/plugins.txt"
-          echo "🔧 Installing tool versions..."
-          asdf install || echo "⚠️  Some tools may have failed to install"
-          echo "✅ asdf setup complete!"
-        else
-          if ! command -v asdf >/dev/null 2>&1; then
-            echo "ℹ️  asdf not found - skipping plugin installation"
-            echo "💡 Install asdf first: https://asdf-vm.com/guide/getting-started.html"
-          fi
-        fi
+      command: bash ./scripts/install_asdf_plugins.sh
+      stdout: true
+      stderr: true
       quiet: false
