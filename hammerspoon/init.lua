@@ -20,6 +20,7 @@ hs.application.watcher.new(function(appName, event, app)
                 print("Current input source is " .. (currentInputSource or "none") .. ". Switching to " .. targetInputSource)
                 hs.keycodes.currentSourceID(targetInputSource)
             else
+                print("Current bundleID " .. bundleID)
                 print("No input source change needed for " .. appName)
             end
         end
