@@ -1,23 +1,9 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-      force: true
-- link:
-    ~/.config/fish: fish
-    ~/.config/nvim: nvim
-    ~/.config/omf: omf
-    ~/.config/karabiner: karabiner
-    ~/.hammerspoon: hammerspoon
-    ~/.Brewfile: brew/Brewfile
-    ~/.asdfrc: asdf/.asdfrc
-    ~/.tool-versions: asdf/.tool-versions
-    ~/.bashrc: bash/.bashrc
-    ~/.zshrc: zsh/.zshrc
-    ~/.gitconfig: gitconfig/.gitconfig
-    ~/.gitignore_global: gitconfig/.gitignore_global
-
 - shell:
+    - description: "Copying dotfiles using install.sh (no symlinks)"
+      command: bash ./scripts/copy_configs.sh
+      stdout: true
+      stderr: true
+      quiet: false
     - description: "Installing Homebrew packages"
       command: bash ./scripts/install_brew_packages.sh
       stdout: true

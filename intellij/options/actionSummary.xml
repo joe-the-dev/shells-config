@@ -4,28 +4,34 @@
       <i c="2" l="1754624661212" />
     </e>
     <e n="$SelectAll">
-      <i c="11" l="1754625793603" />
+      <i c="22" l="1754639789097" />
     </e>
     <e n="$Undo">
-      <i c="15" l="1754624848502" />
+      <i c="16" l="1754638853958" />
+    </e>
+    <e n="ChangesView.Revert">
+      <i c="23" l="1754639877972" />
+    </e>
+    <e n="CloseContent">
+      <i c="1" l="1754638863560" />
     </e>
     <e n="DatabaseView.AddActionGroupPopup">
       <i c="1" l="1754470025928" />
     </e>
     <e n="EditorBackSpace">
-      <i c="227" l="1754625840554" />
+      <i c="370" l="1754639864439" />
     </e>
     <e n="EditorCopy">
-      <i c="13" l="1754625278300" />
+      <i c="18" l="1754638165592" />
     </e>
     <e n="EditorCut">
-      <i c="1" l="1754455661349" />
+      <i c="2" l="1754639695136" />
     </e>
     <e n="EditorDeleteToWordStart">
-      <i c="35" l="1754625340632" />
+      <i c="66" l="1754639147320" />
     </e>
     <e n="EditorDown">
-      <i c="19" l="1754455628612" />
+      <i c="20" l="1754639641138" />
     </e>
     <e n="EditorDuplicate">
       <i c="2" l="1754624681532" />
@@ -34,19 +40,19 @@
       <i c="13" l="1754455623556" />
     </e>
     <e n="EditorEscape">
-      <i c="143" l="1754625800694" />
+      <i c="184" l="1754639637932" />
     </e>
     <e n="EditorNextWord">
-      <i c="3" l="1754618534772" />
+      <i c="17" l="1754638609230" />
     </e>
     <e n="EditorNextWordWithSelection">
       <i c="7" l="1754454401571" />
     </e>
     <e n="EditorPaste">
-      <i c="32" l="1754625793811" />
+      <i c="43" l="1754639804333" />
     </e>
     <e n="EditorPreviousWord">
-      <i c="9" l="1754618530698" />
+      <i c="17" l="1754638604123" />
     </e>
     <e n="EditorTab">
       <i c="1" l="1754455545452" />
@@ -58,10 +64,13 @@
       <i c="14" l="1754455629058" />
     </e>
     <e n="Find">
-      <i c="11" l="1754625191631" />
+      <i c="15" l="1754637820775" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="1" l="1754638899080" />
     </e>
     <e n="GotoFile">
-      <i c="1" l="1754624814726" />
+      <i c="2" l="1754635032655" />
     </e>
     <e n="HideAllWindows">
       <i c="1" l="1754460217544" />
@@ -79,7 +88,10 @@
       <i c="2" l="1754624860136" />
     </e>
     <e n="SaveAll">
-      <i c="582" l="1754625852697" />
+      <i c="817" l="1754639940619" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="6" l="1754638259066" />
     </e>
     <e n="SettingsEntryPoint">
       <i c="1" l="1754465236260" />
@@ -88,7 +100,7 @@
       <i c="1" l="1754625124009" />
     </e>
     <e n="ToggleLineBreakpoint">
-      <i c="5" l="1754624840566" />
+      <i c="6" l="1754635483584" />
     </e>
     <e n="Tree-selectNext">
       <i c="2" l="1754481842475" />
@@ -109,13 +121,13 @@
       <i c="1" l="1754459767301" />
     </e>
     <e n="com.github.copilot.agent.window.actions.AgentSessionHistoryAction">
-      <i c="1" l="1754459763710" />
+      <i c="3" l="1754638845446" />
     </e>
     <e n="com.github.copilot.chat.input.SendMessageAction">
       <i c="1" l="1754454845276" />
     </e>
     <e n="com.github.copilot.chat.input.StopAction">
-      <i c="1" l="1754449796321" />
+      <i c="3" l="1754638228374" />
     </e>
     <e n="com.github.copilot.chat.message.codeblock.CopyCodeBlockAction">
       <i c="1" l="1754459879755" />
@@ -124,10 +136,10 @@
       <i c="1" l="1754449944735" />
     </e>
     <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
-      <i c="10" l="1754625194516" />
+      <i c="15" l="1754637825813" />
     </e>
     <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
-      <i c="5" l="1754624704754" />
+      <i c="7" l="1754635747434" />
     </e>
     <e n="com.intellij.ide.plugins.PluginManagerMain$3">
       <i c="2" l="1754468198280" />
@@ -139,16 +151,16 @@
       <i c="1" l="1754447681267" />
     </e>
     <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
-      <i c="125" l="1754624655767" />
+      <i c="142" l="1754639741789" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="28" l="1754625782137" />
+      <i c="60" l="1754639726894" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="1" l="1754624815796" />
+      <i c="13" l="1754639715898" />
     </e>
     <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
-      <i c="2" l="1754625325419" />
+      <i c="5" l="1754639718158" />
     </e>
     <e n="com.intellij.openapi.updateSettings.impl.PluginUpdateDialog$4$2">
       <i c="1" l="1754468196488" />
@@ -156,17 +168,23 @@
     <e n="com.intellij.openapi.updateSettings.impl.UpdateSettingsEntryPointActionProvider$3">
       <i c="1" l="1754465237420" />
     </e>
+    <e n="com.intellij.openapi.vcs.ex.LocalLineStatusTrackerImpl$LocalLineStatusMarkerRenderer$RollbackLineStatusRangeAction">
+      <i c="3" l="1754638784816" />
+    </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="11" l="1754625328414" />
+      <i c="15" l="1754638868963" />
     </e>
     <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
       <i c="10" l="1754618675852" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
-      <i c="6" l="1754625302456" />
+      <i c="9" l="1754637464980" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
-      <i c="2" l="1754459761099" />
+      <i c="3" l="1754638840162" />
+    </e>
+    <e n="com.maddyhome.idea.vim.extension.nerdtree.NerdTree$NerdDispatcher">
+      <i c="1" l="1754635576169" />
     </e>
     <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
       <i c="1" l="1754624457516" />

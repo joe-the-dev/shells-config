@@ -25,6 +25,23 @@ for tool in "${TOOLS[@]}"; do
   case "$tool" in
     hammerspoon)
       src="$HOME/.hammerspoon"
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      mkdir -p "$dst"
+      if [ -d "$src" ]; then
+        rsync -a "$src"/ "$dst"/
+      fi
+      continue
+      ;;
+    fish|nvim|omf|karabiner)
+      src="$HOME/.config/$tool"
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      mkdir -p "$dst"
+      if [ -d "$src" ]; then
+        rsync -a "$src"/ "$dst"/
+      fi
+      continue
       ;;
     asdf)
       dst="$REPO_DIR/$tool"
