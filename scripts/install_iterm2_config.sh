@@ -49,3 +49,4 @@ fi
 echo "✅ iTerm2 configuration restored successfully!"
 echo "💡 Your terminal profiles, colors, and settings should now be active."
 echo "💡 Please restart iTerm2 for all changes to take effect."
+exit 0

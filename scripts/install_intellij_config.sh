@@ -73,3 +73,4 @@ fi
 echo "✅ IntelliJ IDEA configuration restored successfully!"
 echo "💡 Your 2-space indentation settings and other preferences should now be active."
 echo "💡 You may need to restart IntelliJ IDEA for all changes to take effect."
+exit 0
