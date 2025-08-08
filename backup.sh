@@ -19,7 +19,7 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "intellij" "iterm2")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
@@ -90,6 +90,82 @@ for tool in "${TOOLS[@]}"; do
       if [ -f "$HOME/.gitignore_global" ]; then
         cp "$HOME/.gitignore_global" "$dst/"
       fi
+      continue
+      ;;
+    intellij)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+
+      # Find the latest IntelliJ IDEA version directory
+      INTELLIJ_DIR=$(find "$HOME/Library/Application Support/JetBrains" -name "IntelliJIdea*" -type d | sort -V | tail -1)
+
+      if [ -n "$INTELLIJ_DIR" ] && [ -d "$INTELLIJ_DIR" ]; then
+        echo "📋 Found IntelliJ config at: $INTELLIJ_DIR"
+
+        # Backup essential configuration files
+        if [ -d "$INTELLIJ_DIR/codestyles" ]; then
+          cp -R "$INTELLIJ_DIR/codestyles" "$dst/"
+        fi
+        if [ -d "$INTELLIJ_DIR/options" ]; then
+          cp -R "$INTELLIJ_DIR/options" "$dst/"
+        fi
+        if [ -f "$INTELLIJ_DIR/idea.vmoptions" ]; then
+          cp "$INTELLIJ_DIR/idea.vmoptions" "$dst/"
+        fi
+        if [ -f "$INTELLIJ_DIR/disabled_plugins.txt" ]; then
+          cp "$INTELLIJ_DIR/disabled_plugins.txt" "$dst/"
+        fi
+
+        # Create a version file to track which IntelliJ version this came from
+        basename "$INTELLIJ_DIR" > "$dst/intellij_version.txt"
+      else
+        echo "⚠️  IntelliJ IDEA config directory not found"
+      fi
+
+      # Backup .ideavimrc from home directory
+      if [ -f "$HOME/.ideavimrc" ]; then
+        echo "⌨️  Backing up .ideavimrc"
+        cp "$HOME/.ideavimrc" "$dst/"
+      fi
+      continue
+      ;;
+    iterm2)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+
+      # Backup iTerm2 main preferences (profiles, colors, key bindings, etc.)
+      if [ -f "$HOME/Library/Preferences/com.googlecode.iterm2.plist" ]; then
+        echo "📋 Backing up iTerm2 preferences"
+        cp "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$dst/"
+      fi
+
+      # Backup iTerm2 Application Support files
+      ITERM2_APP_SUPPORT="$HOME/Library/Application Support/iTerm2"
+      if [ -d "$ITERM2_APP_SUPPORT" ]; then
+        # Backup Dynamic Profiles (if any)
+        if [ -d "$ITERM2_APP_SUPPORT/DynamicProfiles" ]; then
+          cp -R "$ITERM2_APP_SUPPORT/DynamicProfiles" "$dst/"
+        fi
+
+        # Backup Scripts (if any)
+        if [ -d "$ITERM2_APP_SUPPORT/Scripts" ]; then
+          cp -R "$ITERM2_APP_SUPPORT/Scripts" "$dst/"
+        fi
+
+        # Backup version info
+        if [ -f "$ITERM2_APP_SUPPORT/version.txt" ]; then
+          cp "$ITERM2_APP_SUPPORT/version.txt" "$dst/"
+        fi
+      fi
+
+      # Export current iTerm2 profile as JSON for easier version control
+      echo "📋 Exporting iTerm2 profiles as JSON"
+      /usr/libexec/PlistBuddy -x -c "Print" "$HOME/Library/Preferences/com.googlecode.iterm2.plist" > "$dst/iterm2_preferences.xml" 2>/dev/null || echo "# Could not export preferences" > "$dst/iterm2_preferences.xml"
+
       continue
       ;;
     *)

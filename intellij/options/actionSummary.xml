@@ -1,0 +1,184 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Redo">
+      <i c="2" l="1754624661212" />
+    </e>
+    <e n="$SelectAll">
+      <i c="10" l="1754625496542" />
+    </e>
+    <e n="$Undo">
+      <i c="15" l="1754624848502" />
+    </e>
+    <e n="DatabaseView.AddActionGroupPopup">
+      <i c="1" l="1754470025928" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="223" l="1754625496739" />
+    </e>
+    <e n="EditorCopy">
+      <i c="13" l="1754625278300" />
+    </e>
+    <e n="EditorCut">
+      <i c="1" l="1754455661349" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="35" l="1754625340632" />
+    </e>
+    <e n="EditorDown">
+      <i c="19" l="1754455628612" />
+    </e>
+    <e n="EditorDuplicate">
+      <i c="2" l="1754624681532" />
+    </e>
+    <e n="EditorEnter">
+      <i c="13" l="1754455623556" />
+    </e>
+    <e n="EditorEscape">
+      <i c="137" l="1754625199228" />
+    </e>
+    <e n="EditorNextWord">
+      <i c="3" l="1754618534772" />
+    </e>
+    <e n="EditorNextWordWithSelection">
+      <i c="7" l="1754454401571" />
+    </e>
+    <e n="EditorPaste">
+      <i c="30" l="1754624709399" />
+    </e>
+    <e n="EditorPreviousWord">
+      <i c="9" l="1754618530698" />
+    </e>
+    <e n="EditorTab">
+      <i c="1" l="1754455545452" />
+    </e>
+    <e n="EditorUnindentSelection">
+      <i c="12" l="1754624023938" />
+    </e>
+    <e n="EditorUp">
+      <i c="14" l="1754455629058" />
+    </e>
+    <e n="Find">
+      <i c="11" l="1754625191631" />
+    </e>
+    <e n="GotoFile">
+      <i c="1" l="1754624814726" />
+    </e>
+    <e n="HideAllWindows">
+      <i c="1" l="1754460217544" />
+    </e>
+    <e n="IdeaVim.ReloadVimRc.reload">
+      <i c="2" l="1754624666098" />
+    </e>
+    <e n="NewFile">
+      <i c="1" l="1754451782920" />
+    </e>
+    <e n="OpenFile">
+      <i c="2" l="1754460348176" />
+    </e>
+    <e n="ReformatCode">
+      <i c="2" l="1754624860136" />
+    </e>
+    <e n="SaveAll">
+      <i c="542" l="1754625498276" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="1" l="1754465236260" />
+    </e>
+    <e n="TextEditorWithPreview.Layout.EditorAndPreview">
+      <i c="1" l="1754625124009" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="5" l="1754624840566" />
+    </e>
+    <e n="Tree-selectNext">
+      <i c="2" l="1754481842475" />
+    </e>
+    <e n="Tree-selectParent">
+      <i c="1" l="1754481842667" />
+    </e>
+    <e n="Tree-selectPrevious">
+      <i c="1" l="1754481842042" />
+    </e>
+    <e n="TrialStateWidget">
+      <i c="1" l="1754449537122" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1754447906155" />
+    </e>
+    <e n="com.github.copilot.agent.session.component.ViewAllSessionsComponent$backwardAction$1">
+      <i c="1" l="1754459767301" />
+    </e>
+    <e n="com.github.copilot.agent.window.actions.AgentSessionHistoryAction">
+      <i c="1" l="1754459763710" />
+    </e>
+    <e n="com.github.copilot.chat.input.SendMessageAction">
+      <i c="1" l="1754454845276" />
+    </e>
+    <e n="com.github.copilot.chat.input.StopAction">
+      <i c="1" l="1754449796321" />
+    </e>
+    <e n="com.github.copilot.chat.message.codeblock.CopyCodeBlockAction">
+      <i c="1" l="1754459879755" />
+    </e>
+    <e n="com.github.copilot.chat.window.actions.ConversationHistoryAction">
+      <i c="1" l="1754449944735" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
+      <i c="10" l="1754625194516" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
+      <i c="5" l="1754624704754" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$3">
+      <i c="2" l="1754468198280" />
+    </e>
+    <e n="com.intellij.ide.startup.importSettings.chooser.productChooser.JbChooserAction">
+      <i c="1" l="1754447679987" />
+    </e>
+    <e n="com.intellij.ide.startup.importSettings.chooser.settingChooser.SettingChooserItemAction">
+      <i c="1" l="1754447681267" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
+      <i c="125" l="1754624655767" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="25" l="1754625343347" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1754624815796" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="2" l="1754625325419" />
+    </e>
+    <e n="com.intellij.openapi.updateSettings.impl.PluginUpdateDialog$4$2">
+      <i c="1" l="1754468196488" />
+    </e>
+    <e n="com.intellij.openapi.updateSettings.impl.UpdateSettingsEntryPointActionProvider$3">
+      <i c="1" l="1754465237420" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="11" l="1754625328414" />
+    </e>
+    <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
+      <i c="10" l="1754618675852" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="6" l="1754625302456" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
+      <i c="2" l="1754459761099" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
+      <i c="1" l="1754624457516" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="1" l="1754624433294" />
+    </e>
+    <e n="copilot.quotaUsage">
+      <i c="1" l="1754451275109" />
+    </e>
+    <e n="org.jetbrains.plugins.terminal.action.RenameTerminalSessionAction">
+      <i c="1" l="1754458565105" />
+    </e>
+  </component>
+</application>

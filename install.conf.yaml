@@ -27,3 +27,13 @@
       stdout: true
       stderr: true
       quiet: false
+    - description: "Installing IntelliJ IDEA configuration"
+      command: bash ./scripts/install_intellij_config.sh
+      stdout: true
+      stderr: true
+      quiet: false
+    - description: "Installing iTerm2 configuration"
+      command: bash ./scripts/install_iterm2_config.sh
+      stdout: true
+      stderr: true
+      quiet: false

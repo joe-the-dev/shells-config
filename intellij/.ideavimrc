@@ -1,0 +1,185 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+"" ============================================================================
+"" Basic Settings
+"" ============================================================================
+" Show a few lines of context around the cursor
+set scrolloff=5
+set sidescrolloff=5
+
+" Search settings
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Line numbers
+set number
+set relativenumber
+
+" Better editing experience
+set clipboard+=unnamed
+set clipboard+=ideaput
+set showmode
+set showcmd
+set visualbell
+set noerrorbells
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+"" ============================================================================
+"" Leader Key
+"" ============================================================================
+" Set leader key explicitly before any mappings
+let mapleader = " "
+let g:mapleader = " "
+
+" Test mapping to verify leader key works
+nnoremap <leader>test :echo "Leader key is working!"<CR>
+
+"" ============================================================================
+"" IdeaVim Plugins
+"" ============================================================================
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" Surround plugin for quotes, brackets, etc.
+Plug 'tpope/vim-surround'
+" Multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+" Easymotion for quick navigation
+Plug 'easymotion/vim-easymotion'
+" NERDTree-like file explorer
+Plug 'preservim/nerdtree'
+" Which-key for discovering keybindings
+Plug 'liuchengxu/vim-which-key'
+
+"" ============================================================================
+"" Key Mappings
+"" ============================================================================
+
+" Clear search highlighting
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Quick save and quit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+" Better indentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Move lines up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"" ============================================================================
+"" IDE Actions
+"" ============================================================================
+
+" File navigation
+map <leader>ff <Action>(GotoFile)
+map <leader>fr <Action>(RecentFiles)
+map <leader>fc <Action>(FindInPath)
+map <leader>fl <Action>(RecentLocations)
+
+" Code navigation
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gu <Action>(FindUsages)
+map <leader>gt <Action>(GotoTest)
+map <leader>gb <Action>(Back)
+map <leader>gf <Action>(Forward)
+
+" Code actions
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cr <Action>(RenameElement)
+map <leader>cf <Action>(ReformatCode)
+map <leader>co <Action>(OptimizeImports)
+
+" Refactoring
+map <leader>re <Action>(ExtractMethod)
+map <leader>rv <Action>(ExtractVariable)
+map <leader>ri <Action>(Inline)
+map <leader>rm <Action>(Move)
+
+" Debugging
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dc <Action>(Debug)
+map <leader>dr <Action>(Run)
+map <leader>ds <Action>(Stop)
+
+" Git integration
+map <leader>ga <Action>(Annotate)
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>gb <Action>(Git.Branches)
+
+" Tool windows
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+map <leader>tp <Action>(ActivateProjectToolWindow)
+map <leader>td <Action>(ActivateDebugToolWindow)
+map <leader>tr <Action>(ActivateRunToolWindow)
+
+" NERDTree-like file explorer
+map <leader>e <Action>(ActivateProjectToolWindow)
+
+" Errors and diagnostics
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+map <leader>el <Action>(ShowErrorDescription)
+
+" Search everywhere
+map <leader>se <Action>(SearchEverywhere)
+
+" Split windows
+map <leader>sv <Action>(SplitVertically)
+map <leader>sh <Action>(SplitHorizontally)
+map <leader>su <Action>(Unsplit)
+map <leader>sm <Action>(MoveEditorToOppositeTabGroup)
+
+"" ============================================================================
+"" Plugin Configurations
+"" ============================================================================
+
+" EasyMotion configuration
+map <leader>s <Plug>(easymotion-s2)
+map <leader>/ <Plug>(easymotion-sn)
+
+" Multiple cursors
+map <C-n> <Plug>NextWholeOccurrence
+map <C-x> <Plug>SkipOccurrence
+map <C-p> <Plug>RemoveOccurrence
+
+" Which-key configuration
+set which-key
+set notimeout
+
+"" ============================================================================
+"" Custom Functions
+"" ============================================================================
+
+" Toggle between relative and absolute line numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <leader>ln :call NumberToggle()<CR>
