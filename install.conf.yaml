@@ -13,6 +13,8 @@
     ~/.tool-versions: asdf/.tool-versions
     ~/.bashrc: bash/.bashrc
     ~/.zshrc: zsh/.zshrc
+    ~/.gitconfig: gitconfig/.gitconfig
+    ~/.gitignore_global: gitconfig/.gitignore_global
 
 - shell:
     - description: "Installing Homebrew packages"

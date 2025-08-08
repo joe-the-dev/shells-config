@@ -19,7 +19,7 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
@@ -74,6 +74,21 @@ for tool in "${TOOLS[@]}"; do
       fi
       if [ -f "$HOME/.zshenv" ]; then
         cp "$HOME/.zshenv" "$dst/"
+      fi
+      continue
+      ;;
+    gitconfig)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+      # Copy gitconfig file from home directory
+      if [ -f "$HOME/.gitconfig" ]; then
+        cp "$HOME/.gitconfig" "$dst/"
+      fi
+      # Copy global gitignore file from home directory
+      if [ -f "$HOME/.gitignore_global" ]; then
+        cp "$HOME/.gitignore_global" "$dst/"
       fi
       continue
       ;;
