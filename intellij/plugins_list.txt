@@ -1,0 +1,23 @@
+IdeaVIM
+IntelliJ-EmmyLua
+Shell Script
+Spring
+clouds-docker-impl
+editorconfig-plugin
+fullLine
+github-copilot-intellij
+java
+javascript-debugger
+javascript-plugin
+jupyter-plugin
+karma
+notebooks-plugin
+packageChecker
+properties
+react
+solarized_theme.jar
+swagger
+terraform
+toml
+vcs-svn
+vuejs

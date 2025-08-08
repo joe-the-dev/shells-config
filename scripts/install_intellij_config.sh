@@ -57,6 +57,13 @@ if [ -f "$INTELLIJ_CONFIG_DIR/disabled_plugins.txt" ]; then
     cp "$INTELLIJ_CONFIG_DIR/disabled_plugins.txt" "$INTELLIJ_DIR/"
 fi
 
+# Restore plugins from plugins_list.txt (print instructions for user)
+if [ -f "$INTELLIJ_CONFIG_DIR/plugins_list.txt" ]; then
+    echo "🔌 The following plugins were previously installed (from plugins_list.txt):"
+    cat "$INTELLIJ_CONFIG_DIR/plugins_list.txt"
+    echo "💡 Please reinstall these plugins manually from the JetBrains Marketplace, or use the JetBrains Toolbox for automation."
+fi
+
 # Restore .ideavimrc to home directory
 if [ -f "$INTELLIJ_CONFIG_DIR/.ideavimrc" ]; then
     echo "⌨️  Restoring .ideavimrc to home directory..."

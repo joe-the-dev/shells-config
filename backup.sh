@@ -112,9 +112,7 @@ for tool in "${TOOLS[@]}"; do
     intellij)
       dst="$REPO_DIR/$tool"
       echo "🔄 Backing up $tool config files → $dst"
-      rm -rf "$dst"
       mkdir -p "$dst"
-
       # Find the latest IntelliJ IDEA version directory
       INTELLIJ_DIR=$(find "$HOME/Library/Application Support/JetBrains" -name "IntelliJIdea*" -type d | sort -V | tail -1)
 
@@ -123,10 +121,14 @@ for tool in "${TOOLS[@]}"; do
 
         # Backup essential configuration files
         if [ -d "$INTELLIJ_DIR/codestyles" ]; then
-          cp -R "$INTELLIJ_DIR/codestyles" "$dst/"
+          rsync -a "$INTELLIJ_DIR/codestyles/" "$dst/codestyles/"
         fi
         if [ -d "$INTELLIJ_DIR/options" ]; then
-          cp -R "$INTELLIJ_DIR/options" "$dst/"
+          rsync -a "$INTELLIJ_DIR/options/" "$dst/options/"
+        fi
+        # Backup plugin list (lightweight, just names)
+        if [ -d "$INTELLIJ_DIR/plugins" ]; then
+          ls "$INTELLIJ_DIR/plugins" > "$dst/plugins_list.txt"
         fi
         if [ -f "$INTELLIJ_DIR/idea.vmoptions" ]; then
           cp "$INTELLIJ_DIR/idea.vmoptions" "$dst/"
@@ -134,7 +136,6 @@ for tool in "${TOOLS[@]}"; do
         if [ -f "$INTELLIJ_DIR/disabled_plugins.txt" ]; then
           cp "$INTELLIJ_DIR/disabled_plugins.txt" "$dst/"
         fi
-
         # Create a version file to track which IntelliJ version this came from
         basename "$INTELLIJ_DIR" > "$dst/intellij_version.txt"
       else
