@@ -2,6 +2,7 @@
     link:
       create: true
       relink: true
+      force: true
 - link:
     ~/.config/fish: fish
     ~/.config/nvim: nvim

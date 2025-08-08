@@ -433,13 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="16" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/.gitignore" protocol="file" />
-      <jump line="12" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="8" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="15" column="57" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="3" column="44" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="4" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="20" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="13" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="5" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="10" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
@@ -469,7 +462,6 @@
       <jump line="86" column="36" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="47" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="52" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="49" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="99" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="114" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="95" column="26" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
@@ -477,7 +469,6 @@
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
       <jump line="17" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
       <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="34" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="32" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/.ideavimrc" protocol="file" />
       <jump line="10" column="0" filename="$USER_HOME$/.ideavimrc" protocol="file" />
@@ -519,8 +510,6 @@
       <jump line="137" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="21" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_iterm2_config.sh" protocol="file" />
-      <jump line="19" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_iterm2_config.sh" protocol="file" />
-      <jump line="139" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="15" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
       <jump line="50" column="26" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
       <jump line="282" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
@@ -528,11 +517,22 @@
       <jump line="274" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
       <jump line="267" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
       <jump line="6" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
-      <jump line="8" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
       <jump line="12" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
+      <jump line="1" column="36" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
+      <jump line="8" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
+      <jump line="10" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
+      <jump line="11" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
+      <jump line="139" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="8" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" protocol="file" />
+      <jump line="49" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="19" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_iterm2_config.sh" protocol="file" />
+      <jump line="34" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="4" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="11" column="29" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="23" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="40" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
@@ -547,11 +547,17 @@
         <mark key="^" line="74" column="21" />
         <mark key="." line="74" column="20" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/backup.sh" timestamp="1754623984426">
-        <mark key="&quot;" line="10" column="0" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/backup.sh" timestamp="1754625780943">
+        <mark key="&quot;" line="139" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/codestyles/Default.xml" timestamp="1754625782139">
+        <mark key="&quot;" line="8" column="13" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1754623989564">
-        <mark key="&quot;" line="16" column="0" />
+        <mark key="&quot;" line="17" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" timestamp="1754625779941">
+        <mark key="&quot;" line="11" column="12" />
       </file>
       <file name="$USER_HOME$/.config/flameshot/flameshot.ini" timestamp="1754460198117">
         <mark key="&quot;" line="0" column="0" />
@@ -573,9 +579,6 @@
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1754481513526">
         <mark key="&quot;" line="10" column="23" />
-      </file>
-      <file name="$USER_HOME$/.config/nvim/lua/tree_setup.lua" timestamp="1754460197386">
-        <mark key="&quot;" line="9" column="3" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" timestamp="1754624849032">
         <mark key="[" line="49" column="20" />
