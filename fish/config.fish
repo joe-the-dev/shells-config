@@ -95,3 +95,27 @@ end
 # pnpm end
 
  abbr --add zz 'fg'
+
+function upgrade-all
+    if type -q brew
+        echo 'Upgrading Homebrew...'
+        brew update && brew upgrade
+    end
+    if type -q asdf
+        echo 'Upgrading asdf...'
+        asdf plugin-update --all; and asdf update
+    end
+    if type -q pnpm
+        echo 'Upgrading pnpm...'
+        pnpm self-update
+    end
+    if type -q npm
+        echo 'Upgrading npm...'
+        npm update -g
+    end
+    if type -q omf
+        echo 'Upgrading omf...'
+        omf update
+    end
+    echo 'All upgrades complete.'
+end
