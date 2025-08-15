@@ -1,10 +1,10 @@
 <application>
   <component name="AcceptanceRateFactors">
-    <option name="lastShowUpTime" value="1754455625008" />
+    <option name="lastShowUpTime" value="1755156934276" />
     <showUpCounts>
-      <entry key="1" value="4.941153882109887" />
-      <entry key="24" value="4.99752627463253" />
-      <entry key="168" value="4.99964649379232" />
+      <entry key="1" value="1.0" />
+      <entry key="24" value="1.0180008486636216" />
+      <entry key="168" value="3.2380680274325777" />
     </showUpCounts>
   </component>
   <component name="CompletionFinishedType">
@@ -13,6 +13,11 @@
         <DailyData>
           <option name="explicitCancel" value="3" />
           <option name="invalidated" value="2" />
+        </DailyData>
+      </entry>
+      <entry key="2025-08-14">
+        <DailyData>
+          <option name="invalidated" value="1" />
         </DailyData>
       </entry>
     </dailyDataMap>
@@ -27,8 +32,14 @@
       </entry>
       <entry key="2025-08-08">
         <DailyData>
-          <option name="count" value="510" />
-          <option name="totalTime" value="369441" />
+          <option name="count" value="516" />
+          <option name="totalTime" value="373778" />
+        </DailyData>
+      </entry>
+      <entry key="2025-08-14">
+        <DailyData>
+          <option name="count" value="56" />
+          <option name="totalTime" value="23230" />
         </DailyData>
       </entry>
     </dailyDataMap>

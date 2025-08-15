@@ -36,8 +36,8 @@
         </entry>
         <entry key="$USER_HOME$/Documents/Playground/shells-config">
           <value>
-            <RecentProjectMetaInfo frameTitle="shells-config – .bash_profile" opened="true" projectWorkspaceId="30twr6wxqehjv8NcycLpu5XKyi2">
-              <option name="activationTimestamp" value="1754640510413" />
+            <RecentProjectMetaInfo frameTitle="shells-config – .env.template" opened="true" projectWorkspaceId="30twr6wxqehjv8NcycLpu5XKyi2">
+              <option name="activationTimestamp" value="1755157208115" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IU-252.23892.409" />
               <option name="buildTimestamp" value="1754024820000" />
@@ -46,7 +46,7 @@
               </option>
               <frame x="160" y="72" width="1192" height="860" extendedState="6" />
               <option name="productionCode" value="IU" />
-              <option name="projectOpenTimestamp" value="1754618505157" />
+              <option name="projectOpenTimestamp" value="1755156437998" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

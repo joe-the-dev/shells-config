@@ -3,6 +3,8 @@ IntelliJ-EmmyLua
 Shell Script
 Spring
 clouds-docker-impl
+clouds-kubernetes
+copyright
 editorconfig-plugin
 fullLine
 github-copilot-intellij
@@ -11,13 +13,19 @@ javascript-debugger
 javascript-plugin
 jupyter-plugin
 karma
+microservices-ui
 notebooks-plugin
 packageChecker
 properties
 react
+restClient
 solarized_theme.jar
 swagger
 terraform
 toml
+vcs-github-IU
+vcs-gitlab-IU
 vcs-svn
+velocity
 vuejs
+yaml
