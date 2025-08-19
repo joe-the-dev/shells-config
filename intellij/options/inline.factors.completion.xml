@@ -38,8 +38,20 @@
       </entry>
       <entry key="2025-08-14">
         <DailyData>
-          <option name="count" value="56" />
-          <option name="totalTime" value="23230" />
+          <option name="count" value="60" />
+          <option name="totalTime" value="32948" />
+        </DailyData>
+      </entry>
+      <entry key="2025-08-15">
+        <DailyData>
+          <option name="count" value="2" />
+          <option name="totalTime" value="368" />
+        </DailyData>
+      </entry>
+      <entry key="2025-08-19">
+        <DailyData>
+          <option name="count" value="10" />
+          <option name="totalTime" value="2150" />
         </DailyData>
       </entry>
     </dailyDataMap>

@@ -34,12 +34,7 @@ map Q gq
 "" ============================================================================
 "" Leader Key
 "" ============================================================================
-" Set leader key explicitly before any mappings
 let mapleader = " "
-let g:mapleader = " "
-
-" Test mapping to verify leader key works
-nnoremap <leader>test :echo "Leader key is working!"<CR>
 
 "" ============================================================================
 "" IdeaVim Plugins

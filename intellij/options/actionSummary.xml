@@ -100,10 +100,10 @@
       <i c="1" l="1754640709034" />
     </e>
     <e n="SaveAll">
-      <i c="858" l="1755157211395" />
+      <i c="874" l="1755586624237" />
     </e>
     <e n="SearchEverywhere">
-      <i c="8" l="1754640624458" />
+      <i c="10" l="1755157356530" />
     </e>
     <e n="SettingsEntryPoint">
       <i c="1" l="1754465236260" />
@@ -178,10 +178,10 @@
       <i c="149" l="1755156987505" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="80" l="1755156457433" />
+      <i c="85" l="1755586530713" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="16" l="1754640626065" />
+      <i c="18" l="1755157361939" />
     </e>
     <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
       <i c="5" l="1754639718158" />
@@ -199,13 +199,16 @@
       <i c="20" l="1755156446068" />
     </e>
     <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
-      <i c="78" l="1755157003592" />
+      <i c="99" l="1755586591883" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
       <i c="11" l="1754640877240" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
       <i c="3" l="1754638840162" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="3" l="1755157361559" />
     </e>
     <e n="com.intellij.ui.content.tabs.TabbedContentAction$CloseAllAction">
       <i c="1" l="1754640300117" />

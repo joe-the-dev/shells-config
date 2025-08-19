@@ -9,7 +9,7 @@
   </component>
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
-    "InstalledPluginsSearchHistory": "ident",
+    "InstalledPluginsSearchHistory": "solar\nsola\nsol\nso\ns",
     "LAST_CALCULATED_COLOR_INDEX_KEY": "8",
     "PluginConfigurable.selectionTab": "1",
     "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
@@ -31,6 +31,7 @@
     "idea.islands.enabled": "true",
     "installed.kotlin.plugin.version": "252.23892.409-IJ",
     "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "llm.jupyter.promote.first.show.timestamp": "1755157357763",
     "migrated.non.roamable.values.from.general.settings": "true",
     "previousColorScheme": "_@user_Solarized Dark",
     "registry.to.advanced.settings.migration.build": "IU-252.23892.409",
