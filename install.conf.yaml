@@ -1,26 +1,26 @@
 - shell:
     - description: "Copying dotfiles using install.sh (no symlinks)"
       command: bash ./scripts/copy_configs.sh
-      stdout: true
+      stdout: false
       stderr: true
       quiet: false
     - description: "Installing Homebrew packages"
       command: bash ./scripts/install_brew_packages.sh
-      stdout: true
+      stdout: false
       stderr: true
       quiet: false
     - description: "Installing asdf plugins"
       command: bash ./scripts/install_asdf_plugins.sh
-      stdout: true
+      stdout: false
       stderr: true
       quiet: false
     - description: "Installing IntelliJ IDEA configuration"
       command: bash ./scripts/install_intellij_config.sh
-      stdout: true
+      stdout: false
       stderr: true
       quiet: false
     - description: "Installing iTerm2 configuration"
       command: bash ./scripts/install_iterm2_config.sh
-      stdout: true
+      stdout: false
       stderr: true
       quiet: false

@@ -19,7 +19,7 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "intellij" "iterm2")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "intellij" "iterm2" "env")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
@@ -183,6 +183,53 @@ for tool in "${TOOLS[@]}"; do
       # Export current iTerm2 profile as JSON for easier version control
       echo "📋 Exporting iTerm2 profiles as JSON"
       /usr/libexec/PlistBuddy -x -c "Print" "$HOME/Library/Preferences/com.googlecode.iterm2.plist" > "$dst/iterm2_preferences.xml" 2>/dev/null || echo "# Could not export preferences" > "$dst/iterm2_preferences.xml"
+
+      continue
+      ;;
+    env)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+
+      # Backup .env files from multiple locations
+      if [ -f "$HOME/.env" ]; then
+        echo "📋 Backing up .env from home directory"
+        cp "$HOME/.env" "$dst/home.env"
+      fi
+
+      # Create a template .env file for documentation
+      cat > "$dst/template.env" << 'EOF'
+# Environment Variables Template
+# Copy this to ~/.env or $SHELL_BACKUP_DIR/.env and customize
+
+# Example variables:
+# OPENAI_API_KEY=your_api_key_here
+# AWS_PROFILE=your_default_profile
+# GITHUB_TOKEN=your_github_token
+# NODE_ENV=development
+EOF
+
+      # Create a README for the env directory
+      cat > "$dst/README.md" << 'EOF'
+# Environment Variables
+
+This directory contains environment variable configurations.
+
+## Files:
+- `template.env`: Template with example variables
+- `home.env`: Backup of ~/.env (if exists)
+
+## Usage:
+1. Copy `template.env` to `~/.env` or `$SHELL_BACKUP_DIR/.env`
+2. Customize with your actual values
+3. The Fish shell will automatically load these variables on startup
+
+## Security Note:
+- Never commit actual API keys or secrets
+- Use placeholder values in templates
+- Consider using a password manager for sensitive values
+EOF
 
       continue
       ;;

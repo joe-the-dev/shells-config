@@ -1,8 +1,13 @@
+if test -f $HOME/.env
+    bass source $HOME/.env
+end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
 eval (/opt/homebrew/bin/brew shellenv)
+eval (direnv hook fish)
 #eval (env _AWS_COMPLETE=fish_source aws)
 source (brew --prefix asdf)/libexec/asdf.fish
 set fish_greeting
@@ -118,4 +123,31 @@ function upgrade-all
         omf update
     end
     echo 'All upgrades complete.'
+end
+
+function backup
+    set -l backup_script "$SHELL_BACKUP_DIR/backup.sh"
+
+    if not test -f "$backup_script"
+        echo "❌ ERROR: backup.sh not found at $backup_script"
+        return 1
+    end
+
+    echo "🚀 Running backup script..."
+
+    # Check if --sync flag is provided
+    if contains -- --sync $argv
+        echo "🔄 Running with git sync enabled"
+        bash "$backup_script" --sync
+    else
+        echo "📦 Running backup without git sync"
+        bash "$backup_script"
+    end
+
+    if test $status -eq 0
+        echo "✅ Backup completed successfully!"
+    else
+        echo "❌ Backup failed with exit code $status"
+        return $status
+    end
 end

@@ -7,10 +7,10 @@
       <i c="2" l="1754624661212" />
     </e>
     <e n="$SelectAll">
-      <i c="22" l="1754639789097" />
+      <i c="25" l="1755674605329" />
     </e>
     <e n="$Undo">
-      <i c="16" l="1754638853958" />
+      <i c="19" l="1755673469425" />
     </e>
     <e n="ChangesView.Revert">
       <i c="23" l="1754639877972" />
@@ -22,58 +22,58 @@
       <i c="1" l="1754470025928" />
     </e>
     <e n="EditorBackSpace">
-      <i c="405" l="1755157035393" />
+      <i c="462" l="1755674604655" />
     </e>
     <e n="EditorCopy">
-      <i c="20" l="1755156543568" />
+      <i c="25" l="1755673532042" />
     </e>
     <e n="EditorCut">
-      <i c="3" l="1754640739087" />
+      <i c="4" l="1755673428927" />
     </e>
     <e n="EditorDeleteToWordStart">
-      <i c="88" l="1755157025611" />
+      <i c="105" l="1755674634269" />
     </e>
     <e n="EditorDown">
-      <i c="20" l="1754639641138" />
+      <i c="26" l="1755591619397" />
     </e>
     <e n="EditorDuplicate">
       <i c="2" l="1754624681532" />
     </e>
     <e n="EditorEnter">
-      <i c="14" l="1755156988006" />
+      <i c="18" l="1755673438457" />
     </e>
     <e n="EditorEscape">
-      <i c="205" l="1755156988184" />
+      <i c="275" l="1755674629832" />
     </e>
     <e n="EditorNextWord">
-      <i c="26" l="1755156982773" />
+      <i c="50" l="1755674633582" />
     </e>
     <e n="EditorNextWordWithSelection">
       <i c="7" l="1754454401571" />
     </e>
     <e n="EditorPaste">
-      <i c="48" l="1755156544826" />
+      <i c="54" l="1755673438816" />
     </e>
     <e n="EditorPreviousWord">
-      <i c="22" l="1755156511267" />
+      <i c="37" l="1755674633893" />
     </e>
     <e n="EditorPreviousWordWithSelection">
       <i c="3" l="1754640738503" />
     </e>
     <e n="EditorTab">
-      <i c="1" l="1754455545452" />
+      <i c="2" l="1755669003659" />
     </e>
     <e n="EditorUnindentSelection">
       <i c="12" l="1754624023938" />
     </e>
     <e n="EditorUp">
-      <i c="14" l="1754455629058" />
+      <i c="16" l="1755674633355" />
     </e>
     <e n="Find">
-      <i c="17" l="1754640604246" />
+      <i c="26" l="1755673527054" />
     </e>
     <e n="FindInPath">
-      <i c="2" l="1754641956800" />
+      <i c="4" l="1755590794070" />
     </e>
     <e n="GotoDeclaration">
       <i c="1" l="1754638899080" />
@@ -86,6 +86,9 @@
     </e>
     <e n="IdeaVim.ReloadVimRc.reload">
       <i c="2" l="1754624666098" />
+    </e>
+    <e n="InsertInlineCompletionAction">
+      <i c="1" l="1755590737234" />
     </e>
     <e n="NewFile">
       <i c="1" l="1754451782920" />
@@ -100,16 +103,25 @@
       <i c="1" l="1754640709034" />
     </e>
     <e n="SaveAll">
-      <i c="874" l="1755586624237" />
+      <i c="1073" l="1755674641823" />
     </e>
     <e n="SearchEverywhere">
-      <i c="10" l="1755157356530" />
+      <i c="15" l="1755674600554" />
     </e>
     <e n="SettingsEntryPoint">
       <i c="1" l="1754465236260" />
     </e>
+    <e n="ShowIntentionActions">
+      <i c="1" l="1755668864451" />
+    </e>
     <e n="Terminal.CopySelectedText">
-      <i c="2" l="1754640340974" />
+      <i c="5" l="1755673699884" />
+    </e>
+    <e n="Terminal.Escape">
+      <i c="1" l="1755673362567" />
+    </e>
+    <e n="Terminal.NewTab">
+      <i c="2" l="1755591727086" />
     </e>
     <e n="TextEditorWithPreview.Layout.EditorAndPreview">
       <i c="1" l="1754625124009" />
@@ -148,19 +160,19 @@
       <i c="3" l="1754638228374" />
     </e>
     <e n="com.github.copilot.chat.message.codeblock.CopyCodeBlockAction">
-      <i c="1" l="1754459879755" />
+      <i c="3" l="1755668882499" />
     </e>
     <e n="com.github.copilot.chat.window.actions.ConversationHistoryAction">
       <i c="1" l="1754449944735" />
     </e>
     <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
-      <i c="17" l="1754640606246" />
+      <i c="24" l="1755673530248" />
     </e>
     <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
-      <i c="7" l="1754635747434" />
+      <i c="17" l="1755591688269" />
     </e>
     <e n="com.intellij.find.impl.FindPopupPanel$MyEnterAction">
-      <i c="2" l="1754641958785" />
+      <i c="3" l="1755590761240" />
     </e>
     <e n="com.intellij.find.impl.FindPopupPanel$MySelectScopeToggleAction">
       <i c="2" l="1754640474530" />
@@ -175,13 +187,13 @@
       <i c="1" l="1754447681267" />
     </e>
     <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
-      <i c="149" l="1755156987505" />
+      <i c="186" l="1755674633354" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
       <i c="85" l="1755586530713" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="18" l="1755157361939" />
+      <i c="24" l="1755674607847" />
     </e>
     <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
       <i c="5" l="1754639718158" />
@@ -193,22 +205,28 @@
       <i c="1" l="1754465237420" />
     </e>
     <e n="com.intellij.openapi.vcs.ex.LocalLineStatusTrackerImpl$LocalLineStatusMarkerRenderer$RollbackLineStatusRangeAction">
-      <i c="3" l="1754638784816" />
+      <i c="6" l="1755592130327" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="20" l="1755156446068" />
+      <i c="22" l="1755668984403" />
     </e>
     <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
-      <i c="99" l="1755586591883" />
+      <i c="130" l="1755674597892" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
-      <i c="11" l="1754640877240" />
+      <i c="12" l="1755673466009" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
       <i c="3" l="1754638840162" />
     </e>
     <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
-      <i c="3" l="1755157361559" />
+      <i c="7" l="1755591596273" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveDownAction">
+      <i c="2" l="1755590759800" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveUpAction">
+      <i c="1" l="1755590760878" />
     </e>
     <e n="com.intellij.ui.content.tabs.TabbedContentAction$CloseAllAction">
       <i c="1" l="1754640300117" />

@@ -276,7 +276,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>407 1437 800 448 -153 982 1920 1055 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>216 560 585 383 0 0 1512 944 </string>
+	<string>-963 1509 570 383 -1080 0 1080 1895 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3381,7 +3381,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-08-19T02:18:06Z</date>
+	<date>2025-08-20T02:27:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Scroll wheel sends arrow keys in alternate screen mode</key>
