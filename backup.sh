@@ -19,7 +19,7 @@ fi
 echo "📦 Backing up config files into $REPO_DIR"
 
 # Define each config you want to back up
-TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "intellij" "iterm2" "env")
+TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "brew" "intellij" "iterm2" "env")
 
 for tool in "${TOOLS[@]}"; do
   case "$tool" in
@@ -106,6 +106,22 @@ for tool in "${TOOLS[@]}"; do
       # Copy global gitignore file from home directory
       if [ -f "$HOME/.gitignore_global" ]; then
         cp "$HOME/.gitignore_global" "$dst/"
+      fi
+      continue
+      ;;
+    brew)
+      dst="$REPO_DIR/$tool"
+      echo "🔄 Backing up $tool config files → $dst"
+      rm -rf "$dst"
+      mkdir -p "$dst"
+      # Generate Brewfile with all installed packages, casks, and taps
+      if command -v brew >/dev/null 2>&1; then
+        echo "📋 Generating Brewfile with all installed packages"
+        brew bundle dump --file="$dst/Brewfile" --force
+        echo "✅ Brewfile generated with $(grep -c '^brew\|^cask\|^tap\|^mas' "$dst/Brewfile") entries"
+      else
+        echo "⚠️  Homebrew not found, skipping brew backup"
+        echo "# Homebrew not installed" > "$dst/Brewfile"
       fi
       continue
       ;;

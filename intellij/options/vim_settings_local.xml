@@ -433,29 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="11" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="114" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="134" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="128" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="125" column="27" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="126" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="59" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="56" column="66" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="14" column="52" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="16" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="129" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="29" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/copy_configs.sh" protocol="file" />
-      <jump line="0" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/omf/bundle" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/omf/bundle" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_omf_config.sh" protocol="file" />
-      <jump line="32" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="9" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="13" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" protocol="file" />
-      <jump line="95" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="89" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="99" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="108" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="119" column="25" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="109" column="46" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -482,7 +459,6 @@
       <jump line="19" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
       <jump line="123" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="10" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="21" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="24" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="192" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="14" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -521,7 +497,6 @@
       <jump line="33" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="9" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="17" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="3" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="8" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="253" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="128" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -533,38 +508,42 @@
       <jump line="22" column="40" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="23" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="18" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="3" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="5" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="19" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="26" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/home.env" protocol="file" />
+      <jump line="15" column="11" filename="$USER_HOME$/Documents/Playground/shells-config/env/home.env" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="12" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="32" column="24" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="25" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="268" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="14" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="116" column="37" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="32" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="16" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="9" column="9" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="4" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="10" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="21" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="101" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="27" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" protocol="file" />
+      <jump line="35" column="38" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="75" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_omf_config.sh" timestamp="1755156441820">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/.ideavimrc" timestamp="1755586529703">
-        <mark key="&quot;" line="157" column="17" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/backup.sh" timestamp="1755156442683">
-        <mark key="&quot;" line="9" column="1" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/gitconfig/.gitignore_global" timestamp="1755590756932">
-        <mark key="&quot;" line="178" column="5" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/omf/bundle" timestamp="1755156444992">
-        <mark key="&quot;" line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/src/dotbot/dispatcher.py" timestamp="1755590798755">
-        <mark key="&quot;" line="31" column="20" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" timestamp="1755675354682">
+        <mark key="&quot;" line="148" column="13" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1755674630009">
         <mark key="&quot;" line="17" column="31" />
         <mark key="[" line="23" column="17" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/lib/pyyaml/lib/yaml/scanner.py" timestamp="1755590756425">
-        <mark key="&quot;" line="367" column="28" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1755590794773">
-        <mark key="&quot;" line="0" column="10" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/options/vim_settings_local.xml" timestamp="1755590799724">
         <mark key="&quot;" line="443" column="107" />
@@ -575,14 +554,6 @@
         <mark key="^" line="17" column="26" />
         <mark key="." line="17" column="25" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_intellij_config.sh" timestamp="1755156457437">
-        <mark key="&quot;" line="16" column="32" />
-        <mark key="'" line="1" column="16" />
-        <mark key="[" line="49" column="20" />
-        <mark key="]" line="49" column="20" />
-        <mark key="." line="49" column="19" />
-        <mark key="^" line="49" column="20" />
-      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1755673437886">
         <mark key="&quot;" line="129" column="0" />
         <mark key="[" line="8" column="37" />
@@ -590,23 +561,44 @@
         <mark key="." line="147" column="24" />
         <mark key="^" line="147" column="25" />
       </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1755675355085">
+        <mark key="&quot;" line="1" column="3" />
+      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/macos/mac_init.sh" timestamp="1755590796367">
         <mark key="&quot;" line="4" column="28" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/lib/pyyaml/lib/_yaml/__init__.py" timestamp="1755590756306">
         <mark key="&quot;" line="29" column="33" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/plugins.txt" timestamp="1755586530040">
-        <mark key="&quot;" line="2" column="0" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1755586530249">
+        <mark key="&quot;" line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/LICENSE" timestamp="1755675354972">
+        <mark key="&quot;" line="4" column="58" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/gitconfig/.gitignore_global" timestamp="1755590756932">
+        <mark key="&quot;" line="178" column="5" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_brew_packages.sh" timestamp="1755675361801">
+        <mark key="&quot;" line="10" column="47" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/src/dotbot/dispatcher.py" timestamp="1755590798755">
+        <mark key="&quot;" line="31" column="20" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/lib/pyyaml/lib/yaml/scanner.py" timestamp="1755590756425">
+        <mark key="&quot;" line="367" column="28" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1755590794773">
+        <mark key="&quot;" line="0" column="10" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/copy_configs.sh" timestamp="1755675367070">
+        <mark key="&quot;" line="8" column="9" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/.env.template" timestamp="1755591616026">
         <mark key="[" line="22" column="6" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/README.md" timestamp="1755156441275">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1755586530249">
-        <mark key="&quot;" line="1" column="0" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/README.md" timestamp="1755675362431">
+        <mark key="&quot;" line="45" column="45" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/src/dotbot/util/common.py" timestamp="1755590756741">
         <mark key="&quot;" line="19" column="27" />
