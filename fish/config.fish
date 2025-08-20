@@ -151,3 +151,8 @@ function backup
         return $status
     end
 end
+
+# Load FZF configurations and functions
+if test -f ~/.config/fish/fzf.fish
+    source ~/.config/fish/fzf.fish
+end
