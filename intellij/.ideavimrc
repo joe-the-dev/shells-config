@@ -16,9 +16,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Line numbers
-set number
-set relativenumber
 
 " Better editing experience
 set clipboard+=unnamed
@@ -168,13 +165,4 @@ set notimeout
 "" Custom Functions
 "" ============================================================================
 
-" Toggle between relative and absolute line numbers
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <leader>ln :call NumberToggle()<CR>
+

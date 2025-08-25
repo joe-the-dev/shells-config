@@ -156,3 +156,8 @@ end
 if test -f ~/.config/fish/fzf.fish
     source ~/.config/fish/fzf.fish
 end
+
+# Load PECO configurations and functions
+if test -f ~/.config/fish/peco.fish
+    source ~/.config/fish/peco.fish
+end

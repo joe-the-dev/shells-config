@@ -433,29 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="108" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="119" column="25" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="109" column="46" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="110" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/plugins.txt" protocol="file" />
-      <jump line="4" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
-      <jump line="16" column="11" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
-      <jump line="36" column="0" filename="$USER_HOME$/.ideavimrc" protocol="file" />
-      <jump line="157" column="17" filename="$USER_HOME$/.ideavimrc" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/plugins.txt" protocol="file" />
-      <jump line="121" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="44" column="26" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" protocol="file" />
-      <jump line="135" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" protocol="file" />
-      <jump line="174" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
-      <jump line="122" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="129" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="133" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="52" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="63" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="9" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/setup_env.sh" protocol="file" />
       <jump line="19" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
       <jump line="123" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="10" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -480,7 +457,6 @@
       <jump line="30" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
       <jump line="225" column="41" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="16" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="0" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="3" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="2" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="1" column="9" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -493,14 +469,12 @@
       <jump line="8" column="37" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="141" column="35" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="12" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="152" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="33" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="9" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="17" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="8" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="253" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="128" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="126" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/template.env" protocol="file" />
       <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/template.env" protocol="file" />
       <jump line="13" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
@@ -527,51 +501,48 @@
       <jump line="9" column="9" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="4" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="10" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="21" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="101" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="27" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" protocol="file" />
       <jump line="35" column="38" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="75" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/run_backup.sh" protocol="file" />
+      <jump line="74" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="37" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
+      <jump line="21" column="90" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="158" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="37" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="10" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="126" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="356" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="397" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="146" column="28" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="152" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="151" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="42" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="154" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="153" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
+      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
+      <jump line="284" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
+      <jump line="311" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
+      <jump line="302" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" protocol="file" />
+      <jump line="159" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
+      <jump line="16" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" timestamp="1755675354682">
-        <mark key="&quot;" line="148" column="13" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" timestamp="1755675739244">
+        <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1755674630009">
-        <mark key="&quot;" line="17" column="31" />
-        <mark key="[" line="23" column="17" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/options/vim_settings_local.xml" timestamp="1755590799724">
-        <mark key="&quot;" line="443" column="107" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/setup_env.sh" timestamp="1755590799884">
-        <mark key="&quot;" line="8" column="24" />
-        <mark key="]" line="17" column="26" />
-        <mark key="^" line="17" column="26" />
-        <mark key="." line="17" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1755673437886">
-        <mark key="&quot;" line="129" column="0" />
-        <mark key="[" line="8" column="37" />
-        <mark key="]" line="147" column="25" />
-        <mark key="." line="147" column="24" />
-        <mark key="^" line="147" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1755675355085">
-        <mark key="&quot;" line="1" column="3" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/macos/mac_init.sh" timestamp="1755590796367">
-        <mark key="&quot;" line="4" column="28" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/lib/pyyaml/lib/_yaml/__init__.py" timestamp="1755590756306">
-        <mark key="&quot;" line="29" column="33" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1755586530249">
-        <mark key="&quot;" line="1" column="0" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/run_backup.sh" timestamp="1755675720120">
+        <mark key="&quot;" line="2" column="0" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/LICENSE" timestamp="1755675354972">
         <mark key="&quot;" line="4" column="58" />
@@ -582,14 +553,36 @@
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_brew_packages.sh" timestamp="1755675361801">
         <mark key="&quot;" line="10" column="47" />
       </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" timestamp="1755675354682">
+        <mark key="&quot;" line="148" column="13" />
+      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/src/dotbot/dispatcher.py" timestamp="1755590798755">
         <mark key="&quot;" line="31" column="20" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/lib/pyyaml/lib/yaml/scanner.py" timestamp="1755590756425">
-        <mark key="&quot;" line="367" column="28" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1755674630009">
+        <mark key="&quot;" line="17" column="31" />
+        <mark key="[" line="23" column="17" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1755590794773">
         <mark key="&quot;" line="0" column="10" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/options/vim_settings_local.xml" timestamp="1755590799724">
+        <mark key="&quot;" line="443" column="107" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/setup_env.sh" timestamp="1755590799884">
+        <mark key="&quot;" line="8" column="24" />
+        <mark key="]" line="17" column="26" />
+        <mark key="^" line="17" column="26" />
+        <mark key="." line="17" column="25" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" timestamp="1755676370478">
+        <mark key="'" line="2" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1755675355085">
+        <mark key="&quot;" line="1" column="3" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/macos/mac_init.sh" timestamp="1755590796367">
+        <mark key="&quot;" line="4" column="28" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/copy_configs.sh" timestamp="1755675367070">
         <mark key="&quot;" line="8" column="9" />
@@ -599,9 +592,6 @@
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/README.md" timestamp="1755675362431">
         <mark key="&quot;" line="45" column="45" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/dotbot/src/dotbot/util/common.py" timestamp="1755590756741">
-        <mark key="&quot;" line="19" column="27" />
       </file>
     </localmarks>
   </component>
@@ -652,7 +642,7 @@
     <search>
       <last-offset encoding="base64" />
       <last-dir encoding="base64">MQ==</last-dir>
-      <show-last encoding="base64">ZmFsc2U=</show-last>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
     </search>
   </component>
   <component name="VimVariables">

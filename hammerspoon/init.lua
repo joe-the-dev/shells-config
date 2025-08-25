@@ -4,6 +4,7 @@ local VIETNAMESE = "com.apple.inputmethod.VietnameseIM.VietnameseVNI"
 local inputSources = {
     ["com.google.Chrome"] = VIETNAMESE,
     ["com.jetbrains.intellij"] = ENGLISH,
+    ["com.jetbrains.WebStorm"] = ENGLISH,
     ["com.googlecode.iterm2"] = ENGLISH,
     ["com.microsoft.VSCode"] = ENGLISH,
     ["com.jetbrains.datagrip"] = ENGLISH,
