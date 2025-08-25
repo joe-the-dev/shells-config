@@ -13,6 +13,7 @@ javascript-debugger
 javascript-plugin
 jupyter-plugin
 karma
+makefile
 microservices-ui
 notebooks-plugin
 packageChecker

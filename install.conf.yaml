@@ -1,26 +1,56 @@
 - shell:
-    - description: "Copying dotfiles using install.sh (no symlinks)"
-      command: bash ./scripts/copy_configs.sh
-      stdout: false
+    # Option 1: Install everything at once
+    - description: "Installing all configurations using Makefile"
+      command: make install
+      stdout: true
       stderr: true
       quiet: false
-    - description: "Installing Homebrew packages"
-      command: bash ./scripts/install_brew_packages.sh
-      stdout: false
-      stderr: true
-      quiet: false
-    - description: "Installing asdf plugins"
-      command: bash ./scripts/install_asdf_plugins.sh
-      stdout: false
-      stderr: true
-      quiet: false
-    - description: "Installing IntelliJ IDEA configuration"
-      command: bash ./scripts/install_intellij_config.sh
-      stdout: false
-      stderr: true
-      quiet: false
-    - description: "Installing iTerm2 configuration"
-      command: bash ./scripts/install_iterm2_config.sh
-      stdout: false
-      stderr: true
-      quiet: false
+
+    # Option 2: Install specific components individually (uncomment as needed)
+    # - description: "Check dependencies first"
+    #   command: make check-deps
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Copy configuration files only"
+    #   command: make copy-configs
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Install Homebrew packages only"
+    #   command: make brew
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Install asdf plugins only"
+    #   command: make asdf
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Setup IntelliJ IDEA only"
+    #   command: make intellij
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Setup iTerm2 only"
+    #   command: make iterm2
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Setup Oh My Fish only"
+    #   command: make omf
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
+
+    # - description: "Setup environment variables only"
+    #   command: make env
+    #   stdout: true
+    #   stderr: true
+    #   quiet: false
