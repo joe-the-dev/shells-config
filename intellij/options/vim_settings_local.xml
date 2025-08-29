@@ -493,7 +493,6 @@
       <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" protocol="file" />
       <jump line="168" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" protocol="file" />
-      <jump line="159" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="5" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
       <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" protocol="file" />
       <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/template.env" protocol="file" />
@@ -531,8 +530,9 @@
       <jump line="310" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="32" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="7" column="55" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="6" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="14" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="6" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
+      <jump line="159" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
@@ -544,11 +544,14 @@
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" timestamp="1755675739244">
         <mark key="&quot;" line="0" column="0" />
       </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/backup.sh" timestamp="1756174163525">
+        <mark key="&quot;" line="151" column="33" />
+      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/run_backup.sh" timestamp="1755675720120">
         <mark key="&quot;" line="2" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" timestamp="1755675354682">
-        <mark key="&quot;" line="148" column="13" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1756174163509">
+        <mark key="&quot;" line="6" column="17" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/env/template.env" timestamp="1756108261739">
         <mark key="&quot;" line="8" column="0" />
@@ -563,23 +566,23 @@
         <mark key="&quot;" line="302" column="17" />
         <mark key="'" line="2" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1756108258616">
-        <mark key="&quot;" line="159" column="0" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1756174163515">
+        <mark key="&quot;" line="141" column="7" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1755675355085">
-        <mark key="&quot;" line="1" column="3" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1756174163524">
+        <mark key="&quot;" line="11" column="14" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1756108256194">
         <mark key="&quot;" line="2" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/LICENSE" timestamp="1755675354972">
-        <mark key="&quot;" line="4" column="58" />
+      <file name="/Dummy.txt" timestamp="1756174163736">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/env/home.env" timestamp="1756174163522">
+        <mark key="&quot;" line="2" column="0" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" timestamp="1756108258080">
         <mark key="&quot;" line="168" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/install_brew_packages.sh" timestamp="1755675361801">
-        <mark key="&quot;" line="10" column="47" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" timestamp="1756108254089">
         <mark key="&quot;" line="16" column="25" />
@@ -587,14 +590,18 @@
       <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" timestamp="1756108260679">
         <mark key="&quot;" line="1" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/copy_configs.sh" timestamp="1755675367070">
-        <mark key="&quot;" line="8" column="9" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1756174163527">
+        <mark key="&quot;" line="37" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/README.md" timestamp="1755675362431">
-        <mark key="&quot;" line="45" column="45" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/.env.template" timestamp="1756174163528">
+        <mark key="&quot;" line="30" column="0" />
+        <mark key="[" line="22" column="6" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" timestamp="1756108257093">
         <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/Makefile" timestamp="1756174163519">
+        <mark key="&quot;" line="7" column="55" />
       </file>
     </localmarks>
   </component>
