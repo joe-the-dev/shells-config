@@ -67,15 +67,18 @@ _copy-hammerspoon:
 _copy-brew:
 	@if [ -f "brew/Brewfile" ]; then \
 		echo "🍺 Copying Brewfile..."; \
+		rm -f "$$HOME/.Brewfile"; \
 		cp "brew/Brewfile" "$$HOME/.Brewfile"; \
 	fi
 
 _copy-asdf:
 	@if [ -f "asdf/.asdfrc" ]; then \
 		echo "🔧 Copying asdf config..."; \
+		rm -f "$$HOME/.asdfrc"; \
 		cp "asdf/.asdfrc" "$$HOME/.asdfrc"; \
 	fi
 	@if [ -f "asdf/.tool-versions" ]; then \
+	    rm -f "$$HOME/.tool-versions"; \
 		cp "asdf/.tool-versions" "$$HOME/.tool-versions"; \
 	fi
 
@@ -222,7 +225,7 @@ iterm2:
 	fi
 	@if pgrep -x "iTerm2" > /dev/null; then \
 		echo "⚠️  iTerm2 is currently running. Please close it first."; \
-		exit 1; \
+		exit 0; \
 	fi
 	@if [ -f "iterm2/com.googlecode.iterm2.plist" ]; then \
 		echo "📋 Restoring iTerm2 preferences..."; \
