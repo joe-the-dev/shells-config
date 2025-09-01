@@ -21,6 +21,11 @@ set -l asdf_dir ~/.asdf
 # Add Homebrew to PATH
 set -x PATH $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin $PATH
 
+# Add JetBrain to PATH if directory exists
+if test -d $HOME/jetbrain
+    set -x PATH $HOME/jetbrain $PATH
+end
+
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
