@@ -1,5 +1,4 @@
 
-export PATH="$HOME/jetbrain:$PATH"
 #AWSume alias to source the AWSume script
 alias awsume="source awsume"
 
