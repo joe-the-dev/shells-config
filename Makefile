@@ -1,10 +1,10 @@
-.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains
+.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains update
 
 # Default target
 all: install
 
 # Main installation target
-install: check-deps copy-configs brew asdf jetbrains iterm2 omf env
+install: update check-deps copy-configs brew asdf jetbrains iterm2 omf env
 	@echo "🎉 All configurations installed successfully!"
 
 # Help target
@@ -12,6 +12,7 @@ help:
 	@echo "Available targets:"
 	@echo "  all              - Install all configurations (default)"
 	@echo "  install          - Same as 'all'"
+	@echo "  update           - Update git repository"
 	@echo "  copy-configs     - Copy dotfiles to home directory"
 	@echo "  brew             - Install Homebrew packages"
 	@echo "  asdf             - Install asdf plugins and tools"
@@ -280,7 +281,7 @@ omf:
 		while IFS= read -r package || [ -n "$$package" ]; do \
 			[[ -z "$$package" || "$$package" =~ ^[[:space:]]*# ]] && continue; \
 			echo "🔌 Installing OMF package: $$package"; \
-			fish -c "omf install $$package" || echo "⚠️  Failed to install $$package"; \
+			fish -c "omf install $$package" || echo "⚠���  Failed to install $$package"; \
 		done < "omf/bundle"; \
 	fi
 	@if [ -f "omf/theme" ]; then \
@@ -447,3 +448,26 @@ clean:
 	@find . -name "*.tmp" -delete 2>/dev/null || true
 	@find . -name ".DS_Store" -delete 2>/dev/null || true
 	@echo "✅ Cleanup complete!"
+
+# Update git repository and submodules
+update:
+	@echo "📥 Updating repository from remote..."
+	@if git rev-parse --git-dir > /dev/null 2>&1; then \
+		CURRENT_BRANCH=$$(git branch --show-current); \
+		if [[ "$$CURRENT_BRANCH" != "main" ]]; then \
+			echo "🔀 Switching from $$CURRENT_BRANCH to main branch"; \
+			git checkout main || { \
+				echo "❌ Failed to switch to main branch"; \
+				echo "💡 Continuing with current branch: $$CURRENT_BRANCH"; \
+			}; \
+		fi; \
+		echo "⬇️  Pulling latest changes from origin/main..."; \
+		if git pull origin main; then \
+			echo "✅ Repository updated successfully"; \
+		else \
+			echo "⚠️  Failed to pull from origin main, continuing with local version"; \
+			echo "💡 You may want to resolve this manually later"; \
+		fi; \
+	else \
+		echo "ℹ️  Not a git repository, skipping update"; \
+	fi
