@@ -1,347 +1,247 @@
-# 🔧 Joe-The-Dev's Development Environment Configuration
+# 🛠️ Development Environment Configuration
 
-A comprehensive dotfiles management system using [dotbot](https://github.com/anishathalye/dotbot) to backup, version, and restore development environment configurations across macOS machines.
+A comprehensive configuration management system for macOS development environments, supporting automatic backup and restoration of all your development tools.
 
 ## 🚀 Quick Start
 
 ### New Machine Setup
 ```bash
-git clone --recurse-submodules <your-repo-url>
+git clone <your-repo-url>
 cd shells-config
-./install.sh
+make install
 ```
 
-### Backup Current Configuration
+### Daily Usage
 ```bash
-# Backup configs to repository
-./backup.sh
-
-# Backup and sync to git automatically
-./backup.sh --sync
+make backup          # Save your current configurations
+make restore         # Restore all configurations
+make help           # See all available commands
 ```
 
-## 📁 What's Included
+## 📦 Supported Tools
 
-This configuration manages the following tools and their settings:
+This configuration system manages settings for:
 
-### 🖥️ Terminal & Shell
-- **🐚 Fish Shell** - Modern shell with auto-suggestions and syntax highlighting
-- **⚡ Oh My Fish (OMF)** - Fish shell framework and theme manager
-- **🐚 Bash** - Traditional shell with custom `.bashrc` configuration
-- **⚡ Zsh** - Z shell with custom `.zshrc` configuration
-- **📺 iTerm2** - Terminal emulator with profiles, colors, and preferences
-
-### 🛠️ Development Tools
-- **📝 Neovim** - Modern Vim-based editor with LSP support
-- **🧠 IntelliJ IDEA** - IDE configuration including:
-  - Code styles (2-space indentation)
-  - IdeaVim configuration (`.ideavimrc`)
-  - Plugins and preferences
-  - JVM options
-- **🔀 asdf** - Version manager for multiple programming languages
-
-### ⚙️ System & Productivity
-- **⌨️ Karabiner-Elements** - Keyboard customization for macOS
+- **🐟 Fish Shell** - Modern shell with excellent autocomplete
+- **⚡ Neovim** - Vim-based text editor configuration
+- **🐟 Oh My Fish (OMF)** - Fish shell framework and themes
+- **⌨️ Karabiner** - Keyboard customization for macOS
 - **🔨 Hammerspoon** - macOS automation and window management
-- **🍺 Homebrew** - Package manager with Brewfile for dependencies
+- **🔧 ASDF** - Version manager for multiple languages
+- **🐚 Bash/Zsh** - Traditional shell configurations
+- **📝 Git** - Global git configuration and aliases
+- **🍺 Homebrew** - Package manager with complete Brewfile
+- **🧠 JetBrains IDEs** - IntelliJ IDEA, PyCharm, WebStorm, DataGrip, etc.
+- **🖥️ iTerm2** - Terminal emulator preferences and profiles
+- **🔐 Environment Variables** - Secure .env template management
 
-### 🔧 Git & Version Control
-- **📋 Git Configuration** - Global git settings (`.gitconfig`)
-- **🚫 Global Gitignore** - Universal ignore patterns (`.gitignore_global`)
+## 🎯 Available Commands
 
-## 🏗️ Project Structure
+### Installation
+- `make install` or `make` - Install all configurations (recommended)
+- `make update` - Update git repository to latest version
+- `make copy-configs` - Copy dotfiles to home directory only
+
+### Individual Components
+- `make brew` - Install Homebrew packages from Brewfile
+- `make asdf` - Install asdf plugins and language versions
+- `make jetbrains` - Setup JetBrains IDEs configurations
+- `make iterm2` - Install iTerm2 preferences and profiles
+- `make omf` - Setup Oh My Fish with themes and packages
+- `make env` - Setup environment variables template
+
+### Backup & Restore
+- `make backup` - Backup all current configurations to repository
+- `make restore` - Restore all configurations from backup
+- `make restore-jetbrains` - Restore only JetBrains IDEs configurations
+
+### Maintenance
+- `make check-deps` - Verify required dependencies are installed
+- `make upgrade-deps` - Update all package managers and tools
+- `make clean` - Remove temporary files and caches
+- `make help` - Show detailed help for all commands
+
+## 🧠 JetBrains IDEs Support
+
+### Supported IDEs
+- IntelliJ IDEA
+- PyCharm 
+- WebStorm
+- PhpStorm
+- CLion
+- GoLand
+- RubyMine
+- DataGrip
+- Rider
+
+### What's Backed Up
+- **Code Styles** - Custom formatting rules
+- **IDE Options** - All IDE preferences and settings
+- **Keymaps** - Custom keyboard shortcuts
+- **Color Schemes** - Custom themes and syntax highlighting
+- **File Templates** - Custom file and code templates
+- **Plugin Lists** - Installed plugins (for manual re-installation)
+- **VM Options** - JVM settings and performance tuning
+- **IdeaVim Config** - Vim emulation settings (`.ideavimrc`)
+
+### Usage
+```bash
+# Backup all JetBrains IDEs
+make backup
+
+# Restore all JetBrains IDEs  
+make restore-jetbrains
+
+# Or restore everything
+make restore
+```
+
+## 📂 Directory Structure
 
 ```
 shells-config/
-├── install.sh                    # Main installation script
-├── backup.sh                     # Backup current configs to repo
-├── install.conf.yaml             # Dotbot configuration
-├── fish/                         # Fish shell configuration
-├── nvim/                         # Neovim configuration  
-├── omf/                          # Oh My Fish configuration
-├── bash/                         # Bash shell configuration
-│   └── .bashrc                   # Bash settings and aliases
-├── zsh/                          # Zsh shell configuration
-│   └── .zshrc                    # Zsh settings and aliases
-├── gitconfig/                    # Git configuration
-│   ├── .gitconfig                # Global git settings
-│   └── .gitignore_global         # Global ignore patterns
-├── intellij/                     # IntelliJ IDEA configuration
-│   ├── .ideavimrc                # IdeaVim settings
-│   ├── codestyles/               # Code formatting (2-space indent)
-│   ├── options/                  # IDE preferences
-│   └── idea.vmoptions            # JVM options
-├── iterm2/                       # iTerm2 configuration
-│   ├── com.googlecode.iterm2.plist   # Profiles and preferences
-│   ├── DynamicProfiles/          # Custom profiles
-│   └── Scripts/                  # Automation scripts
-├── karabiner/                    # Karabiner-Elements settings
-├── hammerspoon/                  # Hammerspoon scripts
-├── brew/                         # Homebrew Brewfile
-├── asdf/                         # asdf configuration
-│   ├── .asdfrc                   # asdf settings
-│   ├── .tool-versions            # Global tool versions
-│   └── plugins.txt               # List of installed plugins
-├── scripts/                      # Installation scripts
-│   ├── install_brew_packages.sh
-│   ├── install_asdf_plugins.sh
-│   ├── install_intellij_config.sh
-│   └── install_iterm2_config.sh
-└── dotbot/                       # Dotbot submodule
+├── backup.sh              # Comprehensive backup script
+├── Makefile               # Main installation and management system
+├── README.md              # This documentation
+│
+├── asdf/                  # ASDF version manager
+│   ├── .asdfrc           # ASDF configuration
+│   ├── .tool-versions    # Language versions
+│   └── plugins.txt       # Installed plugins list
+│
+├── bash/                  # Bash shell configuration
+├── brew/                  # Homebrew packages
+│  └── Brewfile            # All installed packages/casks/taps
+│
+├── env/                   # Environment variables
+│   ├── template.env      # Template with examples
+│   ├── home.env          # Backup of ~/.env
+│   └── README.md         # Environment setup guide
+│
+├── fish/                  # Fish shell configuration
+│   ├── config.fish       # Main Fish configuration
+│   ├── functions/        # Custom Fish functions
+│   └── completions/      # Command completions
+│
+├── gitconfig/             # Git configuration
+│   ├── .gitconfig        # Global git settings
+│   └── .gitignore_global # Global gitignore patterns
+│
+├── hammerspoon/           # macOS automation
+│   ├── init.lua          # Main Hammerspoon config
+│   └── Spoons/           # Hammerspoon extensions
+│
+├── iterm2/               # iTerm2 terminal
+│   ├── com.googlecode.iterm2.plist # Main preferences
+│   ├── DynamicProfiles/  # Dynamic profile configurations
+│   └── Scripts/          # iTerm2 automation scripts
+│
+├── jetbrains-ides/       # All JetBrains IDEs
+│   ├── IntelliJIdea2025.2/
+│   ├── PyCharm2025.2/
+│   ├── WebStorm2025.2/
+│   ├── DataGrip2025.2/
+│   ├── .ideavimrc        # Shared IdeaVim configuration
+│   └── ...               # Other IDE versions
+│
+├── karabiner/            # Keyboard customization
+├── nvim/                 # Neovim configuration
+├── omf/                  # Oh My Fish framework
+└── zsh/                  # Zsh shell configuration
 ```
 
-## 🔄 Usage
+## 🔄 Backup & Restore Process
 
-### Installing on a New Machine
+### Automated Backup
+The backup system automatically detects and backs up:
+- All configuration files from their standard locations
+- Multiple versions of JetBrains IDEs
+- Homebrew package lists (generates fresh Brewfile)
+- Environment variables (securely)
+- Plugin lists for easy reinstallation
 
-1. **Clone the repository:**
-   ```bash
-   git clone --recurse-submodules <your-repo-url>
-   cd shells-config
-   ```
-
-2. **Run the installer:**
-   ```bash
-   ./install.sh
-   ```
-
-   This will:
-   - Create symlinks for all configuration files
-   - Install Homebrew packages from Brewfile
-   - Install asdf plugins and tool versions
-   - Restore IntelliJ IDEA configuration (including 2-space indentation)
-   - Restore iTerm2 profiles and preferences
-
-### Backing Up Current Configuration
-
-When you make changes to your configs, backup them to the repo:
-
+### Git Integration
 ```bash
-# Simple backup
-./backup.sh
-
-# Backup with automatic git commit and push
+# Backup and sync to git
 ./backup.sh --sync
+
+# This will:
+# 1. Backup all configurations
+# 2. Commit changes with timestamp
+# 3. Push to remote repository
 ```
 
-**The `--sync` flag will:**
-- Update main branch from remote
-- Backup all configurations
-- Add and commit changes with timestamp
-- Push to origin/main
+### Restore on New Machine
+```bash
+# Clone your config repository
+git clone <your-repo-url> shells-config
+cd shells-config
 
-**This captures:**
-- All configuration files from their respective locations
-- Current asdf plugin list and tool versions
-- IntelliJ IDEA settings and IdeaVim configuration
-- iTerm2 profiles, colors, and preferences
-- Git configuration and global ignore patterns
-- Shell configurations (bash, zsh, fish)
+# Install everything
+make install
 
-### Installing Prerequisites
+# This will:
+# 1. Update repository to latest version
+# 2. Check dependencies
+# 3. Copy all configuration files
+# 4. Install Homebrew packages
+# 5. Setup ASDF tools and versions
+# 6. Configure all JetBrains IDEs
+# 7. Setup iTerm2, OMF, and environment
+```
 
-Before running the installer, ensure you have:
+## 🔧 Prerequisites
 
-1. **Xcode Command Line Tools:**
-   ```bash
-   xcode-select --install
-   ```
+### Required
+- **Git** - For repository management
+- **Make** - For running the build system (pre-installed on macOS)
 
-2. **Git** (for cloning and syncing):
-   ```bash
-   # Usually comes with Xcode Command Line Tools
-   git --version
-   ```
+### Recommended
+- **Homebrew** - Package manager for macOS
+- **Fish Shell** - Modern shell with great defaults
 
-3. **Optional tools** (installer will handle these):
-   - Homebrew (for package management)
-   - asdf (for version management)
-   - iTerm2 (for terminal enhancement)
-   - IntelliJ IDEA (for IDE configuration)
+### Optional
+- **ASDF** - Multi-language version manager
+- **JetBrains IDEs** - Any JetBrains development environments
 
-## ⚙️ Configuration Details
-
-### Fish Shell
-- Custom functions and aliases
-- Syntax highlighting and auto-suggestions
-- Oh My Fish theme and plugins
-- Auto-completion configurations
-
-### Bash & Zsh
-- Custom aliases and functions
-- Environment variable configurations
-- Shell-specific optimizations
-
-### Neovim
-- Modern Lua-based configuration
-- LSP support for multiple languages
-- Plugin management with lazy.nvim
-- Custom keymaps and settings
-
-### IntelliJ IDEA
-- **Code Styles:** 2-space indentation for all languages
-- **IdeaVim:** Comprehensive Vim emulation with custom keybindings
-  - Leader key: `Space`
-  - File navigation: `<leader>ff`, `<leader>fr`
-  - Code actions: `<leader>ca`, `<leader>cf`
-  - Debugging: `<leader>db`, `<leader>dc`
-- **Plugins:** Automatically manages enabled/disabled plugins
-- **JVM Options:** Custom memory and performance settings
-
-### iTerm2
-- Terminal profiles with custom themes
-- Color schemes (including Solarized Dark)
-- Key bindings and shortcuts
-- Dynamic profiles support
-
-### Git Configuration
-- Global user settings and aliases
-- Custom merge and diff tools
-- Global gitignore patterns for common files
-
-### asdf Version Management
-- Automatically installs and restores plugins
-- Manages tool versions globally via `.tool-versions`
-- Supports legacy version files (`.nvmrc`, `.python-version`, etc.)
-
-### Karabiner-Elements
-- Custom keyboard mappings
-- Complex modifications for enhanced productivity
-
-### Hammerspoon
-- Window management automation
-- Custom Lua scripts for macOS integration
-
-## 🔧 Customization
+## 🎨 Customization
 
 ### Adding New Tools
+1. Add the tool name to the `TOOLS` array in `backup.sh`
+2. Add a case handler for the tool in `backup.sh`
+3. Add a corresponding restoration target in the `Makefile`
+4. Test with `make backup` and `make restore`
 
-1. **Add to backup script:**
-   ```bash
-   # Edit backup.sh and add your tool to TOOLS array
-   TOOLS=("fish" "nvim" "omf" "karabiner" "hammerspoon" "asdf" "bash" "zsh" "gitconfig" "intellij" "iterm2" "your-tool")
-   ```
+### Modifying Backup Behavior
+Edit `backup.sh` to customize:
+- Which files/directories to include
+- Backup frequency and automation
+- Git sync behavior
 
-2. **Add to dotbot config:**
-   ```yaml
-   # Edit install.conf.yaml
-   - link:
-       ~/.config/your-tool: your-tool
-   ```
+## 🚨 Important Notes
 
-### Managing asdf Plugins
+### Security
+- Environment variables are handled securely with proper file permissions
+- Sensitive data uses template approach (never commit actual secrets)
+- Git configurations exclude sensitive files
 
-The system automatically handles asdf plugins:
-- **Backup:** `./backup.sh` captures current plugins to `asdf/plugins.txt`
-- **Restore:** `./install.sh` installs plugins and tool versions automatically
+### Plugin Management
+- JetBrains plugins are **listed but not automatically installed**
+- After restoration, manually reinstall plugins from the generated lists
+- This ensures compatibility and proper licensing
 
-To manually manage:
-```bash
-# Add a new plugin
-asdf plugin add nodejs
-asdf install nodejs latest
-asdf global nodejs latest
-
-# Backup the changes
-./backup.sh --sync
-```
-
-### Customizing IntelliJ IDEA
-
-Your IdeaVim configuration includes:
-- Leader key mappings (Space + key combinations)
-- Code navigation shortcuts
-- Debugging shortcuts
-- File management commands
-
-To test if IdeaVim is working:
-```vim
-" In IntelliJ, press Space + test
-<leader>test
-```
-
-## 🛠️ Troubleshooting
-
-### Permission Issues
-```bash
-# Make scripts executable
-chmod +x install.sh backup.sh scripts/*.sh
-```
-
-### Dotbot Submodule Issues
-```bash
-# Update submodules
-git submodule update --init --recursive
-
-# Update submodules to latest versions
-git submodule update --remote --merge
-
-# Update specific submodule (like dotbot) to latest
-git submodule update --remote dotbot
-```
-
-### Updating Git Submodules
-
-When there are updates to dotbot or other submodules:
-
-```bash
-# Check current submodule status
-git submodule status
-
-# Update all submodules to their latest versions
-git submodule update --remote --merge
-
-# Update only dotbot submodule
-git submodule update --remote dotbot
-
-# Commit the submodule updates
-git add .
-git commit -m "Update dotbot submodule to latest version"
-git push origin main
-```
-
-**Note:** After updating submodules, test your installation to ensure compatibility:
-```bash
-./install.sh --dry-run  # Test without making changes
-```
-
-### asdf Not Found
-```bash
-# Install asdf first, then run installer
-# The installer will skip asdf setup if not found
-```
-
-### IntelliJ IDEA Configuration Not Loading
-1. Restart IntelliJ IDEA completely
-2. Check if IdeaVim plugin is enabled
-3. Reload `.ideavimrc`: `Ctrl+Shift+A` → "Reload .ideavimrc"
-
-### iTerm2 Preferences Not Restored
-1. Close iTerm2 completely before running installer
-2. Restart iTerm2 after installation
-3. Check iTerm2 → Preferences → Profiles
-
-### Git Sync Issues
-```bash
-# If backup --sync fails, manually sync:
-git pull origin main
-git add .
-git commit -m "Update configs"
-git push origin main
-```
+### Version Compatibility
+- The system detects and backs up multiple IDE versions
+- Restoration preserves version-specific configurations
+- Cross-version compatibility is maintained where possible
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test with `./install.sh` on a clean environment
-5. Submit a pull request
+2. Make your changes
+3. Test with `make backup` and `make restore`
+4. Submit a pull request
 
-## 📄 License
+## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Happy coding!** 🚀
+This project is licensed under the MIT License - see the LICENSE file for details.
