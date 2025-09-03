@@ -1,29 +1,31 @@
-.PHONY: all install copy-configs brew asdf intellij iterm2 omf env help clean check-deps upgrade-deps backup
+.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains
 
 # Default target
 all: install
 
 # Main installation target
-install: check-deps copy-configs brew asdf intellij iterm2 omf env
+install: check-deps copy-configs brew asdf jetbrains iterm2 omf env
 	@echo "🎉 All configurations installed successfully!"
 
 # Help target
 help:
 	@echo "Available targets:"
-	@echo "  all          - Install all configurations (default)"
-	@echo "  install      - Same as 'all'"
-	@echo "  copy-configs - Copy dotfiles to home directory"
-	@echo "  brew         - Install Homebrew packages"
-	@echo "  asdf         - Install asdf plugins and tools"
-	@echo "  intellij     - Install IntelliJ IDEA configuration"
-	@echo "  iterm2       - Install iTerm2 configuration"
-	@echo "  omf          - Install Oh My Fish configuration"
-	@echo "  env          - Setup environment variables"
-	@echo "  check-deps   - Check for required dependencies"
-	@echo "  upgrade-deps - Upgrade all package managers and tools"
-	@echo "  backup       - Run backup script"
-	@echo "  clean        - Clean up temporary files"
-	@echo "  help         - Show this help message"
+	@echo "  all              - Install all configurations (default)"
+	@echo "  install          - Same as 'all'"
+	@echo "  copy-configs     - Copy dotfiles to home directory"
+	@echo "  brew             - Install Homebrew packages"
+	@echo "  asdf             - Install asdf plugins and tools"
+	@echo "  jetbrains        - Install JetBrains IDEs configuration"
+	@echo "  iterm2           - Install iTerm2 configuration"
+	@echo "  omf              - Install Oh My Fish configuration"
+	@echo "  env              - Setup environment variables"
+	@echo "  check-deps       - Check for required dependencies"
+	@echo "  upgrade-deps     - Upgrade all package managers and tools"
+	@echo "  backup           - Run backup script"
+	@echo "  restore          - Restore all configurations"
+	@echo "  restore-jetbrains - Restore only JetBrains IDEs configuration"
+	@echo "  clean            - Clean up temporary files"
+	@echo "  help             - Show this help message"
 
 # Copy configuration files
 copy-configs:
@@ -167,54 +169,54 @@ asdf:
 		echo "ℹ️  asdf/plugins.txt not found - skipping plugin installation"; \
 	fi
 
-# Install IntelliJ IDEA configuration
-intellij:
-	@echo "🧠 Installing IntelliJ IDEA configuration..."
-	@if [ ! -d "intellij" ]; then \
-		echo "⚠️  No IntelliJ config found"; \
+# Install JetBrains IDEs configuration
+jetbrains:
+	@echo "🧠 Installing JetBrains IDEs configuration..."
+	@if [ ! -d "jetbrains" ]; then \
+		echo "⚠️  No JetBrains config found"; \
 		exit 0; \
 	fi
-	@INTELLIJ_VERSIONS_DIR="$$HOME/Library/Application Support/JetBrains"; \
-	mkdir -p "$$INTELLIJ_VERSIONS_DIR"; \
-	if [ -f "intellij/intellij_version.txt" ]; then \
-		INTELLIJ_VERSION=$$(cat "intellij/intellij_version.txt"); \
-		INTELLIJ_DIR="$$INTELLIJ_VERSIONS_DIR/$$INTELLIJ_VERSION"; \
-		echo "📋 Restoring to specific version: $$INTELLIJ_VERSION"; \
+	@JETBRAINS_VERSIONS_DIR="$$HOME/Library/Application Support/JetBrains"; \
+	mkdir -p "$$JETBRAINS_VERSIONS_DIR"; \
+	if [ -f "jetbrains/jetbrains_version.txt" ]; then \
+		JETBRAINS_VERSION=$$(cat "jetbrains/jetbrains_version.txt"); \
+		JETBRAINS_DIR="$$JETBRAINS_VERSIONS_DIR/$$JETBRAINS_VERSION"; \
+		echo "📋 Restoring to specific version: $$JETBRAINS_VERSION"; \
 	else \
-		INTELLIJ_DIR=$$(find "$$INTELLIJ_VERSIONS_DIR" -name "IntelliJIdea*" -type d | sort -V | tail -1); \
-		if [ -z "$$INTELLIJ_DIR" ]; then \
-			INTELLIJ_DIR="$$INTELLIJ_VERSIONS_DIR/IntelliJIdea2025.2"; \
+		JETBRAINS_DIR=$$(find "$$JETBRAINS_VERSIONS_DIR" -name "IntelliJIdea*" -type d | sort -V | tail -1); \
+		if [ -z "$$JETBRAINS_DIR" ]; then \
+			JETBRAINS_DIR="$$JETBRAINS_VERSIONS_DIR/IntelliJIdea2025.2"; \
 			echo "📋 Creating new config directory: IntelliJIdea2025.2"; \
 		else \
-			echo "📋 Using existing IntelliJ directory: $$(basename "$$INTELLIJ_DIR")"; \
+			echo "📋 Using existing JetBrains directory: $$(basename "$$JETBRAINS_DIR")"; \
 		fi; \
 	fi; \
-	mkdir -p "$$INTELLIJ_DIR"; \
-	if [ -d "intellij/codestyles" ]; then \
+	mkdir -p "$$JETBRAINS_DIR"; \
+	if [ -d "jetbrains/codestyles" ]; then \
 		echo "🎨 Restoring code styles..."; \
-		cp -R "intellij/codestyles" "$$INTELLIJ_DIR/"; \
+		cp -R "jetbrains/codestyles" "$$JETBRAINS_DIR/"; \
 	fi; \
-	if [ -d "intellij/options" ]; then \
+	if [ -d "jetbrains/options" ]; then \
 		echo "⚙️  Restoring IDE options..."; \
-		cp -R "intellij/options" "$$INTELLIJ_DIR/"; \
+		cp -R "jetbrains/options" "$$JETBRAINS_DIR/"; \
 	fi; \
-	if [ -f "intellij/idea.vmoptions" ]; then \
+	if [ -f "jetbrains/idea.vmoptions" ]; then \
 		echo "🚀 Restoring JVM options..."; \
-		cp "intellij/idea.vmoptions" "$$INTELLIJ_DIR/"; \
+		cp "jetbrains/idea.vmoptions" "$$JETBRAINS_DIR/"; \
 	fi; \
-	if [ -f "intellij/disabled_plugins.txt" ]; then \
+	if [ -f "jetbrains/disabled_plugins.txt" ]; then \
 		echo "🔌 Restoring disabled plugins list..."; \
-		cp "intellij/disabled_plugins.txt" "$$INTELLIJ_DIR/"; \
+		cp "jetbrains/disabled_plugins.txt" "$$JETBRAINS_DIR/"; \
 	fi; \
-	if [ -f "intellij/plugins_list.txt" ]; then \
-		echo "🔌 Plugin list available at intellij/plugins_list.txt"; \
+	if [ -f "jetbrains/plugins_list.txt" ]; then \
+		echo "🔌 Plugin list available at jetbrains/plugins_list.txt"; \
 		echo "💡 Please reinstall these plugins manually from JetBrains Marketplace"; \
 	fi; \
-	if [ -f "intellij/.ideavimrc" ]; then \
+	if [ -f "jetbrains/.ideavimrc" ]; then \
 		echo "⌨️  Restoring .ideavimrc..."; \
-		cp "intellij/.ideavimrc" "$$HOME/"; \
+		cp "jetbrains/.ideavimrc" "$$HOME/"; \
 	fi
-	@echo "✅ IntelliJ IDEA configuration restored!"
+	@echo "✅ JetBrains IDEs configuration restored!"
 
 # Install iTerm2 configuration
 iterm2:
@@ -359,6 +361,85 @@ backup:
 	else \
 		echo "❌ backup.sh not found"; \
 	fi
+
+# Restore all configurations
+restore: copy-configs
+	@echo "🔄 Restoring all configurations..."
+	@$(MAKE) -s restore-jetbrains
+	@echo "✅ All configurations restored!"
+
+# Restore JetBrains IDEs configuration
+restore-jetbrains:
+	@echo "🧠 Enhanced JetBrains IDEs restore starting..."
+	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
+	JETBRAINS_BACKUP_DIR="jetbrains-ides"; \
+	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
+		echo "⚠️  No JetBrains backup found at $$JETBRAINS_BACKUP_DIR"; \
+		echo "💡 Run 'make backup' first to create a backup"; \
+		exit 0; \
+	fi; \
+	mkdir -p "$$JETBRAINS_DIR"; \
+	echo "📋 Restoring JetBrains IDEs configurations..."; \
+	for backup_dir in "$$JETBRAINS_BACKUP_DIR"/*/; do \
+		if [ -d "$$backup_dir" ]; then \
+			IDE_NAME=$$(basename "$$backup_dir"); \
+			if [[ "$$IDE_NAME" == .* ]]; then \
+				continue; \
+			fi; \
+			TARGET_DIR="$$JETBRAINS_DIR/$$IDE_NAME"; \
+			echo "🔄 Restoring $$IDE_NAME → $$TARGET_DIR"; \
+			mkdir -p "$$TARGET_DIR"; \
+			if [ -d "$$backup_dir/codestyles" ]; then \
+				echo "  🎨 Restoring code styles"; \
+				cp -R "$$backup_dir/codestyles" "$$TARGET_DIR/"; \
+			fi; \
+			if [ -d "$$backup_dir/options" ]; then \
+				echo "  ⚙️  Restoring IDE options"; \
+				cp -R "$$backup_dir/options" "$$TARGET_DIR/"; \
+			fi; \
+			if [ -d "$$backup_dir/keymaps" ]; then \
+				echo "  ⌨️  Restoring custom keymaps"; \
+				cp -R "$$backup_dir/keymaps" "$$TARGET_DIR/"; \
+			fi; \
+			if [ -d "$$backup_dir/colors" ]; then \
+				echo "  🌈 Restoring color schemes"; \
+				cp -R "$$backup_dir/colors" "$$TARGET_DIR/"; \
+			fi; \
+			if [ -d "$$backup_dir/templates" ]; then \
+				echo "  📝 Restoring file templates"; \
+				cp -R "$$backup_dir/templates" "$$TARGET_DIR/"; \
+			fi; \
+			if [ -f "$$backup_dir/disabled_plugins.txt" ]; then \
+				echo "  🚫 Restoring disabled plugins list"; \
+				cp "$$backup_dir/disabled_plugins.txt" "$$TARGET_DIR/"; \
+			fi; \
+			for vm_file in "$$backup_dir"/*.vmoptions; do \
+				if [ -f "$$vm_file" ]; then \
+					echo "  🚀 Restoring VM options: $$(basename "$$vm_file")"; \
+					cp "$$vm_file" "$$TARGET_DIR/"; \
+				fi; \
+			done; \
+			if [ -f "$$backup_dir/plugins_list.txt" ]; then \
+				echo "  🔌 Plugin list available for $$IDE_NAME"; \
+				echo "    💡 Manually reinstall plugins from: $$backup_dir/plugins_list.txt"; \
+			fi; \
+			echo "  ✅ $$IDE_NAME restoration complete"; \
+		fi; \
+	done; \
+	if [ -f "$$JETBRAINS_BACKUP_DIR/.ideavimrc" ]; then \
+		echo "⌨️  Restoring shared .ideavimrc"; \
+		cp "$$JETBRAINS_BACKUP_DIR/.ideavimrc" "$$HOME/"; \
+	fi; \
+	if [ -f "$$JETBRAINS_BACKUP_DIR/idea.vmoptions" ]; then \
+		echo "🚀 Restoring global VM options"; \
+		cp "$$JETBRAINS_BACKUP_DIR/idea.vmoptions" "$$JETBRAINS_DIR/"; \
+	fi
+	@echo "✅ Enhanced JetBrains IDEs restore complete!"
+	@echo ""
+	@echo "📋 Manual steps required:"
+	@echo "1. Launch each IDE and reinstall plugins from the plugins_list.txt files"
+	@echo "2. Restart IDEs to ensure all configurations are loaded"
+	@echo "3. Verify your settings in each IDE's preferences"
 
 # Clean up temporary files
 clean:

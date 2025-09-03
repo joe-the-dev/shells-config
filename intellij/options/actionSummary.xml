@@ -7,7 +7,7 @@
       <i c="2" l="1754624661212" />
     </e>
     <e n="$SelectAll">
-      <i c="30" l="1756108275249" />
+      <i c="31" l="1756868485396" />
     </e>
     <e n="$Undo">
       <i c="25" l="1755675594618" />
@@ -25,7 +25,7 @@
       <i c="1" l="1754470025928" />
     </e>
     <e n="EditorBackSpace">
-      <i c="490" l="1756108904648" />
+      <i c="499" l="1756869371987" />
     </e>
     <e n="EditorCopy">
       <i c="28" l="1755676291797" />
@@ -34,7 +34,7 @@
       <i c="4" l="1755673428927" />
     </e>
     <e n="EditorDeleteToWordStart">
-      <i c="109" l="1756108337161" />
+      <i c="111" l="1756869371248" />
     </e>
     <e n="EditorDown">
       <i c="26" l="1755591619397" />
@@ -55,7 +55,7 @@
       <i c="7" l="1754454401571" />
     </e>
     <e n="EditorPaste">
-      <i c="56" l="1755676385402" />
+      <i c="57" l="1756869370007" />
     </e>
     <e n="EditorPreviousWord">
       <i c="40" l="1756108610408" />
@@ -76,10 +76,10 @@
       <i c="36" l="1756108897345" />
     </e>
     <e n="FindInPath">
-      <i c="5" l="1755675354050" />
+      <i c="6" l="1756869369674" />
     </e>
     <e n="GotoDeclaration">
-      <i c="3" l="1756108886572" />
+      <i c="4" l="1756869369498" />
     </e>
     <e n="GotoFile">
       <i c="3" l="1754640359668" />
@@ -106,10 +106,10 @@
       <i c="1" l="1754640709034" />
     </e>
     <e n="SaveAll">
-      <i c="1162" l="1756108941762" />
+      <i c="1172" l="1756879758504" />
     </e>
     <e n="SearchEverywhere">
-      <i c="19" l="1755675812109" />
+      <i c="20" l="1756868401414" />
     </e>
     <e n="SettingsEntryPoint">
       <i c="2" l="1756792402346" />
@@ -133,13 +133,13 @@
       <i c="6" l="1754635483584" />
     </e>
     <e n="Tree-selectChild">
-      <i c="4" l="1756109343190" />
+      <i c="5" l="1756879681471" />
     </e>
     <e n="Tree-selectNext">
-      <i c="24" l="1756109344569" />
+      <i c="40" l="1756879685152" />
     </e>
     <e n="Tree-selectParent">
-      <i c="20" l="1756109343938" />
+      <i c="29" l="1756879685345" />
     </e>
     <e n="Tree-selectPrevious">
       <i c="7" l="1756109344915" />
@@ -156,6 +156,9 @@
     <e n="com.github.copilot.agent.window.actions.AgentSessionHistoryAction">
       <i c="4" l="1755675856662" />
     </e>
+    <e n="com.github.copilot.agent.window.actions.NewAgentSessionAction">
+      <i c="1" l="1756868181150" />
+    </e>
     <e n="com.github.copilot.chat.input.SendMessageAction">
       <i c="1" l="1754454845276" />
     </e>
@@ -167,6 +170,12 @@
     </e>
     <e n="com.github.copilot.chat.window.actions.ConversationHistoryAction">
       <i c="1" l="1754449944735" />
+    </e>
+    <e n="com.github.copilot.chat.window.actions.NewConversationAction">
+      <i c="1" l="1756868172996" />
+    </e>
+    <e n="com.github.copilot.context.AddContextAction$Companion$createAction$1">
+      <i c="1" l="1756868175841" />
     </e>
     <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
       <i c="33" l="1756108905280" />
@@ -196,10 +205,10 @@
       <i c="187" l="1755676361786" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="97" l="1756108261736" />
+      <i c="105" l="1756868188752" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="28" l="1755675813426" />
+      <i c="30" l="1756869372912" />
     </e>
     <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
       <i c="5" l="1754639718158" />
@@ -217,10 +226,10 @@
       <i c="11" l="1755676263092" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="26" l="1756108247412" />
+      <i c="27" l="1756868170605" />
     </e>
     <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
-      <i c="150" l="1756108194738" />
+      <i c="164" l="1756879733856" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
       <i c="15" l="1756108807592" />

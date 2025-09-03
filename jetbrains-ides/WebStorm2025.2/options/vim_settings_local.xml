@@ -13,9 +13,6 @@
   </component>
   <component name="VimJumpsSettings">
     <project id="otr-dc2cada2">
-      <jump line="38" column="30" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
-      <jump line="36" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
-      <jump line="34" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
       <jump line="91" column="13" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
       <jump line="9" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/Dockerfile" protocol="file" />
       <jump line="101" column="0" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
@@ -76,7 +73,6 @@
       <jump line="47" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="32" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="31" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="17" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="41" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="40" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="30" column="49" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
@@ -113,6 +109,10 @@
       <jump line="36" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="35" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
       <jump line="34" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="38" column="44" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="42" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="21" column="5" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="15" column="38" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
     </project>
     <project id="opex-sca-data-621a374">
       <jump line="41" column="33" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
@@ -529,11 +529,12 @@
       <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/docker-compose.yml" timestamp="1756868050490">
         <mark key="&quot;" line="54" column="41" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" timestamp="1756870218288">
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" timestamp="1756879825956">
         <mark key="&quot;" line="47" column="68" />
         <mark key="[" line="34" column="23" />
-        <mark key="]" line="34" column="23" />
-        <mark key="." line="34" column="23" />
+        <mark key="]" line="38" column="49" />
+        <mark key="." line="38" column="48" />
+        <mark key="^" line="38" column="49" />
       </file>
       <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" timestamp="1756870213753">
         <mark key="&quot;" line="26" column="13" />
@@ -573,7 +574,7 @@
         <text encoding="base64">c3RyaW5n</text>
       </register>
       <register name="." type="CHARACTER_WISE">
-        <text encoding="base64">MQ==</text>
+        <text encoding="base64">ZWNobyA=</text>
       </register>
       <register name="/" type="CHARACTER_WISE">
         <text encoding="base64">Y3JlYXRl</text>

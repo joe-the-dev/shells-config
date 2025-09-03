@@ -433,11 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="116" column="37" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="32" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="16" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="9" column="9" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="4" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="10" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="101" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
@@ -518,13 +513,11 @@
       <jump line="146" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="152" column="46" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="156" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="30" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
       <jump line="37" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
       <jump line="151" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="11" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
       <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/home.env" protocol="file" />
       <jump line="7" column="55" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="155" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
       <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
       <jump line="28" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
@@ -533,6 +526,13 @@
       <jump line="17" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
       <jump line="91" column="44" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
       <jump line="92" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
+      <jump line="90" column="28" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/.ideavimrc" protocol="file" />
+      <jump line="161" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="155" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="132" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="1" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="30" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
@@ -652,7 +652,7 @@
     <search>
       <last-offset encoding="base64" />
       <last-dir encoding="base64">MQ==</last-dir>
-      <show-last encoding="base64">dHJ1ZQ==</show-last>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
     </search>
   </component>
   <component name="VimVariables">

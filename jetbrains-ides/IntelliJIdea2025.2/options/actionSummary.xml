@@ -25,10 +25,10 @@
       <i c="1" l="1754470025928" />
     </e>
     <e n="EditorBackSpace">
-      <i c="499" l="1756869371987" />
+      <i c="501" l="1756879821361" />
     </e>
     <e n="EditorCopy">
-      <i c="28" l="1755676291797" />
+      <i c="29" l="1756879822959" />
     </e>
     <e n="EditorCut">
       <i c="4" l="1755673428927" />
@@ -46,7 +46,7 @@
       <i c="18" l="1755673438457" />
     </e>
     <e n="EditorEscape">
-      <i c="332" l="1756108933378" />
+      <i c="348" l="1756879940132" />
     </e>
     <e n="EditorNextWord">
       <i c="54" l="1756108611229" />
@@ -73,7 +73,7 @@
       <i c="16" l="1755674633355" />
     </e>
     <e n="Find">
-      <i c="36" l="1756108897345" />
+      <i c="39" l="1756879937001" />
     </e>
     <e n="FindInPath">
       <i c="6" l="1756869369674" />
@@ -106,10 +106,10 @@
       <i c="1" l="1754640709034" />
     </e>
     <e n="SaveAll">
-      <i c="1162" l="1756108941762" />
+      <i c="1172" l="1756879758504" />
     </e>
     <e n="SearchEverywhere">
-      <i c="20" l="1756868401414" />
+      <i c="21" l="1756879963195" />
     </e>
     <e n="SettingsEntryPoint">
       <i c="2" l="1756792402346" />
@@ -133,13 +133,13 @@
       <i c="6" l="1754635483584" />
     </e>
     <e n="Tree-selectChild">
-      <i c="4" l="1756109343190" />
+      <i c="5" l="1756879681471" />
     </e>
     <e n="Tree-selectNext">
-      <i c="24" l="1756109344569" />
+      <i c="40" l="1756879685152" />
     </e>
     <e n="Tree-selectParent">
-      <i c="20" l="1756109343938" />
+      <i c="29" l="1756879685345" />
     </e>
     <e n="Tree-selectPrevious">
       <i c="7" l="1756109344915" />
@@ -178,10 +178,13 @@
       <i c="1" l="1756868175841" />
     </e>
     <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
-      <i c="33" l="1756108905280" />
+      <i c="36" l="1756879939408" />
     </e>
     <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
       <i c="38" l="1756108891463" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.SwitchToFind">
+      <i c="2" l="1756879770285" />
     </e>
     <e n="com.intellij.find.impl.FindPopupPanel$MyEnterAction">
       <i c="3" l="1755590761240" />
@@ -208,7 +211,7 @@
       <i c="105" l="1756868188752" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="30" l="1756869372912" />
+      <i c="31" l="1756879964658" />
     </e>
     <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
       <i c="5" l="1754639718158" />
@@ -229,7 +232,7 @@
       <i c="27" l="1756868170605" />
     </e>
     <e n="com.intellij.terminal.frontend.action.SendShortcutToTerminalAction">
-      <i c="150" l="1756108194738" />
+      <i c="165" l="1756880010253" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
       <i c="15" l="1756108807592" />
