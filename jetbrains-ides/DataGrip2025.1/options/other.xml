@@ -1,0 +1,61 @@
+<application>
+  <component name="FileEditorProviderManager">{
+  &quot;selectedProviders&quot;: {
+    &quot;text-editor,scripted-data-editor&quot;: &quot;text-editor&quot;
+  }
+}</component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "DG.SingleStripe.Customization2": "true",
+    "DG.SingleStripe.LastLocale": "en",
+    "InstalledPluginsSearchHistory": "soft wr\nsoft\nsoftw",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "3",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/aggregators": "DB-251.26094.87",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/extractors": "DB-251.26094.87",
+    "LayoutCode.rearrangeEntriesMySQL": "false",
+    "MYSQL_DUMP_CLI_PACK_LAST_USED_CONFIGURATION": "MYSQL_PROPERTIES",
+    "MYSQL_PROPERTIES_EXPANDED": "true",
+    "MYSQL_PROPERTIES_VARIANTS_v21313793451": "--databases --all-databases -A -Y --all-tablespaces -y --no-tablespaces --add-drop-database --add-drop-table --skip-add-drop-table --add-drop-trigger --add-drop-user --add-locks --skip-add-locks --allow-keywords --apply-replica-statements --output-as-version --apply-slave-statements --bind-address= --character-sets-dir= --column-statistics -i --comments --skip-comments --compatible= --compact --skip-disable-keys --skip-set-charset -c --complete-insert -C --compress -a --create-options --skip-create-options -B -# --debug --debug-check --debug-info --default-character-set= --delete-source-logs --source-data --delete-master-logs -K --disable-keys --dump-replica --lock-all-tables --single-transaction --lock-tables --dump-slave -E --events -e --extended-insert --skip-extended-insert --fields-terminated-by= --fields-enclosed-by= --fields-optionally-enclosed-by= --fields-escaped-by= -F --flush-logs --databases= --flush-privileges -f --force --help --hex-blob -h --host= --ignore-error= --ignore-table= --exclude-user= --include-user= --include-user --exclude-users= --include-source-host-port --include-master-host-port --insert-ignore --lines-terminated-by= -x -l --skip-lock-tables --log-error= --mysqld-long-query-time= --master-data --max-allowed-packet= --net-buffer-length= --no-autocommit -n --no-create-db -t --no-create-info -d --no-data -N --no-set-names --opt --quick --set-charset --skip-opt --order-by-primary -p --password --password1 --password2 --password3 -P --port= --protocol= -q --skip-quick -Q --quote-names --skip-quote-names --replace -r --result-file= -R --routines --set-gtid-purged --dump-date --skip-dump-date -S --socket= --server-public-key-path= --get-server-public-key --ssl-mode= --ssl-ca= --ssl-capath= --ssl-cert= --ssl-cipher= --ssl-key= --ssl-crl= --ssl-crlpath= --tls-version= --ssl-fips-mode= --tls-ciphersuites= --ssl-session-data= --ssl-session-data-continue-on-failed-reuse --tls-sni-servername= -T --tab= --tables --triggers --skip-triggers --tz-utc --skip-tz-utc -u --user= --users -v --verbose -V --version -w --where= -X --xml --plugin-dir= --default-auth= --enable-cleartext-plugin -M --network-timeout --skip-network-timeout --show-create-table-skip-secondary-engine --compression-algorithms= --zstd-compression-level= --skip-generated-invisible-primary-key --init-command= --init-command-add= --ignore-views",
+    "MYSQL_PROPERTIES_VARIANTS_v2944632348": "--databases --all-databases -A -Y --all-tablespaces -y --no-tablespaces --add-drop-database --add-drop-table --skip-add-drop-table --add-drop-trigger --add-locks --skip-add-locks --allow-keywords --apply-replica-statements --apply-slave-statements --bind-address= --character-sets-dir= --column-statistics --skip-column-statistics -i --comments --skip-comments --compatible= --compact --skip-disable-keys --skip-set-charset -c --complete-insert -C --compress -a --create-options --skip-create-options -B -# --debug --debug-check --debug-info --default-character-set= --delete-source-logs --source-data --delete-master-logs -K --disable-keys --dump-replica --lock-all-tables --single-transaction --lock-tables --dump-slave -E --events -e --extended-insert --skip-extended-insert --fields-terminated-by= --fields-enclosed-by= --fields-optionally-enclosed-by= --fields-escaped-by= -F --flush-logs --databases= --flush-privileges -f --force --help --hex-blob -h --host= --ignore-error= --ignore-table= --include-source-host-port --include-master-host-port --insert-ignore --lines-terminated-by= -x -l --skip-lock-tables --log-error= --mysqld-long-query-time= --master-data --max-allowed-packet= --net-buffer-length= --no-autocommit -n --no-create-db -t --no-create-info -d --no-data -N --no-set-names --opt --quick --set-charset --skip-opt --order-by-primary -p --password --password1 --password2 --password3 -P --port= --protocol= -q --skip-quick -Q --quote-names --skip-quote-names --replace -r --result-file= -R --routines --set-gtid-purged --dump-date --skip-dump-date -S --socket= --server-public-key-path= --get-server-public-key --ssl-mode= --ssl-ca= --ssl-capath= --ssl-cert= --ssl-cipher= --ssl-key= --ssl-crl= --ssl-crlpath= --tls-version= --ssl-fips-mode= --tls-ciphersuites= --ssl-session-data= --ssl-session-data-continue-on-failed-reuse -T --tab= --tables --triggers --skip-triggers --tz-utc --skip-tz-utc -u --user= -v --verbose -V --version -w --where= -X --xml --plugin-dir= --default-auth= --enable-cleartext-plugin -M --network-timeout --skip-network-timeout --show-create-table-skip-secondary-engine --compression-algorithms= --zstd-compression-level= --skip-generated-invisible-primary-key",
+    "MYSQL_PROPERTIES_c9fa03ad-a9bd-4af8-82af-6eb584eb958d_COMMAND": "\"staging_secure_api\" --result-file=\"/Users/joe.ta/{data_source}-{timestamp}-dump.sql\" --skip-extended-insert --no-data --skip-add-locks --create-options",
+    "MYSQL_PROPERTIES_c9fa03ad-a9bd-4af8-82af-6eb584eb958d_PATH": "/opt/homebrew/opt/mysql@8.0/bin/mysqldump",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.deprecation.notification": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "SettingsSearchHistory": "soft wraps",
+    "SqlStructureView.filterD.file.structure.state": "true",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "com.intellij.database.actions.DbDeleteProvider$2.proportion": "0.5",
+    "com.intellij.database.actions.ddl.DbModifyObjectDialog.proportion": "0.5",
+    "database.notebook.setting.id": "a2d45ba4-4500-439d-8c57-951203395f85",
+    "enter_selection_count": "1",
+    "evlsprt.251": "197507c1a80",
+    "evlsprt3.251": "3",
+    "experimental.ui.used.version": "251.26094.87",
+    "fileTypeChangedCounter": "2",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.database.schema.control.got.it": "1",
+    "got.it.tooltip.settings.sync.in.settings": "1",
+    "got.it.tooltip.speed.search.shown": "1",
+    "ideavim.statistics.timestamp": "1753764364842",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Solarized Dark",
+    "registry.to.advanced.settings.migration.build": "DB-251.26094.87",
+    "tab_selection_count": "4"
+  },
+  "keyToStringList": {
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

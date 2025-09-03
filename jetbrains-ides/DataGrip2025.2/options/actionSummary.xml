@@ -1,0 +1,97 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$SelectAll">
+      <i c="19" l="1755574492656" />
+    </e>
+    <e n="$Undo">
+      <i c="7" l="1755146122237" />
+    </e>
+    <e n="Console.Jdbc.Execute">
+      <i c="29" l="1755146124167" />
+    </e>
+    <e n="Console.TableResult.FindInGrid">
+      <i c="2" l="1755146280400" />
+    </e>
+    <e n="DatabaseView.DeactivateAction">
+      <i c="1" l="1754984317407" />
+    </e>
+    <e n="DatabaseView.PropertiesAction">
+      <i c="1" l="1755574487646" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="43" l="1755146283220" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="21" l="1755146123794" />
+    </e>
+    <e n="EditorCopy">
+      <i c="34" l="1755574493181" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="22" l="1755146074125" />
+    </e>
+    <e n="EditorDown">
+      <i c="17" l="1755143920280" />
+    </e>
+    <e n="EditorDownWithSelection">
+      <i c="1" l="1755143866791" />
+    </e>
+    <e n="EditorEnter">
+      <i c="7" l="1755146067341" />
+    </e>
+    <e n="EditorEscape">
+      <i c="3" l="1755143862560" />
+    </e>
+    <e n="EditorLeft">
+      <i c="14" l="1755143907478" />
+    </e>
+    <e n="EditorLeftWithSelection">
+      <i c="7" l="1754984198433" />
+    </e>
+    <e n="EditorNextWord">
+      <i c="36" l="1755146122551" />
+    </e>
+    <e n="EditorPaste">
+      <i c="2" l="1755574494075" />
+    </e>
+    <e n="EditorPreviousWord">
+      <i c="53" l="1755146121394" />
+    </e>
+    <e n="EditorRight">
+      <i c="15" l="1755143866262" />
+    </e>
+    <e n="EditorUp">
+      <i c="10" l="1755143864080" />
+    </e>
+    <e n="Jdbc.OpenConsole.New.Generate">
+      <i c="1" l="1754984152808" />
+    </e>
+    <e n="SaveAll">
+      <i c="18" l="1755059381666" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="1" l="1755059388433" />
+    </e>
+    <e n="WelcomeScreen.CreateDirectoryProject">
+      <i c="2" l="1754983995783" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="2" l="1754983999743" />
+    </e>
+    <e n="com.intellij.database.actions.DataSourceQuickFixAction$MyFixAction">
+      <i c="1" l="1754984272664" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
+      <i c="1" l="1755146283356" />
+    </e>
+    <e n="com.intellij.openapi.editor.colors.impl.EditorColorsManagerImpl$notifyAboutSolarizedColorSchemeDeprecationIfSet$1$projectOpened$1$2">
+      <i c="2" l="1754984138066" />
+    </e>
+    <e n="com.intellij.toolWindow.StripeActionGroup$MyButtonAction">
+      <i c="4" l="1754984130001" />
+    </e>
+    <e n="com.intellij.toolWindow.StripeActionGroup$MyMoreAction">
+      <i c="1" l="1755059394021" />
+    </e>
+  </component>
+</application>

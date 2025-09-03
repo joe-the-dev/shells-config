@@ -1,0 +1,6 @@
+IdeaVIM
+github-copilot-intellij
+solarized_theme.jar
+terraform
+vcs-github-IU
+vcs-gitlab-IU

@@ -1,0 +1,137 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Documents/Project/otr/apps/kyc-service">
+          <value>
+            <RecentProjectMetaInfo frameTitle="kyc-service" projectWorkspaceId="2zZd7uQI6Uuh4bKRyYe3JBTypuq">
+              <option name="activationTimestamp" value="1751958822984" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-251.26927.40" />
+              <option name="buildTimestamp" value="1750424280000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="0" y="0" width="1504" height="942" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1751942364269" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/otr-01">
+          <value>
+            <RecentProjectMetaInfo frameTitle="otr-01 – secure-db.ts" projectWorkspaceId="2xhr1VKWiDhSX155Tiv9R6T8MD7">
+              <option name="activationTimestamp" value="1752647455845" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-251.26927.40" />
+              <option name="buildTimestamp" value="1750424280000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="56" y="58" width="1400" height="904" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1752646277793" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/opex-sca-data">
+          <value>
+            <RecentProjectMetaInfo frameTitle="opex-sca-data – config.json" projectWorkspaceId="2zFwzqTSpgDHQU36g0UPe8zEWpY">
+              <option name="activationTimestamp" value="1753322704663" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-251.26927.40" />
+              <option name="buildTimestamp" value="1750424280000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="56" y="58" width="1400" height="904" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1753259900175" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/auth0-config">
+          <value>
+            <RecentProjectMetaInfo frameTitle="auth0-config – email.tf" projectWorkspaceId="31B7wcSmlynMxOXSWjMBE559Ahx">
+              <option name="activationTimestamp" value="1755053592538" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-252.23892.411" />
+              <option name="buildTimestamp" value="1754032200000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="56" y="58" width="1400" height="904" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1755051860048" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/otr">
+          <value>
+            <RecentProjectMetaInfo frameTitle="otr – pnpm-lock.yaml" opened="true" projectWorkspaceId="2zD1bRQ0BxiwL01NSbaJJQDlW8U">
+              <option name="activationTimestamp" value="1756879634285" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-252.23892.411" />
+              <option name="buildTimestamp" value="1754032200000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="-208" y="38" width="1720" height="944" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1755831462561" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private">
+          <value>
+            <RecentProjectMetaInfo frameTitle="vuthanhdatdev.github.io-private – App.css" projectWorkspaceId="31o7fjG3Z3zWVALtLmeP6AXMd66">
+              <option name="activationTimestamp" value="1756182463683" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-252.23892.411" />
+              <option name="buildTimestamp" value="1754032200000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="9" y="41" width="1494" height="938" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1756178676777" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/secure_rest">
+          <value>
+            <RecentProjectMetaInfo frameTitle="secure_rest – EVSuccessfulListener.php" projectWorkspaceId="3022MP2WsZVTbqhgCY3mGiQurwL">
+              <option name="activationTimestamp" value="1756182529049" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-252.23892.411" />
+              <option name="buildTimestamp" value="1754032200000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="37" y="51" width="1438" height="918" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1756182530034" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/secure-client">
+          <value>
+            <RecentProjectMetaInfo frameTitle="secure-client – constants.ts" projectWorkspaceId="31oFYIDSj6wbPRPHJRGqWkP3EAJ">
+              <option name="activationTimestamp" value="1756433569516" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="WS-252.23892.411" />
+              <option name="buildTimestamp" value="1754032200000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="0" y="38" width="1512" height="944" extendedState="6" />
+              <option name="productionCode" value="WS" />
+              <option name="projectOpenTimestamp" value="1756373172125" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/Documents/Project/otr" />
+  </component>
+</application>

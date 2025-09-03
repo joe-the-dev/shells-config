@@ -433,7 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="7" column="53" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="22" column="40" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="23" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="18" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
@@ -468,8 +467,6 @@
       <jump line="356" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="397" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="146" column="28" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="152" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="151" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="42" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
       <jump line="154" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
@@ -533,11 +530,17 @@
       <jump line="14" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="6" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
       <jump line="159" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="146" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="152" column="46" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
+      <jump line="156" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
+      <file name="/Dummy.txt" timestamp="1756174163736">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" timestamp="1756108259763">
         <mark key="&quot;" line="5" column="8" />
       </file>
@@ -550,8 +553,23 @@
       <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/run_backup.sh" timestamp="1755675720120">
         <mark key="&quot;" line="2" column="0" />
       </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/env/home.env" timestamp="1756174163522">
+        <mark key="&quot;" line="2" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" timestamp="1756108258080">
+        <mark key="&quot;" line="168" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" timestamp="1756108254089">
+        <mark key="&quot;" line="16" column="25" />
+      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1756174163509">
         <mark key="&quot;" line="6" column="17" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" timestamp="1756108260679">
+        <mark key="&quot;" line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1756174163527">
+        <mark key="&quot;" line="37" column="0" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/env/template.env" timestamp="1756108261739">
         <mark key="&quot;" line="8" column="0" />
@@ -567,35 +585,17 @@
         <mark key="'" line="2" column="0" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1756174163515">
-        <mark key="&quot;" line="141" column="7" />
+        <mark key="&quot;" line="146" column="7" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1756174163524">
         <mark key="&quot;" line="11" column="14" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1756108256194">
-        <mark key="&quot;" line="2" column="0" />
-      </file>
-      <file name="/Dummy.txt" timestamp="1756174163736">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/env/home.env" timestamp="1756174163522">
-        <mark key="&quot;" line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" timestamp="1756108258080">
-        <mark key="&quot;" line="168" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" timestamp="1756108254089">
-        <mark key="&quot;" line="16" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" timestamp="1756108260679">
-        <mark key="&quot;" line="1" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1756174163527">
-        <mark key="&quot;" line="37" column="0" />
-      </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/.env.template" timestamp="1756174163528">
         <mark key="&quot;" line="30" column="0" />
         <mark key="[" line="22" column="6" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1756108256194">
+        <mark key="&quot;" line="2" column="0" />
       </file>
       <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" timestamp="1756108257093">
         <mark key="&quot;" line="0" column="0" />
@@ -652,7 +652,7 @@
     <search>
       <last-offset encoding="base64" />
       <last-dir encoding="base64">MQ==</last-dir>
-      <show-last encoding="base64">ZmFsc2U=</show-last>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
     </search>
   </component>
   <component name="VimVariables">

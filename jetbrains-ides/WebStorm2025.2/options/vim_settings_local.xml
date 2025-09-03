@@ -1,0 +1,622 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-cmd>
+        <entry encoding="base64">JzwsJz4h</entry>
+      </history-cmd>
+      <history-search>
+        <entry encoding="base64">Lw==</entry>
+        <entry encoding="base64">Y3JlYXRl</entry>
+        <entry encoding="base64">Zg==</entry>
+      </history-search>
+    </history>
+  </component>
+  <component name="VimJumpsSettings">
+    <project id="otr-dc2cada2">
+      <jump line="38" column="30" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
+      <jump line="36" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
+      <jump line="34" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
+      <jump line="91" column="13" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
+      <jump line="9" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/Dockerfile" protocol="file" />
+      <jump line="101" column="0" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" protocol="file" />
+      <jump line="1" column="5" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
+      <jump line="9" column="13" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
+      <jump line="61" column="10" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
+      <jump line="48" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="59" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="50" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="49" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="45" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="43" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="989" column="0" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="836" column="4" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="15" column="23" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="4" column="32" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="22" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="184" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="190" column="23" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="202" column="88" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="200" column="40" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="195" column="26" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="194" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="193" column="22" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="187" column="9" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="188" column="13" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="49" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="55" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="48" column="21" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="57" column="20" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="58" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
+      <jump line="29" column="18" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="39" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="9" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="10" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="14" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="20" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="10" column="25" filename="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" protocol="file" />
+      <jump line="23" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/.env" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" protocol="file" />
+      <jump line="1" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" protocol="file" />
+      <jump line="0" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" protocol="file" />
+      <jump line="6" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" protocol="file" />
+      <jump line="10" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/type.ts" protocol="file" />
+      <jump line="2" column="53" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
+      <jump line="1" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/scripts/init-test-docker.sh" protocol="file" />
+      <jump line="7" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/vitest.setUp.ts" protocol="file" />
+      <jump line="530" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="549" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="550" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="529" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="589" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="587" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="527" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="18" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="513" column="13" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="47" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="32" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="31" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="17" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="41" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="40" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="30" column="49" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="205" column="14" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
+      <jump line="161" column="18" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
+      <jump line="6" column="23" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
+      <jump line="45" column="5" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
+      <jump line="43" column="7" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
+      <jump line="41" column="2" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
+      <jump line="37" column="15" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
+      <jump line="170" column="15" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
+      <jump line="119" column="27" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
+      <jump line="3" column="10" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/types/types.ts" protocol="file" />
+      <jump line="15" column="35" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/types/types.ts" protocol="file" />
+      <jump line="26" column="41" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="50" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="37" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="49" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="53" column="23" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="525" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="4" column="92" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="7" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="12" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
+      <jump line="1" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
+      <jump line="2" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
+      <jump line="8" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
+      <jump line="10" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
+      <jump line="6" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
+      <jump line="26" column="11" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
+      <jump line="6" column="54" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="27" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="28" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="52" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="36" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="35" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="34" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+    </project>
+    <project id="opex-sca-data-621a374">
+      <jump line="41" column="33" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
+      <jump line="37" column="45" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
+      <jump line="36" column="57" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="324" column="16" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="305" column="15" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="307" column="19" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="200" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="148" column="25" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
+      <jump line="172" column="6" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="188" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="189" column="7" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="196" column="6" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="195" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="185" column="14" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="183" column="15" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="178" column="14" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="190" column="24" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="184" column="26" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="177" column="15" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="168" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="138" column="19" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="185" column="39" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="17" column="885" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="178" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="184" column="15" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="188" column="6" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="73" column="16" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="180" column="36" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="181" column="59" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="238" column="5" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="189" column="31" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="179" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="333" column="5" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="233" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="286" column="43" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="285" column="30" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="384" column="5" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="284" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="335" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="336" column="28" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="292" column="609" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="301" column="10" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="90" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="368" column="11" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="338" column="74" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="361" column="25" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="364" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="399" column="17" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="341" column="8" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="378" column="32" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="290" column="8" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="343" column="51" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="344" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="351" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="395" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="4" column="40" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="175" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="369" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="153" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
+      <jump line="235" column="16" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="190" column="32" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="63" column="46" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="64" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="455" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="456" column="33" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="462" column="6" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="460" column="16" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="458" column="28" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="47" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="225" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="228" column="10" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="384" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="386" column="8" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="387" column="3" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="389" column="0" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="383" column="24" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="377" column="26" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="381" column="41" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="326" column="16" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="379" column="38" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="75" column="130" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="54" column="4" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="327" column="679" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="328" column="53" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="382" column="7" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="385" column="2" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="304" column="19" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="349" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="183" column="19" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="257" column="23" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="264" column="19" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="256" column="39" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="255" column="31" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="346" column="31" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users_grant.json" protocol="file" />
+      <jump line="248" column="39" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="15" column="9" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="18" column="40" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="14" column="29" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+      <jump line="13" column="18" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_indiv_users/config.json" protocol="file" />
+    </project>
+    <project id="kyc-service-34059e4d">
+      <jump line="10" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="36" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="12" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="51" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="46" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="17" column="57" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="24" column="52" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="18" column="80" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="395" column="17" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/index.d.ts" protocol="file" />
+      <jump line="398" column="21" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/index.d.ts" protocol="file" />
+      <jump line="22" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="16" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="504" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="30" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="73" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="506" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="507" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="39" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="63" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="60" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="124" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="125" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="77" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="81" column="25" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="28" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="68" column="10" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="127" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="519" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="50" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="515" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="123" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="116" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="521" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="513" column="51" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="82" column="61" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="78" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="520" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="75" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="1736" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="1740" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="54" column="34" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="29" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="59" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="37" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="501" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="529" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="511" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="541" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="523" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="534" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="514" column="29" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="74" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="177" column="25" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="159" column="23" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="532" column="41" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="560" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="554" column="48" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="533" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="14" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
+      <jump line="41" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
+      <jump line="158" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="535" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="509" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="539" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="538" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="537" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="549" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="551" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="550" column="10" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="543" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="510" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="561" column="35" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="566" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="14" column="13" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="502" column="42" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="15" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="556" column="76" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="563" column="18" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="562" column="57" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.test.ts" protocol="file" />
+      <jump line="12" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.test.ts" protocol="file" />
+      <jump line="5" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.test.ts" protocol="file" />
+      <jump line="2" column="51" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.test.ts" protocol="file" />
+      <jump line="7" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
+      <jump line="1" column="68" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.test.ts" protocol="file" />
+      <jump line="204" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="313" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="305" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="4" column="35" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/client.schemas.ts" protocol="file" />
+      <jump line="142" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/.env" protocol="file" />
+      <jump line="15" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/env.server.ts" protocol="file" />
+      <jump line="498" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.test.ts" protocol="file" />
+      <jump line="37" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/profile-created.handler.test.ts" protocol="file" />
+      <jump line="41" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-profile-identity-verification.service.test.ts" protocol="file" />
+      <jump line="50" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/profile-application.handler.ts" protocol="file" />
+      <jump line="10" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/start-journey.service.ts" protocol="file" />
+      <jump line="37" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/events/event-type-handler-map.ts" protocol="file" />
+    </project>
+    <project id="otr-01-f342860c">
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/types/secure-db.types.ts" protocol="file" />
+      <jump line="0" column="7" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="54" column="28" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="18" column="2" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="85" column="17" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="110" column="16" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="83" column="18" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="9" column="33" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="13" column="6" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="78" column="7" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="118" column="34" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="125" column="0" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="119" column="19" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr-01/node_modules/.pnpm/mysql2@3.14.1/node_modules/mysql2/promise.d.ts" protocol="file" />
+      <jump line="28" column="5" filename="$USER_HOME$/Documents/Project/otr-01/node_modules/.pnpm/mysql2@3.14.1/node_modules/mysql2/promise.d.ts" protocol="file" />
+      <jump line="123" column="18" filename="$USER_HOME$/Documents/Project/otr-01/apps/sca-profile-adaptor/src/repositories/secure-db.ts" protocol="file" />
+    </project>
+    <project id="secure_rest-ffa0511">
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure_rest/README.md" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="116" column="25" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="123" column="18" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="121" column="45" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="119" column="29" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="126" column="36" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="122" column="44" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="131" column="68" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="130" column="48" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="159" column="33" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+      <jump line="204" column="29" filename="$USER_HOME$/Documents/Project/secure_rest/src/SecureBundle/EventListener/EV/EVSuccessfulListener.php" protocol="file" />
+    </project>
+    <project id="auth0-config-10bd8252">
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="70" column="42" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="6" column="18" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="62" column="0" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="69" column="32" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="78" column="47" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="76" column="18" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="67" column="23" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+      <jump line="79" column="16" filename="$USER_HOME$/Documents/Project/auth0-config/terraform/env/stg/identity/email.tf" protocol="file" />
+    </project>
+    <project id="vuthanhdatdev.github.io-private-9cacb560">
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/README.md" protocol="file" />
+      <jump line="7" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.tsx" protocol="file" />
+      <jump line="6" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/public/index.html" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/hooks/useIntersectionObserver.ts" protocol="file" />
+      <jump line="17" column="25" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/hooks/useIntersectionObserver.ts" protocol="file" />
+      <jump line="44" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/data/portfolio.data.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/projects.component.tsx" protocol="file" />
+      <jump line="47" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.tsx" protocol="file" />
+      <jump line="33" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/hooks/useDarkMode.ts" protocol="file" />
+      <jump line="16" column="20" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/hooks/useDarkMode.ts" protocol="file" />
+      <jump line="15" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/hooks/useDarkMode.ts" protocol="file" />
+      <jump line="2980" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="2998" column="10" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="0" column="15" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.tsx" protocol="file" />
+      <jump line="5458" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="4105" column="18" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="10" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/pages/portfolio.page.tsx" protocol="file" />
+      <jump line="3419" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="3331" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/App.css" protocol="file" />
+      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="6" column="30" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="13" column="14" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="40" column="17" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/pages/portfolio.page.tsx" protocol="file" />
+      <jump line="76" column="35" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="74" column="13" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+      <jump line="83" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
+    </project>
+    <project id="secure-client-8b5aaf16">
+      <jump line="93" column="22" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="99" column="27" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="22" column="29" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="55" column="26" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="29" column="2" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/types.ts" protocol="file" />
+      <jump line="54" column="17" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="111" column="35" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="148" column="15" filename="$USER_HOME$/Documents/Project/secure-client/src/core/browser.ts" protocol="file" />
+      <jump line="138" column="9" filename="$USER_HOME$/Documents/Project/secure-client/src/core/browser.ts" protocol="file" />
+      <jump line="122" column="59" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="113" column="13" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="112" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="56" column="34" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="81" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="2" column="95" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/index.ts" protocol="file" />
+      <jump line="133" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="89" column="29" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="26" column="28" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="35" column="22" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="0" column="7" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="8" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="18" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="86" column="4" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="130" column="5" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="106" column="33" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="11" column="2" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/types.ts" protocol="file" />
+      <jump line="15" column="40" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="39" column="13" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="49" column="5" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="1" column="25" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="125" column="4" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="120" column="11" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="116" column="9" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="18" column="11" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="14" column="11" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="58" column="37" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="55" column="32" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="66" column="28" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_tokens.js" protocol="file" />
+      <jump line="62" column="24" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="52" column="35" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="19" column="35" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="29" column="33" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="3" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/types.ts" protocol="file" />
+      <jump line="5" column="21" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/types.ts" protocol="file" />
+      <jump line="46" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="5" column="21" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="4" column="21" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="6" column="7" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="14" column="19" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="12" column="20" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="25" column="29" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="17" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="23" column="29" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="16" column="1" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="9" column="37" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_examples.md" protocol="file" />
+      <jump line="14" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_examples.md" protocol="file" />
+      <jump line="10" column="2" filename="$USER_HOME$/Documents/Project/secure-client/experian_examples.md" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_v2_tokens.js" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/working_curl_examples.sh" protocol="file" />
+      <jump line="6" column="24" filename="$USER_HOME$/Documents/Project/secure-client/working_curl_examples.sh" protocol="file" />
+      <jump line="5" column="25" filename="$USER_HOME$/Documents/Project/secure-client/working_curl_examples.sh" protocol="file" />
+      <jump line="2" column="34" filename="$USER_HOME$/Documents/Project/secure-client/working_curl_examples.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="8" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="240" column="40" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/example-usage.ts" protocol="file" />
+      <jump line="27" column="29" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/example-usage.ts" protocol="file" />
+      <jump line="12" column="13" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/example-usage.ts" protocol="file" />
+      <jump line="113" column="19" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/example-usage.ts" protocol="file" />
+      <jump line="106" column="3" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/example-usage.ts" protocol="file" />
+      <jump line="13" column="36" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/format.ts" protocol="file" />
+      <jump line="24" column="30" filename="$USER_HOME$/Documents/Project/secure-client/experian_examples.md" protocol="file" />
+      <jump line="115" column="8" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_v2_tokens.js" protocol="file" />
+      <jump line="6" column="23" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_v2_tokens.js" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/README.md" protocol="file" />
+      <jump line="19" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="25" column="0" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="218" column="15" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="144" column="21" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="96" column="13" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="63" column="6" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="221" column="6" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="219" column="31" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="67" column="8" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="68" column="43" filename="$USER_HOME$/Documents/Project/secure-client/experian_clean/experian-service.ts" protocol="file" />
+      <jump line="133" column="32" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_tokens.js" protocol="file" />
+      <jump line="10" column="14" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_tokens.js" protocol="file" />
+      <jump line="8" column="39" filename="$USER_HOME$/Documents/Project/secure-client/test_experian_tokens.js" protocol="file" />
+      <jump line="2" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="83" column="44" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="94" column="40" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="69" column="37" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="68" column="32" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="79" column="44" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="65" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="70" column="13" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+    </project>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <localmarks>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/type.ts" timestamp="1756868048724">
+        <mark key="&quot;" line="10" column="3" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" timestamp="1756868048482">
+        <mark key="&quot;" line="6" column="40" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/vitest.setUp.ts" timestamp="1756868050153">
+        <mark key="&quot;" line="7" column="20" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/scripts/init-test-docker.sh" timestamp="1756868049659">
+        <mark key="&quot;" line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-mfe/package.json" timestamp="1756868512178">
+        <mark key="&quot;" line="55" column="10" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" timestamp="1756868046309">
+        <mark key="&quot;" line="1" column="33" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" timestamp="1756866560187">
+        <mark key="&quot;" line="58" column="19" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" timestamp="1756868035214">
+        <mark key="&quot;" line="10" column="25" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" timestamp="1756868033536">
+        <mark key="&quot;" line="20" column="21" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/sca-profile-adaptor/src/services/user.service.ts" timestamp="1756868512806">
+        <mark key="&quot;" line="142" column="56" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/docker-compose.yml" timestamp="1756868050490">
+        <mark key="&quot;" line="54" column="41" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" timestamp="1756870218288">
+        <mark key="&quot;" line="47" column="68" />
+        <mark key="[" line="34" column="23" />
+        <mark key="]" line="34" column="23" />
+        <mark key="." line="34" column="23" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" timestamp="1756870213753">
+        <mark key="&quot;" line="26" column="13" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/journeys/journeys.ts" timestamp="1756868513227">
+        <mark key="&quot;" line="211" column="73" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" timestamp="1756868049027">
+        <mark key="&quot;" line="2" column="53" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" timestamp="1756869379039">
+        <mark key="&quot;" line="529" column="65" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" timestamp="1756870212451">
+        <mark key="&quot;" line="1" column="12" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" timestamp="1756869955299">
+        <mark key="&quot;" line="119" column="27" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/.env" timestamp="1756868036785">
+        <mark key="&quot;" line="23" column="28" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/otr/package.json" timestamp="1756868512538">
+        <mark key="&quot;" line="1" column="4" />
+      </file>
+    </localmarks>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="CHARACTER_WISE">
+        <text encoding="base64">c3RyaW5n</text>
+      </register>
+      <register name="*" type="CHARACTER_WISE">
+        <text encoding="base64">c3RyaW5n</text>
+      </register>
+      <register name="-" type="CHARACTER_WISE">
+        <text encoding="base64">c3RyaW5n</text>
+      </register>
+      <register name="." type="CHARACTER_WISE">
+        <text encoding="base64">MQ==</text>
+      </register>
+      <register name="/" type="CHARACTER_WISE">
+        <text encoding="base64">Y3JlYXRl</text>
+      </register>
+      <register name="1" type="LINE_WISE">
+        <text encoding="base64">aW1wb3J0IHBhdGggZnJvbSAncGF0aCc7Cg==</text>
+      </register>
+      <register name="2" type="LINE_WISE">
+        <text encoding="base64">Y29uc3QgREVWX1RPS0VOID0gOwo=</text>
+      </register>
+      <register name="3" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgdG90YWxNYXRjaGVzOiByZXN1bHRzLnRvdGFsTWF0Y2hlcywKICAgICAgY291bnQ6IHJlc3VsdHMuY291bnQsCiAgICAgIHJlc3VsdHM6IFsKICAgICAgICAuLi5yZXN1bHRzLnJlc3VsdHMKICAgICAgXQo=</text>
+      </register>
+      <register name="4" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICBhZGRyZXNzZXM6IHJlc3VsdHMucmVzdWx0cywK</text>
+      </register>
+      <register name="5" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICBpbmNvbXBsZXRlUmVzdWx0czogcmVzdWx0cy5pbmNvbXBsZXRlUmVzdWx0cywK</text>
+      </register>
+      <register name="6" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgcmVzdWx0czogewogICAgICAgIAogICAgICB9Cg==</text>
+      </register>
+      <register name="7" type="LINE_WISE">
+        <text encoding="base64">ICBjb25zb2xlLmxvZyhyZXN1bHRzKTsK</text>
+      </register>
+      <register name="8" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgLi4ucmVzdWx0cywK</text>
+      </register>
+      <register name="9" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgLi4uaXRlbSwK</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">Y3JlYXRl</last-search>
+      <last-offset encoding="base64" />
+      <last-pattern encoding="base64">Y3JlYXRl</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
+    </search>
+  </component>
+  <component name="VimVariables">
+    <vim-variables />
+  </component>
+</application>

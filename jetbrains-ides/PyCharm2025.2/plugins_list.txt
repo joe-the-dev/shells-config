@@ -1,0 +1,11 @@
+editorconfig-plugin
+fullLine
+javascript-debugger
+javascript-plugin
+jupyter-plugin
+notebooks-plugin
+packageChecker
+properties
+react
+restClient
+toml

@@ -18,6 +18,9 @@
     <e n="CloseContent">
       <i c="1" l="1754638863560" />
     </e>
+    <e n="CompileDirty">
+      <i c="1" l="1756792406299" />
+    </e>
     <e n="DatabaseView.AddActionGroupPopup">
       <i c="1" l="1754470025928" />
     </e>
@@ -109,7 +112,7 @@
       <i c="19" l="1755675812109" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="1" l="1754465236260" />
+      <i c="2" l="1756792402346" />
     </e>
     <e n="ShowIntentionActions">
       <i c="1" l="1755668864451" />
@@ -185,6 +188,9 @@
     </e>
     <e n="com.intellij.ide.startup.importSettings.chooser.settingChooser.SettingChooserItemAction">
       <i c="1" l="1754447681267" />
+    </e>
+    <e n="com.intellij.ide.ui.customization.ToolbarAddQuickActionsAction">
+      <i c="1" l="1756792404410" />
     </e>
     <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
       <i c="187" l="1755676361786" />

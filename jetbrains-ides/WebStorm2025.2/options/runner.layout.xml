@@ -1,0 +1,105 @@
+<application>
+  <component name="RunnerLayoutSettings">
+    <runner id="Debug">
+      <ViewImpl>
+        <option name="ID" value="FrameContent" />
+        <option name="placeInGrid" value="left" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="VariablesContent" />
+        <option name="placeInGrid" value="center" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ConsoleContent" />
+        <option name="placeInGrid" value="bottom" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="js.console.node.process.id" />
+        <option name="placeInGrid" value="bottom" />
+        <option name="tabIndex" value="2" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="SCRIPTS_CONTENT" />
+        <option name="placeInGrid" value="bottom" />
+        <option name="tabIndex" value="3" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="wi.structureView" />
+        <option name="placeInGrid" value="left" />
+        <option name="tabIndex" value="3" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="wi.textView" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="3" />
+      </ViewImpl>
+      <TabImpl>
+        <option name="leftProportion" value="0.47689074" />
+      </TabImpl>
+      <TabImpl>
+        <option name="bottomProportion" value="0.0" />
+        <option name="defaultIndex" value="1" />
+        <option name="index" value="1" />
+      </TabImpl>
+      <TabImpl>
+        <option name="bottomProportion" value="0.0" />
+        <option name="defaultIndex" value="2" />
+        <option name="index" value="2" />
+      </TabImpl>
+      <TabImpl>
+        <option name="bottomProportion" value="0.0" />
+        <option name="defaultIndex" value="3" />
+        <option name="index" value="3" />
+        <option name="leftProportion" value="0.19941987" />
+      </TabImpl>
+    </runner>
+    <runner id="JavaRunner">
+      <ViewImpl>
+        <option name="ID" value="ConsoleContent" />
+        <option name="placeInGrid" value="bottom" />
+      </ViewImpl>
+      <TabImpl>
+        <option name="bottomProportion" value="0.0" />
+      </TabImpl>
+    </runner>
+    <runner id="Session">
+      <ViewImpl>
+        <option name="ID" value="Input" />
+        <option name="placeInGrid" value="center" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#39071c5e@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#3df7d637@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#23f24dc0@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#7654398b@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <TabImpl />
+      <TabImpl>
+        <option name="defaultIndex" value="2" />
+        <option name="index" value="1" />
+      </TabImpl>
+      <TabImpl>
+        <option name="defaultIndex" value="2" />
+        <option name="index" value="1" />
+      </TabImpl>
+      <General>
+        <option name="isTabLabelsHidden" value="false" />
+      </General>
+    </runner>
+  </component>
+</application>

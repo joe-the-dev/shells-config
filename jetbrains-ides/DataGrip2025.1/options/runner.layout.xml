@@ -1,0 +1,79 @@
+<application>
+  <component name="RunnerLayoutSettings">
+    <runner id="Session">
+      <ViewImpl>
+        <option name="ID" value="Input" />
+        <option name="placeInGrid" value="center" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#4068cefd@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#22084fc2@2.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#73a9b3d9@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#5ecf8b57@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#7b95d9b4@23.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="2" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#5d0122c4@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="3" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#58d5860b@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#b4cff8e@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="4" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#4a3cea66@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="5" />
+      </ViewImpl>
+      <TabImpl />
+      <TabImpl>
+        <option name="defaultIndex" value="4" />
+        <option name="index" value="1" />
+      </TabImpl>
+      <TabImpl>
+        <option name="defaultIndex" value="2" />
+        <option name="index" value="2" />
+      </TabImpl>
+      <TabImpl>
+        <option name="defaultIndex" value="3" />
+        <option name="index" value="3" />
+      </TabImpl>
+      <TabImpl>
+        <option name="defaultIndex" value="4" />
+        <option name="index" value="4" />
+      </TabImpl>
+      <TabImpl>
+        <option name="defaultIndex" value="5" />
+        <option name="index" value="5" />
+      </TabImpl>
+      <General>
+        <option name="isTabLabelsHidden" value="false" />
+      </General>
+    </runner>
+  </component>
+</application>
