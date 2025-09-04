@@ -1,5 +1,0 @@
-<application>
-  <component name="TerminalLocalOptions">
-    <option name="shellPath" value="/opt/homebrew/bin/fish" />
-  </component>
-</application>

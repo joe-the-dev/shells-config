@@ -448,19 +448,31 @@ clean:
 	@find . -name "*.tmp" -delete 2>/dev/null || true
 	@find . -name ".DS_Store" -delete 2>/dev/null || true
 	@CLEANED_COUNT=0; \
-	if [ -d "intellij" ]; then \
-		echo "🧠 Cleaning up legacy IntelliJ directory..."; \
-		INTELLIJ_FILES_COUNT=$$(find intellij -type f | wc -l | tr -d ' '); \
-		if [ "$$INTELLIJ_FILES_COUNT" -gt 0 ]; then \
-			echo "  📊 Found $$INTELLIJ_FILES_COUNT files in legacy intellij/ directory"; \
-			echo "  🗑️  Removing legacy intellij/ directory (replaced by jetbrains-ides/)"; \
-			rm -rf intellij/; \
-			CLEANED_COUNT=$$((CLEANED_COUNT + INTELLIJ_FILES_COUNT)); \
-			echo "  ✅ Removed legacy IntelliJ configuration directory"; \
-		fi; \
-	fi; \
 	if [ -d "jetbrains-ides" ]; then \
-		echo "🧠 Cleaning cache files from JetBrains IDEs configurations..."; \
+		echo "🧠 Cleaning up old JetBrains IDE versions..."; \
+		cd jetbrains-ides; \
+		for ide_base in DataGrip IntelliJIdea PyCharm WebStorm PhpStorm CLion GoLand RubyMine Rider; do \
+			IDE_DIRS=$$(find . -maxdepth 1 -type d -name "$$ide_base*" | sort -V); \
+			if [ -n "$$IDE_DIRS" ]; then \
+				IDE_COUNT=$$(echo "$$IDE_DIRS" | wc -l | tr -d ' '); \
+				if [ "$$IDE_COUNT" -gt 1 ]; then \
+					LATEST_DIR=$$(echo "$$IDE_DIRS" | tail -1); \
+					echo "  📂 Found $$IDE_COUNT versions of $$ide_base, keeping latest: $$(basename "$$LATEST_DIR")"; \
+					echo "$$IDE_DIRS" | while read -r dir; do \
+						if [ "$$dir" != "$$LATEST_DIR" ] && [ -d "$$dir" ]; then \
+							OLD_FILES_COUNT=$$(find "$$dir" -type f | wc -l | tr -d ' '); \
+							echo "    🗑️  Removing old version: $$(basename "$$dir") ($$OLD_FILES_COUNT files)"; \
+							rm -rf "$$dir"; \
+							CLEANED_COUNT=$$((CLEANED_COUNT + OLD_FILES_COUNT)); \
+						fi; \
+					done; \
+				else \
+					echo "  ℹ️  Only 1 version of $$ide_base found, keeping it"; \
+				fi; \
+			fi; \
+		done; \
+		cd ..; \
+		echo "🧠 Cleaning cache files from remaining JetBrains IDEs configurations..."; \
 		REMOVED_XML_COUNT=0; \
 		for xml_pattern in "recentProjects" "window\." "actionSummary" "contributorSummary" "features\.usage\.statistics" "dailyLocalStatistics" "log-categories" "EventLog" "DontShowAgain" "CommonFeedback" "AIOnboarding" "McpToolsStore"; do \
 			XML_FILES=$$(find jetbrains-ides -name "*.xml" -path "*/options/*" | grep -E "$$xml_pattern" 2>/dev/null || true); \
