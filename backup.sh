@@ -161,21 +161,34 @@ for tool in "${TOOLS[@]}"; do
           continue
       fi
 
-      # Find all JetBrains IDE directories
-      IDE_DIRS=$(find "$JETBRAINS_DIR" -maxdepth 1 -type d -name "*Idea*" -o -name "*PyCharm*" -o -name "*WebStorm*" -o -name "*PhpStorm*" -o -name "*CLion*" -o -name "*GoLand*" -o -name "*RubyMine*" -o -name "*DataGrip*" -o -name "*Rider*" | sort)
-
-      if [[ -z "$IDE_DIRS" ]]; then
-          echo "⚠️  No JetBrains IDE configurations found"
-          continue
-      fi
+      # Find all JetBrains IDE directories and keep only the latest version of each
+      echo "🔍 Finding JetBrains IDE directories and selecting latest versions..."
 
       # Create jetbrains-ides directory in your config repo
       JETBRAINS_BACKUP_DIR="$REPO_DIR/jetbrains-ides"
       mkdir -p "$JETBRAINS_BACKUP_DIR"
 
-      echo "📋 Found JetBrains IDEs to backup:"
-      echo "$IDE_DIRS" | while read -r ide_dir; do
-          echo "  - $(basename "$ide_dir")"
+      # Group IDEs by base name and find latest version of each
+      LATEST_IDES=""
+      for ide_base in DataGrip IntelliJIdea PyCharm WebStorm PhpStorm CLion GoLand RubyMine Rider; do
+          IDE_DIRS_FOR_BASE=$(find "$JETBRAINS_DIR" -maxdepth 1 -type d -name "${ide_base}*" | sort -V)
+          if [[ -n "$IDE_DIRS_FOR_BASE" ]]; then
+              LATEST_IDE=$(echo "$IDE_DIRS_FOR_BASE" | tail -1)
+              LATEST_IDES="$LATEST_IDES$LATEST_IDE"$'\n'
+              echo "  📂 Found $(echo "$IDE_DIRS_FOR_BASE" | wc -l | tr -d ' ') versions of $ide_base, selecting latest: $(basename "$LATEST_IDE")"
+          fi
+      done
+
+      if [[ -z "$LATEST_IDES" ]]; then
+          echo "⚠️  No JetBrains IDE configurations found"
+          continue
+      fi
+
+      echo "📋 Selected JetBrains IDEs to backup (latest versions only):"
+      echo "$LATEST_IDES" | while read -r ide_dir; do
+          if [[ -n "$ide_dir" ]]; then
+              echo "  - $(basename "$ide_dir")"
+          fi
       done
 
       # Define patterns for files to exclude from backup
@@ -196,6 +209,7 @@ for tool in "${TOOLS[@]}"; do
           "--exclude=statistics.xml"
           "--exclude=event-log-whitelist.xml"
           "--exclude=vim_settings_local.xml"
+          "--exclude=ConversationToolStoreService.xml"
           "--exclude=*_backup_*.xml"
           "--exclude=*.backup"
           "--exclude=consoles/"
@@ -205,7 +219,7 @@ for tool in "${TOOLS[@]}"; do
       )
 
       # Backup each IDE
-      echo "$IDE_DIRS" | while read -r ide_dir; do
+      echo "$LATEST_IDES" | while read -r ide_dir; do
           if [[ -d "$ide_dir" ]]; then
               IDE_NAME=$(basename "$ide_dir")
               BACKUP_DIR="$JETBRAINS_BACKUP_DIR/$IDE_NAME"
@@ -258,7 +272,6 @@ for tool in "${TOOLS[@]}"; do
               done
 
               # Create metadata file
-              echo "$(date '+%Y-%m-%d %H:%M:%S')" > "$BACKUP_DIR/backup_date.txt"
               echo "$IDE_NAME" > "$BACKUP_DIR/ide_version.txt"
 
               echo "  ✅ $IDE_NAME backup complete"

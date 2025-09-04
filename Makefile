@@ -474,7 +474,7 @@ clean:
 		cd ..; \
 		echo "🧠 Cleaning cache and unnecessary files from JetBrains IDEs configurations..."; \
 		REMOVED_FILE_COUNT=0; \
-		for file_pattern in "vim_settings_local.xml" "recentProjects.xml" "window.*.xml" "actionSummary.xml" "contributorSummary.xml" "features.usage.statistics.xml" "dailyLocalStatistics.xml" "log-categories.xml" "EventLog*.xml" "DontShowAgain*.xml" "CommonFeedback*.xml" "AIOnboarding*.xml" "McpToolsStore*.xml" "usage.statistics.xml" "statistics.xml" "event-log-whitelist.xml" "*_backup_*.xml" "*.backup"; do \
+		for file_pattern in "vim_settings_local.xml" "recentProjects.xml" "window.*.xml" "actionSummary.xml" "contributorSummary.xml" "features.usage.statistics.xml" "dailyLocalStatistics.xml" "log-categories.xml" "EventLog*.xml" "DontShowAgain*.xml" "CommonFeedback*.xml" "AIOnboarding*.xml" "McpToolsStore*.xml" "usage.statistics.xml" "statistics.xml" "event-log-whitelist.xml" "ConversationToolStoreService.xml" "*_backup_*.xml" "*.backup"; do \
 			FOUND_FILES=$$(find jetbrains-ides -name "$$file_pattern" 2>/dev/null || true); \
 			if [ -n "$$FOUND_FILES" ]; then \
 				FILE_COUNT=$$(echo "$$FOUND_FILES" | wc -l | tr -d ' '); \
