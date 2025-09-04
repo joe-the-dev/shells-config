@@ -433,9 +433,6 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="12" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="3" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.gitmodules" protocol="file" />
-      <jump line="2" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="3" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.gitmodules" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/.ideavimrc" protocol="file" />
@@ -528,11 +525,14 @@
       <jump line="179" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/log-categories.xml" protocol="file" />
       <jump line="2" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/log-categories.xml" protocol="file" />
-      <jump line="55" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="447" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="446" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
       <jump line="142" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="55" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="451" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="450" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="146" column="41" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">

@@ -444,10 +444,58 @@ restore-jetbrains:
 
 # Clean up temporary files
 clean:
-	@echo "🧹 Cleaning up temporary files..."
+	@echo "🧹 Cleaning up temporary files and old configurations..."
 	@find . -name "*.tmp" -delete 2>/dev/null || true
 	@find . -name ".DS_Store" -delete 2>/dev/null || true
-	@echo "✅ Cleanup complete!"
+	@CLEANED_COUNT=0; \
+	if [ -d "intellij" ]; then \
+		echo "🧠 Cleaning up legacy IntelliJ directory..."; \
+		INTELLIJ_FILES_COUNT=$$(find intellij -type f | wc -l | tr -d ' '); \
+		if [ "$$INTELLIJ_FILES_COUNT" -gt 0 ]; then \
+			echo "  📊 Found $$INTELLIJ_FILES_COUNT files in legacy intellij/ directory"; \
+			echo "  🗑️  Removing legacy intellij/ directory (replaced by jetbrains-ides/)"; \
+			rm -rf intellij/; \
+			CLEANED_COUNT=$$((CLEANED_COUNT + INTELLIJ_FILES_COUNT)); \
+			echo "  ✅ Removed legacy IntelliJ configuration directory"; \
+		fi; \
+	fi; \
+	if [ -d "jetbrains-ides" ]; then \
+		echo "🧠 Cleaning cache files from JetBrains IDEs configurations..."; \
+		REMOVED_XML_COUNT=0; \
+		for xml_pattern in "recentProjects" "window\." "actionSummary" "contributorSummary" "features\.usage\.statistics" "dailyLocalStatistics" "log-categories" "EventLog" "DontShowAgain" "CommonFeedback" "AIOnboarding" "McpToolsStore"; do \
+			XML_FILES=$$(find jetbrains-ides -name "*.xml" -path "*/options/*" | grep -E "$$xml_pattern" 2>/dev/null || true); \
+			if [ -n "$$XML_FILES" ]; then \
+				XML_COUNT=$$(echo "$$XML_FILES" | wc -l | tr -d ' '); \
+				echo "$$XML_FILES" | xargs rm -f; \
+				REMOVED_XML_COUNT=$$((REMOVED_XML_COUNT + XML_COUNT)); \
+			fi; \
+		done; \
+		if [ "$$REMOVED_XML_COUNT" -gt 0 ]; then \
+			echo "  ✅ Removed $$REMOVED_XML_COUNT cache XML files from jetbrains-ides/"; \
+			CLEANED_COUNT=$$((CLEANED_COUNT + REMOVED_XML_COUNT)); \
+		else \
+			echo "  ℹ️  No cache XML files found in jetbrains-ides/"; \
+		fi; \
+	fi; \
+	if [ -d "karabiner/automatic_backups" ]; then \
+		echo "⌨️  Cleaning old Karabiner automatic backups..."; \
+		BACKUP_COUNT=$$(ls -1 karabiner/automatic_backups/karabiner_*.json 2>/dev/null | wc -l | tr -d ' '); \
+		if [ "$$BACKUP_COUNT" -gt 2 ]; then \
+			KEEP_COUNT=2; \
+			DELETE_COUNT=$$((BACKUP_COUNT - KEEP_COUNT)); \
+			echo "  📊 Found $$BACKUP_COUNT backups, keeping $$KEEP_COUNT most recent, removing $$DELETE_COUNT old ones"; \
+			ls -1t karabiner/automatic_backups/karabiner_*.json 2>/dev/null | tail -n +$$((KEEP_COUNT + 1)) | xargs rm -f; \
+			CLEANED_COUNT=$$((CLEANED_COUNT + DELETE_COUNT)); \
+			echo "  ✅ Removed $$DELETE_COUNT old Karabiner backups"; \
+		else \
+			echo "  ℹ️  Only $$BACKUP_COUNT Karabiner backups found, keeping all"; \
+		fi; \
+	fi; \
+	if [ "$$CLEANED_COUNT" -gt 0 ]; then \
+		echo "🎉 Cleanup complete! Removed $$CLEANED_COUNT total files"; \
+	else \
+		echo "✅ Cleanup complete! No unnecessary files found"; \
+	fi
 
 # Update git repository and submodules
 update:
