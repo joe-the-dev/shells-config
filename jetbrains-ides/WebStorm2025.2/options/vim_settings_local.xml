@@ -13,106 +13,106 @@
   </component>
   <component name="VimJumpsSettings">
     <project id="otr-dc2cada2">
-      <jump line="91" column="13" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
-      <jump line="9" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/Dockerfile" protocol="file" />
-      <jump line="101" column="0" filename="$USER_HOME$/Documents/Project/otr/node_modules/.pnpm/axios@1.10.0/node_modules/axios/lib/core/AxiosError.js" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" protocol="file" />
-      <jump line="1" column="5" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
-      <jump line="9" column="13" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
-      <jump line="61" column="10" filename="$USER_HOME$/Documents/Project/otr/package.json" protocol="file" />
-      <jump line="48" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="59" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="50" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="49" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="45" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="43" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="989" column="0" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="836" column="4" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="15" column="23" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="4" column="32" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="22" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="184" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="190" column="23" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="202" column="88" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="200" column="40" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="195" column="26" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="194" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="193" column="22" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="187" column="9" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="188" column="13" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="49" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="55" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="48" column="21" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="57" column="20" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="58" column="19" filename="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" protocol="file" />
-      <jump line="29" column="18" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="39" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="9" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="10" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="14" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="20" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
-      <jump line="10" column="25" filename="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" protocol="file" />
-      <jump line="23" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/.env" protocol="file" />
-      <jump line="5" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" protocol="file" />
-      <jump line="1" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" protocol="file" />
-      <jump line="0" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" protocol="file" />
-      <jump line="6" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" protocol="file" />
-      <jump line="10" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/type.ts" protocol="file" />
-      <jump line="2" column="53" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/scripts/init-test-docker.sh" protocol="file" />
-      <jump line="7" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/vitest.setUp.ts" protocol="file" />
-      <jump line="530" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="549" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="550" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="529" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="589" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="587" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="527" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="18" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" protocol="file" />
-      <jump line="513" column="13" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="47" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="32" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="31" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="41" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="40" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="30" column="49" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="205" column="14" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
-      <jump line="161" column="18" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
-      <jump line="6" column="23" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
-      <jump line="45" column="5" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
-      <jump line="43" column="7" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
-      <jump line="41" column="2" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
-      <jump line="37" column="15" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" protocol="file" />
-      <jump line="170" column="15" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
-      <jump line="119" column="27" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" protocol="file" />
-      <jump line="3" column="10" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/types/types.ts" protocol="file" />
-      <jump line="15" column="35" filename="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/types/types.ts" protocol="file" />
-      <jump line="26" column="41" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="50" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="37" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="49" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="53" column="23" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="525" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" protocol="file" />
-      <jump line="4" column="92" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="7" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="12" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
-      <jump line="1" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
-      <jump line="2" column="15" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
-      <jump line="8" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
-      <jump line="10" column="28" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
-      <jump line="6" column="39" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" protocol="file" />
-      <jump line="26" column="11" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" protocol="file" />
-      <jump line="6" column="54" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="27" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="28" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="52" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="36" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="35" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="34" column="43" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="38" column="44" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="42" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="21" column="5" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
-      <jump line="15" column="38" filename="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" protocol="file" />
+      <jump line="33" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="76" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="54" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="73" column="5" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="69" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="70" column="10" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="39" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="75" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="2" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="36" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/experian/routes.experian.ts" protocol="file" />
+      <jump line="0" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="58" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="126" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="6" column="23" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="4" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="34" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="30" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="39" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="125" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="133" column="18" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="131" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="40" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="44" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="19" column="13" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="20" column="1" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="25" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="26" column="29" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="82" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="111" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="113" column="18" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="24" column="11" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="37" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="66" column="65" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="68" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="31" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="29" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="45" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="103" column="54" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="12" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="13" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="18" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="14" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="113" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="102" column="12" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="98" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="107" column="31" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="74" column="51" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="30" column="36" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="39" column="14" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/experian/routes.experian.ts" protocol="file" />
+      <jump line="20" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/app.ts" protocol="file" />
+      <jump line="71" column="19" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/app.ts" protocol="file" />
+      <jump line="69" column="2" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/app.ts" protocol="file" />
+      <jump line="31" column="49" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="42" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="11" column="3" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="7" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="8" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="6" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="35" column="6" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="108" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="10" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="23" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="9" column="22" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="20" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="12" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="25" column="25" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="187" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="7" column="20" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="17" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="137" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="39" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="129" column="7" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="31" column="33" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="39" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="74" column="16" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="91" column="8" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="10" column="46" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="104" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" protocol="file" />
+      <jump line="15" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="26" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/experian.controller.ts" protocol="file" />
+      <jump line="165" column="40" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="47" column="11" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="65" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="50" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="66" column="21" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="73" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-monitor.ts" protocol="file" />
+      <jump line="8" column="4" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-monitor.ts" protocol="file" />
+      <jump line="56" column="0" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-monitor.ts" protocol="file" />
+      <jump line="43" column="9" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" protocol="file" />
+      <jump line="16" column="17" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="89" column="23" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="38" column="11" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="36" column="24" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="218" column="44" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
+      <jump line="13" column="26" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" protocol="file" />
+      <jump line="192" column="76" filename="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/lib/cache-manager.ts" protocol="file" />
     </project>
     <project id="opex-sca-data-621a374">
       <jump line="41" column="33" filename="$USER_HOME$/Documents/Project/opex-sca-data/terraform/sca-data/db_users.tf" protocol="file" />
@@ -391,7 +391,6 @@
       <jump line="83" column="0" filename="$USER_HOME$/Documents/Playground/vuthanhdatdev.github.io-private/src/components/navbar.component.tsx" protocol="file" />
     </project>
     <project id="secure-client-8b5aaf16">
-      <jump line="93" column="22" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
       <jump line="99" column="27" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
       <jump line="22" column="29" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
       <jump line="55" column="26" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/search.ts" protocol="file" />
@@ -491,120 +490,116 @@
       <jump line="79" column="44" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
       <jump line="65" column="0" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
       <jump line="70" column="13" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
+      <jump line="44" column="33" filename="$USER_HOME$/Documents/Project/secure-client/src/components/AutoComplete/address/services/experian/constants.ts" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/type.ts" timestamp="1756868048724">
-        <mark key="&quot;" line="10" column="3" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/plugins/cache.ts" timestamp="1756959596425">
+        <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/config/environment.ts" timestamp="1756868048482">
-        <mark key="&quot;" line="6" column="40" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/repositories/profile/profile.repository.types.ts" timestamp="1756955788043">
+        <mark key="&quot;" line="46" column="22" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/vitest.setUp.ts" timestamp="1756868050153">
-        <mark key="&quot;" line="7" column="20" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/application-note.service.ts" timestamp="1756955789112">
+        <mark key="&quot;" line="9" column="13" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/scripts/init-test-docker.sh" timestamp="1756868049659">
-        <mark key="&quot;" line="1" column="0" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/routes.cache.ts" timestamp="1756967340189">
+        <mark key="&quot;" line="8" column="23" />
+        <mark key="[" line="91" column="0" />
+        <mark key="]" line="91" column="0" />
+        <mark key="." line="91" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-mfe/package.json" timestamp="1756868512178">
-        <mark key="&quot;" line="55" column="10" />
-      </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/.env.example" timestamp="1756868046309">
-        <mark key="&quot;" line="1" column="33" />
-      </file>
-      <file name="$USER_HOME$/Documents/Project/otr/pnpm-lock.yaml" timestamp="1756866560187">
-        <mark key="&quot;" line="58" column="19" />
-      </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/trading-account-service/package.json" timestamp="1756868035214">
-        <mark key="&quot;" line="10" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" timestamp="1756868033536">
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/package.json" timestamp="1756960797104">
         <mark key="&quot;" line="20" column="21" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/sca-profile-adaptor/src/services/user.service.ts" timestamp="1756868512806">
-        <mark key="&quot;" line="142" column="56" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/cache/cache-metrics.routes.ts" timestamp="1756960810095">
+        <mark key="&quot;" line="32" column="30" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/docker-compose.yml" timestamp="1756868050490">
-        <mark key="&quot;" line="54" column="41" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/experian/experian.service.ts" timestamp="1756966093067">
+        <mark key="&quot;" line="28" column="37" />
+        <mark key="[" line="31" column="15" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/update-alloy.handler.ts" timestamp="1756879825956">
-        <mark key="&quot;" line="47" column="68" />
-        <mark key="[" line="34" column="23" />
-        <mark key="]" line="38" column="49" />
-        <mark key="." line="38" column="48" />
-        <mark key="^" line="38" column="49" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/orval.config.ts" timestamp="1756960812387">
+        <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/sca-user-updated.types.ts" timestamp="1756870213753">
-        <mark key="&quot;" line="26" column="13" />
+      <file name="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/types/types.ts" timestamp="1756955788401">
+        <mark key="&quot;" line="15" column="35" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/api/alloy/journeys/journeys.ts" timestamp="1756868513227">
-        <mark key="&quot;" line="211" column="73" />
+      <file name="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/find.ts" timestamp="1756955788577">
+        <mark key="&quot;" line="37" column="15" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/component-tests/utils/jwt-utils.ts" timestamp="1756868049027">
-        <mark key="&quot;" line="2" column="53" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/services/cache/cache.service.ts" timestamp="1756959596427">
+        <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/services/mapping/alloy-payload-mapping.ts" timestamp="1756869379039">
-        <mark key="&quot;" line="529" column="65" />
+      <file name="/Dummy.txt" timestamp="1756960818997">
+        <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/kyc-service/src/generated/types/events/event-types.types.ts" timestamp="1756870212451">
-        <mark key="&quot;" line="1" column="12" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/controllers/profile-application.controller.ts" timestamp="1756955788225">
+        <mark key="&quot;" line="21" column="22" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/packages/event-bus/src/services/event-bus.ts" timestamp="1756869955299">
-        <mark key="&quot;" line="119" column="27" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/routes/index.ts" timestamp="1756960818968">
+        <mark key="&quot;" line="6" column="0" />
+        <mark key="[" line="6" column="0" />
+        <mark key="]" line="6" column="0" />
+        <mark key="." line="6" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/.env" timestamp="1756868036785">
-        <mark key="&quot;" line="23" column="28" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/src/app.ts" timestamp="1756966656611">
+        <mark key="'" line="0" column="0" />
+        <mark key="[" line="69" column="0" />
+        <mark key="]" line="69" column="0" />
+        <mark key="^" line="20" column="0" />
+        <mark key="." line="69" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Project/otr/package.json" timestamp="1756868512538">
-        <mark key="&quot;" line="1" column="4" />
+      <file name="$USER_HOME$/Documents/Project/otr/apps/otr-profile-api/test-cache.js" timestamp="1756960790369">
+        <mark key="&quot;" line="17" column="6" />
       </file>
     </localmarks>
   </component>
   <component name="VimRegisterSettings">
     <registers>
-      <register name="&quot;" type="CHARACTER_WISE">
-        <text encoding="base64">c3RyaW5n</text>
+      <register name="&quot;" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICBkZXNjcmlwdGlvbjogJ0NsZWFyIGFsbCBjYWNoZXMnLAo=</text>
       </register>
-      <register name="*" type="CHARACTER_WISE">
-        <text encoding="base64">c3RyaW5n</text>
+      <register name="*" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICBkZXNjcmlwdGlvbjogJ0NsZWFyIGFsbCBjYWNoZXMnLAo=</text>
       </register>
       <register name="-" type="CHARACTER_WISE">
-        <text encoding="base64">c3RyaW5n</text>
+        <text encoding="base64">MzYwMA==</text>
       </register>
       <register name="." type="CHARACTER_WISE">
-        <text encoding="base64">ZWNobyA=</text>
+        <text encoding="base64" />
       </register>
       <register name="/" type="CHARACTER_WISE">
         <text encoding="base64">Y3JlYXRl</text>
       </register>
       <register name="1" type="LINE_WISE">
-        <text encoding="base64">aW1wb3J0IHBhdGggZnJvbSAncGF0aCc7Cg==</text>
+        <text encoding="base64">ICAgICAgICBkZXNjcmlwdGlvbjogJ0NsZWFyIGFsbCBjYWNoZXMnLAo=</text>
       </register>
       <register name="2" type="LINE_WISE">
-        <text encoding="base64">Y29uc3QgREVWX1RPS0VOID0gOwo=</text>
+        <text encoding="base64">ICAgICAgICBkZXNjcmlwdGlvbjogJ0dldCBjYWNoZSBzdGF0aXN0aWNzIGZvciBtb25pdG9yaW5nJywK</text>
       </register>
       <register name="3" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgdG90YWxNYXRjaGVzOiByZXN1bHRzLnRvdGFsTWF0Y2hlcywKICAgICAgY291bnQ6IHJlc3VsdHMuY291bnQsCiAgICAgIHJlc3VsdHM6IFsKICAgICAgICAuLi5yZXN1bHRzLnJlc3VsdHMKICAgICAgXQo=</text>
+        <text encoding="base64">CiAgLy8gUmVnaXN0ZXIgQGZhc3RpZnkvY2FjaGluZyBwbHVnaW4KICBhd2FpdCBhcHAucmVnaXN0ZXIoaW1wb3J0KCdAZmFzdGlmeS9jYWNoaW5nJyksIHsKICAgIHByaXZhY3k6ICdwcml2YXRlJywKICAgIGV4cGlyZXNJbjogOTAwLCAvLyAxNSBtaW51dGVzIGRlZmF1bHQKICB9KTsKCg==</text>
       </register>
       <register name="4" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICBhZGRyZXNzZXM6IHJlc3VsdHMucmVzdWx0cywK</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="5" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICBpbmNvbXBsZXRlUmVzdWx0czogcmVzdWx0cy5pbmNvbXBsZXRlUmVzdWx0cywK</text>
+        <text encoding="base64">ICAvLyBTZXQgY2FjaGUgaGVhZGVycyBmb3IgQGZhc3RpZnkvY2FjaGluZyAoMTUgbWludXRlcykK</text>
       </register>
       <register name="6" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgcmVzdWx0czogewogICAgICAgIAogICAgICB9Cg==</text>
+        <text encoding="base64">ICBhcHA/OiBGYXN0aWZ5SW5zdGFuY2UK</text>
       </register>
       <register name="7" type="LINE_WISE">
-        <text encoding="base64">ICBjb25zb2xlLmxvZyhyZXN1bHRzKTsK</text>
+        <text encoding="base64">ICogQHBhcmFtIGFwcCAtIEZhc3RpZnkgaW5zdGFuY2UgZm9yIGFjY2Vzc2luZyBjYWNoZQo=</text>
       </register>
       <register name="8" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgLi4ucmVzdWx0cywK</text>
+        <text encoding="base64">aW1wb3J0IHR5cGUgeyBGYXN0aWZ5SW5zdGFuY2UgfSBmcm9tICdmYXN0aWZ5JzsK</text>
       </register>
       <register name="9" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgLi4uaXRlbSwK</text>
+        <text encoding="base64">ICBTRUFSQ0hfQUREUkVTU0VTOiA5MDAsIC8vIDE1IG1pbnV0ZXMgZm9yIHNlYXJjaCByZXN1bHRzCg==</text>
       </register>
     </registers>
   </component>
@@ -614,7 +609,7 @@
       <last-offset encoding="base64" />
       <last-pattern encoding="base64">Y3JlYXRl</last-pattern>
       <last-dir encoding="base64">MQ==</last-dir>
-      <show-last encoding="base64">dHJ1ZQ==</show-last>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
     </search>
   </component>
   <component name="VimVariables">

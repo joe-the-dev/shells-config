@@ -444,7 +444,7 @@ restore-jetbrains:
 
 # Clean up temporary files
 clean:
-	@echo "🧹 Cleaning up..."
+	@echo "🧹 Cleaning up temporary files..."
 	@find . -name "*.tmp" -delete 2>/dev/null || true
 	@find . -name ".DS_Store" -delete 2>/dev/null || true
 	@echo "✅ Cleanup complete!"

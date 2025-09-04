@@ -93,10 +93,6 @@
         <option name="defaultIndex" value="2" />
         <option name="index" value="1" />
       </TabImpl>
-      <TabImpl>
-        <option name="defaultIndex" value="2" />
-        <option name="index" value="1" />
-      </TabImpl>
       <General>
         <option name="isTabLabelsHidden" value="false" />
       </General>

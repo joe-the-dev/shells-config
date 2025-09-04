@@ -53,7 +53,19 @@ for tool in "${TOOLS[@]}"; do
       echo "🔄 Backing up $tool config files → $dst"
       mkdir -p "$dst"
       if [ -d "$src" ]; then
-        rsync -a "$src"/ "$dst"/
+        if [ "$tool" = "karabiner" ]; then
+          # For Karabiner, exclude automatic backup files to keep only the current config
+          echo "  ⌨️  Excluding automatic backup files"
+          rsync -a --exclude="automatic_backups/karabiner_*.json" "$src"/ "$dst"/
+          # Keep only the 2 most recent backup files if any exist
+          if [ -d "$src/automatic_backups" ] && [ -n "$(ls "$src/automatic_backups"/karabiner_*.json 2>/dev/null)" ]; then
+            echo "  📋 Keeping 2 most recent Karabiner backups"
+            mkdir -p "$dst/automatic_backups"
+            ls -1t "$src/automatic_backups"/karabiner_*.json 2>/dev/null | head -2 | xargs -I {} cp {} "$dst/automatic_backups/"
+          fi
+        else
+          rsync -a "$src"/ "$dst"/
+        fi
       fi
       continue
       ;;
@@ -166,6 +178,25 @@ for tool in "${TOOLS[@]}"; do
           echo "  - $(basename "$ide_dir")"
       done
 
+      # Define patterns for files to exclude from backup
+      EXCLUDE_PATTERNS=(
+          "--exclude=recentProjects.xml"
+          "--exclude=window.*.xml"
+          "--exclude=actionSummary.xml"
+          "--exclude=contributorSummary.xml"
+          "--exclude=features.usage.statistics.xml"
+          "--exclude=dailyLocalStatistics.xml"
+          "--exclude=log-categories.xml"
+          "--exclude=EventLog*.xml"
+          "--exclude=DontShowAgain*.xml"
+          "--exclude=CommonFeedback*.xml"
+          "--exclude=AIOnboarding*.xml"
+          "--exclude=McpToolsStore*.xml"
+          "--exclude=usage.statistics.xml"
+          "--exclude=statistics.xml"
+          "--exclude=event-log-whitelist.xml"
+      )
+
       # Backup each IDE
       echo "$IDE_DIRS" | while read -r ide_dir; do
           if [[ -d "$ide_dir" ]]; then
@@ -182,8 +213,8 @@ for tool in "${TOOLS[@]}"; do
               fi
 
               if [[ -d "$ide_dir/options" ]]; then
-                  echo "  ⚙️  Backing up IDE options"
-                  rsync -a "$ide_dir/options/" "$BACKUP_DIR/options/"
+                  echo "  ⚙️  Backing up IDE options (excluding cache files)"
+                  rsync -a "${EXCLUDE_PATTERNS[@]}" "$ide_dir/options/" "$BACKUP_DIR/options/"
               fi
 
               if [[ -d "$ide_dir/keymaps" ]]; then

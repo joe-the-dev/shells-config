@@ -433,218 +433,214 @@
       <jump line="7" column="0" filename="$USER_HOME$/.config/nvim/init.lua" protocol="file" />
     </project>
     <project id="shells-config-7bea4e2d">
-      <jump line="4" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="10" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="101" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="27" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="35" column="38" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="75" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/upgrade_all.sh" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/scripts/run_backup.sh" protocol="file" />
-      <jump line="74" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="21" column="90" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="37" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
-      <jump line="10" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
-      <jump line="126" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="356" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="397" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="151" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="42" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="154" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="153" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
-      <jump line="284" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
-      <jump line="311" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="14" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="12" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="18" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="10" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="8" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="16" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="13" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" protocol="file" />
-      <jump line="9" column="44" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" protocol="file" />
-      <jump line="16" column="25" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" protocol="file" />
-      <jump line="302" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" protocol="file" />
-      <jump line="168" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" protocol="file" />
-      <jump line="5" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" protocol="file" />
-      <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/template.env" protocol="file" />
-      <jump line="26" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="158" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="11" column="36" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="13" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="222" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="330" column="23" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="323" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="354" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="1" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="5" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="9" column="18" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="2" column="15" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="4" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="15" column="25" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="17" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="54" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="10" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="355" column="9" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="5" column="25" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="4" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="2" column="15" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="59" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="63" column="41" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="64" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="61" column="34" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="57" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="147" column="26" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="136" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="6" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="310" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="32" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="14" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="6" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" protocol="file" />
-      <jump line="159" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="146" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="152" column="46" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="156" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="37" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/install.sh" protocol="file" />
-      <jump line="151" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
-      <jump line="11" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
-      <jump line="2" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/env/home.env" protocol="file" />
-      <jump line="7" column="55" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
-      <jump line="8" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
-      <jump line="28" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
-      <jump line="100" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" protocol="file" />
-      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
-      <jump line="17" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
-      <jump line="91" column="44" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
-      <jump line="92" column="1" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
-      <jump line="90" column="28" filename="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" protocol="file" />
+      <jump line="12" column="17" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="3" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.gitmodules" protocol="file" />
+      <jump line="2" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="3" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.gitmodules" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/.ideavimrc" protocol="file" />
-      <jump line="161" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="155" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="132" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="1" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" protocol="file" />
-      <jump line="30" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/.env.template" protocol="file" />
+      <jump line="271" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="470" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="469" column="11" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="468" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="473" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="14" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="25" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="17" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="12" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="16" column="29" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="114" column="7" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="113" column="27" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="247" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="68" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="4" column="16" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="82" column="51" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="45" column="52" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="32" column="49" filename="$USER_HOME$/Documents/Playground/shells-config/README.md" protocol="file" />
+      <jump line="24" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="17" column="27" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="17" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/gitconfig/.gitconfig" protocol="file" />
+      <jump line="8" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/gitconfig/.gitconfig" protocol="file" />
+      <jump line="31" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/gitconfig/.gitconfig" protocol="file" />
+      <jump line="0" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" protocol="file" />
+      <jump line="11" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="7" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" protocol="file" />
+      <jump line="4" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="49" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="51" column="42" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" protocol="file" />
+      <jump line="8" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" protocol="file" />
+      <jump line="104" column="51" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="106" column="5" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="108" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="150" column="50" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="9" column="37" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="30" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="246" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="77" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="93" column="24" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="114" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="112" column="32" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="104" column="26" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="4" column="14" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="8" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="3" column="21" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="4" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="8" column="33" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="14" column="29" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="12" column="27" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="15" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="10" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="21" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="23" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="16" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="17" column="10" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="19" column="39" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="7" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="5" column="30" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="6" column="6" filename="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/actionSummary.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/CommonFeedbackSurveyService.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/images.support.xml" protocol="file" />
+      <jump line="0" column="3" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/plugins_list.txt" protocol="file" />
+      <jump line="6" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/images.support.xml" protocol="file" />
+      <jump line="2" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/CommonFeedbackSurveyService.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/colors.scheme.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/AIOnboardingPromoWindowAdvisor.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/actionSummary.xml" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/backup_date.txt" protocol="file" />
+      <jump line="6" column="37" filename="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/IntelliLang.xml" protocol="file" />
+      <jump line="11" column="12" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/karabiner/automatic_backups/karabiner_20250528.json" protocol="file" />
+      <jump line="204" column="11" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="213" column="36" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="208" column="40" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/actionSummary.xml" protocol="file" />
+      <jump line="9" column="20" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/actionSummary.xml" protocol="file" />
+      <jump line="445" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="505" column="8" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="168" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="179" column="31" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/log-categories.xml" protocol="file" />
+      <jump line="2" column="13" filename="$USER_HOME$/Documents/Playground/shells-config/intellij/options/log-categories.xml" protocol="file" />
+      <jump line="55" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/backup.sh" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="447" column="19" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="446" column="22" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
+      <jump line="142" column="4" filename="$USER_HOME$/Documents/Playground/shells-config/Makefile" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/restore_all_jetbrains.sh" timestamp="1756869375100">
-        <mark key="&quot;" line="90" column="28" />
-      </file>
-      <file name="/Dummy.txt" timestamp="1756174163736">
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/backup_date.txt" timestamp="1756971011346">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco_config.json" timestamp="1756108259763">
-        <mark key="&quot;" line="5" column="8" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/backup.sh" timestamp="1756868187971">
-        <mark key="&quot;" line="151" column="33" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/env/home.env" timestamp="1756868188279">
-        <mark key="&quot;" line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/.ideavimrc" timestamp="1756108258080">
-        <mark key="&quot;" line="168" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/peco.fish" timestamp="1756108254089">
-        <mark key="&quot;" line="16" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/install.conf.yaml" timestamp="1756868188754">
-        <mark key="&quot;" line="6" column="17" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fish_plugins" timestamp="1756108260679">
-        <mark key="&quot;" line="1" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/install.sh" timestamp="1756868187798">
-        <mark key="&quot;" line="37" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/env/template.env" timestamp="1756108261739">
-        <mark key="&quot;" line="8" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/scripts/setup_env.sh" timestamp="1756108680238">
-        <mark key="&quot;" line="61" column="46" />
-        <mark key="]" line="17" column="26" />
-        <mark key="^" line="17" column="26" />
-        <mark key="." line="17" column="25" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/fzf.fish" timestamp="1756108255038">
-        <mark key="&quot;" line="302" column="17" />
-        <mark key="'" line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/fish/config.fish" timestamp="1756868188587">
-        <mark key="&quot;" line="155" column="21" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/backup_all_jetbrains.sh" timestamp="1756869375098">
-        <mark key="&quot;" line="100" column="32" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1756868188123">
-        <mark key="&quot;" line="11" column="14" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/.env.template" timestamp="1756868187692">
-        <mark key="&quot;" line="30" column="0" />
-        <mark key="[" line="22" column="6" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1756108256194">
-        <mark key="&quot;" line="2" column="0" />
-      </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/disabled_plugins.txt" timestamp="1756108257093">
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/actionSummary.xml" timestamp="1756971009995">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Documents/Playground/shells-config/Makefile" timestamp="1756868188441">
-        <mark key="&quot;" line="7" column="55" />
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/colors.scheme.xml" timestamp="1756971009370">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/options/log-categories.xml" timestamp="1756976620609">
+        <mark key="&quot;" line="2" column="13" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/karabiner/automatic_backups/karabiner_20250528.json" timestamp="1756976278209">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/images.support.xml" timestamp="1756971005198">
+        <mark key="&quot;" line="6" column="13" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/plugins_list.txt" timestamp="1756971002464">
+        <mark key="&quot;" line="0" column="3" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/AIOnboardingPromoWindowAdvisor.xml" timestamp="1756971009752">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/swift-bar-plugin/dualclock.1m.sh" timestamp="1756913359045">
+        <mark key="&quot;" line="6" column="6" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/Solarized Dark - Patched.itermcolors" timestamp="1756886993284">
+        <mark key="&quot;" line="8" column="4" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/karabiner/karabiner.json" timestamp="1756886994553">
+        <mark key="&quot;" line="11" column="12" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/actionSummary.xml" timestamp="1756971013415">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/brew/Brewfile" timestamp="1756885397281">
+        <mark key="&quot;" line="7" column="8" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/DataGrip2025.1/options/CommonFeedbackSurveyService.xml" timestamp="1756971007182">
+        <mark key="&quot;" line="2" column="13" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/jetbrains-ides/IntelliJIdea2025.2/options/IntelliLang.xml" timestamp="1756971013012">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/intellij/options/actionSummary.xml" timestamp="1756976503052">
+        <mark key="&quot;" line="9" column="20" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/hammerspoon/init.lua" timestamp="1756971011897">
+        <mark key="&quot;" line="6" column="37" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/asdf/.tool-versions" timestamp="1756885398840">
+        <mark key="&quot;" line="5" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Playground/shells-config/Makefile" timestamp="1756971012598">
+        <mark key="&quot;" line="204" column="11" />
+        <mark key="[" line="4" column="0" />
+        <mark key="]" line="4" column="0" />
+        <mark key="^" line="24" column="32" />
+        <mark key="." line="4" column="0" />
       </file>
     </localmarks>
   </component>
   <component name="VimRegisterSettings">
     <registers>
-      <register name="&quot;" type="LINE_WISE">
-        <text encoding="base64">IyBMb2FkIC5lbnYgZmlsZXMgb24gc3RhcnR1cApsb2FkX2Vudgo=</text>
+      <register name="&quot;" type="CHARACTER_WISE">
+        <text encoding="base64">Ig==</text>
       </register>
-      <register name="*" type="LINE_WISE">
-        <text encoding="base64">IyBMb2FkIC5lbnYgZmlsZXMgb24gc3RhcnR1cApsb2FkX2Vudgo=</text>
+      <register name="*" type="CHARACTER_WISE">
+        <text encoding="base64">Ig==</text>
       </register>
       <register name="-" type="CHARACTER_WISE">
-        <text encoding="base64">Ug==</text>
+        <text encoding="base64">Ig==</text>
       </register>
       <register name="." type="CHARACTER_WISE">
-        <text encoding="base64" />
+        <text encoding="base64">ICAgICAgICAgICAgIOKUlOKUgOKUgCAgICAgICAgICAgCg==</text>
       </register>
       <register name="1" type="LINE_WISE">
-        <text encoding="base64">IyBMb2FkIC5lbnYgZmlsZXMgb24gc3RhcnR1cApsb2FkX2Vudgo=</text>
+        <text encoding="base64">ICAg4pSU4pSA4pSAICAgICAgICAgICAK</text>
       </register>
       <register name="2" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICA7IGFuZCBwbnBtIHNlbGYtdXBkYXRlCg==</text>
+        <text encoding="base64">IyBMb2FkIC5lbnYgZmlsZXMgb24gc3RhcnR1cApsb2FkX2Vudgo=</text>
       </register>
       <register name="3" type="LINE_WISE">
-        <text encoding="base64">LSBkZWZhdWx0czoKICAgIGxpbms6CiAgICAgIGNyZWF0ZTogdHJ1ZQogICAgICByZWxpbms6IHRydWUKICAgICAgZm9yY2U6IHRydWUKIy0gbGluazoKIyAgICB+Ly5jb25maWcvZmlzaDogZmlzaAojICAgIH4vLmNvbmZpZy9udmltOiBudmltCiMgICAgfi8uY29uZmlnL29tZjogb21mCiMgICAgfi8uY29uZmlnL2thcmFiaW5lcjoga2FyYWJpbmVyCiMgICAgfi8uaGFtbWVyc3Bvb246IGhhbW1lcnNwb29uCiMgICAgfi8uQnJld2ZpbGU6IGJyZXcvQnJld2ZpbGUKIyAgICB+Ly5hc2RmcmM6IGFzZGYvLmFzZGZyYwojICAgIH4vLnRvb2wtdmVyc2lvbnM6IGFzZGYvLnRvb2wtdmVyc2lvbnMKIyAgICB+Ly5iYXNocmM6IGJhc2gvLmJhc2hyYwojICAgIH4vLnpzaHJjOiB6c2gvLnpzaHJjCiMgICAgfi8uZ2l0Y29uZmlnOiBnaXRjb25maWcvLmdpdGNvbmZpZwojICAgIH4vLmdpdGlnbm9yZV9nbG9iYWw6IGdpdGNvbmZpZy8uZ2l0aWdub3JlX2dsb2JhbAo=</text>
+        <text encoding="base64">ICAgICAgICA7IGFuZCBwbnBtIHNlbGYtdXBkYXRlCg==</text>
       </register>
       <register name="4" type="LINE_WISE">
-        <text encoding="base64">ICAjIPCfm6HvuI8gU2FmZXR5IGNoZWNrOiBFbnN1cmUgZHN0IGlzIHdpdGhpbiB0aGUgcmVwb3NpdG9yeSBkaXJlY3RvcnkKICBpZiBbWyAhICIkZHN0IiA9PSAiJFJFUE9fRElSIiogXV07IHRoZW4KICAgIGVjaG8gIuKdjCBTQUZFVFkgRVJST1I6IERlc3RpbmF0aW9uIHBhdGggaXMgb3V0c2lkZSByZXBvc2l0b3J5OiAkZHN0IgogICAgZXhpdCAxCiAgZmkKCiAgIyDwn5uh77iPIFNhZmV0eSBjaGVjazogRW5zdXJlIHdlJ3JlIG5vdCB0YXJnZXRpbmcgaG9tZSBkaXJlY3RvcnkKICBpZiBbWyAiJGRzdCIgPT0gIiRIT01FIiogXV07IHRoZW4KICAgIGVjaG8gIuKdjCBTQUZFVFkgRVJST1I6IERlc3RpbmF0aW9uIHBhdGggaXMgaW4gaG9tZSBkaXJlY3Rvcnk6ICRkc3QiCiAgICBleGl0IDEKICBmaQoK</text>
+        <text encoding="base64">LSBkZWZhdWx0czoKICAgIGxpbms6CiAgICAgIGNyZWF0ZTogdHJ1ZQogICAgICByZWxpbms6IHRydWUKICAgICAgZm9yY2U6IHRydWUKIy0gbGluazoKIyAgICB+Ly5jb25maWcvZmlzaDogZmlzaAojICAgIH4vLmNvbmZpZy9udmltOiBudmltCiMgICAgfi8uY29uZmlnL29tZjogb21mCiMgICAgfi8uY29uZmlnL2thcmFiaW5lcjoga2FyYWJpbmVyCiMgICAgfi8uaGFtbWVyc3Bvb246IGhhbW1lcnNwb29uCiMgICAgfi8uQnJld2ZpbGU6IGJyZXcvQnJld2ZpbGUKIyAgICB+Ly5hc2RmcmM6IGFzZGYvLmFzZGZyYwojICAgIH4vLnRvb2wtdmVyc2lvbnM6IGFzZGYvLnRvb2wtdmVyc2lvbnMKIyAgICB+Ly5iYXNocmM6IGJhc2gvLmJhc2hyYwojICAgIH4vLnpzaHJjOiB6c2gvLnpzaHJjCiMgICAgfi8uZ2l0Y29uZmlnOiBnaXRjb25maWcvLmdpdGNvbmZpZwojICAgIH4vLmdpdGlnbm9yZV9nbG9iYWw6IGdpdGNvbmZpZy8uZ2l0aWdub3JlX2dsb2JhbAo=</text>
       </register>
       <register name="5" type="LINE_WISE">
-        <text encoding="base64">ZG9ja2VyLWNvbXBvc2UueW1sCmRvY2tlci1jb21wb3NlLm92ZXJyaWRlLnltbAo=</text>
+        <text encoding="base64">ICAjIPCfm6HvuI8gU2FmZXR5IGNoZWNrOiBFbnN1cmUgZHN0IGlzIHdpdGhpbiB0aGUgcmVwb3NpdG9yeSBkaXJlY3RvcnkKICBpZiBbWyAhICIkZHN0IiA9PSAiJFJFUE9fRElSIiogXV07IHRoZW4KICAgIGVjaG8gIuKdjCBTQUZFVFkgRVJST1I6IERlc3RpbmF0aW9uIHBhdGggaXMgb3V0c2lkZSByZXBvc2l0b3J5OiAkZHN0IgogICAgZXhpdCAxCiAgZmkKCiAgIyDwn5uh77iPIFNhZmV0eSBjaGVjazogRW5zdXJlIHdlJ3JlIG5vdCB0YXJnZXRpbmcgaG9tZSBkaXJlY3RvcnkKICBpZiBbWyAiJGRzdCIgPT0gIiRIT01FIiogXV07IHRoZW4KICAgIGVjaG8gIuKdjCBTQUZFVFkgRVJST1I6IERlc3RpbmF0aW9uIHBhdGggaXMgaW4gaG9tZSBkaXJlY3Rvcnk6ICRkc3QiCiAgICBleGl0IDEKICBmaQoK</text>
       </register>
       <register name="6" type="LINE_WISE">
-        <text encoding="base64">LS0gU2V0IGxlYWRlciBrZXkgdG8gc3BhY2UgYmFyIChtdXN0IGJlIHNldCBiZWZvcmUgYW55IGxlYWRlciBrZXltYXBzKQp2aW0uZy5tYXBsZWFkZXIgPSAiICIKdmltLmcubWFwbG9jYWxsZWFkZXIgPSAiICIK</text>
+        <text encoding="base64">ZG9ja2VyLWNvbXBvc2UueW1sCmRvY2tlci1jb21wb3NlLm92ZXJyaWRlLnltbAo=</text>
       </register>
       <register name="7" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICBqYXZhc2NyaXB0ID0geyAicHJldHRpZXJkIiwgInByZXR0aWVyIiB9LAogICAgICAgIHR5cGVzY3JpcHQgPSB7ICJwcmV0dGllcmQiLCAicHJldHRpZXIiIH0sCg==</text>
+        <text encoding="base64">LS0gU2V0IGxlYWRlciBrZXkgdG8gc3BhY2UgYmFyIChtdXN0IGJlIHNldCBiZWZvcmUgYW55IGxlYWRlciBrZXltYXBzKQp2aW0uZy5tYXBsZWFkZXIgPSAiICIKdmltLmcubWFwbG9jYWxsZWFkZXIgPSAiICIK</text>
       </register>
       <register name="8" type="LINE_WISE">
-        <text encoding="base64">dmltLm9wdC5iYWNrZ3JvdW5kID0gImRhcmsiIC0tIG9yICJsaWdodCIK</text>
+        <text encoding="base64">ICAgICAgICBqYXZhc2NyaXB0ID0geyAicHJldHRpZXJkIiwgInByZXR0aWVyIiB9LAogICAgICAgIHR5cGVzY3JpcHQgPSB7ICJwcmV0dGllcmQiLCAicHJldHRpZXIiIH0sCg==</text>
       </register>
       <register name="9" type="LINE_WISE">
-        <text encoding="base64">IyMgQXBwcm92YWwgUmVxdWlyZW1lbnRzCgp8ICoqU3Rha2Vob2xkZXIqKiB8ICoqQXBwcm92YWwgTmVlZGVkIEZvcioqIHwgKipUaW1lbGluZSoqIHwKfC0tLS0tLS0tLS0tLS0tLS0tfC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfAp8ICoqRW5naW5lZXJpbmcgTWFuYWdlcioqIHwgUmVzb3VyY2UgYWxsb2NhdGlvbiBhbmQgdGltZWxpbmUgfCBXZWVrIDAgfAp8ICoqRmluYW5jZSoqIHwgQnVkZ2V0IGFwcHJvdmFsIGZvciB0b29saW5nIGNvc3RzIHwgV2VlayAwIHwKfCAqKkluZnJhc3RydWN0dXJlIFRlYW0qKiB8IFJ1bm5lciBhbmQgQVdTIGNoYW5nZXMgfCBXZWVrIDEgfAp8ICoqU2VjdXJpdHkgVGVhbSoqIHwgQ2FjaGluZyBhbmQgYXJ0aWZhY3Qgc3RvcmFnZSByZXZpZXcgfCBXZWVrIDEgfAoK</text>
+        <text encoding="base64">dmltLm9wdC5iYWNrZ3JvdW5kID0gImRhcmsiIC0tIG9yICJsaWdodCIK</text>
       </register>
     </registers>
   </component>
@@ -652,7 +648,7 @@
     <search>
       <last-offset encoding="base64" />
       <last-dir encoding="base64">MQ==</last-dir>
-      <show-last encoding="base64">ZmFsc2U=</show-last>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
     </search>
   </component>
   <component name="VimVariables">
