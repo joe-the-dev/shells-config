@@ -195,6 +195,13 @@ for tool in "${TOOLS[@]}"; do
           "--exclude=usage.statistics.xml"
           "--exclude=statistics.xml"
           "--exclude=event-log-whitelist.xml"
+          "--exclude=vim_settings_local.xml"
+          "--exclude=*_backup_*.xml"
+          "--exclude=*.backup"
+          "--exclude=consoles/"
+          "--exclude=scratches/"
+          "--exclude=*.tmp"
+          "--exclude=.DS_Store"
       )
 
       # Backup each IDE

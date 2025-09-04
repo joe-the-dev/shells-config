@@ -25,7 +25,7 @@ help:
 	@echo "  backup           - Run backup script"
 	@echo "  restore          - Restore all configurations"
 	@echo "  restore-jetbrains - Restore only JetBrains IDEs configuration"
-	@echo "  clean            - Clean up temporary files"
+	@echo "  clean            - Clean up old versions and cache files"
 	@echo "  help             - Show this help message"
 
 # Copy configuration files
@@ -472,21 +472,28 @@ clean:
 			fi; \
 		done; \
 		cd ..; \
-		echo "🧠 Cleaning cache files from remaining JetBrains IDEs configurations..."; \
-		REMOVED_XML_COUNT=0; \
-		for xml_pattern in "recentProjects" "window\." "actionSummary" "contributorSummary" "features\.usage\.statistics" "dailyLocalStatistics" "log-categories" "EventLog" "DontShowAgain" "CommonFeedback" "AIOnboarding" "McpToolsStore"; do \
-			XML_FILES=$$(find jetbrains-ides -name "*.xml" -path "*/options/*" | grep -E "$$xml_pattern" 2>/dev/null || true); \
-			if [ -n "$$XML_FILES" ]; then \
-				XML_COUNT=$$(echo "$$XML_FILES" | wc -l | tr -d ' '); \
-				echo "$$XML_FILES" | xargs rm -f; \
-				REMOVED_XML_COUNT=$$((REMOVED_XML_COUNT + XML_COUNT)); \
+		echo "🧠 Cleaning cache and unnecessary files from JetBrains IDEs configurations..."; \
+		REMOVED_FILE_COUNT=0; \
+		for file_pattern in "vim_settings_local.xml" "recentProjects.xml" "window.*.xml" "actionSummary.xml" "contributorSummary.xml" "features.usage.statistics.xml" "dailyLocalStatistics.xml" "log-categories.xml" "EventLog*.xml" "DontShowAgain*.xml" "CommonFeedback*.xml" "AIOnboarding*.xml" "McpToolsStore*.xml" "usage.statistics.xml" "statistics.xml" "event-log-whitelist.xml" "*_backup_*.xml" "*.backup"; do \
+			FOUND_FILES=$$(find jetbrains-ides -name "$$file_pattern" 2>/dev/null || true); \
+			if [ -n "$$FOUND_FILES" ]; then \
+				FILE_COUNT=$$(echo "$$FOUND_FILES" | wc -l | tr -d ' '); \
+				echo "$$FOUND_FILES" | xargs rm -f; \
+				REMOVED_FILE_COUNT=$$((REMOVED_FILE_COUNT + FILE_COUNT)); \
 			fi; \
 		done; \
-		if [ "$$REMOVED_XML_COUNT" -gt 0 ]; then \
-			echo "  ✅ Removed $$REMOVED_XML_COUNT cache XML files from jetbrains-ides/"; \
-			CLEANED_COUNT=$$((CLEANED_COUNT + REMOVED_XML_COUNT)); \
+		if [ "$$REMOVED_FILE_COUNT" -gt 0 ]; then \
+			echo "  ✅ Removed $$REMOVED_FILE_COUNT unnecessary files from jetbrains-ides/"; \
+			CLEANED_COUNT=$$((CLEANED_COUNT + REMOVED_FILE_COUNT)); \
 		else \
-			echo "  ℹ️  No cache XML files found in jetbrains-ides/"; \
+			echo "  ℹ️  No unnecessary files found in jetbrains-ides/"; \
+		fi; \
+		echo "🧠 Cleaning empty directories in JetBrains IDEs configurations..."; \
+		EMPTY_DIRS=$$(find jetbrains-ides -type d -empty 2>/dev/null || true); \
+		if [ -n "$$EMPTY_DIRS" ]; then \
+			EMPTY_DIR_COUNT=$$(echo "$$EMPTY_DIRS" | wc -l | tr -d ' '); \
+			echo "$$EMPTY_DIRS" | xargs rmdir 2>/dev/null || true; \
+			echo "  ✅ Removed $$EMPTY_DIR_COUNT empty directories"; \
 		fi; \
 	fi; \
 	if [ -d "karabiner/automatic_backups" ]; then \
@@ -504,30 +511,7 @@ clean:
 		fi; \
 	fi; \
 	if [ "$$CLEANED_COUNT" -gt 0 ]; then \
-		echo "🎉 Cleanup complete! Removed $$CLEANED_COUNT total files"; \
+		echo "✅ Cleanup complete! Removed $$CLEANED_COUNT files/directories"; \
 	else \
-		echo "✅ Cleanup complete! No unnecessary files found"; \
-	fi
-
-# Update git repository and submodules
-update:
-	@echo "📥 Updating repository from remote..."
-	@if git rev-parse --git-dir > /dev/null 2>&1; then \
-		CURRENT_BRANCH=$$(git branch --show-current); \
-		if [[ "$$CURRENT_BRANCH" != "main" ]]; then \
-			echo "🔀 Switching from $$CURRENT_BRANCH to main branch"; \
-			git checkout main || { \
-				echo "❌ Failed to switch to main branch"; \
-				echo "💡 Continuing with current branch: $$CURRENT_BRANCH"; \
-			}; \
-		fi; \
-		echo "⬇️  Pulling latest changes from origin/main..."; \
-		if git pull origin main; then \
-			echo "✅ Repository updated successfully"; \
-		else \
-			echo "⚠️  Failed to pull from origin main, continuing with local version"; \
-			echo "💡 You may want to resolve this manually later"; \
-		fi; \
-	else \
-		echo "ℹ️  Not a git repository, skipping update"; \
+		echo "✅ Cleanup complete! No files needed to be removed"; \
 	fi
