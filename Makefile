@@ -1,12 +1,23 @@
 .PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean \
 	check-deps upgrade-deps backup restore restore-jetbrains \
-	install-jetbrains-plugins update
+	install-jetbrains-plugins update set-fish-default
 
 # Default target
 all: install
 
+# Update git repository
+update:
+	@echo "🔄 Updating git repository..."
+	@if [ -d ".git" ]; then \
+		echo "📥 Pulling latest changes..."; \
+		git pull || echo "⚠️  Git pull failed - continuing anyway"; \
+		echo "✅ Repository updated"; \
+	else \
+		echo "ℹ️  Not a git repository - skipping update"; \
+	fi
+
 # Main installation target
-install: update check-deps copy-configs brew asdf jetbrains iterm2 omf env
+install: update check-deps copy-configs brew asdf jetbrains iterm2 omf env set-fish-default
 	@echo "🎉 All configurations installed successfully!"
 
 # Help target
@@ -22,6 +33,7 @@ help:
 	@echo "  iterm2           - Install iTerm2 configuration"
 	@echo "  omf              - Install Oh My Fish configuration"
 	@echo "  env              - Setup environment variables"
+	@echo "  set-fish-default - Set Fish as the default shell"
 	@echo "  check-deps       - Check for required dependencies"
 	@echo "  upgrade-deps     - Upgrade all package managers and tools"
 	@echo "  backup           - Run backup script"
@@ -143,7 +155,7 @@ brew:
 
 # Install asdf plugins and tools
 asdf:
-	@echo "🔌 Installing asdf plugins and tools..."
+	@echo "���� Installing asdf plugins and tools..."
 	@if ! command -v asdf >/dev/null 2>&1; then \
 		echo "ℹ️  asdf not found - skipping plugin installation"; \
 		echo "💡 Install asdf first: https://asdf-vm.com/guide/getting-started.html"; \
@@ -161,7 +173,7 @@ asdf:
 				echo "⚠️  Plugin $$plugin_name is already installed, skipping"; \
 			else \
 				echo "Installing plugin: $$plugin_name"; \
-				asdf plugin add $$plugin || (echo "❌ Failed to install plugin: $$plugin_name"; exit 1); \
+				asdf plugin add $$plugin || (echo "����� Failed to install plugin: $$plugin_name"; exit 1); \
 				echo "✅ Successfully installed plugin: $$plugin_name"; \
 			fi; \
 		done < "asdf/plugins.txt"; \
@@ -182,7 +194,7 @@ jetbrains:
 	fi
 	@$(MAKE) -s restore-jetbrains
 	@$(MAKE) -s install-jetbrains-plugins
-	@echo "✅ JetBrains IDEs configuration and plugins installed!"
+	@echo "�� JetBrains IDEs configuration and plugins installed!"
 
 # Install JetBrains plugins automatically using CLI
 install-jetbrains-plugins:
@@ -330,6 +342,35 @@ env:
 	@echo "🔒 Set secure permissions (600) on ~/.env"
 	@echo "✅ Environment template installed!"
 	@echo "💡 Edit ~/.env with your actual credentials"
+
+# Set Fish as the default shell
+set-fish-default:
+	@echo "🐟 Setting Fish as the default shell..."
+	@if ! command -v fish >/dev/null 2>&1; then \
+		echo "❌ Fish shell not found!"; \
+		echo "💡 Install Fish first: brew install fish"; \
+		exit 1; \
+	fi
+	@FISH_PATH=$$(which fish); \
+	echo "📍 Fish shell found at: $$FISH_PATH"; \
+	if ! grep -q "$$FISH_PATH" /etc/shells; then \
+		echo "📝 Adding Fish to /etc/shells..."; \
+		echo "$$FISH_PATH" | sudo tee -a /etc/shells >/dev/null; \
+		echo "✅ Fish added to /etc/shells"; \
+	else \
+		echo "✅ Fish already exists in /etc/shells"; \
+	fi
+	@CURRENT_SHELL=$$(dscl . -read /Users/$$(whoami) UserShell 2>/dev/null | awk '{print $$2}' || echo "unknown"); \
+	FISH_PATH=$$(which fish); \
+	if [ "$$CURRENT_SHELL" = "$$FISH_PATH" ]; then \
+		echo "✅ Fish is already set as the default shell for $$(whoami)"; \
+	else \
+		echo "🔄 Current default shell: $$CURRENT_SHELL"; \
+		echo "🔄 Setting Fish as default shell for $$(whoami)..."; \
+		sudo chsh -s "$$FISH_PATH" "$$(whoami)"; \
+		echo "✅ Default shell changed to Fish!"; \
+		echo "💡 Open a new terminal window to use Fish as your default shell"; \
+	fi
 
 # Check for required dependencies
 check-deps:
