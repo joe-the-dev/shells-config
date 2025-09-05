@@ -1,4 +1,6 @@
-.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains install-jetbrains-plugins update
+.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean \
+	check-deps upgrade-deps backup restore restore-jetbrains \
+	install-jetbrains-plugins update
 
 # Default target
 all: install
