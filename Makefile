@@ -1,15 +1,44 @@
+# Configuration variables
+HOME_DIR := $(HOME)
+CONFIG_DIR := $(HOME_DIR)/.config
+JETBRAINS_DIR := $(HOME_DIR)/Library/Application Support/JetBrains
+ITERM2_APP_SUPPORT := $(HOME_DIR)/Library/Application Support/iTerm2
+BACKUP_TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+
+# Source directories
+SRC_BREW := brew/Brewfile
+SRC_ASDF_RC := asdf/.asdfrc
+SRC_ASDF_TOOLS := asdf/.tool-versions
+SRC_GITCONFIG := gitconfig/.gitconfig
+SRC_GITIGNORE := gitconfig/.gitignore_global
+
+# Target files
+TARGET_BREWFILE := $(HOME_DIR)/.Brewfile
+TARGET_ASDF_RC := $(HOME_DIR)/.asdfrc
+TARGET_ASDF_TOOLS := $(HOME_DIR)/.tool-versions
+TARGET_GITCONFIG := $(HOME_DIR)/.gitconfig
+TARGET_GITIGNORE := $(HOME_DIR)/.gitignore_global
+
+# Colors for output (currently unused but available for future enhancements)
+BLUE := \033[34m
+GREEN := \033[32m
+YELLOW := \033[33m
+RED := \033[31m
+RESET := \033[0m
+
 .PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean \
 	check-deps upgrade-deps backup restore restore-jetbrains \
-	install-jetbrains-plugins update set-fish-default
+	install-jetbrains-plugins update set-fish-default status dry-run \
+	install-minimal install-dev install-tools validate-config
 
 # Default target
 all: install
 
 # Update git repository
 update:
-	@echo "🔄 Updating git repository..."
+	@echo "ℹ️  Updating git repository..."
 	@if [ -d ".git" ]; then \
-		echo "📥 Pulling latest changes..."; \
+		echo "ℹ️  Pulling latest changes..."; \
 		git pull || echo "⚠️  Git pull failed - continuing anyway"; \
 		echo "✅ Repository updated"; \
 	else \
@@ -18,13 +47,16 @@ update:
 
 # Main installation target
 install: update check-deps copy-configs brew asdf jetbrains iterm2 omf env set-fish-default
-	@echo "🎉 All configurations installed successfully!"
+	@echo "✅ All configurations installed successfully!"
 
 # Help target
 help:
 	@echo "Available targets:"
 	@echo "  all              - Install all configurations (default)"
 	@echo "  install          - Same as 'all'"
+	@echo "  install-minimal  - Install only essential configs (git, fish, nvim)"
+	@echo "  install-dev      - Install development tools (brew, asdf, jetbrains)"
+	@echo "  install-tools    - Install productivity tools (karabiner, hammerspoon, iterm2)"
 	@echo "  update           - Update git repository"
 	@echo "  copy-configs     - Copy dotfiles to home directory"
 	@echo "  brew             - Install Homebrew packages"
@@ -40,6 +72,9 @@ help:
 	@echo "  restore          - Restore all configurations"
 	@echo "  restore-jetbrains - Restore only JetBrains IDEs configuration"
 	@echo "  clean            - Clean up old versions and cache files"
+	@echo "  status           - Show current configuration status"
+	@echo "  dry-run          - Show what would be installed without doing it"
+	@echo "  validate-config  - Validate configuration files"
 	@echo "  help             - Show this help message"
 
 # Copy configuration files
@@ -264,7 +299,6 @@ iterm2:
 		echo "📋 Restoring iTerm2 preferences..."; \
 		cp "iterm2/com.googlecode.iterm2.plist" "$$HOME/Library/Preferences/"; \
 	fi
-	@ITERM2_APP_SUPPORT="$$HOME/Library/Application Support/iTerm2"; \
 	mkdir -p "$$ITERM2_APP_SUPPORT"; \
 	if [ -d "iterm2/DynamicProfiles" ]; then \
 		echo "🎨 Restoring Dynamic Profiles..."; \
@@ -326,22 +360,97 @@ omf:
 # Setup environment variables
 env:
 	@echo "🔐 Setting up environment variables..."
-	@if [ ! -f "env/template.env" ]; then \
-		echo "❌ env/template.env not found!"; \
+	@if [ ! -f ".env.template" ]; then \
+		echo "❌ .env.template not found!"; \
 		exit 1; \
 	fi
-	@if [ -f "$$HOME/.env" ]; then \
-		echo "⚠️  ~/.env already exists!"; \
-		echo "Creating backup..."; \
-		cp "$$HOME/.env" "$$HOME/.env.backup.$$(date +%Y%m%d_%H%M%S)"; \
-		echo "✅ Backup created"; \
-	fi
-	@echo "📄 Copying .env template to ~/.env..."
-	@cp "env/template.env" "$$HOME/.env"
-	@chmod 600 "$$HOME/.env"
-	@echo "🔒 Set secure permissions (600) on ~/.env"
-	@echo "✅ Environment template installed!"
-	@echo "💡 Edit ~/.env with your actual credentials"
+	@echo "🔄 Using merge approach to preserve existing .env..."
+	@TEMPLATE_FILE=".env.template"; \
+	TARGET_ENV_FILE="$$HOME/.env"; \
+	MARKER_LINE="# export ANOTHER_VAR=\"value with spaces\""; \
+	echo "📄 Template file: $$TEMPLATE_FILE"; \
+	echo "🎯 Target file: $$TARGET_ENV_FILE"; \
+	if [ ! -f "$$TARGET_ENV_FILE" ]; then \
+		echo "📝 Creating new .env file from template..."; \
+		cp "$$TEMPLATE_FILE" "$$TARGET_ENV_FILE"; \
+		chmod 600 "$$TARGET_ENV_FILE"; \
+		echo "✅ New .env file created!"; \
+		exit 0; \
+	fi; \
+	BACKUP_FILE="$${TARGET_ENV_FILE}.backup.$$(date +%Y%m%d_%H%M%S)"; \
+	cp "$$TARGET_ENV_FILE" "$$BACKUP_FILE"; \
+	echo "💾 Backup created: $$BACKUP_FILE"; \
+	echo "🔍 Analyzing existing environment variables..."; \
+	EXISTING_VARS=$$(grep -E '^[[:space:]]*[A-Za-z_][A-Za-z0-9_]*=' "$$TARGET_ENV_FILE" | sed 's/^[[:space:]]*export[[:space:]]*//' | sed 's/=.*//' | sort -u); \
+	EXISTING_EXPORT_VARS=$$(grep -E '^[[:space:]]*export[[:space:]]+[A-Za-z_][A-Za-z0-9_]*=' "$$TARGET_ENV_FILE" | sed 's/^[[:space:]]*export[[:space:]]*//' | sed 's/=.*//' | sort -u); \
+	echo "🔍 Finding new variables in template..."; \
+	TEMPLATE_VARS=$$(grep -E '^[[:space:]]*[A-Za-z_][A-Za-z0-9_]*=' "$$TEMPLATE_FILE" | sed 's/^[[:space:]]*export[[:space:]]*//' | sed 's/=.*//' | sort -u); \
+	TEMPLATE_EXPORT_VARS=$$(grep -E '^[[:space:]]*export[[:space:]]+[A-Za-z_][A-Za-z0-9_]*=' "$$TEMPLATE_FILE" | sed 's/^[[:space:]]*export[[:space:]]*//' | sed 's/=.*//' | sort -u); \
+	NEW_VARS=""; \
+	NEW_EXPORT_VARS=""; \
+	for var in $$TEMPLATE_VARS; do \
+		if ! echo "$$EXISTING_VARS" | grep -q "^$$var$$" && ! echo "$$EXISTING_EXPORT_VARS" | grep -q "^$$var$$"; then \
+			NEW_VARS="$$NEW_VARS $$var"; \
+		fi; \
+	done; \
+	for var in $$TEMPLATE_EXPORT_VARS; do \
+		if ! echo "$$EXISTING_VARS" | grep -q "^$$var$$" && ! echo "$$EXISTING_EXPORT_VARS" | grep -q "^$$var$$"; then \
+			NEW_EXPORT_VARS="$$NEW_EXPORT_VARS $$var"; \
+		fi; \
+	done; \
+	TOTAL_NEW_VARS=$$(echo "$$NEW_VARS $$NEW_EXPORT_VARS" | wc -w | tr -d ' '); \
+	if [ "$$TOTAL_NEW_VARS" -eq 0 ]; then \
+		echo "✅ No new variables found in template. Your .env is up to date!"; \
+		rm "$$BACKUP_FILE"; \
+		exit 0; \
+	fi; \
+	echo "📦 Found $$TOTAL_NEW_VARS new variables to add:"; \
+	for var in $$NEW_VARS $$NEW_EXPORT_VARS; do \
+		echo "  • $$var"; \
+	done; \
+	if grep -q "$$MARKER_LINE" "$$TARGET_ENV_FILE"; then \
+		INSERTION_LINE=$$(grep -n "$$MARKER_LINE" "$$TARGET_ENV_FILE" | cut -d: -f1); \
+		echo "📍 Found marker line at line $$INSERTION_LINE"; \
+	else \
+		INSERTION_LINE=$$(wc -l < "$$TARGET_ENV_FILE"); \
+		echo "📍 Marker line not found, appending to end of file (line $$INSERTION_LINE)"; \
+	fi; \
+	TEMP_FILE=$$(mktemp); \
+	if grep -q "$$MARKER_LINE" "$$TARGET_ENV_FILE"; then \
+		sed -n "1,$${INSERTION_LINE}p" "$$TARGET_ENV_FILE" > "$$TEMP_FILE"; \
+	else \
+		cp "$$TARGET_ENV_FILE" "$$TEMP_FILE"; \
+		echo "" >> "$$TEMP_FILE"; \
+	fi; \
+	echo "" >> "$$TEMP_FILE"; \
+	echo "# New variables added from template on $$(date)" >> "$$TEMP_FILE"; \
+	for var in $$NEW_VARS; do \
+		LINE=$$(grep -E "^[[:space:]]*$$var=" "$$TEMPLATE_FILE" | head -1); \
+		if [ -n "$$LINE" ]; then \
+			echo "$$LINE" >> "$$TEMP_FILE"; \
+			echo "  ✅ Added: $$var"; \
+		fi; \
+	done; \
+	for var in $$NEW_EXPORT_VARS; do \
+		LINE=$$(grep -E "^[[:space:]]*export[[:space:]]+$$var=" "$$TEMPLATE_FILE" | head -1); \
+		if [ -n "$$LINE" ]; then \
+			echo "$$LINE" >> "$$TEMP_FILE"; \
+			echo "  ✅ Added: $$var (export)"; \
+		fi; \
+	done; \
+	if grep -q "$$MARKER_LINE" "$$TARGET_ENV_FILE"; then \
+		NEXT_LINE=$$((INSERTION_LINE + 1)); \
+		sed -n "$${NEXT_LINE},\$$p" "$$TARGET_ENV_FILE" >> "$$TEMP_FILE"; \
+	fi; \
+	mv "$$TEMP_FILE" "$$TARGET_ENV_FILE"; \
+	chmod 600 "$$TARGET_ENV_FILE"; \
+	echo ""; \
+	echo "✅ Environment merge complete!"; \
+	echo "📊 Added $$TOTAL_NEW_VARS new variables to $$TARGET_ENV_FILE"; \
+	echo "💾 Backup available at: $$BACKUP_FILE"; \
+	echo "🔒 File permissions set to 600 for security"; \
+	echo ""; \
+	echo "💡 Review the changes and update the new variables with your actual values."
 
 # Set Fish as the default shell
 set-fish-default:
@@ -597,4 +706,179 @@ clean:
 		echo "✅ Cleanup complete! Removed $$CLEANED_COUNT files/directories"; \
 	else \
 		echo "✅ Cleanup complete! No files needed to be removed"; \
+	fi
+
+# Minimal installation (essential configs only)
+install-minimal: update check-deps
+	@echo "🚀 Installing minimal configuration..."
+	@$(MAKE) -s _copy-git _copy-fish _copy-nvim
+	@echo "✅ Minimal configuration installed (git, fish, nvim)!"
+
+# Development tools installation
+install-dev: update check-deps
+	@echo "🛠️  Installing development tools..."
+	@$(MAKE) -s brew asdf jetbrains
+	@echo "✅ Development tools installed (brew, asdf, jetbrains)!"
+
+# Productivity tools installation
+install-tools: update check-deps
+	@echo "⚡ Installing productivity tools..."
+	@$(MAKE) -s _copy-karabiner _copy-hammerspoon iterm2
+	@echo "✅ Productivity tools installed (karabiner, hammerspoon, iterm2)!"
+
+# Show current configuration status
+status:
+	@echo "📊 Configuration Status Report"
+	@echo "=============================="
+	@echo ""
+	@echo "🏠 Home Directory: $(HOME_DIR)"
+	@echo "📁 Config Directory: $(CONFIG_DIR)"
+	@echo ""
+	@echo "🔍 Dependencies:"
+	@printf "  %-15s " "Homebrew:"; command -v brew >/dev/null && echo "✅ $(shell brew --version | head -1)" || echo "❌ Not installed"
+	@printf "  %-15s " "Git:"; command -v git >/dev/null && echo "✅ $(shell git --version)" || echo "❌ Not installed"
+	@printf "  %-15s " "Fish:"; command -v fish >/dev/null && echo "✅ $(shell fish --version)" || echo "⚠️  Not installed"
+	@printf "  %-15s " "asdf:"; command -v asdf >/dev/null && echo "✅ $(shell asdf version)" || echo "⚠️  Not installed"
+	@echo ""
+	@echo "📄 Configuration Files:"
+	@printf "  %-20s " ".gitconfig:"; [ -f "$(TARGET_GITCONFIG)" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " ".gitignore_global:"; [ -f "$(TARGET_GITIGNORE)" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "Fish config:"; [ -d "$(CONFIG_DIR)/fish" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "Neovim config:"; [ -d "$(CONFIG_DIR)/nvim" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "Karabiner config:"; [ -d "$(CONFIG_DIR)/karabiner" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "Hammerspoon config:"; [ -d "$(HOME_DIR)/.hammerspoon" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "Brewfile:"; [ -f "$(TARGET_BREWFILE)" ] && echo "✅ Exists" || echo "❌ Missing"
+	@printf "  %-20s " "asdf config:"; [ -f "$(TARGET_ASDF_RC)" ] && echo "✅ Exists" || echo "❌ Missing"
+	@echo ""
+	@echo "🧠 JetBrains IDEs:"
+	@if [ -d "$(JETBRAINS_DIR)" ]; then \
+		IDE_COUNT=$$(find "$(JETBRAINS_DIR)" -maxdepth 1 -type d -name "*20*" | wc -l | tr -d ' '); \
+		if [ "$$IDE_COUNT" -gt 0 ]; then \
+			echo "  📦 Found $$IDE_COUNT IDE configurations:"; \
+			find "$(JETBRAINS_DIR)" -maxdepth 1 -type d -name "*20*" | while read -r ide_dir; do \
+				IDE_NAME=$$(basename "$$ide_dir"); \
+				echo "    ✅ $$IDE_NAME"; \
+			done; \
+		else \
+			echo "  ⚠️  No IDE configurations found"; \
+		fi; \
+	else \
+		echo "  ❌ JetBrains directory not found"; \
+	fi
+	@echo ""
+	@echo "🐚 Current Shell:"
+	@CURRENT_SHELL=$$(dscl . -read /Users/$$(whoami) UserShell 2>/dev/null | awk '{print $$2}' || echo "unknown"); \
+	echo "  Current: $$CURRENT_SHELL"; \
+	if command -v fish >/dev/null && [ "$$CURRENT_SHELL" = "$$(which fish)" ]; then \
+		echo "  ✅ Fish is set as default shell"; \
+	elif command -v fish >/dev/null; then \
+		echo "  ⚠️  Fish available but not default shell"; \
+	else \
+		echo "  ❌ Fish not installed"; \
+	fi
+
+# Dry run - show what would be installed
+dry-run:
+	@echo "🔍 Dry Run - What would be installed:"
+	@echo "=================================="
+	@echo ""
+	@echo "📂 Configuration files that would be copied:"
+	@for dir in omf karabiner hammerspoon fish nvim; do \
+		if [ -d "$$dir" ]; then \
+			echo "  ✅ $$dir/ → ~/.config/$$dir/ (or appropriate location)"; \
+		else \
+			echo "  ⚠️  $$dir/ not found - would skip"; \
+		fi; \
+	done
+	@for file in "brew/Brewfile" "asdf/.asdfrc" "asdf/.tool-versions" "gitconfig/.gitconfig" "gitconfig/.gitignore_global"; do \
+		if [ -f "$$file" ]; then \
+			echo "  ✅ $$file → ~/.$$(basename "$$file")"; \
+		else \
+			echo "  ⚠️  $$file not found - would skip"; \
+		fi; \
+	done
+	@echo ""
+	@echo "🍺 Homebrew packages:"
+	@if [ -f "brew/Brewfile" ]; then \
+		echo "  📦 Would install packages from brew/Brewfile:"; \
+		grep -E "^(brew|cask|mas)" brew/Brewfile 2>/dev/null | head -10 | sed 's/^/    /' || echo "    (No packages found)"; \
+		TOTAL_PACKAGES=$$(grep -E "^(brew|cask|mas)" brew/Brewfile 2>/dev/null | wc -l | tr -d ' '); \
+		if [ "$$TOTAL_PACKAGES" -gt 10 ]; then \
+			echo "    ... and $$((TOTAL_PACKAGES - 10)) more packages"; \
+		fi; \
+	else \
+		echo "  ⚠️  No Brewfile found"; \
+	fi
+	@echo ""
+	@echo "🔧 asdf plugins:"
+	@if [ -f "asdf/plugins.txt" ]; then \
+		echo "  📦 Would install plugins:"; \
+		cat asdf/plugins.txt | grep -v "^#" | grep -v "^$$" | sed 's/^/    /' || echo "    (No plugins found)"; \
+	else \
+		echo "  ⚠️  No plugins.txt found"; \
+	fi
+	@echo ""
+	@echo "💡 To actually install, run: make install"
+
+# Validate configuration files
+validate-config:
+	@echo "🔍 Validating configuration files..."
+	@ERROR_COUNT=0; \
+	echo "📄 Checking configuration file syntax..."; \
+	if [ -f "gitconfig/.gitconfig" ]; then \
+		if git config --file="gitconfig/.gitconfig" --list >/dev/null 2>&1; then \
+			echo "  ✅ .gitconfig syntax is valid"; \
+		else \
+			echo "  ❌ .gitconfig has syntax errors"; \
+			ERROR_COUNT=$$((ERROR_COUNT + 1)); \
+		fi; \
+	else \
+		echo "  ⚠️  .gitconfig not found"; \
+	fi; \
+	if [ -f "fish/config.fish" ]; then \
+		if command -v fish >/dev/null && fish -n fish/config.fish >/dev/null 2>&1; then \
+			echo "  ✅ Fish config syntax is valid"; \
+		else \
+			echo "  ⚠️  Fish config syntax check skipped (fish not available or syntax errors)"; \
+		fi; \
+	else \
+		echo "  ⚠️  Fish config not found"; \
+	fi; \
+	if [ -f "karabiner/karabiner.json" ]; then \
+		if python3 -m json.tool karabiner/karabiner.json >/dev/null 2>&1; then \
+			echo "  ✅ Karabiner config JSON is valid"; \
+		else \
+			echo "  ❌ Karabiner config has JSON syntax errors"; \
+			ERROR_COUNT=$$((ERROR_COUNT + 1)); \
+		fi; \
+	else \
+		echo "  ⚠️  Karabiner config not found"; \
+	fi; \
+	if [ -f "hammerspoon/init.lua" ]; then \
+		if lua -l hammerspoon/init.lua -e "" >/dev/null 2>&1; then \
+			echo "  ✅ Hammerspoon config Lua syntax is valid"; \
+		else \
+			echo "  ⚠️  Hammerspoon config syntax check skipped (lua not available or syntax errors)"; \
+		fi; \
+	else \
+		echo "  ⚠️  Hammerspoon config not found"; \
+	fi; \
+	echo ""; \
+	echo "📦 Checking file permissions..."; \
+	for sensitive_file in ".env.template" "env/home.env" "env/template.env"; do \
+		if [ -f "$$sensitive_file" ]; then \
+			PERMS=$$(stat -f "%A" "$$sensitive_file" 2>/dev/null || stat -c "%a" "$$sensitive_file" 2>/dev/null); \
+			if [ "$$PERMS" = "600" ] || [ "$$PERMS" = "644" ]; then \
+				echo "  ✅ $$sensitive_file has appropriate permissions ($$PERMS)"; \
+			else \
+				echo "  ⚠️  $$sensitive_file permissions may be too open ($$PERMS)"; \
+			fi; \
+		fi; \
+	done; \
+	echo ""; \
+	if [ "$$ERROR_COUNT" -eq 0 ]; then \
+		echo "✅ All configuration files passed validation!"; \
+	else \
+		echo "❌ Found $$ERROR_COUNT configuration errors that need attention"; \
+		exit 1; \
 	fi
