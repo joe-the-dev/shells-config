@@ -216,6 +216,7 @@ for tool in "${TOOLS[@]}"; do
           "--exclude=scratches/"
           "--exclude=*.tmp"
           "--exclude=.DS_Store"
+          "--exclude=inline.factors.completion.xml"
       )
 
       # Backup each IDE
@@ -254,8 +255,32 @@ for tool in "${TOOLS[@]}"; do
               fi
 
               if [[ -d "$ide_dir/plugins" ]]; then
-                  echo "  🔌 Backing up plugin list"
+                  echo "  🔌 Backing up plugin list with IDs"
+                  # Create both a simple list and a detailed plugin manifest
                   ls "$ide_dir/plugins" > "$BACKUP_DIR/plugins_list.txt"
+
+                  # Create a more detailed plugin manifest with IDs for CLI installation
+                  echo "# JetBrains Plugin Manifest" > "$BACKUP_DIR/plugins_manifest.txt"
+                  echo "# Generated on $(date)" >> "$BACKUP_DIR/plugins_manifest.txt"
+                  echo "# Format: PluginID (for CLI installation)" >> "$BACKUP_DIR/plugins_manifest.txt"
+                  echo "" >> "$BACKUP_DIR/plugins_manifest.txt"
+
+                  # Extract plugin IDs from plugin.xml files when available
+                  for plugin_dir in "$ide_dir/plugins"/*; do
+                      if [[ -d "$plugin_dir" ]]; then
+                          plugin_name=$(basename "$plugin_dir")
+                          plugin_xml="$plugin_dir/META-INF/plugin.xml"
+
+                          if [[ -f "$plugin_xml" ]]; then
+                              # Try to extract plugin ID from plugin.xml
+                              plugin_id=$(grep -o '<id>[^<]*</id>' "$plugin_xml" 2>/dev/null | sed 's/<id>\(.*\)<\/id>/\1/' || echo "$plugin_name")
+                              echo "$plugin_id" >> "$BACKUP_DIR/plugins_manifest.txt"
+                          else
+                              # Fallback to directory name
+                              echo "$plugin_name" >> "$BACKUP_DIR/plugins_manifest.txt"
+                          fi
+                      fi
+                  done
               fi
 
               if [[ -f "$ide_dir/disabled_plugins.txt" ]]; then

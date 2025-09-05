@@ -1,4 +1,4 @@
-.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains update
+.PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean check-deps upgrade-deps backup restore restore-jetbrains install-jetbrains-plugins update
 
 # Default target
 all: install
@@ -173,51 +173,67 @@ asdf:
 # Install JetBrains IDEs configuration
 jetbrains:
 	@echo "🧠 Installing JetBrains IDEs configuration..."
-	@if [ ! -d "jetbrains" ]; then \
-		echo "⚠️  No JetBrains config found"; \
+	@if [ ! -d "jetbrains-ides" ]; then \
+		echo "⚠️  No JetBrains backup found at jetbrains-ides/"; \
+		echo "💡 Run 'make backup' first to create a backup"; \
 		exit 0; \
 	fi
-	@JETBRAINS_VERSIONS_DIR="$$HOME/Library/Application Support/JetBrains"; \
-	mkdir -p "$$JETBRAINS_VERSIONS_DIR"; \
-	if [ -f "jetbrains/jetbrains_version.txt" ]; then \
-		JETBRAINS_VERSION=$$(cat "jetbrains/jetbrains_version.txt"); \
-		JETBRAINS_DIR="$$JETBRAINS_VERSIONS_DIR/$$JETBRAINS_VERSION"; \
-		echo "📋 Restoring to specific version: $$JETBRAINS_VERSION"; \
-	else \
-		JETBRAINS_DIR=$$(find "$$JETBRAINS_VERSIONS_DIR" -name "IntelliJIdea*" -type d | sort -V | tail -1); \
-		if [ -z "$$JETBRAINS_DIR" ]; then \
-			JETBRAINS_DIR="$$JETBRAINS_VERSIONS_DIR/IntelliJIdea2025.2"; \
-			echo "📋 Creating new config directory: IntelliJIdea2025.2"; \
-		else \
-			echo "📋 Using existing JetBrains directory: $$(basename "$$JETBRAINS_DIR")"; \
+	@$(MAKE) -s restore-jetbrains
+	@$(MAKE) -s install-jetbrains-plugins
+	@echo "✅ JetBrains IDEs configuration and plugins installed!"
+
+# Install JetBrains plugins automatically using CLI
+install-jetbrains-plugins:
+	@echo "🔌 Installing JetBrains plugins from backup..."
+	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
+	JETBRAINS_BACKUP_DIR="jetbrains-ides"; \
+	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
+		echo "⚠️  No JetBrains backup found"; \
+		exit 0; \
+	fi; \
+	for backup_dir in "$$JETBRAINS_BACKUP_DIR"/*/; do \
+		if [ -d "$$backup_dir" ]; then \
+			IDE_NAME=$$(basename "$$backup_dir"); \
+			if [[ "$$IDE_NAME" == .* ]]; then \
+				continue; \
+			fi; \
+			echo "🔌 Installing plugins for $$IDE_NAME..."; \
+			if [ -f "$$backup_dir/plugins_manifest.txt" ]; then \
+				PLUGIN_COUNT=0; \
+				while IFS= read -r plugin_id || [ -n "$$plugin_id" ]; do \
+					if [[ -z "$$plugin_id" || "$$plugin_id" =~ ^[[:space:]]*# ]]; then \
+						continue; \
+					fi; \
+					echo "  📦 Installing plugin: $$plugin_id"; \
+					if [[ "$$IDE_NAME" == *"IntelliJ"* ]]; then \
+						IDE_EXECUTABLE="/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"; \
+					elif [[ "$$IDE_NAME" == *"WebStorm"* ]]; then \
+						IDE_EXECUTABLE="/Applications/WebStorm.app/Contents/MacOS/webstorm"; \
+					elif [[ "$$IDE_NAME" == *"PyCharm"* ]]; then \
+						IDE_EXECUTABLE="/Applications/PyCharm.app/Contents/MacOS/pycharm"; \
+					elif [[ "$$IDE_NAME" == *"DataGrip"* ]]; then \
+						IDE_EXECUTABLE="/Applications/DataGrip.app/Contents/MacOS/datagrip"; \
+					else \
+						echo "    ⚠️  Unknown IDE type for $$IDE_NAME, skipping plugin installation"; \
+						continue; \
+					fi; \
+					if [ -f "$$IDE_EXECUTABLE" ]; then \
+						"$$IDE_EXECUTABLE" installPlugins "$$plugin_id" 2>/dev/null || \
+						echo "    ⚠️  Failed to install $$plugin_id (may already be installed)"; \
+						PLUGIN_COUNT=$$((PLUGIN_COUNT + 1)); \
+					else \
+						echo "    ⚠️  $$IDE_NAME executable not found, skipping plugin installation"; \
+					fi; \
+				done < "$$backup_dir/plugins_manifest.txt"; \
+				echo "  ✅ Processed $$PLUGIN_COUNT plugins for $$IDE_NAME"; \
+			elif [ -f "$$backup_dir/plugins_list.txt" ]; then \
+				echo "  💡 Found plugins_list.txt but no plugins_manifest.txt"; \
+				echo "     Run 'make backup' to generate plugin manifest for CLI installation"; \
+			else \
+				echo "  ℹ️  No plugin manifest found for $$IDE_NAME"; \
+			fi; \
 		fi; \
-	fi; \
-	mkdir -p "$$JETBRAINS_DIR"; \
-	if [ -d "jetbrains/codestyles" ]; then \
-		echo "🎨 Restoring code styles..."; \
-		cp -R "jetbrains/codestyles" "$$JETBRAINS_DIR/"; \
-	fi; \
-	if [ -d "jetbrains/options" ]; then \
-		echo "⚙️  Restoring IDE options..."; \
-		cp -R "jetbrains/options" "$$JETBRAINS_DIR/"; \
-	fi; \
-	if [ -f "jetbrains/idea.vmoptions" ]; then \
-		echo "🚀 Restoring JVM options..."; \
-		cp "jetbrains/idea.vmoptions" "$$JETBRAINS_DIR/"; \
-	fi; \
-	if [ -f "jetbrains/disabled_plugins.txt" ]; then \
-		echo "🔌 Restoring disabled plugins list..."; \
-		cp "jetbrains/disabled_plugins.txt" "$$JETBRAINS_DIR/"; \
-	fi; \
-	if [ -f "jetbrains/plugins_list.txt" ]; then \
-		echo "🔌 Plugin list available at jetbrains/plugins_list.txt"; \
-		echo "💡 Please reinstall these plugins manually from JetBrains Marketplace"; \
-	fi; \
-	if [ -f "jetbrains/.ideavimrc" ]; then \
-		echo "⌨️  Restoring .ideavimrc..."; \
-		cp "jetbrains/.ideavimrc" "$$HOME/"; \
-	fi
-	@echo "✅ JetBrains IDEs configuration restored!"
+	done
 
 # Install iTerm2 configuration
 iterm2:
@@ -329,7 +345,7 @@ upgrade-deps:
 		brew update && brew upgrade; \
 	fi
 	@if command -v asdf >/dev/null 2>&1; then \
-		echo "🔧 Upgrading asdf..."; \
+		echo "��� Upgrading asdf..."; \
 		asdf update; \
 	fi
 	@if command -v npm >/dev/null 2>&1; then \
@@ -474,7 +490,28 @@ clean:
 		cd ..; \
 		echo "🧠 Cleaning cache and unnecessary files from JetBrains IDEs configurations..."; \
 		REMOVED_FILE_COUNT=0; \
-		for file_pattern in "vim_settings_local.xml" "recentProjects.xml" "window.*.xml" "actionSummary.xml" "contributorSummary.xml" "features.usage.statistics.xml" "dailyLocalStatistics.xml" "log-categories.xml" "EventLog*.xml" "DontShowAgain*.xml" "CommonFeedback*.xml" "AIOnboarding*.xml" "McpToolsStore*.xml" "usage.statistics.xml" "statistics.xml" "event-log-whitelist.xml" "ConversationToolStoreService.xml" "*_backup_*.xml" "*.backup"; do \
+		for file_pattern in \
+			"vim_settings_local.xml" \
+			"recentProjects.xml" \
+			"window.*.xml" \
+			"actionSummary.xml" \
+			"contributorSummary.xml" \
+			"features.usage.statistics.xml" \
+			"dailyLocalStatistics.xml" \
+			"log-categories.xml" \
+			"EventLog*.xml" \
+			"DontShowAgain*.xml" \
+			"CommonFeedback*.xml" \
+			"AIOnboarding*.xml" \
+			"McpToolsStore*.xml" \
+			"usage.statistics.xml" \
+			"statistics.xml" \
+			"event-log-whitelist.xml" \
+			"inline.factors.completion.xml" \
+			"ConversationToolStoreService.xml" \
+			"*_backup_*.xml" \
+			"*.backup" \
+		; do \
 			FOUND_FILES=$$(find jetbrains-ides -name "$$file_pattern" 2>/dev/null || true); \
 			if [ -n "$$FOUND_FILES" ]; then \
 				FILE_COUNT=$$(echo "$$FOUND_FILES" | wc -l | tr -d ' '); \

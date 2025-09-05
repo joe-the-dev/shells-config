@@ -1,0 +1,35 @@
+# JetBrains Plugin Manifest
+# Generated on Fri Sep  5 09:49:27 +07 2025
+# Format: PluginID (for CLI installation)
+
+IdeaVIM
+IntelliJ-EmmyLua
+Shell Script
+Spring
+clouds-docker-impl
+clouds-kubernetes
+copyright
+editorconfig-plugin
+fullLine
+github-copilot-intellij
+java
+javascript-debugger
+javascript-plugin
+jupyter-plugin
+karma
+makefile
+microservices-ui
+notebooks-plugin
+packageChecker
+properties
+react
+restClient
+swagger
+terraform
+toml
+vcs-github-IU
+vcs-gitlab-IU
+vcs-svn
+velocity
+vuejs
+yaml
