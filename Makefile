@@ -1,13 +1,18 @@
 .PHONY: all install copy-configs brew asdf jetbrains iterm2 omf env help clean \
 	check-deps upgrade-deps backup restore restore-jetbrains \
-	install-jetbrains-plugins update
+	install-jetbrains-plugins update install-packages
 
 # Default target
 all: install
 
+# Detect OS and set platform-specific variables
+SHELL := /bin/bash
+OS := $(shell ./scripts/detect_os.sh)
+PLATFORM_DIR := platforms/$(OS)
+
 # Main installation target
-install: update check-deps copy-configs brew asdf jetbrains iterm2 omf env
-	@echo "🎉 All configurations installed successfully!"
+install: update check-deps copy-configs install-packages asdf jetbrains terminal omf env
+	@echo "🎉 All configurations installed successfully for $(OS)!"
 
 # Help target
 help:
@@ -124,6 +129,99 @@ _copy-nvim:
 		cp -a "nvim" "$$HOME/.config/nvim"; \
 	fi
 
+# Platform-specific package installation
+install-packages:
+	@echo "📦 Installing packages for $(OS)..."
+	@if [ "$(OS)" = "macos" ]; then \
+		$(MAKE) -s brew; \
+	elif [ "$(OS)" = "ubuntu" ]; then \
+		$(MAKE) -s ubuntu-packages; \
+	elif [ "$(OS)" = "manjaro" ]; then \
+		$(MAKE) -s manjaro-packages; \
+	else \
+		echo "⚠️  Package installation not configured for $(OS)"; \
+	fi
+
+# macOS Homebrew packages (renamed from brew target)
+brew:
+	@echo "🍺 Installing Homebrew packages..."
+	@if ! command -v brew >/dev/null 2>&1; then \
+		echo "⚠️  Homebrew not found - please install Homebrew first"; \
+		echo "💡 Install from: https://brew.sh"; \
+		exit 1; \
+	fi
+	@if [ -f "$(PLATFORM_DIR)/brew/Brewfile" ]; then \
+		echo "📦 Installing packages..."; \
+		brew bundle install --file=$(PLATFORM_DIR)/brew/Brewfile --verbose || \
+		(echo "⚠️  Some packages may have failed - this might be normal for packages requiring sudo"; \
+		 echo "💡 You can manually run: brew bundle install --file=$(PLATFORM_DIR)/brew/Brewfile"); \
+	else \
+		echo "⚠️  $(PLATFORM_DIR)/brew/Brewfile not found"; \
+	fi
+
+# Ubuntu/Debian package installation
+ubuntu-packages:
+	@echo "🐧 Installing Ubuntu/Debian packages..."
+	@if [ -f "$(PLATFORM_DIR)/packages.txt" ]; then \
+		echo "📦 Installing packages from $(PLATFORM_DIR)/packages.txt..."; \
+		sudo apt update; \
+		sudo apt install -y $$(grep -v '^#' "$(PLATFORM_DIR)/packages.txt" | grep -v '^$$' | tr '\n' ' '); \
+		echo "✅ Ubuntu packages installed"; \
+	else \
+		echo "⚠️  $(PLATFORM_DIR)/packages.txt not found"; \
+	fi
+
+# Manjaro/Arch package installation
+manjaro-packages:
+	@echo "🏔️  Installing Manjaro/Arch packages..."
+	@if [ -f "$(PLATFORM_DIR)/packages.txt" ]; then \
+		echo "📦 Installing packages from $(PLATFORM_DIR)/packages.txt..."; \
+		sudo pacman -Syu --needed $$(grep -v '^#' "$(PLATFORM_DIR)/packages.txt" | grep -v '^$$' | tr '\n' ' '); \
+		echo "✅ Manjaro packages installed"; \
+	else \
+		echo "⚠���  $(PLATFORM_DIR)/packages.txt not found"; \
+	fi
+
+# Platform-specific terminal configuration
+terminal:
+	@echo "🖥️  Setting up terminal for $(OS)..."
+	@if [ "$(OS)" = "macos" ]; then \
+		$(MAKE) -s iterm2; \
+	elif [ "$(OS)" = "ubuntu" ] || [ "$(OS)" = "manjaro" ] || [ "$(OS)" = "linux" ]; then \
+		$(MAKE) -s linux-terminal; \
+	else \
+		echo "⚠️  Terminal configuration not available for $(OS)"; \
+	fi
+
+# Linux terminal configuration
+linux-terminal:
+	@echo "🐧 Setting up Linux terminal configuration..."
+	@if [ -f "platforms/linux/terminal_config.sh" ]; then \
+		echo "📋 Applying terminal configuration..."; \
+		cat platforms/linux/terminal_config.sh >> "$$HOME/.bashrc"; \
+		echo "✅ Terminal configuration added to ~/.bashrc"; \
+	else \
+		echo "⚠️  Linux terminal config not found"; \
+	fi
+
+# Platform-aware JetBrains installation
+jetbrains:
+	@echo "🧠 Installing JetBrains IDEs configuration..."
+	@JETBRAINS_BACKUP_DIR="$(PLATFORM_DIR)/jetbrains-ides"; \
+	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
+		echo "⚠️  No JetBrains backup found at $$JETBRAINS_BACKUP_DIR"; \
+		echo "💡 Run 'make backup' first to create a backup"; \
+		exit 0; \
+	fi; \
+	if [ "$(OS)" = "macos" ]; then \
+		$(MAKE) -s restore-jetbrains; \
+		$(MAKE) -s install-jetbrains-plugins; \
+	else \
+		echo "⚠️  JetBrains plugin installation only supported on macOS currently"; \
+		$(MAKE) -s restore-jetbrains; \
+	fi
+	@echo "✅ JetBrains IDEs configuration installed!"
+
 # Install Homebrew packages
 brew:
 	@echo "🍺 Installing Homebrew packages..."
@@ -172,25 +270,18 @@ asdf:
 		echo "ℹ️  asdf/plugins.txt not found - skipping plugin installation"; \
 	fi
 
-# Install JetBrains IDEs configuration
-jetbrains:
-	@echo "🧠 Installing JetBrains IDEs configuration..."
-	@if [ ! -d "jetbrains-ides" ]; then \
-		echo "⚠️  No JetBrains backup found at jetbrains-ides/"; \
-		echo "💡 Run 'make backup' first to create a backup"; \
-		exit 0; \
-	fi
-	@$(MAKE) -s restore-jetbrains
-	@$(MAKE) -s install-jetbrains-plugins
-	@echo "✅ JetBrains IDEs configuration and plugins installed!"
-
 # Install JetBrains plugins automatically using CLI
 install-jetbrains-plugins:
 	@echo "🔌 Installing JetBrains plugins from backup..."
-	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
-	JETBRAINS_BACKUP_DIR="jetbrains-ides"; \
+	@if [ "$(OS)" = "macos" ]; then \
+		JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
+		JETBRAINS_BACKUP_DIR="$(PLATFORM_DIR)/jetbrains-ides"; \
+	else \
+		JETBRAINS_DIR="$$HOME/.local/share/JetBrains"; \
+		JETBRAINS_BACKUP_DIR="$(PLATFORM_DIR)/jetbrains-ides"; \
+	fi; \
 	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
-		echo "⚠️  No JetBrains backup found"; \
+		echo "⚠️  No JetBrains backup found at $$JETBRAINS_BACKUP_DIR"; \
 		exit 0; \
 	fi; \
 	for backup_dir in "$$JETBRAINS_BACKUP_DIR"/*/; do \
@@ -207,24 +298,28 @@ install-jetbrains-plugins:
 						continue; \
 					fi; \
 					echo "  📦 Installing plugin: $$plugin_id"; \
-					if [[ "$$IDE_NAME" == *"IntelliJ"* ]]; then \
-						IDE_EXECUTABLE="/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"; \
-					elif [[ "$$IDE_NAME" == *"WebStorm"* ]]; then \
-						IDE_EXECUTABLE="/Applications/WebStorm.app/Contents/MacOS/webstorm"; \
-					elif [[ "$$IDE_NAME" == *"PyCharm"* ]]; then \
-						IDE_EXECUTABLE="/Applications/PyCharm.app/Contents/MacOS/pycharm"; \
-					elif [[ "$$IDE_NAME" == *"DataGrip"* ]]; then \
-						IDE_EXECUTABLE="/Applications/DataGrip.app/Contents/MacOS/datagrip"; \
+					if [ "$(OS)" = "macos" ]; then \
+						if [[ "$$IDE_NAME" == *"IntelliJ"* ]]; then \
+							IDE_EXECUTABLE="/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"; \
+						elif [[ "$$IDE_NAME" == *"WebStorm"* ]]; then \
+							IDE_EXECUTABLE="/Applications/WebStorm.app/Contents/MacOS/webstorm"; \
+						elif [[ "$$IDE_NAME" == *"PyCharm"* ]]; then \
+							IDE_EXECUTABLE="/Applications/PyCharm.app/Contents/MacOS/pycharm"; \
+						elif [[ "$$IDE_NAME" == *"DataGrip"* ]]; then \
+							IDE_EXECUTABLE="/Applications/DataGrip.app/Contents/MacOS/datagrip"; \
+						else \
+							echo "    ⚠️  Unknown IDE type for $$IDE_NAME, skipping plugin installation"; \
+							continue; \
+						fi; \
+						if [ -f "$$IDE_EXECUTABLE" ]; then \
+							"$$IDE_EXECUTABLE" installPlugins "$$plugin_id" 2>/dev/null || \
+							echo "    ⚠️  Failed to install $$plugin_id (may already be installed)"; \
+							PLUGIN_COUNT=$$((PLUGIN_COUNT + 1)); \
+						else \
+							echo "    ⚠️  $$IDE_NAME executable not found, skipping plugin installation"; \
+						fi; \
 					else \
-						echo "    ⚠️  Unknown IDE type for $$IDE_NAME, skipping plugin installation"; \
-						continue; \
-					fi; \
-					if [ -f "$$IDE_EXECUTABLE" ]; then \
-						"$$IDE_EXECUTABLE" installPlugins "$$plugin_id" 2>/dev/null || \
-						echo "    ⚠️  Failed to install $$plugin_id (may already be installed)"; \
-						PLUGIN_COUNT=$$((PLUGIN_COUNT + 1)); \
-					else \
-						echo "    ⚠️  $$IDE_NAME executable not found, skipping plugin installation"; \
+						echo "    ℹ️  Plugin CLI installation not supported on $(OS), manual installation required"; \
 					fi; \
 				done < "$$backup_dir/plugins_manifest.txt"; \
 				echo "  ✅ Processed $$PLUGIN_COUNT plugins for $$IDE_NAME"; \
@@ -237,33 +332,37 @@ install-jetbrains-plugins:
 		fi; \
 	done
 
-# Install iTerm2 configuration
+# Install iTerm2 configuration (macOS only)
 iterm2:
 	@echo "🖥️  Installing iTerm2 configuration..."
-	@if [ ! -d "iterm2" ]; then \
-		echo "⚠️  No iTerm2 config found"; \
+	@if [ "$(OS)" != "macos" ]; then \
+		echo "⚠️  iTerm2 is only available on macOS"; \
+		exit 0; \
+	fi
+	@if [ ! -d "$(PLATFORM_DIR)/iterm2" ]; then \
+		echo "⚠️  No iTerm2 config found at $(PLATFORM_DIR)/iterm2"; \
 		exit 0; \
 	fi
 	@if pgrep -x "iTerm2" > /dev/null; then \
 		echo "⚠️  iTerm2 is currently running. Please close it first."; \
 		exit 0; \
 	fi
-	@if [ -f "iterm2/com.googlecode.iterm2.plist" ]; then \
+	@if [ -f "$(PLATFORM_DIR)/iterm2/com.googlecode.iterm2.plist" ]; then \
 		echo "📋 Restoring iTerm2 preferences..."; \
-		cp "iterm2/com.googlecode.iterm2.plist" "$$HOME/Library/Preferences/"; \
+		cp "$(PLATFORM_DIR)/iterm2/com.googlecode.iterm2.plist" "$$HOME/Library/Preferences/"; \
 	fi
 	@ITERM2_APP_SUPPORT="$$HOME/Library/Application Support/iTerm2"; \
 	mkdir -p "$$ITERM2_APP_SUPPORT"; \
-	if [ -d "iterm2/DynamicProfiles" ]; then \
+	if [ -d "$(PLATFORM_DIR)/iterm2/DynamicProfiles" ]; then \
 		echo "🎨 Restoring Dynamic Profiles..."; \
-		cp -R "iterm2/DynamicProfiles" "$$ITERM2_APP_SUPPORT/"; \
+		cp -R "$(PLATFORM_DIR)/iterm2/DynamicProfiles" "$$ITERM2_APP_SUPPORT/"; \
 	fi; \
-	if [ -d "iterm2/Scripts" ]; then \
+	if [ -d "$(PLATFORM_DIR)/iterm2/Scripts" ]; then \
 		echo "📜 Restoring iTerm2 Scripts..."; \
-		cp -R "iterm2/Scripts" "$$ITERM2_APP_SUPPORT/"; \
+		cp -R "$(PLATFORM_DIR)/iterm2/Scripts" "$$ITERM2_APP_SUPPORT/"; \
 	fi; \
-	if [ -f "iterm2/version.txt" ]; then \
-		cp "iterm2/version.txt" "$$ITERM2_APP_SUPPORT/"; \
+	if [ -f "$(PLATFORM_DIR)/iterm2/version.txt" ]; then \
+		cp "$(PLATFORM_DIR)/iterm2/version.txt" "$$ITERM2_APP_SUPPORT/"; \
 	fi
 	@echo "✅ iTerm2 configuration restored!"
 

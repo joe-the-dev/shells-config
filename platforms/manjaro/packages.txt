@@ -1,0 +1,54 @@
+# Manjaro/Arch Package List
+# Install with: sudo pacman -S --needed $(grep -v '^#' packages.txt | tr '\n' ' ')
+
+# Development Tools
+git
+curl
+wget
+vim
+neovim
+tmux
+htop
+tree
+jq
+unzip
+base-devel
+cmake
+pkgconf
+
+# Terminal & Shell
+fish
+zsh
+fzf
+ripgrep
+bat
+exa
+fd
+
+# Development Languages
+nodejs
+npm
+python
+python-pip
+go
+
+# Fonts & Terminal Enhancement
+ttf-fira-code
+ttf-hack
+
+# Network Tools
+net-tools
+openssh
+
+# Development Tools
+docker
+docker-compose
+code
+
+# Media & Graphics
+imagemagick
+ffmpeg
+
+# AUR Helper (install separately)
+# yay
+# paru

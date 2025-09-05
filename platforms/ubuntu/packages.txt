@@ -1,0 +1,58 @@
+# Ubuntu/Debian Package List
+# Install with: sudo apt update && sudo apt install -y $(grep -v '^#' packages.txt | tr '\n' ' ')
+
+# Development Tools
+git
+curl
+wget
+vim
+neovim
+tmux
+htop
+tree
+jq
+unzip
+build-essential
+cmake
+pkg-config
+
+# Terminal & Shell
+fish
+zsh
+fzf
+ripgrep
+bat
+exa
+fd-find
+
+# Development Languages
+nodejs
+npm
+python3
+python3-pip
+golang-go
+
+# Fonts & Terminal Enhancement
+fonts-firacode
+fonts-hack
+
+# Network Tools
+net-tools
+openssh-client
+openssh-server
+
+# Optional Development Tools
+docker.io
+docker-compose
+code
+
+# Media & Graphics
+imagemagick
+ffmpeg
+
+# System Tools
+software-properties-common
+apt-transport-https
+ca-certificates
+gnupg
+lsb-release
