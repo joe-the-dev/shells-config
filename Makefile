@@ -299,17 +299,17 @@ iterm2:
 		echo "📋 Restoring iTerm2 preferences..."; \
 		cp "iterm2/com.googlecode.iterm2.plist" "$$HOME/Library/Preferences/"; \
 	fi
-	mkdir -p "$$ITERM2_APP_SUPPORT"; \
+	@mkdir -p "$$HOME/Library/Application Support/iTerm2"; \
 	if [ -d "iterm2/DynamicProfiles" ]; then \
 		echo "🎨 Restoring Dynamic Profiles..."; \
-		cp -R "iterm2/DynamicProfiles" "$$ITERM2_APP_SUPPORT/"; \
+		cp -R "iterm2/DynamicProfiles" "$$HOME/Library/Application Support/iTerm2/"; \
 	fi; \
 	if [ -d "iterm2/Scripts" ]; then \
 		echo "📜 Restoring iTerm2 Scripts..."; \
-		cp -R "iterm2/Scripts" "$$ITERM2_APP_SUPPORT/"; \
+		cp -R "iterm2/Scripts" "$$HOME/Library/Application Support/iTerm2/"; \
 	fi; \
 	if [ -f "iterm2/version.txt" ]; then \
-		cp "iterm2/version.txt" "$$ITERM2_APP_SUPPORT/"; \
+		cp "iterm2/version.txt" "$$HOME/Library/Application Support/iTerm2/"; \
 	fi
 	@echo "✅ iTerm2 configuration restored!"
 

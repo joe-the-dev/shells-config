@@ -63,6 +63,26 @@ for tool in "${TOOLS[@]}"; do
             mkdir -p "$dst/automatic_backups"
             ls -1t "$src/automatic_backups"/karabiner_*.json 2>/dev/null | head -2 | xargs -I {} cp {} "$dst/automatic_backups/"
           fi
+        elif [ "$tool" = "omf" ]; then
+          # For OMF, ensure bundle file is in correct format (no "package" prefix)
+          echo "  🐟 Backing up OMF with proper bundle format"
+          rsync -a "$src"/ "$dst"/
+
+          # Fix bundle file format if it exists
+          if [ -f "$dst/bundle" ]; then
+            echo "  📦 Cleaning up bundle file format"
+            # Remove "package " prefix and "theme " lines, keep only package names
+            sed -E 's/^package[[:space:]]+//; /^theme[[:space:]]/d' "$dst/bundle" > "$dst/bundle.tmp"
+            mv "$dst/bundle.tmp" "$dst/bundle"
+          fi
+
+          # Ensure theme file contains only theme name
+          if [ -f "$dst/theme" ]; then
+            echo "  🎨 Cleaning up theme file format"
+            # Remove "theme " prefix if present
+            sed -E 's/^theme[[:space:]]+//' "$dst/theme" > "$dst/theme.tmp"
+            mv "$dst/theme.tmp" "$dst/theme"
+          fi
         else
           rsync -a "$src"/ "$dst"/
         fi
@@ -71,7 +91,7 @@ for tool in "${TOOLS[@]}"; do
       ;;
     asdf)
       dst="$REPO_DIR/$tool"
-      echo "🔄 Backing up $tool config files → $dst"
+      echo "🔄 Backing up $tool config files �� $dst"
       rm -rf "$dst"
       mkdir -p "$dst"
       # Copy asdf config files individually since they're in home directory
