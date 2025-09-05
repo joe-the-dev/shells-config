@@ -511,6 +511,9 @@ clean:
 			"event-log-whitelist.xml" \
 			"inline.factors.completion.xml" \
 			"ConversationToolStoreService.xml" \
+			"vcs-inputs.xml" \
+			"github.xml" \
+			"trusted-paths.xml" \
 			"*_backup_*.xml" \
 			"*.backup" \
 		; do \
