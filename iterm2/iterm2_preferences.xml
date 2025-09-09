@@ -276,7 +276,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>407 1437 800 448 -153 982 1920 1055 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-963 1512 570 383 -1080 0 1080 1895 </string>
+	<string>216 561 570 383 0 0 1512 944 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2440,7 +2440,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>32</integer>
+	<integer>33</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>770609432.769629</real>
 	<key>NoSyncPermissionToShowTip</key>
@@ -3381,7 +3381,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-09-04T02:19:16Z</date>
+	<date>2025-09-09T01:43:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Scroll wheel sends arrow keys in alternate screen mode</key>

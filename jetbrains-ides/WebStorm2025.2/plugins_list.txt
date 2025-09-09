@@ -1,9 +1,9 @@
-IdeaVIM
 clouds-docker-impl
 copyright
 editorconfig-plugin
 fullLine
 github-copilot-intellij
+IdeaVIM
 javascript-debugger
 karma
 mdx
