@@ -131,29 +131,37 @@ function upgrade-all
 end
 
 function backup
-    set -l backup_script "$SHELL_BACKUP_DIR/backup.sh"
+    # Change to the shells-config directory
+    set -l config_dir "$SHELL_BACKUP_DIR"
 
-    if not test -f "$backup_script"
-        echo "❌ ERROR: backup.sh not found at $backup_script"
+    if not test -d "$config_dir"
+        echo "❌ ERROR: Configuration directory not found at $config_dir"
+        echo "💡 Make sure SHELL_BACKUP_DIR is set correctly"
         return 1
     end
 
-    echo "🚀 Running backup script..."
+    echo "🚀 Running backup using make system..."
+
+    # Change to config directory and run make
+    pushd "$config_dir"
 
     # Check if --sync flag is provided
     if contains -- --sync $argv
-        echo "🔄 Running with git sync enabled"
-        bash "$backup_script" --sync
+        echo "🔄 Running backup with git sync enabled"
+        make backup-sync
     else
         echo "📦 Running backup without git sync"
-        bash "$backup_script"
+        make backup
     end
 
-    if test $status -eq 0
+    set -l exit_code $status
+    popd
+
+    if test $exit_code -eq 0
         echo "✅ Backup completed successfully!"
     else
-        echo "❌ Backup failed with exit code $status"
-        return $status
+        echo "❌ Backup failed with exit code $exit_code"
+        return $exit_code
     end
 end
 

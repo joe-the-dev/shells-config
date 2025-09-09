@@ -1,11 +1,13 @@
+IdeaVIM
+IntelliJ-EmmyLua
+Shell Script
+Spring
 clouds-docker-impl
 clouds-kubernetes
 copyright
 editorconfig-plugin
 fullLine
 github-copilot-intellij
-IdeaVIM
-IntelliJ-EmmyLua
 java
 javascript-debugger
 javascript-plugin
@@ -18,9 +20,7 @@ packageChecker
 properties
 react
 restClient
-Shell Script
 solarized_theme.jar
-Spring
 swagger
 terraform
 toml

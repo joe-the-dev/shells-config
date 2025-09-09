@@ -1,5 +1,5 @@
 # JetBrains Plugin Manifest
-# Generated on Tue  9 Sep 2025 09:24:33 +07
+# Generated on Tue Sep  9 16:06:23 +07 2025
 # Format: PluginID (for CLI installation)
 
 editorconfig-plugin

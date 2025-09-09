@@ -1,0 +1,96 @@
+{
+    autohide = 1;
+    "last-analytics-stamp" =     (
+        "778597407.018671"
+    );
+    lastShowIndicatorTime = "778732241.110359";
+    launchanim = 0;
+    loc = "en_US:VN";
+    mineffect = scale;
+    "mod-count" = 42;
+    orientation = left;
+    "persistent-apps" =     (
+                {
+            GUID = 3696513593;
+            "tile-data" =             {
+                book = {length = 584, bytes = 0x626f6f6b 48020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "com.apple.launchpad.launcher";
+                "dock-extra" = 0;
+                "file-data" =                 {
+                    "_CFURLString" = "file:///System/Applications/Launchpad.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = Launchpad;
+                "file-mod-date" = 3812427861;
+                "file-type" = 169;
+                "is-beta" = 0;
+                "parent-mod-date" = 3812427861;
+            };
+            "tile-type" = "file-tile";
+        },
+                {
+            GUID = 3696513609;
+            "tile-data" =             {
+                book = {length = 588, bytes = 0x626f6f6b 4c020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "com.apple.systempreferences";
+                "dock-extra" = 1;
+                "file-data" =                 {
+                    "_CFURLString" = "file:///System/Applications/System%20Settings.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = "System Settings";
+                "file-mod-date" = 3838214669;
+                "file-type" = 41;
+                "is-beta" = 0;
+                "parent-mod-date" = 3838214669;
+            };
+            "tile-type" = "file-tile";
+        },
+                {
+            GUID = 3557547928;
+            "tile-data" =             {
+                book = {length = 556, bytes = 0x626f6f6b 2c020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "com.googlecode.iterm2";
+                "dock-extra" = 0;
+                "file-data" =                 {
+                    "_CFURLString" = "file:///Applications/iTerm.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = iTerm;
+                "file-mod-date" = 3830198341;
+                "file-type" = 41;
+                "is-beta" = 0;
+                "parent-mod-date" = 41153921765173;
+            };
+            "tile-type" = "file-tile";
+        },
+                {
+            GUID = 1174748765;
+            "tile-data" =             {
+                book = {length = 564, bytes = 0x626f6f6b 34020000 00000410 30000000 ... 04000000 00000000 };
+                "bundle-identifier" = "com.microsoft.edgemac";
+                "dock-extra" = 0;
+                "file-data" =                 {
+                    "_CFURLString" = "file:///Applications/Microsoft%20Edge.app/";
+                    "_CFURLStringType" = 15;
+                };
+                "file-label" = "Microsoft Edge";
+                "file-mod-date" = 14752757015455;
+                "file-type" = 41;
+                "is-beta" = 0;
+                "parent-mod-date" = 104831106542850;
+            };
+            "tile-type" = "file-tile";
+        }
+    );
+    "persistent-others" =     (
+    );
+    "recent-apps" =     (
+    );
+    region = VN;
+    "show-recents" = 0;
+    tilesize = 27;
+    "trash-full" = 1;
+    version = 1;
+    "wvous-br-corner" = 14;
+}

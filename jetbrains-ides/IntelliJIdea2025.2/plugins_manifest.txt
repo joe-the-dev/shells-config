@@ -1,15 +1,17 @@
 # JetBrains Plugin Manifest
-# Generated on Tue  9 Sep 2025 09:24:33 +07
+# Generated on Tue Sep  9 16:06:22 +07 2025
 # Format: PluginID (for CLI installation)
 
+IdeaVIM
+IntelliJ-EmmyLua
+Shell Script
+Spring
 clouds-docker-impl
 clouds-kubernetes
 copyright
 editorconfig-plugin
 fullLine
 github-copilot-intellij
-IdeaVIM
-IntelliJ-EmmyLua
 java
 javascript-debugger
 javascript-plugin
@@ -22,8 +24,6 @@ packageChecker
 properties
 react
 restClient
-Shell Script
-Spring
 swagger
 terraform
 toml
