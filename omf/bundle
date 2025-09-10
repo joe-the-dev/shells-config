@@ -1,12 +1,11 @@
-bass
-z
-fzf
-gi
-node-binpath
-brew
-docker-completion
-extract
-pj
-thefuck
-weather
-bobthefish
+bass bass
+brew brew
+docker-completion docker-completion
+extract extract
+fzf fzf
+gi gi
+node-binpath node-binpath
+pj pj
+thefuck thefuck
+weather weather
+z z
