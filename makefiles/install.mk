@@ -27,98 +27,194 @@ install-tools: update
 	@$(MAKE) -s _copy-karabiner _copy-hammerspoon iterm2
 	@echo "✅ Productivity tools installed (karabiner, hammerspoon, iterm2)!"
 
-# Copy configuration files
+# Copy configuration files with parallel execution and progress indicators
 copy-configs:
-	@echo "📁 Copying configuration files..."
-	@$(MAKE) -s _copy-omf
-	@$(MAKE) -s _copy-karabiner
-	@$(MAKE) -s _copy-hammerspoon
-	@$(MAKE) -s _copy-brew
-	@$(MAKE) -s _copy-asdf
-	@$(MAKE) -s _copy-bash
-	@$(MAKE) -s _copy-zsh
-	@$(MAKE) -s _copy-git
-	@$(MAKE) -s _copy-fish
-	@$(MAKE) -s _copy-nvim
+	@echo "📁 Copying configuration files with parallel execution..."
+	@rm -f .parallel_pids .parallel_log.tmp
+	@echo "🚀 Starting: OMF config"; \
+	$(MAKE) -s _copy-omf & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Karabiner config"; \
+	$(MAKE) -s _copy-karabiner & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Hammerspoon config"; \
+	$(MAKE) -s _copy-hammerspoon & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Homebrew config"; \
+	$(MAKE) -s _copy-brew & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 1 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 1 completed!"; \
+	fi
+	@echo "🚀 Starting: ASDF config"; \
+	$(MAKE) -s _copy-asdf & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Bash config"; \
+	$(MAKE) -s _copy-bash & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Zsh config"; \
+	$(MAKE) -s _copy-zsh & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Git config"; \
+	$(MAKE) -s _copy-git & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 2 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 2 completed!"; \
+	fi
+	@echo "🚀 Starting: Fish config"; \
+	$(MAKE) -s _copy-fish & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Neovim config"; \
+	$(MAKE) -s _copy-nvim & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 3 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 3 completed!"; \
+	fi
+	@if [ -f .parallel_log.tmp ]; then \
+		echo "📋 Parallel execution results:"; \
+		sort .parallel_log.tmp; \
+		rm -f .parallel_log.tmp; \
+	fi
 	@echo "✅ All configuration files copied!"
 
-# Internal copy targets
+# Enhanced copy targets with progress reporting
 _copy-omf:
+	@echo "[1/10] 🐟 Copying OMF config..." >> .parallel_log.tmp
 	@if [ -d "omf" ]; then \
-		echo "🐟 Copying OMF config..."; \
 		rm -rf "$$HOME/.config/omf"; \
 		mkdir -p "$$HOME/.config"; \
 		cp -a "omf" "$$HOME/.config/omf"; \
+		echo "✅ OMF config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No OMF config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-karabiner:
+	@echo "[2/10] ⌨️  Copying Karabiner config..." >> .parallel_log.tmp
 	@if [ -d "karabiner" ]; then \
-		echo "⌨️  Copying Karabiner config..."; \
 		rm -rf "$$HOME/.config/karabiner"; \
 		mkdir -p "$$HOME/.config"; \
 		cp -a "karabiner" "$$HOME/.config/karabiner"; \
+		echo "✅ Karabiner config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Karabiner config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-hammerspoon:
+	@echo "[3/10] 🔨 Copying Hammerspoon config..." >> .parallel_log.tmp
 	@if [ -d "hammerspoon" ]; then \
-		echo "🔨 Copying Hammerspoon config..."; \
 		rm -rf "$$HOME/.hammerspoon"; \
 		cp -a "hammerspoon" "$$HOME/.hammerspoon"; \
+		echo "✅ Hammerspoon config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Hammerspoon config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-brew:
+	@echo "[4/10] 🍺 Copying Homebrew config..." >> .parallel_log.tmp
 	@if [ -f "brew/Brewfile" ]; then \
-		echo "🍺 Copying Brewfile..."; \
 		rm -f "$$HOME/.Brewfile"; \
 		cp "brew/Brewfile" "$$HOME/.Brewfile"; \
+		echo "✅ Brewfile copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Brewfile found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-asdf:
-	@if [ -f "asdf/.asdfrc" ]; then \
-		echo "🔧 Copying asdf config..."; \
+	@echo "[5/10] 🔧 Copying ASDF config..." >> .parallel_log.tmp
+	@COPIED=false; \
+	if [ -f "asdf/.asdfrc" ]; then \
 		rm -f "$$HOME/.asdfrc"; \
 		cp "asdf/.asdfrc" "$$HOME/.asdfrc"; \
-	fi
-	@if [ -f "asdf/.tool-versions" ]; then \
-	    rm -f "$$HOME/.tool-versions"; \
+		COPIED=true; \
+	fi; \
+	if [ -f "asdf/.tool-versions" ]; then \
+		rm -f "$$HOME/.tool-versions"; \
 		cp "asdf/.tool-versions" "$$HOME/.tool-versions"; \
+		COPIED=true; \
+	fi; \
+	if [ "$$COPIED" = "true" ]; then \
+		echo "✅ ASDF config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No ASDF config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-bash:
+	@echo "[6/10] 🐚 Copying Bash config..." >> .parallel_log.tmp
 	@if [ -f "bash/.bashrc" ]; then \
-		echo "🐚 Copying bash config..."; \
 		cp "bash/.bashrc" "$$HOME/.bashrc"; \
+		echo "✅ Bash config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Bash config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-zsh:
+	@echo "[7/10] 🦓 Copying Zsh config..." >> .parallel_log.tmp
 	@if [ -f "zsh/.zshrc" ]; then \
-		echo "🦓 Copying zsh config..."; \
 		cp "zsh/.zshrc" "$$HOME/.zshrc"; \
+		echo "✅ Zsh config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Zsh config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-git:
-	@if [ -f "gitconfig/.gitconfig" ]; then \
-		echo "📝 Copying git config..."; \
+	@echo "[8/10] 📝 Copying Git config..." >> .parallel_log.tmp
+	@COPIED=false; \
+	if [ -f "gitconfig/.gitconfig" ]; then \
 		cp "gitconfig/.gitconfig" "$$HOME/.gitconfig"; \
-	fi
-	@if [ -f "gitconfig/.gitignore_global" ]; then \
+		COPIED=true; \
+	fi; \
+	if [ -f "gitconfig/.gitignore_global" ]; then \
 		cp "gitconfig/.gitignore_global" "$$HOME/.gitignore_global"; \
+		COPIED=true; \
+	fi; \
+	if [ "$$COPIED" = "true" ]; then \
+		echo "✅ Git config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Git config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-fish:
+	@echo "[9/10] 🐟 Copying Fish config..." >> .parallel_log.tmp
 	@if [ -d "fish" ]; then \
-		echo "🐟 Copying Fish shell config..."; \
 		rm -rf "$$HOME/.config/fish"; \
 		mkdir -p "$$HOME/.config"; \
 		cp -a "fish" "$$HOME/.config/fish"; \
+		echo "✅ Fish config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Fish config found to copy" >> .parallel_log.tmp; \
 	fi
 
 _copy-nvim:
+	@echo "[10/10] 📝 Copying Neovim config..." >> .parallel_log.tmp
 	@if [ -d "nvim" ]; then \
-		echo "⚡ Copying Neovim config..."; \
 		rm -rf "$$HOME/.config/nvim"; \
 		mkdir -p "$$HOME/.config"; \
 		cp -a "nvim" "$$HOME/.config/nvim"; \
+		echo "✅ Neovim config copied successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Neovim config found to copy" >> .parallel_log.tmp; \
 	fi
 
 # Install Homebrew packages

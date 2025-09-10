@@ -54,47 +54,111 @@ backup-sync: backup
 # Backup application configurations only
 backup-apps:
 	@echo "📱 Running application configurations backup..."
-	@echo "📦 Backing up config files"
-	@$(MAKE) -s _backup-fish
-	@$(MAKE) -s _backup-nvim
-	@$(MAKE) -s _backup-omf
-	@$(MAKE) -s _backup-karabiner
-	@$(MAKE) -s _backup-hammerspoon
-	@$(MAKE) -s _backup-asdf
-	@$(MAKE) -s _backup-bash
-	@$(MAKE) -s _backup-zsh
-	@$(MAKE) -s _backup-gitconfig
-	@$(MAKE) -s _backup-brew
+	@echo "📦 Backing up config files with parallel execution..."
+	@rm -f .parallel_pids .parallel_log.tmp
+	@echo "🚀 Starting: Fish shell config"; \
+	$(MAKE) -s _backup-fish & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Neovim config"; \
+	$(MAKE) -s _backup-nvim & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Oh My Fish config"; \
+	$(MAKE) -s _backup-omf & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Karabiner config"; \
+	$(MAKE) -s _backup-karabiner & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 1 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 1 completed!"; \
+	fi
+	@echo "🚀 Starting: Hammerspoon config"; \
+	$(MAKE) -s _backup-hammerspoon & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: ASDF config"; \
+	$(MAKE) -s _backup-asdf & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Bash config"; \
+	$(MAKE) -s _backup-bash & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Zsh config"; \
+	$(MAKE) -s _backup-zsh & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 2 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 2 completed!"; \
+	fi
+	@echo "🚀 Starting: Git config"; \
+	$(MAKE) -s _backup-gitconfig & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Homebrew config"; \
+	$(MAKE) -s _backup-brew & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: iTerm2 config"; \
+	$(MAKE) -s _backup-iterm2 & \
+	echo $$! >> .parallel_pids
+	@echo "🚀 Starting: Environment config"; \
+	$(MAKE) -s _backup-env & \
+	echo $$! >> .parallel_pids
+	@if [ -f .parallel_pids ]; then \
+		echo "⏳ Waiting for batch 3 to complete..."; \
+		while read -r PID; do \
+			if [ -n "$$PID" ]; then \
+				wait $$PID 2>/dev/null || true; \
+			fi; \
+		done < .parallel_pids; \
+		rm -f .parallel_pids; \
+		echo "✅ Batch 3 completed!"; \
+	fi
 	@$(MAKE) -s _backup-jetbrains
-	@$(MAKE) -s _backup-iterm2
-	@$(MAKE) -s _backup-env
+	@if [ -f .parallel_log.tmp ]; then \
+		echo "📋 Parallel execution results:"; \
+		sort .parallel_log.tmp; \
+		rm -f .parallel_log.tmp; \
+	fi
 	@echo "✅ All application configs backed up successfully!"
 
-# Fish shell backup
+# Enhanced backup targets with progress reporting
 _backup-fish:
-	@echo "🔄 Backing up fish config files → fish/"
+	@echo "[1/13] 🐟 Backing up fish config files → fish/" >> .parallel_log.tmp
 	@src="$$HOME/.config/fish"; \
 	dst="fish"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
 	if [ -d "$$src" ]; then \
 		rsync -a "$$src"/ "$$dst"/; \
+		echo "✅ Fish config backed up successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No fish config found" >> .parallel_log.tmp; \
 	fi
 
-# Neovim backup
 _backup-nvim:
-	@echo "🔄 Backing up nvim config files → nvim/"
+	@echo "[2/13] 📝 Backing up nvim config files → nvim/" >> .parallel_log.tmp
 	@src="$$HOME/.config/nvim"; \
 	dst="nvim"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
 	if [ -d "$$src" ]; then \
 		rsync -a "$$src"/ "$$dst"/; \
+		echo "✅ Neovim config backed up successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No neovim config found" >> .parallel_log.tmp; \
 	fi
 
-# Oh My Fish backup
 _backup-omf:
-	@echo "🔄 Backing up omf config files → omf/"
+	@echo "[3/13] 🐟 Backing up omf config files → omf/" >> .parallel_log.tmp
 	@src="$$HOME/.config/omf"; \
 	dst="omf"; \
 	rm -rf "$$dst"; \
@@ -112,11 +176,13 @@ _backup-omf:
 			sed -E 's/^theme[[:space:]]+//' "$$dst/theme" > "$$dst/theme.tmp"; \
 			mv "$$dst/theme.tmp" "$$dst/theme"; \
 		fi; \
+		echo "✅ Oh My Fish config backed up successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Oh My Fish config found" >> .parallel_log.tmp; \
 	fi
 
-# Karabiner backup
 _backup-karabiner:
-	@echo "🔄 Backing up karabiner config files → karabiner/"
+	@echo "[4/13] ⌨️  Backing up karabiner config files → karabiner/" >> .parallel_log.tmp
 	@src="$$HOME/.config/karabiner"; \
 	dst="karabiner"; \
 	rm -rf "$$dst"; \
@@ -129,22 +195,26 @@ _backup-karabiner:
 			mkdir -p "$$dst/automatic_backups"; \
 			ls -1t "$$src/automatic_backups"/karabiner_*.json 2>/dev/null | head -2 | xargs -I {} cp {} "$$dst/automatic_backups/"; \
 		fi; \
+		echo "✅ Karabiner config backed up successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Karabiner config found" >> .parallel_log.tmp; \
 	fi
 
-# Hammerspoon backup
 _backup-hammerspoon:
-	@echo "🔄 Backing up hammerspoon config files → hammerspoon/"
+	@echo "[5/13] 🔄 Backing up hammerspoon config files → hammerspoon/" >> .parallel_log.tmp
 	@src="$$HOME/.hammerspoon"; \
 	dst="hammerspoon"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
 	if [ -d "$$src" ]; then \
 		rsync -a "$$src"/ "$$dst"/; \
+		echo "✅ Hammerspoon config backed up successfully" >> .parallel_log.tmp; \
+	else \
+		echo "ℹ️  No Hammerspoon config found" >> .parallel_log.tmp; \
 	fi
 
-# asdf backup
 _backup-asdf:
-	@echo "🔄 Backing up asdf config files → asdf/"
+	@echo "[6/13] 🔄 Backing up asdf config files → asdf/" >> .parallel_log.tmp
 	@dst="asdf"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
@@ -155,11 +225,11 @@ _backup-asdf:
 		cp "$$HOME/.tool-versions" "$$dst/"; \
 	fi; \
 	echo "📋 Backing up asdf plugin list"; \
-	asdf plugin list > "$$dst/plugins.txt" 2>/dev/null || echo "# No plugins installed yet" > "$$dst/plugins.txt"
+	asdf plugin list > "$$dst/plugins.txt" 2>/dev/null || echo "# No plugins installed yet" > "$$dst/plugins.txt"; \
+	echo "✅ ASDF config backed up successfully" >> .parallel_log.tmp
 
-# Bash backup
 _backup-bash:
-	@echo "🔄 Backing up bash config files → bash/"
+	@echo "[7/13] 🔄 Backing up bash config files → bash/" >> .parallel_log.tmp
 	@dst="bash"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
@@ -171,11 +241,11 @@ _backup-bash:
 	fi; \
 	if [ -f "$$HOME/.profile" ]; then \
 		cp "$$HOME/.profile" "$$dst/"; \
-	fi
+	fi; \
+	echo "✅ Bash config backed up successfully" >> .parallel_log.tmp
 
-# Zsh backup
 _backup-zsh:
-	@echo "🔄 Backing up zsh config files → zsh/"
+	@echo "[8/13] 🔄 Backing up zsh config files → zsh/" >> .parallel_log.tmp
 	@dst="zsh"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
@@ -187,11 +257,11 @@ _backup-zsh:
 	fi; \
 	if [ -f "$$HOME/.zshenv" ]; then \
 		cp "$$HOME/.zshenv" "$$dst/"; \
-	fi
+	fi; \
+	echo "✅ Zsh config backed up successfully" >> .parallel_log.tmp
 
-# Git configuration backup
 _backup-gitconfig:
-	@echo "🔄 Backing up gitconfig config files → gitconfig/"
+	@echo "[9/13] 🔄 Backing up gitconfig config files → gitconfig/" >> .parallel_log.tmp
 	@dst="gitconfig"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
@@ -200,11 +270,11 @@ _backup-gitconfig:
 	fi; \
 	if [ -f "$$HOME/.gitignore_global" ]; then \
 		cp "$$HOME/.gitignore_global" "$$dst/"; \
-	fi
+	fi; \
+	echo "✅ Git config backed up successfully" >> .parallel_log.tmp
 
-# Homebrew backup
 _backup-brew:
-	@echo "🔄 Backing up brew config files → brew/"
+	@echo "[10/13] 🔄 Backing up brew config files → brew/" >> .parallel_log.tmp
 	@dst="brew"; \
 	rm -rf "$$dst"; \
 	mkdir -p "$$dst"; \
@@ -217,9 +287,52 @@ _backup-brew:
 		echo "# Homebrew not installed" > "$$dst/Brewfile"; \
 	fi
 
-# JetBrains IDEs backup
+_backup-iterm2:
+	@echo "[11/13] 🖥️  Backing up iterm2 config files → iterm2/" >> .parallel_log.tmp
+	@dst="iterm2"; \
+	rm -rf "$$dst"; \
+	mkdir -p "$$dst"; \
+	if [ -f "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" ]; then \
+		echo "📋 Backing up iTerm2 preferences"; \
+		cp "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$$dst/"; \
+	fi; \
+	ITERM2_APP_SUPPORT="$$HOME/Library/Application Support/iTerm2"; \
+	if [ -d "$$ITERM2_APP_SUPPORT" ]; then \
+		if [ -d "$$ITERM2_APP_SUPPORT/DynamicProfiles" ]; then \
+			cp -R "$$ITERM2_APP_SUPPORT/DynamicProfiles" "$$dst/"; \
+		fi; \
+		if [ -d "$$ITERM2_APP_SUPPORT/Scripts" ]; then \
+			cp -R "$$ITERM2_APP_SUPPORT/Scripts" "$$dst/"; \
+		fi; \
+		if [ -f "$$ITERM2_APP_SUPPORT/version.txt" ]; then \
+			cp "$$ITERM2_APP_SUPPORT/version.txt" "$$dst/"; \
+		fi; \
+	fi; \
+	echo "📋 Exporting iTerm2 profiles as JSON"; \
+	/usr/libexec/PlistBuddy -x -c "Print" "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" > "$$dst/iterm2_preferences.xml" 2>/dev/null || echo "# Could not export preferences" > "$$dst/iterm2_preferences.xml"; \
+	echo "✅ iTerm2 config backed up successfully" >> .parallel_log.tmp
+
+_backup-env:
+	@echo "[12/13] 🌍 Backing up env config files → env/" >> .parallel_log.tmp
+	@dst="env"; \
+	rm -rf "$$dst"; \
+	mkdir -p "$$dst"; \
+	if [ -f "$$HOME/.env" ]; then \
+		echo "📋 Backing up .env from home directory"; \
+		cp "$$HOME/.env" "$$dst/home.env"; \
+	fi; \
+	echo "# Environment Variables Template" > "$$dst/template.env"; \
+	echo "# Copy this to ~/.env and customize" >> "$$dst/template.env"; \
+	echo "" >> "$$dst/template.env"; \
+	echo "# Example variables:" >> "$$dst/template.env"; \
+	echo "# OPENAI_API_KEY=your_api_key_here" >> "$$dst/template.env"; \
+	echo "# AWS_PROFILE=your_default_profile" >> "$$dst/template.env"; \
+	echo "# GITHUB_TOKEN=your_github_token" >> "$$dst/template.env"; \
+	echo "# NODE_ENV=development" >> "$$dst/template.env"; \
+	echo "✅ Environment config backed up successfully" >> .parallel_log.tmp
+
 _backup-jetbrains:
-	@echo "🧠 Enhanced JetBrains IDEs backup starting..."
+	@echo "[13/13] 🧠 Enhanced JetBrains IDEs backup starting..."
 	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
 	if [ ! -d "$$JETBRAINS_DIR" ]; then \
 		echo "⚠️  No JetBrains directory found at $$JETBRAINS_DIR"; \
@@ -347,49 +460,6 @@ _backup-jetbrains:
 	echo "✅ Enhanced JetBrains IDEs backup complete!"; \
 	echo "📁 Backup location: $$JETBRAINS_BACKUP_DIR"
 
-# iTerm2 backup
-_backup-iterm2:
-	@echo "🔄 Backing up iterm2 config files → iterm2/"
-	@dst="iterm2"; \
-	rm -rf "$$dst"; \
-	mkdir -p "$$dst"; \
-	if [ -f "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" ]; then \
-		echo "📋 Backing up iTerm2 preferences"; \
-		cp "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$$dst/"; \
-	fi; \
-	ITERM2_APP_SUPPORT="$$HOME/Library/Application Support/iTerm2"; \
-	if [ -d "$$ITERM2_APP_SUPPORT" ]; then \
-		if [ -d "$$ITERM2_APP_SUPPORT/DynamicProfiles" ]; then \
-			cp -R "$$ITERM2_APP_SUPPORT/DynamicProfiles" "$$dst/"; \
-		fi; \
-		if [ -d "$$ITERM2_APP_SUPPORT/Scripts" ]; then \
-			cp -R "$$ITERM2_APP_SUPPORT/Scripts" "$$dst/"; \
-		fi; \
-		if [ -f "$$ITERM2_APP_SUPPORT/version.txt" ]; then \
-			cp "$$ITERM2_APP_SUPPORT/version.txt" "$$dst/"; \
-		fi; \
-	fi; \
-	echo "📋 Exporting iTerm2 profiles as JSON"; \
-	/usr/libexec/PlistBuddy -x -c "Print" "$$HOME/Library/Preferences/com.googlecode.iterm2.plist" > "$$dst/iterm2_preferences.xml" 2>/dev/null || echo "# Could not export preferences" > "$$dst/iterm2_preferences.xml"
-
-# Environment variables backup
-_backup-env:
-	@echo "🔄 Backing up env config files → env/"
-	@dst="env"; \
-	rm -rf "$$dst"; \
-	mkdir -p "$$dst"; \
-	if [ -f "$$HOME/.env" ]; then \
-		echo "📋 Backing up .env from home directory"; \
-		cp "$$HOME/.env" "$$dst/home.env"; \
-	fi; \
-	echo "# Environment Variables Template" > "$$dst/template.env"; \
-	echo "# Copy this to ~/.env and customize" >> "$$dst/template.env"; \
-	echo "" >> "$$dst/template.env"; \
-	echo "# Example variables:" >> "$$dst/template.env"; \
-	echo "# OPENAI_API_KEY=your_api_key_here" >> "$$dst/template.env"; \
-	echo "# AWS_PROFILE=your_default_profile" >> "$$dst/template.env"; \
-	echo "# GITHUB_TOKEN=your_github_token" >> "$$dst/template.env"; \
-	echo "# NODE_ENV=development" >> "$$dst/template.env"
 
 # Backup macOS system settings only
 backup-macos:
