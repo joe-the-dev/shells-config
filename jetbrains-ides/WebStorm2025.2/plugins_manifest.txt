@@ -1,5 +1,5 @@
 # JetBrains Plugin Manifest
-# Generated on Tue Sep  9 16:06:23 +07 2025
+# Generated on Wed Sep 10 12:14:16 +07 2025
 # Format: PluginID (for CLI installation)
 
 IdeaVIM
