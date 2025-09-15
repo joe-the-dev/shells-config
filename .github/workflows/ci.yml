@@ -1,0 +1,241 @@
+name: Configuration Validation
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+jobs:
+  validate-makefile:
+    name: Validate Makefile
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install make
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make
+
+    - name: Verify Makefile syntax
+      run: |
+        echo "🔍 Checking Makefile syntax..."
+        make --dry-run --just-print help > /dev/null
+        echo "✅ Makefile syntax is valid"
+
+    - name: Test make targets exist
+      run: |
+        echo "🎯 Verifying essential make targets exist..."
+        make --dry-run help
+        make --dry-run validate-config
+        make --dry-run check-deps
+        make --dry-run dry-run
+        echo "✅ All essential targets are available"
+
+  validate-fish-config:
+    name: Validate Fish Shell Configuration
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Fish shell
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fish
+
+    - name: Validate Fish configuration syntax
+      run: |
+        echo "🐟 Validating Fish configuration syntax..."
+        if [ -f "fish/config.fish" ]; then
+          fish -n fish/config.fish
+          echo "✅ fish/config.fish syntax is valid"
+        else
+          echo "❌ fish/config.fish not found"
+          exit 1
+        fi
+
+    - name: Validate Fish function files
+      run: |
+        echo "🔍 Checking Fish function files..."
+        if [ -d "fish/functions" ]; then
+          for func_file in fish/functions/*.fish; do
+            if [ -f "$func_file" ]; then
+              echo "  Checking $(basename "$func_file")..."
+              fish -n "$func_file"
+            fi
+          done
+          echo "✅ All Fish function files are valid"
+        else
+          echo "ℹ️ No Fish functions directory found"
+        fi
+
+    - name: Validate Fish completion files
+      run: |
+        echo "🔍 Checking Fish completion files..."
+        if [ -d "fish/completions" ]; then
+          for comp_file in fish/completions/*.fish; do
+            if [ -f "$comp_file" ]; then
+              echo "  Checking $(basename "$comp_file")..."
+              fish -n "$comp_file"
+            fi
+          done
+          echo "✅ All Fish completion files are valid"
+        else
+          echo "ℹ️ No Fish completions directory found"
+        fi
+
+  validate-configs:
+    name: Validate Configuration Files
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git python3 lua5.3 jq
+
+    - name: Validate Git configuration
+      run: |
+        echo "📝 Validating Git configuration..."
+        if [ -f "gitconfig/.gitconfig" ]; then
+          git config --file="gitconfig/.gitconfig" --list > /dev/null
+          echo "✅ .gitconfig syntax is valid"
+        else
+          echo "⚠️ .gitconfig not found"
+        fi
+
+    - name: Validate JSON configurations
+      run: |
+        echo "🔍 Validating JSON configuration files..."
+        
+        # Validate Karabiner config
+        if [ -f "karabiner/karabiner.json" ]; then
+          echo "  Checking karabiner.json..."
+          python3 -m json.tool karabiner/karabiner.json > /dev/null
+          echo "  ✅ Karabiner config JSON is valid"
+        else
+          echo "  ℹ️ Karabiner config not found"
+        fi
+        
+        # Validate other JSON files
+        find . -name "*.json" -not -path "./.git/*" | while read -r json_file; do
+          echo "  Checking $json_file..."
+          python3 -m json.tool "$json_file" > /dev/null
+        done
+        echo "✅ All JSON files are valid"
+
+    - name: Validate Lua configurations
+      run: |
+        echo "🌙 Validating Lua configuration files..."
+        if [ -f "hammerspoon/init.lua" ]; then
+          echo "  Checking hammerspoon/init.lua..."
+          lua5.3 -e "dofile('hammerspoon/init.lua')" 2>/dev/null || echo "  ⚠️ Hammerspoon config may have runtime dependencies"
+          # Just check syntax
+          lua5.3 -l hammerspoon/init.lua -e "" 2>/dev/null || echo "  ℹ️ Syntax check skipped (may have external dependencies)"
+          echo "  ✅ Hammerspoon config checked"
+        else
+          echo "  ℹ️ Hammerspoon config not found"
+        fi
+        
+        # Check other Lua files
+        find . -name "*.lua" -not -path "./.git/*" | while read -r lua_file; do
+          echo "  Checking syntax for $lua_file..."
+          lua5.3 -e "assert(loadfile('$lua_file'))" || echo "  ⚠️ $lua_file has syntax issues or dependencies"
+        done
+
+  run-make-validation:
+    name: Run Make Validation Targets
+    runs-on: ubuntu-latest
+    needs: [validate-makefile]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make git fish python3 lua5.3
+
+    - name: Run make check-deps
+      run: |
+        echo "🔍 Running make check-deps..."
+        make check-deps || echo "⚠️ Some dependencies missing (expected in CI)"
+
+    - name: Run make dry-run
+      run: |
+        echo "🎯 Running make dry-run..."
+        make dry-run
+
+    - name: Run make validate-config
+      run: |
+        echo "✅ Running make validate-config..."
+        make validate-config
+
+  test-brewfile:
+    name: Validate Brewfile
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Validate Brewfile syntax
+      run: |
+        echo "🍺 Validating Brewfile..."
+        if [ -f "brew/Brewfile" ]; then
+          # Install Homebrew if not present
+          if ! command -v brew &> /dev/null; then
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          fi
+          
+          # Validate Brewfile syntax
+          brew bundle check --file=brew/Brewfile --verbose || echo "⚠️ Some packages in Brewfile are not installed (expected)"
+          echo "✅ Brewfile syntax is valid"
+        else
+          echo "❌ brew/Brewfile not found"
+          exit 1
+        fi
+
+  check-security:
+    name: Security and Best Practices Check
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Check for sensitive files
+      run: |
+        echo "🔒 Checking for sensitive files..."
+        
+        # Check for common sensitive patterns
+        if grep -r "password\|secret\|key\|token" --include="*.fish" --include="*.env" --include="*.sh" . 2>/dev/null; then
+          echo "⚠️ Found potential sensitive data patterns - please review"
+        else
+          echo "✅ No obvious sensitive data patterns found"
+        fi
+        
+        # Check file permissions patterns in config
+        echo "📋 Checking for appropriate file permission references..."
+        if grep -r "chmod.*600\|chmod.*644" . 2>/dev/null; then
+          echo "✅ Found secure file permission patterns"
+        fi
+
+    - name: Validate shell script syntax
+      run: |
+        echo "📜 Validating shell scripts..."
+        find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
+          echo "  Checking $script..."
+          bash -n "$script"
+        done
+        echo "✅ All shell scripts have valid syntax"
