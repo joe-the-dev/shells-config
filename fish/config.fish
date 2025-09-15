@@ -270,13 +270,6 @@ abbr --add zz 'fg'
 abbr --add .. 'cd ..'
 abbr --add ... 'cd ../..'
 abbr --add .... 'cd ../../..'
-abbr --add ll 'ls -la'
-abbr --add la 'ls -la'
-abbr --add gc 'git commit'
-abbr --add gca 'git commit -a'
-abbr --add gp 'git push'
-abbr --add gl 'git pull'
-abbr --add gs 'git status'
 
 # ASDF configuration with better error handling
 if test -z $ASDF_DATA_DIR
