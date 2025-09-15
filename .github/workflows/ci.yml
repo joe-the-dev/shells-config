@@ -16,6 +16,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Cache apt packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt-${{ hashFiles('**/ci.yml') }}
+        restore-keys: |
+          ${{ runner.os }}-apt-
+
     - name: Install make
       run: |
         sudo apt-get update
@@ -44,6 +52,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Cache Fish shell and dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          /var/cache/apt/archives
+          ~/.cache/fish
+        key: ${{ runner.os }}-fish-${{ hashFiles('fish/**/*.fish') }}
+        restore-keys: |
+          ${{ runner.os }}-fish-
+
     - name: Install Fish shell
       run: |
         sudo apt-get update
@@ -54,7 +72,7 @@ jobs:
         echo "🐟 Validating Fish configuration syntax..."
         if [ -f "fish/config.fish" ]; then
           fish -n fish/config.fish
-          echo "✅ fish/config.fish syntax is valid"
+          echo "�� fish/config.fish syntax is valid"
         else
           echo "❌ fish/config.fish not found"
           exit 1
@@ -97,6 +115,16 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Cache validation tools
+      uses: actions/cache@v4
+      with:
+        path: |
+          /var/cache/apt/archives
+          ~/.cache/pip
+        key: ${{ runner.os }}-validation-tools-${{ hashFiles('**/*.json', '**/*.lua', 'gitconfig/.gitconfig') }}
+        restore-keys: |
+          ${{ runner.os }}-validation-tools-
 
     - name: Install dependencies
       run: |
@@ -161,6 +189,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Cache make validation dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          /var/cache/apt/archives
+          ~/.cache/fish
+          ~/.cache/pip
+        key: ${{ runner.os }}-make-validation-${{ hashFiles('Makefile', 'makefiles/*.mk') }}
+        restore-keys: |
+          ${{ runner.os }}-make-validation-
+
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -189,6 +228,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Cache Homebrew
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/Library/Caches/Homebrew
+          /usr/local/Homebrew
+          /opt/homebrew
+        key: ${{ runner.os }}-homebrew-${{ hashFiles('brew/Brewfile') }}
+        restore-keys: |
+          ${{ runner.os }}-homebrew-
+
     - name: Validate Brewfile syntax
       run: |
         echo "🍺 Validating Brewfile..."
@@ -197,6 +247,9 @@ jobs:
           if ! command -v brew &> /dev/null; then
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           fi
+          
+          # Update Homebrew
+          brew update
           
           # Validate Brewfile syntax
           brew bundle check --file=brew/Brewfile --verbose || echo "⚠️ Some packages in Brewfile are not installed (expected)"
@@ -213,6 +266,21 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Cache security scanning tools
+      uses: actions/cache@v4
+      with:
+        path: |
+          /var/cache/apt/archives
+          ~/.cache/shellcheck
+        key: ${{ runner.os }}-security-tools-${{ hashFiles('**/*.sh', '**/*.fish') }}
+        restore-keys: |
+          ${{ runner.os }}-security-tools-
+
+    - name: Install security tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y shellcheck
 
     - name: Check for sensitive files
       run: |
@@ -231,11 +299,25 @@ jobs:
           echo "✅ Found secure file permission patterns"
         fi
 
-    - name: Validate shell script syntax
+    - name: Validate shell script syntax with ShellCheck
       run: |
-        echo "📜 Validating shell scripts..."
+        echo "📜 Validating shell scripts with ShellCheck..."
         find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
-          echo "  Checking $script..."
+          echo "  Checking syntax for $script..."
           bash -n "$script"
+          echo "  Running ShellCheck on $script..."
+          shellcheck "$script" || echo "  ���️ ShellCheck found issues in $script"
         done
-        echo "✅ All shell scripts have valid syntax"
+        echo "✅ All shell scripts checked"
+
+    - name: Validate Fish scripts
+      run: |
+        echo "🐟 Installing Fish for script validation..."
+        sudo apt-get install -y fish
+        
+        echo "🔍 Validating Fish scripts..."
+        find . -name "*.fish" -not -path "./.git/*" | while read -r script; do
+          echo "  Checking syntax for $script..."
+          fish -n "$script" || echo "  ⚠️ Fish syntax issues in $script"
+        done
+        echo "✅ All Fish scripts checked"
