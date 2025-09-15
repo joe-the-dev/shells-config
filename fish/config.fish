@@ -1,137 +1,167 @@
+# Performance: Only load in interactive mode
+if not status is-interactive
+    exit
+end
+
+# Environment loading with better error handling
 if test -f $HOME/.env
     bass source $HOME/.env
 end
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
+# Better Homebrew detection and setup
+if test -x /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+elif test -x /usr/local/bin/brew
+    eval (/usr/local/bin/brew shellenv)
 end
 
-eval (/opt/homebrew/bin/brew shellenv)
-eval (direnv hook fish)
-#eval (env _AWS_COMPLETE=fish_source aws)
-source (brew --prefix asdf)/libexec/asdf.fish
-set fish_greeting
+# Conditional tool loading
+command -q direnv; and eval (direnv hook fish)
+test -f (brew --prefix asdf 2>/dev/null)/libexec/asdf.fish; and source (brew --prefix asdf)/libexec/asdf.fish
 
+# Better terminal and display settings
+set fish_greeting
 set -gx TERM xterm-256color
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+# Environment variables
 set -Ux ASDF_NODEJS_VERIFY_RELEASE_SIGNATURES no
 set -Ux HOMEBREW_PREFIX /opt/homebrew
 set -x SSH_AUTH_SOCK ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
-set -l asdf_dir ~/.asdf
-# Add Homebrew to PATH
-set -x PATH $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin $PATH
+# PATH management with better organization
+set -l homebrew_paths $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin
+set -l user_paths $HOME/.local/bin $HOME/jetbrain
+set -l pnpm_path $HOME/Library/pnpm
 
-# Add JetBrain to PATH if directory exists
-if test -d $HOME/jetbrain
-    set -x PATH $HOME/jetbrain $PATH
+# Build PATH systematically
+for path_dir in $homebrew_paths $user_paths $pnpm_path
+    if test -d $path_dir; and not contains $path_dir $PATH
+        set -gx PATH $path_dir $PATH
+    end
 end
 
+# Enhanced aliases with better organization
+# Basic file operations
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+alias clr realclear
+
+# Git aliases
 alias g git
+alias gs "git status"
+alias ga "git add"
+alias gc "git commit"
+alias gcm "git commit -m"
+alias gp "git push"
+alias gl "git log --oneline"
+
+# Kubernetes aliases
 alias k kubectl
 alias kl kubectl
 alias kctl kubectl
 alias konf "kubectl config"
 alias kfwd "kpfwd"
+alias kns "kubectl config set-context --current --namespace"
 
+# Editor aliases
 alias vi nvim
-
 command -qv nvim && alias vim nvim
 
+# Enhanced eza integration
 if type -q eza
-  alias ll "eza -l -g --icons"
-  alias lla "ll -a"
+    alias ll "eza -l -g --icons --git"
+    alias lla "ll -a"
+    alias lt "eza --tree --level=2 --icons"
+    alias lta "lt -a"
 end
 
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-  status --is-command-substitution; and return
-
-  if test -f .nvmrc; and test -r .nvmrc;
-    nvm use
-  else
-  end
-end
-
-function realclear
-	clear
-       	printf '\e[3J'
-end
-
-function pnpm_format
-	pnpm format
-	pnpm lint:fix
-end
-
-function pnpm_document
-	pnpm run generate:zod:schema:validators
-	pnpm run generate:sca-profile-adaptor:spec:types
-	pnpm run generate:types:and:validators
-end
-
-alias clr realclear
-# ASDF configuration code
-if test -z $ASDF_DATA_DIR
-    set _asdf_shims "$HOME/.asdf/shims"
-else
-    set _asdf_shims "$ASDF_DATA_DIR/shims"
-end
-
-# Do not use fish_add_path (added in Fish 3.2) because it
-# potentially changes the order of items in PATH
-if not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
-end
-set --erase _asdf_shims
-
-
-function ecs-cluster
-    set cluster (aws ecs list-clusters --query 'clusterArns[]' --output text --profile $argv[1] | sed 's#.*/##' | fzf)
-    if test -n "$cluster"
-        echo $cluster
+# Better FZF integration
+if type -q fzf
+    set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
+    if type -q fd
+        set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --follow --exclude .git"
     end
 end
 
-# Created by `pipx` on 2025-08-06 07:17:37
-set PATH $PATH /Users/joe.ta/.local/bin
+# Enhanced functions with error handling
+function __check_rvm --on-variable PWD --description 'Auto-use Node version from .nvmrc'
+    status --is-command-substitution; and return
 
-# pnpm
-set -gx PNPM_HOME "/Users/joe.ta/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    if test -f .nvmrc; and test -r .nvmrc; and type -q nvm
+        echo "🔄 Switching to Node version specified in .nvmrc"
+        nvm use
+    end
 end
-# pnpm end
 
- abbr --add zz 'fg'
+function realclear --description 'Clear terminal completely'
+    clear
+    printf '\e[3J'
+end
 
-function upgrade-all
+function pnpm_format --description 'Format and lint with pnpm'
+    if not type -q pnpm
+        echo "❌ pnpm not found"
+        return 1
+    end
+    echo "🎨 Formatting code..."
+    pnpm format
+    echo "🔧 Fixing lint issues..."
+    pnpm lint:fix
+end
+
+# Enhanced upgrade function with better error handling
+function upgrade-all --description 'Upgrade all package managers and tools'
+    set -l failed_upgrades
+
     if type -q brew
-        echo 'Upgrading Homebrew...'
-        brew update && brew upgrade
+        echo '🍺 Upgrading Homebrew...'
+        if not brew update && brew upgrade
+            set -a failed_upgrades "Homebrew"
+        end
     end
+
     if type -q asdf
-        echo 'Upgrading asdf...'
-        asdf plugin-update --all; and asdf update
+        echo '🔧 Upgrading asdf...'
+        if not asdf plugin-update --all; and asdf update
+            set -a failed_upgrades "asdf"
+        end
     end
+
     if type -q pnpm
-        echo 'Upgrading pnpm...'
-        pnpm self-update
+        echo '📦 Upgrading pnpm...'
+        if not pnpm self-update
+            set -a failed_upgrades "pnpm"
+        end
     end
+
     if type -q npm
-        echo 'Upgrading npm...'
-        npm update -g
+        echo '📦 Upgrading npm globals...'
+        if not npm update -g
+            set -a failed_upgrades "npm"
+        end
     end
+
     if type -q omf
-        echo 'Upgrading omf...'
-        omf update
+        echo '🐟 Upgrading Oh My Fish...'
+        if not omf update
+            set -a failed_upgrades "OMF"
+        end
     end
-    echo 'All upgrades complete.'
+
+    if test (count $failed_upgrades) -eq 0
+        echo '✅ All upgrades completed successfully!'
+    else
+        echo "❌ Some upgrades failed: "(string join ", " $failed_upgrades)
+        return 1
+    end
 end
 
-function backup
-    # Change to the shells-config directory
+# Enhanced backup function
+function backup --description 'Backup configuration files'
     set -l config_dir "$SHELL_BACKUP_DIR"
 
     if not test -d "$config_dir"
@@ -142,10 +172,8 @@ function backup
 
     echo "🚀 Running backup using make system..."
 
-    # Change to config directory and run make
     pushd "$config_dir"
 
-    # Check if --sync flag is provided
     if contains -- --sync $argv
         echo "🔄 Running backup with git sync enabled"
         make backup-sync
@@ -165,12 +193,106 @@ function backup
     end
 end
 
-# Load FZF configurations and functions
-if test -f ~/.config/fish/fzf.fish
-    source ~/.config/fish/fzf.fish
+# New utility functions
+function mkcd --description 'Create directory and cd into it'
+    mkdir -p $argv[1]; and cd $argv[1]
 end
 
-# Load PECO configurations and functions
-if test -f ~/.config/fish/peco.fish
-    source ~/.config/fish/peco.fish
+function extract --description 'Extract various archive formats'
+    if test (count $argv) -ne 1
+        echo "Usage: extract <file>"
+        return 1
+    end
+
+    switch $argv[1]
+        case "*.tar.bz2"
+            tar xjf $argv[1]
+        case "*.tar.gz"
+            tar xzf $argv[1]
+        case "*.bz2"
+            bunzip2 $argv[1]
+        case "*.rar"
+            unrar x $argv[1]
+        case "*.gz"
+            gunzip $argv[1]
+        case "*.tar"
+            tar xf $argv[1]
+        case "*.tbz2"
+            tar xjf $argv[1]
+        case "*.tgz"
+            tar xzf $argv[1]
+        case "*.zip"
+            unzip $argv[1]
+        case "*.Z"
+            uncompress $argv[1]
+        case "*.7z"
+            7z x $argv[1]
+        case "*"
+            echo "❌ '$argv[1]' cannot be extracted via extract()"
+            return 1
+    end
+end
+
+function weather --description 'Get weather information'
+    if test (count $argv) -eq 0
+        curl -s "wttr.in?format=3"
+    else
+        curl -s "wttr.in/$argv[1]?format=3"
+    end
+end
+
+function ports --description 'Show listening ports'
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+end
+
+function myip --description 'Get public IP address'
+    curl -s ifconfig.me
+end
+
+# Enhanced AWS/ECS function
+function ecs-cluster --description 'Select ECS cluster interactively'
+    if test (count $argv) -eq 0
+        echo "Usage: ecs-cluster <profile>"
+        return 1
+    end
+
+    set cluster (aws ecs list-clusters --query 'clusterArns[]' --output text --profile $argv[1] 2>/dev/null | sed 's#.*/##' | fzf --prompt="Select ECS cluster: ")
+    if test -n "$cluster"
+        echo $cluster
+    else
+        echo "❌ No cluster selected or AWS CLI error"
+        return 1
+    end
+end
+
+# Better abbreviations
+abbr --add zz 'fg'
+abbr --add .. 'cd ..'
+abbr --add ... 'cd ../..'
+abbr --add .... 'cd ../../..'
+abbr --add ll 'ls -la'
+abbr --add la 'ls -la'
+abbr --add gc 'git commit'
+abbr --add gca 'git commit -a'
+abbr --add gp 'git push'
+abbr --add gl 'git pull'
+abbr --add gs 'git status'
+
+# ASDF configuration with better error handling
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+if test -d $_asdf_shims; and not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
+
+# Load external configuration files with error handling
+for config_file in ~/.config/fish/fzf.fish ~/.config/fish/peco.fish
+    if test -f $config_file
+        source $config_file
+    end
 end
