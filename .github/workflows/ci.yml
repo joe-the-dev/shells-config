@@ -16,18 +16,27 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Cache apt packages
+    - name: Cache make and system packages
       uses: actions/cache@v4
       with:
-        path: /var/cache/apt/archives
-        key: ${{ runner.os }}-apt-${{ hashFiles('**/ci.yml') }}
+        path: |
+          /var/cache/apt/archives
+          /usr/bin/make
+          /usr/share/man/man1/make.1.gz
+        key: ${{ runner.os }}-make-system-${{ hashFiles('Makefile', 'makefiles/*.mk') }}
         restore-keys: |
+          ${{ runner.os }}-make-system-
           ${{ runner.os }}-apt-
 
-    - name: Install make
+    - name: Install make (if not cached)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y make
+        if ! command -v make &> /dev/null; then
+          echo "📦 Installing make..."
+          sudo apt-get update
+          sudo apt-get install -y make
+        else
+          echo "✅ Make already available (cached)"
+        fi
 
     - name: Verify Makefile syntax
       run: |
@@ -58,14 +67,21 @@ jobs:
         path: |
           /var/cache/apt/archives
           ~/.cache/fish
+          /usr/bin/fish
+          /usr/share/fish
         key: ${{ runner.os }}-fish-${{ hashFiles('fish/**/*.fish') }}
         restore-keys: |
           ${{ runner.os }}-fish-
 
-    - name: Install Fish shell
+    - name: Install Fish shell (if not cached)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y fish
+        if ! command -v fish &> /dev/null; then
+          echo "🐟 Installing Fish shell..."
+          sudo apt-get update
+          sudo apt-get install -y fish
+        else
+          echo "✅ Fish shell already available (cached)"
+        fi
 
     - name: Validate Fish configuration syntax
       run: |
@@ -116,20 +132,40 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Cache validation tools
+    - name: Cache validation tools and binaries
       uses: actions/cache@v4
       with:
         path: |
           /var/cache/apt/archives
           ~/.cache/pip
+          /usr/bin/git
+          /usr/bin/python3
+          /usr/bin/lua5.3
+          /usr/bin/jq
+          /usr/share/man/man1/git.1.gz
+          /usr/share/man/man1/python3.1.gz
+          /usr/share/man/man1/lua5.3.1.gz
+          /usr/share/man/man1/jq.1.gz
         key: ${{ runner.os }}-validation-tools-${{ hashFiles('**/*.json', '**/*.lua', 'gitconfig/.gitconfig') }}
         restore-keys: |
           ${{ runner.os }}-validation-tools-
 
-    - name: Install dependencies
+    - name: Install dependencies (if not cached)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y git python3 lua5.3 jq
+        MISSING_TOOLS=()
+        
+        command -v git &> /dev/null || MISSING_TOOLS+=("git")
+        command -v python3 &> /dev/null || MISSING_TOOLS+=("python3")
+        command -v lua5.3 &> /dev/null || MISSING_TOOLS+=("lua5.3")
+        command -v jq &> /dev/null || MISSING_TOOLS+=("jq")
+        
+        if [ ${#MISSING_TOOLS[@]} -eq 0 ]; then
+          echo "✅ All validation tools already available (cached)"
+        else
+          echo "📦 Installing missing tools: ${MISSING_TOOLS[*]}"
+          sudo apt-get update
+          sudo apt-get install -y "${MISSING_TOOLS[@]}"
+        fi
 
     - name: Validate Git configuration
       run: |
@@ -189,21 +225,40 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Cache make validation dependencies
+    - name: Cache make validation dependencies and binaries
       uses: actions/cache@v4
       with:
         path: |
           /var/cache/apt/archives
           ~/.cache/fish
           ~/.cache/pip
+          /usr/bin/make
+          /usr/bin/git
+          /usr/bin/fish
+          /usr/bin/python3
+          /usr/bin/lua5.3
+          /usr/share/fish
         key: ${{ runner.os }}-make-validation-${{ hashFiles('Makefile', 'makefiles/*.mk') }}
         restore-keys: |
           ${{ runner.os }}-make-validation-
 
-    - name: Install dependencies
+    - name: Install dependencies (if not cached)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y make git fish python3 lua5.3
+        MISSING_TOOLS=()
+        
+        command -v make &> /dev/null || MISSING_TOOLS+=("make")
+        command -v git &> /dev/null || MISSING_TOOLS+=("git")
+        command -v fish &> /dev/null || MISSING_TOOLS+=("fish")
+        command -v python3 &> /dev/null || MISSING_TOOLS+=("python3")
+        command -v lua5.3 &> /dev/null || MISSING_TOOLS+=("lua5.3")
+        
+        if [ ${#MISSING_TOOLS[@]} -eq 0 ]; then
+          echo "✅ All tools already available (cached)"
+        else
+          echo "📦 Installing missing tools: ${MISSING_TOOLS[*]}"
+          sudo apt-get update
+          sudo apt-get install -y "${MISSING_TOOLS[@]}"
+        fi
 
     - name: Run make check-deps
       run: |
@@ -267,20 +322,34 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Cache security scanning tools
+    - name: Cache security scanning tools and binaries
       uses: actions/cache@v4
       with:
         path: |
           /var/cache/apt/archives
           ~/.cache/shellcheck
+          /usr/bin/shellcheck
+          /usr/bin/fish
+          /usr/share/fish
+          /usr/share/man/man1/shellcheck.1.gz
         key: ${{ runner.os }}-security-tools-${{ hashFiles('**/*.sh', '**/*.fish') }}
         restore-keys: |
           ${{ runner.os }}-security-tools-
 
-    - name: Install security tools
+    - name: Install security tools (if not cached)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y shellcheck
+        MISSING_TOOLS=()
+        
+        command -v shellcheck &> /dev/null || MISSING_TOOLS+=("shellcheck")
+        command -v fish &> /dev/null || MISSING_TOOLS+=("fish")
+        
+        if [ ${#MISSING_TOOLS[@]} -eq 0 ]; then
+          echo "✅ All security tools already available (cached)"
+        else
+          echo "📦 Installing missing security tools: ${MISSING_TOOLS[*]}"
+          sudo apt-get update
+          sudo apt-get install -y "${MISSING_TOOLS[@]}"
+        fi
 
     - name: Check for sensitive files
       run: |
