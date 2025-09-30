@@ -6,6 +6,7 @@ fullLine
 github-copilot-intellij
 javascript-debugger
 karma
+mcpserver
 mdx
 microservices-ui
 packageChecker

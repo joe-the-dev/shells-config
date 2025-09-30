@@ -1,0 +1,68 @@
+<application>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="LangManager">
+    <option name="languageName" value="Python" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "AIHubNotificationManager.lastUsedLicenseType": "FREE",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "0",
+    "PyCharm.InitialConfiguration": "true",
+    "PyCharm.InitialConfiguration.V2": "true",
+    "PyCharm.InitialConfiguration.V3": "true",
+    "PyCharm.InitialConfiguration.V4": "true",
+    "PyCharm.InitialConfiguration.V5": "true",
+    "PyCharm.InitialConfiguration.V6": "true",
+    "PyCharm.InitialConfiguration.V7": "true",
+    "PyCharm.InitialConfiguration.V8": "true",
+    "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
+    "RunOnceActivity.TerminalLocalOptions.migration": "true",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "RunOnceActivity.llm.onboarding.window.launcher.v7": "true",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "evlsprt3.252": "4",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "252.26199.168",
+    "experimentalFeature.terminal.shell.command.handling": "false",
+    "fileTypeChangedCounter": "54",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "full.line.logs.sending.asked": "true",
+    "idea.islands.enabled": "true",
+    "junie.openOnceAfterInstall": "true",
+    "llm.installer.auto.activation.executed": "true",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Solarized Dark",
+    "registry.to.advanced.settings.migration.build": "PY-252.26199.168",
+    "terminal.gen.one.option.visible": "false",
+    "trial.state.last.availability.check": "1758595406782",
+    "trial.state.last.availability.state": "false",
+    "trial.state.last.state": "EXPIRED",
+    "ts.lib.d.ts.version": "5.7.3",
+    "whats.new.last.shown.version": "2025-2.2-26199-bf9800fe06357a8d934337c13de66c2b153b9545"
+  },
+  "keyToStringList": {
+    "AIHubNotificationManager.lastAllNotifications": [],
+    "AIHubNotificationManager.notifications": [
+      "FREE_ENABLED"
+    ],
+    "AIHubNotificationManager.seenNotifications": [],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

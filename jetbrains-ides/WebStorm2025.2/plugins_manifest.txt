@@ -1,5 +1,5 @@
 # JetBrains Plugin Manifest
-# Generated on Fri Sep 12 11:43:11 +07 2025
+# Generated on Tue Sep 30 14:17:58 +07 2025
 # Format: PluginID (for CLI installation)
 
 IdeaVIM
@@ -10,6 +10,7 @@ fullLine
 github-copilot-intellij
 javascript-debugger
 karma
+mcpserver
 mdx
 microservices-ui
 packageChecker

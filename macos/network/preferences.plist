@@ -8,6 +8,46 @@
 	<string>Mac16,8</string>
 	<key>NetworkServices</key>
 	<dict>
+		<key>1E178649-964A-4C51-B94C-D177897E0C76</key>
+		<dict>
+			<key>DNS</key>
+			<dict/>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>DHCP</string>
+			</dict>
+			<key>IPv6</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Automatic</string>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>DeviceName</key>
+				<string>en8</string>
+				<key>Hardware</key>
+				<string>Ethernet</string>
+				<key>Type</key>
+				<string>Ethernet</string>
+				<key>UserDefinedName</key>
+				<string>iPhone USB</string>
+			</dict>
+			<key>Proxies</key>
+			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string>*.local</string>
+					<string>169.254/16</string>
+				</array>
+				<key>FTPPassive</key>
+				<integer>1</integer>
+			</dict>
+			<key>SMB</key>
+			<dict/>
+			<key>UserDefinedName</key>
+			<string>iPhone</string>
+		</dict>
 		<key>55BF0CC9-BF7D-4779-A571-97765FBA2F6A</key>
 		<dict>
 			<key>DNS</key>
@@ -388,6 +428,7 @@
 							<string>56FF622E-844C-495F-815F-C578A559FD41</string>
 							<string>EB4DFF68-8BBB-4F21-8A81-13F5B26FAF3E</string>
 							<string>B37C366F-034F-4C03-A99C-EF0121E6C17D</string>
+							<string>1E178649-964A-4C51-B94C-D177897E0C76</string>
 						</array>
 					</dict>
 				</dict>
@@ -404,6 +445,11 @@
 				</dict>
 				<key>Service</key>
 				<dict>
+					<key>1E178649-964A-4C51-B94C-D177897E0C76</key>
+					<dict>
+						<key>__LINK__</key>
+						<string>/NetworkServices/1E178649-964A-4C51-B94C-D177897E0C76</string>
+					</dict>
 					<key>55BF0CC9-BF7D-4779-A571-97765FBA2F6A</key>
 					<dict>
 						<key>__LINK__</key>

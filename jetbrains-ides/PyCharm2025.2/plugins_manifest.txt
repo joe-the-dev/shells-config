@@ -1,15 +1,23 @@
 # JetBrains Plugin Manifest
-# Generated on Fri Sep 12 11:43:11 +07 2025
+# Generated on Tue Sep 30 14:17:58 +07 2025
 # Format: PluginID (for CLI installation)
 
+IdeaVIM
+copyright
 editorconfig-plugin
+ej
 fullLine
+github-copilot-intellij
 javascript-debugger
 javascript-plugin
 jupyter-plugin
+ml-llm
 notebooks-plugin
 packageChecker
 properties
 react
 restClient
+terraform
 toml
+vuejs
+yaml

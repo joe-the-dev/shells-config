@@ -1,0 +1,5 @@
+<application>
+  <component name="PySdkSettings">
+    <option name="PREFERRED_VIRTUALENV_BASE_SDK" value="$USER_HOME$/.asdf/installs/python/3.13.7t/bin/python3" />
+  </component>
+</application>

@@ -1,6 +1,6 @@
-# macOS System Information - Generated on 20250912_114311
-macOS Version: 15.6.1
-Build: 24G90
+# macOS System Information - Generated on 20250930_141758
+macOS Version: 15.7
+Build: 24G222
 Hardware:       Model Name: MacBook Pro
       Chip: Apple M4 Pro
       Memory: 24 GB
