@@ -1,9 +1,9 @@
-IdeaVIM
 copyright
 editorconfig-plugin
 ej
 fullLine
 github-copilot-intellij
+IdeaVIM
 javascript-debugger
 javascript-plugin
 jupyter-plugin

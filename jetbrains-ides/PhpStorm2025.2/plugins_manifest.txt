@@ -1,0 +1,28 @@
+# JetBrains Plugin Manifest
+# Generated on Wed  8 Oct 2025 10:50:59 +07
+# Format: PluginID (for CLI installation)
+
+blade
+clouds-docker-impl
+codeception
+copyright
+drupal
+editorconfig-plugin
+fullLine
+github-copilot-intellij
+IdeaVIM
+ideolog
+javascript-debugger
+mcpserver
+mdx
+microservices-ui
+packageChecker
+pest
+phpspec
+phpstan
+psalm
+react
+restClient
+terraform
+wordPress
+yaml

@@ -231,6 +231,8 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>NSAutoFillHeuristicControllerEnabled</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{800, 448}</string>
 	<key>NSOSPLastRootDirectory</key>
@@ -276,11 +278,11 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>407 1437 800 448 -153 982 1920 1055 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>556 606 400 135 0 0 1512 944 </string>
+	<string>-740 1318 400 135 -1080 0 1080 1895 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>446 409 620 398 0 0 1512 944 </string>
+	<string>-850 1122 620 398 -1080 0 1080 1895 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>364 394 570 383 0 0 1512 944 </string>
+	<string>-885 1062 584 383 -1080 0 1080 1895 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2420,6 +2422,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.6.4</string>
 		<string>3.6.0</string>
 		<string>3.5.14</string>
 		<string>3.6.2</string>
@@ -2443,11 +2446,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>6908A56B-6FCB-4D3C-9163-FC38E6E2E779</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 15.7 (Build 24G222)</string>
+	<string>Version 15.7.1 (Build 24G231)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>38</integer>
+	<integer>41</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>779947628.22663605</real>
 	<key>NoSyncOnboardingWindowHasBeenShown34</key>
@@ -3390,11 +3393,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-09-29T04:41:16Z</date>
+	<date>2025-10-08T03:40:12Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>2249186165</integer>
+	<integer>2376194449</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>Scroll wheel sends arrow keys in alternate screen mode</key>
@@ -3406,6 +3409,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.6.2</string>
+	<string>3.6.4</string>
 </dict>
 </plist>

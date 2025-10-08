@@ -1,6 +1,6 @@
-# macOS System Information - Generated on 20250930_141758
-macOS Version: 15.7
-Build: 24G222
+# macOS System Information - Generated on 20251008_105100
+macOS Version: 15.7.1
+Build: 24G231
 Hardware:       Model Name: MacBook Pro
       Chip: Apple M4 Pro
       Memory: 24 GB
@@ -25,12 +25,27 @@ Graphics/Displays:
           Online: Yes
           Automatically Adjust Brightness: Yes
           Connection Type: Internal
+        LG ULTRAFINE:
+          Resolution: 2160 x 3840
+          UI Looks like: 1080 x 1920 @ 60.00Hz
+          Mirror: Off
+          Online: Yes
+          Rotation: 90
+          Automatically Adjust Brightness: No
 
 
 # Audio Information
 Audio:
 
     Devices:
+
+        LG ULTRAFINE:
+
+          Manufacturer: GSM
+          Output Channels: 2
+          Current SampleRate: 48000
+          Transport: DisplayPort
+          Output Source: Default
 
         MacBook Pro Microphone:
 
