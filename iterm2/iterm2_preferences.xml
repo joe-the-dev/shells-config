@@ -282,7 +282,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-850 1122 620 398 -1080 0 1080 1895 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-885 1062 584 383 -1080 0 1080 1895 </string>
+	<string>-1392 1280 599 383 -3008 730 3008 1667 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2450,7 +2450,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>41</integer>
+	<integer>42</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>779947628.22663605</real>
 	<key>NoSyncOnboardingWindowHasBeenShown34</key>
@@ -3393,7 +3393,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-10-08T03:40:12Z</date>
+	<date>2025-10-20T07:06:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>

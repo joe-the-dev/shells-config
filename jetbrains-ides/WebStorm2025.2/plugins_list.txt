@@ -1,10 +1,10 @@
+IdeaVIM
 clouds-docker-impl
 copyright
 dotenv
 editorconfig-plugin
 fullLine
 github-copilot-intellij
-IdeaVIM
 javascript-debugger
 karma
 mcpserver
@@ -15,6 +15,7 @@ react
 restClient
 solarized_theme.jar
 swagger
+tasks
 terraform
 vcs-github-IU
 vcs-gitlab-IU

@@ -1,7 +1,8 @@
 # JetBrains Plugin Manifest
-# Generated on Wed  8 Oct 2025 10:50:59 +07
+# Generated on Wed Oct 22 12:53:03 +07 2025
 # Format: PluginID (for CLI installation)
 
+IdeaVIM
 blade
 clouds-docker-impl
 codeception
@@ -10,7 +11,6 @@ drupal
 editorconfig-plugin
 fullLine
 github-copilot-intellij
-IdeaVIM
 ideolog
 javascript-debugger
 mcpserver

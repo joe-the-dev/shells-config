@@ -1,3 +1,4 @@
+IdeaVIM
 blade
 clouds-docker-impl
 codeception
@@ -6,7 +7,6 @@ drupal
 editorconfig-plugin
 fullLine
 github-copilot-intellij
-IdeaVIM
 ideolog
 javascript-debugger
 mcpserver

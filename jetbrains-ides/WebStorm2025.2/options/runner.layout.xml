@@ -98,6 +98,11 @@
         <option name="placeInGrid" value="center" />
         <option name="tabIndex" value="1" />
       </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab#220e8ae9@1.1.1" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="1" />
+      </ViewImpl>
       <TabImpl />
       <TabImpl>
         <option name="defaultIndex" value="2" />
