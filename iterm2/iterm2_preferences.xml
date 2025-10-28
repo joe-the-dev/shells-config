@@ -278,11 +278,13 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>407 1437 800 448 -153 982 1920 1055 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-740 1318 400 135 -1080 0 1080 1895 </string>
+	<string>556 606 400 135 0 0 1512 944 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-850 1122 620 398 -1080 0 1080 1895 </string>
+	<string>446 409 620 398 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1392 1280 599 383 -3008 730 3008 1667 </string>
+	<string>166 153 570 383 0 0 1512 944 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>195 124 570 383 0 0 1512 944 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2424,8 +2426,9 @@
 	<array>
 		<string>3.6.4</string>
 		<string>3.6.0</string>
-		<string>3.5.14</string>
+		<string>3.6.5</string>
 		<string>3.6.2</string>
+		<string>3.5.14</string>
 		<string>3.6.1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -2450,7 +2453,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>42</integer>
+	<integer>47</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>779947628.22663605</real>
 	<key>NoSyncOnboardingWindowHasBeenShown34</key>
@@ -3393,11 +3396,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-10-20T07:06:50Z</date>
+	<date>2025-10-27T11:03:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>2376194449</integer>
+	<integer>3102669077</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>Scroll wheel sends arrow keys in alternate screen mode</key>
@@ -3409,6 +3412,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.6.4</string>
+	<string>3.6.5</string>
 </dict>
 </plist>
