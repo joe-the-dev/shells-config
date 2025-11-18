@@ -1,102 +1,99 @@
 # Installation and Restoration Makefile
-# Handles all installation targets and configuration restoration
+# Handles all installation targets and configuration restoration with feature flag support
 
 .PHONY: install install-minimal install-dev install-tools copy-configs restore restore-jetbrains restore-macos macos
 .PHONY: brew asdf jetbrains iterm2 omf env set-fish-default
 .PHONY: _copy-omf _copy-karabiner _copy-hammerspoon _copy-brew _copy-asdf _copy-bash _copy-zsh _copy-git _copy-fish _copy-nvim
 
-# Main installation target
-install: update copy-configs brew asdf jetbrains iterm2 omf env set-fish-default
-	@echo "✅ All configurations installed successfully!"
+# Main installation target - respects feature flags
+install: update copy-configs
+	@echo "🚀 Starting feature-based installation..."
+	$(call conditional_exec,$(ENABLE_BREW_INSTALL),$(MAKE) -s brew,Homebrew installation)
+	$(call conditional_exec,$(ENABLE_ASDF_INSTALL),$(MAKE) -s asdf,ASDF installation)
+	$(call conditional_exec,$(ENABLE_JETBRAINS_INSTALL),$(MAKE) -s jetbrains,JetBrains installation)
+	$(call conditional_exec,$(ENABLE_ITERM2_INSTALL),$(MAKE) -s iterm2,iTerm2 installation)
+	$(call conditional_exec,$(ENABLE_OMF_INSTALL),$(MAKE) -s omf,Oh My Fish installation)
+	@$(MAKE) -s env set-fish-default
+	@echo "✅ All enabled configurations installed successfully!"
 
 # Minimal installation (essential configs only)
 install-minimal: update
 	@echo "🚀 Installing minimal configuration..."
-	@$(MAKE) -s _copy-git _copy-fish _copy-nvim
-	@echo "✅ Minimal configuration installed (git, fish, nvim)!"
+	@$(MAKE) -s _copy-git _copy-fish
+	$(call conditional_exec,$(ENABLE_NVIM_INSTALL),$(MAKE) -s _copy-nvim,Neovim configuration)
+	$(call conditional_exec,$(ENABLE_ASDF_INSTALL),$(MAKE) -s asdf,ASDF installation)
+	$(call conditional_exec,$(ENABLE_OMF_INSTALL),$(MAKE) -s omf,Oh My Fish installation)
+	@echo "✅ Minimal configuration installed!"
 
 # Development tools installation
 install-dev: update
 	@echo "🛠️  Installing development tools..."
-	@$(MAKE) -s brew asdf jetbrains
-	@echo "✅ Development tools installed (brew, asdf, jetbrains)!"
+	$(call conditional_exec,$(ENABLE_BREW_INSTALL),$(MAKE) -s brew,Homebrew)
+	$(call conditional_exec,$(ENABLE_ASDF_INSTALL),$(MAKE) -s asdf,ASDF)
+	$(call conditional_exec,$(ENABLE_JETBRAINS_INSTALL),$(MAKE) -s jetbrains,JetBrains IDEs)
+	@echo "✅ Development tools installation completed!"
 
 # Productivity tools installation
 install-tools: update
 	@echo "⚡ Installing productivity tools..."
-	@$(MAKE) -s _copy-karabiner _copy-hammerspoon iterm2
-	@echo "✅ Productivity tools installed (karabiner, hammerspoon, iterm2)!"
+	$(call conditional_exec,$(ENABLE_KARABINER_INSTALL),$(MAKE) -s _copy-karabiner,Karabiner configuration)
+	$(call conditional_exec,$(ENABLE_HAMMERSPOON_INSTALL),$(MAKE) -s _copy-hammerspoon,Hammerspoon configuration)
+	$(call conditional_exec,$(ENABLE_ITERM2_INSTALL),$(MAKE) -s iterm2,iTerm2 configuration)
+	@echo "✅ Productivity tools installation completed!"
 
-# Copy configuration files with parallel execution and progress indicators
+# Copy configuration files with feature flag support and parallel execution
 copy-configs:
-	@echo "📁 Copying configuration files with parallel execution..."
+	@echo "📁 Copying configuration files with feature flag support..."
 	@rm -f .parallel_pids .parallel_log.tmp
-	@echo "🚀 Starting: OMF config"; \
-	$(MAKE) -s _copy-omf & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Karabiner config"; \
-	$(MAKE) -s _copy-karabiner & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Hammerspoon config"; \
-	$(MAKE) -s _copy-hammerspoon & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Homebrew config"; \
-	$(MAKE) -s _copy-brew & \
-	echo $$! >> .parallel_pids
+	@if [ "$(PARALLEL_EXECUTION)" = "true" ] && [ "$(CI_MODE)" != "true" ]; then \
+		echo "🚀 Using parallel execution..."; \
+		$(MAKE) -s _parallel_copy_configs; \
+	else \
+		echo "🚀 Using sequential execution..."; \
+		$(MAKE) -s _sequential_copy_configs; \
+	fi
+	@echo "✅ Configuration files copying completed!"
+
+# Sequential copy for CI or when parallel is disabled
+_sequential_copy_configs:
+	$(call conditional_exec,$(ENABLE_OMF_INSTALL),$(MAKE) -s _copy-omf,OMF configuration)
+	$(call conditional_exec,$(ENABLE_KARABINER_INSTALL),$(MAKE) -s _copy-karabiner,Karabiner configuration)
+	$(call conditional_exec,$(ENABLE_HAMMERSPOON_INSTALL),$(MAKE) -s _copy-hammerspoon,Hammerspoon configuration)
+	$(call conditional_exec,$(ENABLE_BREW_INSTALL),$(MAKE) -s _copy-brew,Homebrew configuration)
+	$(call conditional_exec,$(ENABLE_ASDF_INSTALL),$(MAKE) -s _copy-asdf,ASDF configuration)
+	@$(MAKE) -s _copy-bash _copy-zsh _copy-git _copy-fish
+	$(call conditional_exec,$(ENABLE_NVIM_INSTALL),$(MAKE) -s _copy-nvim,Neovim configuration)
+
+# Parallel copy for faster execution
+_parallel_copy_configs:
+	@echo "🚀 Starting batch 1 (parallel)..."
+	@if [ "$(ENABLE_OMF_INSTALL)" = "true" ]; then $(MAKE) -s _copy-omf & echo $$! >> .parallel_pids; fi
+	@if [ "$(ENABLE_KARABINER_INSTALL)" = "true" ]; then $(MAKE) -s _copy-karabiner & echo $$! >> .parallel_pids; fi
+	@if [ "$(ENABLE_HAMMERSPOON_INSTALL)" = "true" ]; then $(MAKE) -s _copy-hammerspoon & echo $$! >> .parallel_pids; fi
+	@if [ "$(ENABLE_BREW_INSTALL)" = "true" ]; then $(MAKE) -s _copy-brew & echo $$! >> .parallel_pids; fi
+	@$(MAKE) -s _wait_for_parallel_batch
+	@echo "🚀 Starting batch 2 (parallel)..."
+	@if [ "$(ENABLE_ASDF_INSTALL)" = "true" ]; then $(MAKE) -s _copy-asdf & echo $$! >> .parallel_pids; fi
+	@$(MAKE) -s _copy-bash & echo $$! >> .parallel_pids
+	@$(MAKE) -s _copy-zsh & echo $$! >> .parallel_pids
+	@$(MAKE) -s _copy-git & echo $$! >> .parallel_pids
+	@$(MAKE) -s _wait_for_parallel_batch
+	@echo "🚀 Starting batch 3 (parallel)..."
+	@$(MAKE) -s _copy-fish & echo $$! >> .parallel_pids
+	@if [ "$(ENABLE_NVIM_INSTALL)" = "true" ]; then $(MAKE) -s _copy-nvim & echo $$! >> .parallel_pids; fi
+	@$(MAKE) -s _wait_for_parallel_batch
+
+_wait_for_parallel_batch:
 	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 1 to complete..."; \
+		echo "⏳ Waiting for batch to complete..."; \
 		while read -r PID; do \
 			if [ -n "$$PID" ]; then \
 				wait $$PID 2>/dev/null || true; \
 			fi; \
 		done < .parallel_pids; \
 		rm -f .parallel_pids; \
-		echo "✅ Batch 1 completed!"; \
+		echo "✅ Batch completed!"; \
 	fi
-	@echo "🚀 Starting: ASDF config"; \
-	$(MAKE) -s _copy-asdf & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Bash config"; \
-	$(MAKE) -s _copy-bash & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Zsh config"; \
-	$(MAKE) -s _copy-zsh & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Git config"; \
-	$(MAKE) -s _copy-git & \
-	echo $$! >> .parallel_pids
-	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 2 to complete..."; \
-		while read -r PID; do \
-			if [ -n "$$PID" ]; then \
-				wait $$PID 2>/dev/null || true; \
-			fi; \
-		done < .parallel_pids; \
-		rm -f .parallel_pids; \
-		echo "✅ Batch 2 completed!"; \
-	fi
-	@echo "🚀 Starting: Fish config"; \
-	$(MAKE) -s _copy-fish & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Neovim config"; \
-	$(MAKE) -s _copy-nvim & \
-	echo $$! >> .parallel_pids
-	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 3 to complete..."; \
-		while read -r PID; do \
-			if [ -n "$$PID" ]; then \
-				wait $$PID 2>/dev/null || true; \
-			fi; \
-		done < .parallel_pids; \
-		rm -f .parallel_pids; \
-		echo "✅ Batch 3 completed!"; \
-	fi
-	@if [ -f .parallel_log.tmp ]; then \
-		echo "📋 Parallel execution results:"; \
-		sort .parallel_log.tmp; \
-		rm -f .parallel_log.tmp; \
-	fi
-	@echo "✅ All configuration files copied!"
 
 # Enhanced copy targets with progress reporting
 _copy-omf:

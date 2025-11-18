@@ -29,21 +29,44 @@ YELLOW := \033[33m
 RED := \033[31m
 RESET := \033[0m
 
+# Include configuration system first
+include makefiles/config.mk
+
 # Include sub-makefiles
 include makefiles/install.mk
 include makefiles/backup.mk
 include makefiles/utils.mk
 
-# Export variables to sub-makefiles
-export HOME_DIR CONFIG_DIR JETBRAINS_DIR ITERM2_APP_SUPPORT BACKUP_TIMESTAMP
-export SRC_BREW SRC_ASDF_RC SRC_ASDF_TOOLS SRC_GITCONFIG SRC_GITIGNORE
-export TARGET_BREWFILE TARGET_ASDF_RC TARGET_ASDF_TOOLS TARGET_GITCONFIG TARGET_GITIGNORE
-export BLUE GREEN YELLOW RED RESET
+# Export variables to sub-makefiles (fixed syntax)
+export HOME_DIR
+export CONFIG_DIR
+export JETBRAINS_DIR
+export ITERM2_APP_SUPPORT
+export BACKUP_TIMESTAMP
+export SRC_BREW
+export SRC_ASDF_RC
+export SRC_ASDF_TOOLS
+export SRC_GITCONFIG
+export SRC_GITIGNORE
+export TARGET_BREWFILE
+export TARGET_ASDF_RC
+export TARGET_ASDF_TOOLS
+export TARGET_GITCONFIG
+export TARGET_GITIGNORE
+export BLUE
+export GREEN
+export YELLOW
+export RED
+export RESET
 
-.PHONY: all install help
+.PHONY: all install help show-config configure-ci configure-minimal configure-dev configure-reset
+.PHONY: macos
 
 # Default target
 all: install
+
+# Alias for macOS restore
+macos: restore-macos
 
 # Help target - shows all available commands
 help:
@@ -70,6 +93,7 @@ help:
 	@echo "  backup           - Run complete backup (apps + macOS)"
 	@echo "  backup-apps      - Backup application configurations only"
 	@echo "  backup-macos     - Backup macOS system settings only"
+	@echo "  backup-sync      - Backup and sync to git"
 	@echo "  restore          - Restore all configurations"
 	@echo "  restore-jetbrains - Restore only JetBrains IDEs configuration"
 	@echo "  restore-macos    - Restore macOS system settings"
@@ -85,8 +109,104 @@ help:
 	@echo "  validate-config  - Validate configuration files"
 	@echo "  help             - Show this help message"
 	@echo ""
+	@echo "⚙️  Configuration Management:"
+	@echo "  show-config      - Display current feature flag settings"
+	@echo "  configure-ci     - Set up configuration for CI/CD environments"
+	@echo "  configure-minimal - Set up minimal configuration (essentials only)"
+	@echo "  configure-dev    - Set up full development configuration"
+	@echo "  configure-reset  - Reset all configuration to defaults"
+	@echo ""
 	@echo "💡 Examples:"
 	@echo "  make install-minimal  # Quick setup with essentials"
 	@echo "  make backup          # Full backup"
 	@echo "  make backup-apps     # Apps only"
 	@echo "  make restore         # Full restore"
+	@echo "  make show-config     # View current settings"
+	@echo "  make configure-ci    # Optimize for CI/CD"
+
+# Configuration preset targets
+configure-ci:
+	@echo "🔧 Configuring for CI/CD environment..."
+	@mkdir -p config
+	@cp config/features.conf config/features.conf.backup 2>/dev/null || true
+	@echo "# CI/CD optimized configuration" > config/features.conf
+	@echo "ENABLE_BREW_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_ASDF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_ITERM2_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_OMF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_KARABINER_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_HAMMERSPOON_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_NVIM_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_APPS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_MACOS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_ITERM2_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_KARABINER_BACKUP=false" >> config/features.conf
+	@echo "SKIP_HEAVY_OPERATIONS=true" >> config/features.conf
+	@echo "DRY_RUN_MODE=false" >> config/features.conf
+	@echo "VERBOSE_OUTPUT=true" >> config/features.conf
+	@echo "CI_MODE=true" >> config/features.conf
+	@echo "SKIP_INTERACTIVE=true" >> config/features.conf
+	@echo "PARALLEL_EXECUTION=true" >> config/features.conf
+	@echo "MINIMAL_MODE=false" >> config/features.conf
+	@echo "✅ CI/CD configuration applied"
+
+configure-minimal:
+	@echo "🔧 Configuring for minimal setup..."
+	@mkdir -p config
+	@cp config/features.conf config/features.conf.backup 2>/dev/null || true
+	@echo "# Minimal configuration - essentials only" > config/features.conf
+	@echo "ENABLE_BREW_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_ASDF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_ITERM2_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_OMF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_KARABINER_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_HAMMERSPOON_INSTALL=false" >> config/features.conf
+	@echo "ENABLE_NVIM_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_APPS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_MACOS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_ITERM2_BACKUP=false" >> config/features.conf
+	@echo "ENABLE_KARABINER_BACKUP=false" >> config/features.conf
+	@echo "SKIP_HEAVY_OPERATIONS=true" >> config/features.conf
+	@echo "DRY_RUN_MODE=false" >> config/features.conf
+	@echo "VERBOSE_OUTPUT=false" >> config/features.conf
+	@echo "CI_MODE=false" >> config/features.conf
+	@echo "MINIMAL_MODE=true" >> config/features.conf
+	@echo "✅ Minimal configuration applied"
+
+configure-dev:
+	@echo "🔧 Configuring for full development setup..."
+	@mkdir -p config
+	@cp config/features.conf config/features.conf.backup 2>/dev/null || true
+	@echo "# Full development configuration" > config/features.conf
+	@echo "ENABLE_BREW_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_ASDF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_ITERM2_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_OMF_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_KARABINER_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_HAMMERSPOON_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_NVIM_INSTALL=true" >> config/features.conf
+	@echo "ENABLE_APPS_BACKUP=true" >> config/features.conf
+	@echo "ENABLE_MACOS_BACKUP=true" >> config/features.conf
+	@echo "ENABLE_JETBRAINS_BACKUP=true" >> config/features.conf
+	@echo "ENABLE_ITERM2_BACKUP=true" >> config/features.conf
+	@echo "ENABLE_KARABINER_BACKUP=true" >> config/features.conf
+	@echo "SKIP_HEAVY_OPERATIONS=false" >> config/features.conf
+	@echo "DRY_RUN_MODE=false" >> config/features.conf
+	@echo "VERBOSE_OUTPUT=false" >> config/features.conf
+	@echo "CI_MODE=false" >> config/features.conf
+	@echo "MINIMAL_MODE=false" >> config/features.conf
+	@echo "✅ Full development configuration applied"
+
+configure-reset:
+	@echo "🔄 Resetting configuration to defaults..."
+	@if [ -f config/features.conf.backup ]; then \
+		mv config/features.conf.backup config/features.conf; \
+		echo "✅ Configuration restored from backup"; \
+	else \
+		git checkout config/features.conf 2>/dev/null || echo "❌ No backup found, manual reset required"; \
+	fi
