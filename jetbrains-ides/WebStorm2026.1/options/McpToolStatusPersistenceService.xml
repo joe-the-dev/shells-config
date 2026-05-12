@@ -1,0 +1,5 @@
+<application>
+  <component name="McpToolStatusPersistenceService">
+    <option name="toolStatusByMode" value="{&quot;Agent&quot;:{}}" />
+  </component>
+</application>

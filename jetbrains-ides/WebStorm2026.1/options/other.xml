@@ -1,0 +1,250 @@
+<application>
+  <component name="ActionHistoryManager">
+    <ids>
+      <option value="NewEditorConfigFile" />
+      <option value="Javascript.Linters.EsLint.Fix" />
+    </ids>
+  </component>
+  <component name="FileEditorProviderManager">{
+  &quot;selectedProviders&quot;: {
+    &quot;text-editor,csv-data-editor&quot;: &quot;text-editor&quot;
+  }
+}</component>
+  <component name="NextEditCaretFeaturesState">
+    <decayedBetweenFilesMoves>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedBetweenFilesMoves>
+    <decayedWithinFileMoves>
+      <entry key="MS100" value="1.000000008499352" />
+      <entry key="MS500" value="1.0244423408990235" />
+      <entry key="S2" value="1.5429629932786488" />
+      <entry key="S5" value="2.550666132300378" />
+      <entry key="S10" value="3.637915367261072" />
+      <entry key="S30" value="5.3340917152469824" />
+      <entry key="S60" value="6.090693485474944" />
+      <entry key="M2" value="7.521586678769924" />
+      <entry key="M5" value="15.013022418613687" />
+      <entry key="M10" value="23.36474109419532" />
+      <entry key="M15" value="27.692730264114783" />
+      <entry key="M30" value="33.1404707350988" />
+      <entry key="H1" value="36.372742805017516" />
+      <entry key="H2" value="38.134096674112875" />
+      <entry key="H4" value="39.05359829105697" />
+      <entry key="D1" value="39.84036504352271" />
+      <entry key="W1" value="39.97714800266296" />
+    </decayedWithinFileMoves>
+  </component>
+  <component name="NextEditTypingFeaturesState">
+    <decayedRemovalEvents>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.000000000000067" />
+      <entry key="S10" value="1.0000007718779873" />
+      <entry key="S30" value="1.0440320700565255" />
+      <entry key="S60" value="1.6931498909157545" />
+      <entry key="M2" value="3.758450990223781" />
+      <entry key="M5" value="7.344130490668745" />
+      <entry key="M10" value="9.94803355195768" />
+      <entry key="M15" value="12.053535647975924" />
+      <entry key="M30" value="17.03795004070598" />
+      <entry key="H1" value="22.182259422544483" />
+      <entry key="H2" value="25.991102898075162" />
+      <entry key="H4" value="28.32314415515505" />
+      <entry key="D1" value="30.52773330368711" />
+      <entry key="W1" value="30.931863059211913" />
+    </decayedRemovalEvents>
+    <decayedTypingEvents>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedTypingEvents>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "AIHubNotificationManager.lastUsedLicenseType": "ACP",
+    "CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2": "0.5976231",
+    "DEBUGGER_VISUALIZED_TEXT_SELECTED_TAB#com.intellij.xdebugger.impl.ui.visualizedtext.RawTextVisualizer#com.intellij.xdebugger.impl.ui.visualizedtext.common.UrlEncodedTextVisualizer": "com.intellij.xdebugger.impl.ui.visualizedtext.common.UrlEncodedTextVisualizer",
+    "DiffRequestProcessor.BottomComponentSplitter": "0.99",
+    "Endpoints.split": "0.65",
+    "FindSplitterProportion": "0.3699422",
+    "GeneralSettings.initiallyConfigured": "true",
+    "InstalledPluginsSearchHistory": "quota\nquot\nquo\nqu\nq",
+    "JestJavaScriptTestRunner.Splitter.Proportion": "0.3013986",
+    "JestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
+    "JestJavaScriptTestRunnerSupport.hidePassedTests": "false",
+    "JestJavaScriptTestRunnerSupport.scrollToSource": "true",
+    "JestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "6",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/aggregators": "WS-253.30387.83",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/extractors": "WS-252.26830.93",
+    "LayoutCode.optimizeImports": "false",
+    "LayoutCode.processChangedText": "false",
+    "LayoutCode.rearrangeEntriesJSON": "false",
+    "LayoutCode.rearrangeEntriesMySQL": "false",
+    "LayoutCode.rearrangeEntriesTypeScript": "false",
+    "Markdown Split EditorLayout": "Preview only",
+    "MarketplacePluginsSearchHistory": "claude\ncopilot\ncopi\ncop\nquota",
+    "MemberChooser.copyJavadoc": "false",
+    "MemberChooser.showClasses": "true",
+    "OpenAPI Preview EditorLayout": "Editor only",
+    "RunOnceActivity.AIPromoWindowAdvisorPreheat": "true",
+    "RunOnceActivity.MCP settings loaded": "true",
+    "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
+    "RunOnceActivity.TerminalLocalOptions.migration": "true",
+    "RunOnceActivity.TerminalOptionsProvider.TerminalEngineMigration.2026.1": "true",
+    "RunOnceActivity.TerminalOptionsProvider.appTitleMigration.2026.1.1": "true",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.deprecation.notification": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "RunOnceActivity.llm.claude.code.byok.migration": "true",
+    "RunOnceActivity.llm.onboarding.window.launcher.v7": "true",
+    "RunOnceActivity.reset.auto.reparse.settings.to.default": "true",
+    "RunOnceActivity.terminal.escape.behavior.change.notification": "true",
+    "RunOnceActivity.webstorm.auto-popup.quick-doc.initialized": "true",
+    "SettingsSearchHistory": "javascript\ncode styl\nplugin\nPrettier\nlint",
+    "SqlStructureView.filterD.file.structure.state": "true",
+    "TextEditorWithPreview.SplitterProportionKey": "0.49001995",
+    "VitestJavaScriptTestRunnerSupport.hideIgnoredTests": "true",
+    "VitestJavaScriptTestRunnerSupport.hidePassedTests": "false",
+    "VitestJavaScriptTestRunnerSupport.scrollToSource": "true",
+    "VitestJavaScriptTestRunnerSupport.selectFirtsDefect": "true",
+    "WelcomeFeature.SHORT_WELCOME_GUIDE_SHOWN": "true",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "cef_cleanup_temporary_cache_folder": "/Users/dat.ta/Library/Caches/JetBrains/WebStorm2026.1/jcef_cache_temp",
+    "cef_is_cleared_caches_2026_1_2": "true",
+    "com.intellij.database.actions.ddl.DbModifyObjectDialog.proportion": "0.5",
+    "copilot.agent.session.splitter": "0.73942095",
+    "copilot.chat.session.splitter": "0.78768843",
+    "database.notebook.setting.id": "37d60ba5-279d-48bb-88bb-a3aac7458e49",
+    "debugger.speed.search.tree.option.hint.counter": "1",
+    "enter_selection_count": "5",
+    "evlsprt.251": "19712afca80",
+    "evlsprt3.251": "5",
+    "evlsprt3.252": "7",
+    "evlsprt3.253": "5",
+    "evlsprt3.261": "4",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "261.25134.101",
+    "file.gist.reindex.count": "12",
+    "fileTypeChangedCounter": "14",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "full.line.logs.sending.asked": "true",
+    "git.working.trees.stop.showing.new.badge": "true",
+    "got.it.tooltip.coverage.view.elements.by.branch.filter": "1",
+    "got.it.tooltip.coverage.view.elements.filter": "1",
+    "got.it.tooltip.database.cloud.explorer.promo": "1",
+    "got.it.tooltip.database.schema.control.got.it": "1",
+    "got.it.tooltip.github.copilot.inline.diffable.response": "1",
+    "got.it.tooltip.js.debugger.terminal.start.debugger.from.url": "1",
+    "got.it.tooltip.settings.sync.in.settings": "1",
+    "got.it.tooltip.speed.search.shown": "1",
+    "got.it.tooltip.typescript.engine.widget.TSandTSX.tooltip": "1",
+    "ide.islands.ab2": "true",
+    "ide.islands.ab3": "true",
+    "ide.islands.new.darcula": "true",
+    "idea.islands.enabled": "true",
+    "ideavim.statistics.timestamp": "1754468334455",
+    "javascript.spte.engine.popup.was.shown": "true",
+    "js.chrome.debugger.port.98ca6316-2f89-46d9-a9e5-fa9e2b0625b3": "60907",
+    "js.rename.search.for.text.occurrences": "false",
+    "js.rename.search.in.comments": "false",
+    "last_opened_file_path": "/Users/dat.ta/Documents/Side-work/int-gw-fasttrack",
+    "llm.chat.promo.event.default_agent_rollout.finished": "true",
+    "llm.installer.last.toolwindow.state": "AI_ASSISTANT",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Solarized Dark",
+    "registry.to.advanced.settings.migration.build": "WS-261.25134.101",
+    "settings.code.style.selected.tab.JavaScript": "Wrapping and Braces",
+    "settings.code.style.selected.tab.TypeScript": "Punctuation",
+    "terminal.gen.one.option.visible": "false",
+    "trial.state.last.availability.check": "0",
+    "trial.state.last.state": "EXPIRED",
+    "ts.lib.d.ts.version": "5.9.3"
+  },
+  "keyToStringList": {
+    "AIHubNotificationManager.lastAllNotifications": [],
+    "AIHubNotificationManager.notifications": [],
+    "AIHubNotificationManager.seenNotifications": [],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ],
+    "muted.system.shortcut.conflicts.actions": [
+      "CodeCompletion",
+      "Terminal.ClearPrompt"
+    ]
+  }
+}]]></component>
+  <component name="ReworkedTerminalUsage">{
+  &quot;feedbackNotificationShown&quot;: true,
+  &quot;enterKeyPressedTimes&quot;: 10664,
+  &quot;firstIdeSessionMoment&quot;: {
+    &quot;type&quot;: &quot;org.jetbrains.plugins.terminal.TerminalFirstIdeSessionMoment.BeforeTrackingStarted&quot;
+  }
+}</component>
+  <component name="SearchOptions">
+    <option name="fuState">
+      <list />
+    </option>
+    <option name="suState">
+      <list />
+    </option>
+  </component>
+  <component name="SessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-sonnet-4.6" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
+  <component name="TerminalAgentsState">{}</component>
+</application>

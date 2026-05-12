@@ -1,0 +1,13 @@
+<application>
+  <component name="LocalDatabaseDriverManager" version="201">
+    <driver id="oracle.19">
+      <artifact id="Oracle" name="Oracle" use="true" version="23.5" />
+    </driver>
+    <driver id="mysql_aurora.aws_wrapper">
+      <artifact id="AWS JDBC Wrapper for MySQL" name="AWS JDBC Wrapper for MySQL" use="true" version="2.3.7" />
+    </driver>
+    <driver id="postgresql">
+      <artifact id="PostgreSQL" name="PostgreSQL" use="true" version="42.7.3" />
+    </driver>
+  </component>
+</application>

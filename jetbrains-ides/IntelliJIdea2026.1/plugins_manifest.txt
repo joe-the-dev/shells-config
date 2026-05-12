@@ -1,0 +1,49 @@
+# JetBrains Plugin Manifest
+# Generated on Wed  8 Jul 2026 15:55:28 +07
+# Format: PluginID (for CLI installation)
+
+cline
+clouds-docker-gateway
+clouds-docker-impl
+clouds-kubernetes
+copyright
+debugger-collections-visualizer
+editorconfig-plugin
+frontend
+fullLine
+github-copilot-intellij
+gitlab-ci-aid
+idea_plugin
+IdeaVIM
+JavaEE
+javascript-debugger
+javascript-plugin
+jupyter-plugin
+jvm-dfa-analysis
+karma
+makefile
+mcpserver
+microservices-ui
+nodeJS-remoteInterpreter
+notebooks-plugin
+packageChecker
+performanceTesting
+properties
+react
+reactivestreams-core
+remoteRun
+restClient
+Shell Script
+Spring
+swagger
+terminal
+toml
+vcs-github-IU
+vcs-gitlab-IU
+vcs-svn
+velocity
+vitejs
+vuejs
+vuejs-plugin
+webDeployment
+yaml

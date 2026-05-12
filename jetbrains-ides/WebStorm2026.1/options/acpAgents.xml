@@ -1,0 +1,5 @@
+<application>
+  <component name="AcpAgentSettings">
+    <option name="global_use_idea_mcp" value="true" />
+  </component>
+</application>

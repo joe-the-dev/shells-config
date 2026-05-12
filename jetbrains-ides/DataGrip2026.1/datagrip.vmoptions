@@ -1,0 +1,4 @@
+-Xmx2048m
+-Dide.managed.by.toolbox=/Applications/JetBrains Toolbox.app/Contents/MacOS/jetbrains-toolbox
+-Dtoolbox.notification.token=a37d7f0e-a32d-46f4-a659-04cb40e7806f
+-Dtoolbox.notification.portFile=/Users/dat.ta/Library/Caches/JetBrains/Toolbox/ports/075deabe-e2fe-4284-b9eb-33dbbe6b57be.port

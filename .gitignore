@@ -51,6 +51,7 @@ jetbrains-ides/**/*.backup
 *.env.local
 *.env.production
 *.env.staging
+env/home.env
 
 # Logs
 *.log

@@ -1,0 +1,5 @@
+<application>
+  <component name="PathMacrosImpl">
+    <macro name="DB_ARTIFACTS_BUNDLE" value="/Users/dat.ta/Applications/DataGrip.app/Contents/plugins/database-artifactsBundle/artifacts" />
+  </component>
+</application>

@@ -1,0 +1,35 @@
+<application>
+  <component name="bashsupport-pro.local">
+    <option name="shellInterpreters">
+      <list>
+        <interpreter>
+          <option name="independentPath" value="/opt/homebrew/bin/bash" />
+          <option name="mapping" value="None" />
+          <option name="type" value="shell" />
+        </interpreter>
+        <interpreter>
+          <option name="independentPath" value="/opt/homebrew/bin/bash" />
+          <option name="mapping" value="None" />
+          <option name="type" value="bash" />
+        </interpreter>
+        <interpreter>
+          <option name="independentPath" value="/bin/sh" />
+          <option name="mapping" value="None" />
+          <option name="type" value="shell" />
+        </interpreter>
+        <interpreter>
+          <option name="independentPath" value="/bin/bash" />
+          <option name="mapping" value="None" />
+          <option name="type" value="bash" />
+        </interpreter>
+        <interpreter>
+          <option name="independentPath" value="/bin/zsh" />
+          <option name="mapping" value="None" />
+          <option name="type" value="zsh" />
+        </interpreter>
+      </list>
+    </option>
+    <option name="startupCounter" value="3" />
+    <option name="majorVersionNotification" value="5" />
+  </component>
+</application>

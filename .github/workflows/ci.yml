@@ -321,6 +321,13 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Scan for secrets with gitleaks
+      uses: gitleaks/gitleaks-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Cache security scanning tools and binaries
       uses: actions/cache@v4
@@ -331,7 +338,6 @@ jobs:
           /usr/bin/shellcheck
           /usr/bin/fish
           /usr/share/fish
-          /usr/share/man/man1/shellcheck.1.gz
         key: ${{ runner.os }}-security-tools-${{ hashFiles('**/*.sh', '**/*.fish') }}
         restore-keys: |
           ${{ runner.os }}-security-tools-
@@ -339,10 +345,8 @@ jobs:
     - name: Install security tools (if not cached)
       run: |
         MISSING_TOOLS=()
-        
         command -v shellcheck &> /dev/null || MISSING_TOOLS+=("shellcheck")
         command -v fish &> /dev/null || MISSING_TOOLS+=("fish")
-        
         if [ ${#MISSING_TOOLS[@]} -eq 0 ]; then
           echo "✅ All security tools already available (cached)"
         else
@@ -351,42 +355,21 @@ jobs:
           sudo apt-get install -y "${MISSING_TOOLS[@]}"
         fi
 
-    - name: Check for sensitive files
-      run: |
-        echo "🔒 Checking for sensitive files..."
-        
-        # Check for common sensitive patterns
-        if grep -r "password\|secret\|key\|token" --include="*.fish" --include="*.env" --include="*.sh" . 2>/dev/null; then
-          echo "⚠️ Found potential sensitive data patterns - please review"
-        else
-          echo "✅ No obvious sensitive data patterns found"
-        fi
-        
-        # Check file permissions patterns in config
-        echo "📋 Checking for appropriate file permission references..."
-        if grep -r "chmod.*600\|chmod.*644" . 2>/dev/null; then
-          echo "✅ Found secure file permission patterns"
-        fi
-
     - name: Validate shell script syntax with ShellCheck
       run: |
         echo "📜 Validating shell scripts with ShellCheck..."
         find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
-          echo "  Checking syntax for $script..."
+          echo "  Checking $script..."
           bash -n "$script"
-          echo "  Running ShellCheck on $script..."
-          shellcheck "$script" || echo "  ���️ ShellCheck found issues in $script"
+          shellcheck "$script" || echo "  ⚠️ ShellCheck found issues in $script"
         done
         echo "✅ All shell scripts checked"
 
     - name: Validate Fish scripts
       run: |
-        echo "🐟 Installing Fish for script validation..."
-        sudo apt-get install -y fish
-        
         echo "🔍 Validating Fish scripts..."
         find . -name "*.fish" -not -path "./.git/*" | while read -r script; do
-          echo "  Checking syntax for $script..."
+          echo "  Checking $script..."
           fish -n "$script" || echo "  ⚠️ Fish syntax issues in $script"
         done
         echo "✅ All Fish scripts checked"

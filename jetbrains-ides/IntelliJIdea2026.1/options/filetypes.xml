@@ -1,0 +1,9 @@
+<application>
+  <component name="FileTypeManager" version="19">
+    <extensionMap>
+      <mapping pattern="mcp.json" type="JSON5" />
+      <mapping pattern=".env.rds" type="PLAIN_TEXT" />
+      <mapping ext="plist" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

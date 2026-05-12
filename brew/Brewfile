@@ -1,57 +1,146 @@
 tap "nats-io/nats-tools"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Utility for easily assuming AWS IAM roles from the command-line
 brew "awsume"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Git extension for versioning large files
+brew "git-lfs"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Improved top (interactive process viewer)
 brew "htop"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Open source relational database management system
 brew "mysql"
-brew "mysql@8.0"
-brew "tree-sitter"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Simplistic interactive filtering tool
 brew "peco"
+# Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# Object-relational database system
+brew "postgresql@16"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# User interface to the TELNET protocol
+brew "telnet"
+# Programmatically correct mistyped console commands
 brew "thefuck"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Internet file retriever
 brew "wget"
-brew "nats-io/nats-tools/nats"
-cask "audacity"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Desktop password and login vault
+cask "bitwarden"
+# Web browser focusing on privacy
 cask "brave-browser"
+# Utility that prevents the system from going to sleep
 cask "caffeine"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
+# Write, edit, and chat about your code with AI
 cask "cursor"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Web browser
 cask "firefox@developer-edition"
-cask "flameshot"
 cask "font-awesome-terminal-fonts"
 cask "font-droid-sans-mono-nerd-font"
 cask "font-fontawesome"
-cask "git-credential-manager"
+# Desktop automation application
 cask "hammerspoon"
+# Utility to hide menu bar items
 cask "hiddenbar"
+# Keyboard customiser
 cask "karabiner-elements"
+# Password manager app
 cask "keepassxc"
-cask "min"
+# Vietnamese input system
+cask "openkey"
+# Collaboration platform for API development
 cask "postman"
+# HTTP client that helps testing and describing APIs
 cask "rapidapi"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Store SSH keys in the Secure Enclave
 cask "secretive"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
+# Music streaming service
 cask "spotify"
+# Menu bar customization tool
+cask "swiftbar"
+# Configurator of compatible keyboards in real time
 cask "vial"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
-cask "zalo"
+# Rust-based terminal
+cask "warp"
+# View output from scripts in the menu bar
+cask "xbar"
+vscode "christian-kohler.npm-intellisense"
+vscode "christian-kohler.path-intellisense"
+vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
+vscode "imgildev.vscode-nestjs-snippets-extension"
+vscode "k--kato.intellij-idea-keybindings"
+vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.vscode-typescript-next"
+vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "rubiin.nestjs"
+vscode "ryanolsonx.solarized"
+vscode "usernamehw.errorlens"
+vscode "vscodevim.vim"
+vscode "wix.vscode-import-cost"

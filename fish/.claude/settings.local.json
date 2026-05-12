@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fish -c \"set -Ux ASDF_NODEJS_VERIFY_RELEASE_SIGNATURES no; set -Ux HOMEBREW_PREFIX /opt/homebrew; echo done\")",
+      "Bash(fish --no-config -c \"time source ~/.config/fish/config.fish\")",
+      "Bash(time /opt/homebrew/bin/brew shellenv)",
+      "Bash(time /opt/homebrew/bin/brew --prefix asdf)",
+      "Bash(/opt/homebrew/bin/brew shellenv *)",
+      "Bash(fish -c \"source ~/.config/fish/config.fish && echo OK\" 2>&1)",
+      "Bash(fish -c \"source ~/.config/fish/config.fish && uname && echo OK\" 2>&1)",
+      "Read(//Users/dat.ta/.config/omf/**)",
+      "Bash(fish --version)",
+      "Bash(omf list *)",
+      "Bash(fish -c 'for tool in zoxide atuin lazygit delta gum starship; if command -q $tool; echo \"$tool ✓\"; else; echo \"$tool ✗\"; end; end')",
+      "Bash(fish -c 'command -q fisher && echo \"fisher ✓\" || echo \"fisher ✗\"')",
+      "Read(//Users/dat.ta/**)",
+      "Bash(brew install *)",
+      "Bash(curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish)",
+      "Bash(fish -c 'source - && fisher install IlanCosman/tide@v6')",
+      "Bash(fish -c 'omf remove z' 2>&1)",
+      "Bash(fish -c 'source ~/.config/fish/config.fish && echo OK' 2>&1)",
+      "Bash(fish -c 'fisher remove IlanCosman/tide@v6' 2>&1)",
+      "Bash(fish -c 'source ~/.config/fish/config.fish && fisher remove IlanCosman/tide@v6' 2>&1)",
+      "Bash(xargs rm -f)",
+      "Bash(fish -c 'source ~/.config/fish/config.fish && echo OK')",
+      "Bash(git config *)",
+      "Bash(git -C /tmp config --list)"
+    ]
+  }
+}

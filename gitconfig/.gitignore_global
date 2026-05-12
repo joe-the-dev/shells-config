@@ -577,5 +577,10 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/node,visualstudio,visualstudiocode
 
 # End of https://www.gitignore.io/api/intellij
+.prompt-doc/
+.prompt-docs/
+*/prompt-doc/
+prompt-doc/
 
-
+prompt-docs/
+.tool-versions

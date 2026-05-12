@@ -306,7 +306,6 @@ end
 
 # Short aliases for commonly used functions
 alias fif ff          # Find files
-alias fd fcd          # Change directory (note: conflicts with fd command, use fcd directly)
 alias fgit fgl        # Git log browser
 alias pk fkill        # Process killer
 alias hist fh         # History search

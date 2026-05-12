@@ -1,6 +1,6 @@
-# macOS System Information - Generated on 20251028_123130
-macOS Version: 15.7.1
-Build: 24G231
+# macOS System Information - Generated on 20260708_155529
+macOS Version: 26.5.2
+Build: 25F84
 Hardware:       Model Name: MacBook Pro
       Chip: Apple M4 Pro
       Memory: 24 GB
@@ -15,7 +15,7 @@ Graphics/Displays:
       Bus: Built-In
       Total Number of Cores: 16
       Vendor: Apple (0x106b)
-      Metal Support: Metal 3
+      Metal Support: Metal 4
       Displays:
         Color LCD:
           Display Type: Built-in Liquid Retina XDR Display
@@ -50,14 +50,4 @@ Audio:
           Current SampleRate: 48000
           Transport: Built-in
           Output Source: MacBook Pro Speakers
-
-        Microsoft Teams Audio:
-
-          Input Channels: 1
-          Manufacturer: Microsoft Corp.
-          Output Channels: 1
-          Current SampleRate: 48000
-          Transport: Virtual
-          Input Source: Microsoft Teams Audio Device
-          Output Source: Microsoft Teams Audio Device
 

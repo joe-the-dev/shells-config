@@ -1,0 +1,14 @@
+aspire-plugin
+copyright
+debugger-collections-visualizer
+github-copilot-intellij
+gitlab-ci-aid
+IdeaVIM
+jupyter-plugin
+makefile
+notebooks-plugin
+packageChecker
+solarized_theme.jar
+toml
+vcs-svn
+velocity

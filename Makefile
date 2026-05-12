@@ -33,6 +33,7 @@ RESET := \033[0m
 include makefiles/install.mk
 include makefiles/backup.mk
 include makefiles/utils.mk
+include makefiles/dependencies.mk
 
 # Export variables to sub-makefiles
 export HOME_DIR CONFIG_DIR JETBRAINS_DIR ITERM2_APP_SUPPORT BACKUP_TIMESTAMP
@@ -55,6 +56,8 @@ help:
 	@echo "  install-minimal  - Install only essential configs (git, fish, nvim)"
 	@echo "  install-dev      - Install development tools (brew, asdf, jetbrains)"
 	@echo "  install-tools    - Install productivity tools (karabiner, hammerspoon, iterm2)"
+	@echo "  install-smart    - Smart install with automatic dependency resolution"
+	@echo "  show-dependency-graph - Show the installation dependency graph"
 	@echo ""
 	@echo "📦 Individual Components:"
 	@echo "  copy-configs     - Copy dotfiles to home directory"

@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>CurrentSet</key>
-	<string>/Sets/063B0C87-8017-455B-950E-C098101FD024</string>
+	<string>/Sets/E45CD9B0-164B-4E94-95B7-8F6EB90084A7</string>
 	<key>Model</key>
 	<string>Mac16,8</string>
 	<key>NetworkServices</key>
 	<dict>
-		<key>024F692B-BAFF-44D3-982F-ADC946AA5E26</key>
+		<key>436FBC75-1396-41CE-B81A-E66251E7B727</key>
 		<dict>
 			<key>DNS</key>
 			<dict/>
@@ -25,13 +25,13 @@
 			<key>Interface</key>
 			<dict>
 				<key>DeviceName</key>
-				<string>en11</string>
+				<string>bridge0</string>
 				<key>Hardware</key>
 				<string>Ethernet</string>
 				<key>Type</key>
 				<string>Ethernet</string>
 				<key>UserDefinedName</key>
-				<string>iPhone USB</string>
+				<string>Thunderbolt Bridge</string>
 			</dict>
 			<key>Proxies</key>
 			<dict>
@@ -46,173 +46,9 @@
 			<key>SMB</key>
 			<dict/>
 			<key>UserDefinedName</key>
-			<string>iPhone 2</string>
+			<string>Thunderbolt Bridge</string>
 		</dict>
-		<key>1E178649-964A-4C51-B94C-D177897E0C76</key>
-		<dict>
-			<key>DNS</key>
-			<dict/>
-			<key>IPv4</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>DHCP</string>
-			</dict>
-			<key>IPv6</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>Automatic</string>
-			</dict>
-			<key>Interface</key>
-			<dict>
-				<key>DeviceName</key>
-				<string>en8</string>
-				<key>Hardware</key>
-				<string>Ethernet</string>
-				<key>Type</key>
-				<string>Ethernet</string>
-				<key>UserDefinedName</key>
-				<string>iPhone USB</string>
-			</dict>
-			<key>Proxies</key>
-			<dict>
-				<key>ExceptionsList</key>
-				<array>
-					<string>*.local</string>
-					<string>169.254/16</string>
-				</array>
-				<key>FTPPassive</key>
-				<integer>1</integer>
-			</dict>
-			<key>SMB</key>
-			<dict/>
-			<key>UserDefinedName</key>
-			<string>iPhone</string>
-		</dict>
-		<key>55BF0CC9-BF7D-4779-A571-97765FBA2F6A</key>
-		<dict>
-			<key>DNS</key>
-			<dict/>
-			<key>IPv4</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>DHCP</string>
-			</dict>
-			<key>IPv6</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>Automatic</string>
-			</dict>
-			<key>Interface</key>
-			<dict>
-				<key>DeviceName</key>
-				<string>en5</string>
-				<key>Hardware</key>
-				<string>Ethernet</string>
-				<key>HiddenConfiguration</key>
-				<true/>
-				<key>Type</key>
-				<string>Ethernet</string>
-				<key>UserDefinedName</key>
-				<string>Ethernet Adapter (en5)</string>
-			</dict>
-			<key>Proxies</key>
-			<dict>
-				<key>ExceptionsList</key>
-				<array>
-					<string>*.local</string>
-					<string>169.254/16</string>
-				</array>
-				<key>FTPPassive</key>
-				<integer>1</integer>
-			</dict>
-			<key>SMB</key>
-			<dict/>
-			<key>UserDefinedName</key>
-			<string>Ethernet Adapter (en5)</string>
-		</dict>
-		<key>56FF622E-844C-495F-815F-C578A559FD41</key>
-		<dict>
-			<key>DNS</key>
-			<dict/>
-			<key>IPv4</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>DHCP</string>
-			</dict>
-			<key>IPv6</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>Automatic</string>
-			</dict>
-			<key>Interface</key>
-			<dict>
-				<key>DeviceName</key>
-				<string>en7</string>
-				<key>Hardware</key>
-				<string>Ethernet</string>
-				<key>Type</key>
-				<string>Ethernet</string>
-				<key>UserDefinedName</key>
-				<string>USB 10/100/1000 LAN</string>
-			</dict>
-			<key>Proxies</key>
-			<dict>
-				<key>ExceptionsList</key>
-				<array>
-					<string>*.local</string>
-					<string>169.254/16</string>
-				</array>
-				<key>FTPPassive</key>
-				<integer>1</integer>
-			</dict>
-			<key>SMB</key>
-			<dict/>
-			<key>UserDefinedName</key>
-			<string>USB 10/100/1000 LAN</string>
-		</dict>
-		<key>8044DA0A-B43D-4556-8CAF-58CC3F725655</key>
-		<dict>
-			<key>DNS</key>
-			<dict/>
-			<key>IPv4</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>DHCP</string>
-			</dict>
-			<key>IPv6</key>
-			<dict>
-				<key>ConfigMethod</key>
-				<string>Automatic</string>
-			</dict>
-			<key>Interface</key>
-			<dict>
-				<key>DeviceName</key>
-				<string>en6</string>
-				<key>Hardware</key>
-				<string>Ethernet</string>
-				<key>HiddenConfiguration</key>
-				<true/>
-				<key>Type</key>
-				<string>Ethernet</string>
-				<key>UserDefinedName</key>
-				<string>Ethernet Adapter (en6)</string>
-			</dict>
-			<key>Proxies</key>
-			<dict>
-				<key>ExceptionsList</key>
-				<array>
-					<string>*.local</string>
-					<string>169.254/16</string>
-				</array>
-				<key>FTPPassive</key>
-				<integer>1</integer>
-			</dict>
-			<key>SMB</key>
-			<dict/>
-			<key>UserDefinedName</key>
-			<string>Ethernet Adapter (en6)</string>
-		</dict>
-		<key>8088FDDE-40E0-4A7B-9890-E762208E9689</key>
+		<key>6FEAACC7-6E83-416F-A67B-E7E9E83E1E27</key>
 		<dict>
 			<key>DNS</key>
 			<dict/>
@@ -254,7 +90,129 @@
 			<key>UserDefinedName</key>
 			<string>Ethernet Adapter (en4)</string>
 		</dict>
-		<key>B37C366F-034F-4C03-A99C-EF0121E6C17D</key>
+		<key>8CAB049F-213D-4B4D-8E0F-694FD7F7C09B</key>
+		<dict>
+			<key>DNS</key>
+			<dict/>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>DHCP</string>
+			</dict>
+			<key>IPv6</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Automatic</string>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>DeviceName</key>
+				<string>en8</string>
+				<key>Hardware</key>
+				<string>Ethernet</string>
+				<key>Type</key>
+				<string>Ethernet</string>
+				<key>UserDefinedName</key>
+				<string>iPhone USB</string>
+			</dict>
+			<key>Proxies</key>
+			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string>*.local</string>
+					<string>169.254/16</string>
+				</array>
+				<key>FTPPassive</key>
+				<integer>1</integer>
+			</dict>
+			<key>SMB</key>
+			<dict/>
+			<key>UserDefinedName</key>
+			<string>iPhone</string>
+		</dict>
+		<key>9107FFE9-6021-4ACE-9996-DFB4FC4E9A1C</key>
+		<dict>
+			<key>DNS</key>
+			<dict/>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>DHCP</string>
+			</dict>
+			<key>IPv6</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Automatic</string>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>DeviceName</key>
+				<string>en7</string>
+				<key>Hardware</key>
+				<string>Ethernet</string>
+				<key>Type</key>
+				<string>Ethernet</string>
+				<key>UserDefinedName</key>
+				<string>USB 10/100/1000 LAN</string>
+			</dict>
+			<key>Proxies</key>
+			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string>*.local</string>
+					<string>169.254/16</string>
+				</array>
+				<key>FTPPassive</key>
+				<integer>1</integer>
+			</dict>
+			<key>SMB</key>
+			<dict/>
+			<key>UserDefinedName</key>
+			<string>USB 10/100/1000 LAN</string>
+		</dict>
+		<key>A3A5459F-4F6D-46E9-A371-3EF2DB692697</key>
+		<dict>
+			<key>DNS</key>
+			<dict/>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>DHCP</string>
+			</dict>
+			<key>IPv6</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Automatic</string>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>DeviceName</key>
+				<string>en6</string>
+				<key>Hardware</key>
+				<string>Ethernet</string>
+				<key>HiddenConfiguration</key>
+				<true/>
+				<key>Type</key>
+				<string>Ethernet</string>
+				<key>UserDefinedName</key>
+				<string>Ethernet Adapter (en6)</string>
+			</dict>
+			<key>Proxies</key>
+			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string>*.local</string>
+					<string>169.254/16</string>
+				</array>
+				<key>FTPPassive</key>
+				<integer>1</integer>
+			</dict>
+			<key>SMB</key>
+			<dict/>
+			<key>UserDefinedName</key>
+			<string>Ethernet Adapter (en6)</string>
+		</dict>
+		<key>E252EF80-8150-4F03-A6B6-F320FC6AED66</key>
 		<dict>
 			<key>DNS</key>
 			<dict/>
@@ -283,21 +241,15 @@
 			<dict>
 				<key>ExceptionsList</key>
 				<array>
-					<string>*.local</string>
-					<string>169.254/16</string>
+					<string></string>
 				</array>
-				<key>FTPPassive</key>
-				<integer>1</integer>
 			</dict>
 			<key>SMB</key>
-			<dict>
-				<key>NetBIOSName</key>
-				<string>192</string>
-			</dict>
+			<dict/>
 			<key>UserDefinedName</key>
 			<string>Wi-Fi</string>
 		</dict>
-		<key>CABC566A-7F9E-4701-A380-8AAE1D0143F5</key>
+		<key>EBE8D6D8-321A-44D8-9CC2-96D37F0DC644</key>
 		<dict>
 			<key>DNS</key>
 			<dict/>
@@ -408,7 +360,7 @@
 			<key>UserDefinedName</key>
 			<string>LG Monitor Controls</string>
 		</dict>
-		<key>EB4DFF68-8BBB-4F21-8A81-13F5B26FAF3E</key>
+		<key>F2F47E84-747B-4256-A42A-7493846491C2</key>
 		<dict>
 			<key>DNS</key>
 			<dict/>
@@ -425,13 +377,15 @@
 			<key>Interface</key>
 			<dict>
 				<key>DeviceName</key>
-				<string>bridge0</string>
+				<string>en5</string>
 				<key>Hardware</key>
 				<string>Ethernet</string>
+				<key>HiddenConfiguration</key>
+				<true/>
 				<key>Type</key>
 				<string>Ethernet</string>
 				<key>UserDefinedName</key>
-				<string>Thunderbolt Bridge</string>
+				<string>Ethernet Adapter (en5)</string>
 			</dict>
 			<key>Proxies</key>
 			<dict>
@@ -446,12 +400,12 @@
 			<key>SMB</key>
 			<dict/>
 			<key>UserDefinedName</key>
-			<string>Thunderbolt Bridge</string>
+			<string>Ethernet Adapter (en5)</string>
 		</dict>
 	</dict>
 	<key>Sets</key>
 	<dict>
-		<key>063B0C87-8017-455B-950E-C098101FD024</key>
+		<key>E45CD9B0-164B-4E94-95B7-8F6EB90084A7</key>
 		<dict>
 			<key>Network</key>
 			<dict>
@@ -461,15 +415,14 @@
 					<dict>
 						<key>ServiceOrder</key>
 						<array>
-							<string>CABC566A-7F9E-4701-A380-8AAE1D0143F5</string>
-							<string>8088FDDE-40E0-4A7B-9890-E762208E9689</string>
-							<string>55BF0CC9-BF7D-4779-A571-97765FBA2F6A</string>
-							<string>8044DA0A-B43D-4556-8CAF-58CC3F725655</string>
-							<string>56FF622E-844C-495F-815F-C578A559FD41</string>
-							<string>EB4DFF68-8BBB-4F21-8A81-13F5B26FAF3E</string>
-							<string>B37C366F-034F-4C03-A99C-EF0121E6C17D</string>
-							<string>1E178649-964A-4C51-B94C-D177897E0C76</string>
-							<string>024F692B-BAFF-44D3-982F-ADC946AA5E26</string>
+							<string>EBE8D6D8-321A-44D8-9CC2-96D37F0DC644</string>
+							<string>6FEAACC7-6E83-416F-A67B-E7E9E83E1E27</string>
+							<string>F2F47E84-747B-4256-A42A-7493846491C2</string>
+							<string>A3A5459F-4F6D-46E9-A371-3EF2DB692697</string>
+							<string>9107FFE9-6021-4ACE-9996-DFB4FC4E9A1C</string>
+							<string>436FBC75-1396-41CE-B81A-E66251E7B727</string>
+							<string>E252EF80-8150-4F03-A6B6-F320FC6AED66</string>
+							<string>8CAB049F-213D-4B4D-8E0F-694FD7F7C09B</string>
 						</array>
 					</dict>
 				</dict>
@@ -483,53 +436,53 @@
 							<string>Automatic</string>
 						</dict>
 					</dict>
+					<key>en8</key>
+					<dict>
+						<key>EnableLowDataMode</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<key>Service</key>
 				<dict>
-					<key>024F692B-BAFF-44D3-982F-ADC946AA5E26</key>
+					<key>436FBC75-1396-41CE-B81A-E66251E7B727</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/024F692B-BAFF-44D3-982F-ADC946AA5E26</string>
+						<string>/NetworkServices/436FBC75-1396-41CE-B81A-E66251E7B727</string>
 					</dict>
-					<key>1E178649-964A-4C51-B94C-D177897E0C76</key>
+					<key>6FEAACC7-6E83-416F-A67B-E7E9E83E1E27</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/1E178649-964A-4C51-B94C-D177897E0C76</string>
+						<string>/NetworkServices/6FEAACC7-6E83-416F-A67B-E7E9E83E1E27</string>
 					</dict>
-					<key>55BF0CC9-BF7D-4779-A571-97765FBA2F6A</key>
+					<key>8CAB049F-213D-4B4D-8E0F-694FD7F7C09B</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/55BF0CC9-BF7D-4779-A571-97765FBA2F6A</string>
+						<string>/NetworkServices/8CAB049F-213D-4B4D-8E0F-694FD7F7C09B</string>
 					</dict>
-					<key>56FF622E-844C-495F-815F-C578A559FD41</key>
+					<key>9107FFE9-6021-4ACE-9996-DFB4FC4E9A1C</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/56FF622E-844C-495F-815F-C578A559FD41</string>
+						<string>/NetworkServices/9107FFE9-6021-4ACE-9996-DFB4FC4E9A1C</string>
 					</dict>
-					<key>8044DA0A-B43D-4556-8CAF-58CC3F725655</key>
+					<key>A3A5459F-4F6D-46E9-A371-3EF2DB692697</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/8044DA0A-B43D-4556-8CAF-58CC3F725655</string>
+						<string>/NetworkServices/A3A5459F-4F6D-46E9-A371-3EF2DB692697</string>
 					</dict>
-					<key>8088FDDE-40E0-4A7B-9890-E762208E9689</key>
+					<key>E252EF80-8150-4F03-A6B6-F320FC6AED66</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/8088FDDE-40E0-4A7B-9890-E762208E9689</string>
+						<string>/NetworkServices/E252EF80-8150-4F03-A6B6-F320FC6AED66</string>
 					</dict>
-					<key>B37C366F-034F-4C03-A99C-EF0121E6C17D</key>
+					<key>EBE8D6D8-321A-44D8-9CC2-96D37F0DC644</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/B37C366F-034F-4C03-A99C-EF0121E6C17D</string>
+						<string>/NetworkServices/EBE8D6D8-321A-44D8-9CC2-96D37F0DC644</string>
 					</dict>
-					<key>CABC566A-7F9E-4701-A380-8AAE1D0143F5</key>
+					<key>F2F47E84-747B-4256-A42A-7493846491C2</key>
 					<dict>
 						<key>__LINK__</key>
-						<string>/NetworkServices/CABC566A-7F9E-4701-A380-8AAE1D0143F5</string>
-					</dict>
-					<key>EB4DFF68-8BBB-4F21-8A81-13F5B26FAF3E</key>
-					<dict>
-						<key>__LINK__</key>
-						<string>/NetworkServices/EB4DFF68-8BBB-4F21-8A81-13F5B26FAF3E</string>
+						<string>/NetworkServices/F2F47E84-747B-4256-A42A-7493846491C2</string>
 					</dict>
 				</dict>
 			</dict>
@@ -544,17 +497,15 @@
 			<key>HostNames</key>
 			<dict>
 				<key>LocalHostName</key>
-				<string>PSLM-LL7NVG2X2T</string>
+				<string>Joe-Mantel-Macbook-Pro-M4-Pro</string>
 			</dict>
 		</dict>
 		<key>System</key>
 		<dict>
 			<key>ComputerName</key>
-			<string>PSLM-LL7NVG2X2T</string>
+			<string>Joe Mantel Macbook Pro M4 Pro</string>
 			<key>ComputerNameEncoding</key>
-			<integer>134217984</integer>
-			<key>HostName</key>
-			<string>PSLM-LL7NVG2X2T</string>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>VirtualNetworkInterfaces</key>

@@ -19,8 +19,9 @@ backup-sync: backup
 	fi; \
 	CURRENT_BRANCH=$$(git branch --show-current); \
 	if [ "$$CURRENT_BRANCH" != "main" ]; then \
-		echo "🔀 Switching from $$CURRENT_BRANCH to main branch"; \
-		git checkout main || (echo "❌ Failed to switch to main branch"; exit 1); \
+		echo "❌ ERROR: backup-sync must be run from the main branch (currently on: $$CURRENT_BRANCH)"; \
+		echo "💡 Run: git checkout main && make backup-sync"; \
+		exit 1; \
 	fi; \
 	echo "⬇️  Pulling latest changes from origin/main..."; \
 	if git pull origin main; then \
@@ -55,73 +56,31 @@ backup-sync: backup
 backup-apps:
 	@echo "📱 Running application configurations backup..."
 	@echo "📦 Backing up config files with parallel execution..."
-	@rm -f .parallel_pids .parallel_log.tmp
-	@echo "🚀 Starting: Fish shell config"; \
-	$(MAKE) -s _backup-fish & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Neovim config"; \
-	$(MAKE) -s _backup-nvim & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Oh My Fish config"; \
-	$(MAKE) -s _backup-omf & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Karabiner config"; \
-	$(MAKE) -s _backup-karabiner & \
-	echo $$! >> .parallel_pids
-	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 1 to complete..."; \
-		while read -r PID; do \
-			if [ -n "$$PID" ]; then \
-				wait $$PID 2>/dev/null || true; \
-			fi; \
-		done < .parallel_pids; \
-		rm -f .parallel_pids; \
-		echo "✅ Batch 1 completed!"; \
-	fi
-	@echo "🚀 Starting: Hammerspoon config"; \
-	$(MAKE) -s _backup-hammerspoon & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: ASDF config"; \
-	$(MAKE) -s _backup-asdf & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Bash config"; \
-	$(MAKE) -s _backup-bash & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Zsh config"; \
-	$(MAKE) -s _backup-zsh & \
-	echo $$! >> .parallel_pids
-	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 2 to complete..."; \
-		while read -r PID; do \
-			if [ -n "$$PID" ]; then \
-				wait $$PID 2>/dev/null || true; \
-			fi; \
-		done < .parallel_pids; \
-		rm -f .parallel_pids; \
-		echo "✅ Batch 2 completed!"; \
-	fi
-	@echo "🚀 Starting: Git config"; \
-	$(MAKE) -s _backup-gitconfig & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Homebrew config"; \
-	$(MAKE) -s _backup-brew & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: iTerm2 config"; \
-	$(MAKE) -s _backup-iterm2 & \
-	echo $$! >> .parallel_pids
-	@echo "🚀 Starting: Environment config"; \
-	$(MAKE) -s _backup-env & \
-	echo $$! >> .parallel_pids
-	@if [ -f .parallel_pids ]; then \
-		echo "⏳ Waiting for batch 3 to complete..."; \
-		while read -r PID; do \
-			if [ -n "$$PID" ]; then \
-				wait $$PID 2>/dev/null || true; \
-			fi; \
-		done < .parallel_pids; \
-		rm -f .parallel_pids; \
-		echo "✅ Batch 3 completed!"; \
-	fi
+	@rm -f .parallel_log.tmp
+	@echo "🚀 Batch 1: fish, nvim, omf, karabiner"; \
+	$(MAKE) -s _backup-fish & PID1=$$!; \
+	$(MAKE) -s _backup-nvim & PID2=$$!; \
+	$(MAKE) -s _backup-omf & PID3=$$!; \
+	$(MAKE) -s _backup-karabiner & PID4=$$!; \
+	echo "⏳ Waiting for batch 1 to complete..."; \
+	wait $$PID1 $$PID2 $$PID3 $$PID4; \
+	echo "✅ Batch 1 completed!"
+	@echo "🚀 Batch 2: hammerspoon, asdf, bash, zsh"; \
+	$(MAKE) -s _backup-hammerspoon & PID1=$$!; \
+	$(MAKE) -s _backup-asdf & PID2=$$!; \
+	$(MAKE) -s _backup-bash & PID3=$$!; \
+	$(MAKE) -s _backup-zsh & PID4=$$!; \
+	echo "⏳ Waiting for batch 2 to complete..."; \
+	wait $$PID1 $$PID2 $$PID3 $$PID4; \
+	echo "✅ Batch 2 completed!"
+	@echo "🚀 Batch 3: git, brew, iterm2, env"; \
+	$(MAKE) -s _backup-gitconfig & PID1=$$!; \
+	$(MAKE) -s _backup-brew & PID2=$$!; \
+	$(MAKE) -s _backup-iterm2 & PID3=$$!; \
+	$(MAKE) -s _backup-env & PID4=$$!; \
+	echo "⏳ Waiting for batch 3 to complete..."; \
+	wait $$PID1 $$PID2 $$PID3 $$PID4; \
+	echo "✅ Batch 3 completed!"
 	@$(MAKE) -s _backup-jetbrains
 	@if [ -f .parallel_log.tmp ]; then \
 		echo "📋 Parallel execution results:"; \
@@ -271,6 +230,11 @@ _backup-gitconfig:
 	if [ -f "$$HOME/.gitignore_global" ]; then \
 		cp "$$HOME/.gitignore_global" "$$dst/"; \
 	fi; \
+	for identity_file in "$$HOME"/.gitconfig-*; do \
+		if [ -f "$$identity_file" ]; then \
+			cp "$$identity_file" "$$dst/"; \
+		fi; \
+	done; \
 	echo "✅ Git config backed up successfully" >> .parallel_log.tmp
 
 _backup-brew:

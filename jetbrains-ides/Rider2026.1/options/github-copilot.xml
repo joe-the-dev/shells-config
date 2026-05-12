@@ -1,0 +1,14 @@
+<application>
+  <component name="github-copilot">
+    <option name="signinNotificationShown" value="true" />
+    <option name="nesDefaultAppliedForFreePlan" value="true" />
+    <option name="useNestedClaudeMdFiles" value="true" />
+    <option name="terminalRulesVersion" value="1" />
+    <option name="legacyXdgConfigMigrated" value="true" />
+    <mcpSamplingAllowedModels>
+      <option value="claude-sonnet-4" />
+      <option value="claude-sonnet-4.5" />
+      <option value="gpt-4.1" />
+    </mcpSamplingAllowedModels>
+  </component>
+</application>
