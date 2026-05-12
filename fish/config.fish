@@ -26,8 +26,8 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 # Environment variables
-set -Ux ASDF_NODEJS_VERIFY_RELEASE_SIGNATURES no
-set -Ux HOMEBREW_PREFIX /opt/homebrew
+set -gx ASDF_NODEJS_VERIFY_RELEASE_SIGNATURES no
+set -gx HOMEBREW_PREFIX /opt/homebrew
 set -x SSH_AUTH_SOCK ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # PATH management with better organization
@@ -88,7 +88,7 @@ if type -q fzf
 end
 
 # Enhanced functions with error handling
-function __check_rvm --on-variable PWD --description 'Auto-use Node version from .nvmrc'
+function __check_nvmrc --on-variable PWD --description 'Auto-use Node version from .nvmrc'
     status --is-command-substitution; and return
 
     if test -f .nvmrc; and test -r .nvmrc; and type -q nvm
@@ -194,6 +194,47 @@ function backup --description 'Backup configuration files'
 end
 
 # New utility functions
+function gcp --description 'Cherry-pick a commit onto a new branch: gcp <commit> <new-branch> <base-branch>'
+    if test (count $argv) -lt 3
+        echo "Usage: gcp <commit> <new-branch> <base-branch>"
+        echo ""
+        echo "Example:"
+        echo "  gcp 32a1a189 feat/CU-869c8bx1r-s112 develop-s112"
+        echo ""
+        echo "  → checkout develop-s112"
+        echo "  → pull origin develop-s112"
+        echo "  → create branch feat/CU-869c8bx1r-s112"
+        echo "  → cherry-pick <commit>"
+        echo "  → git push -f origin feat/CU-869c8bx1r-s112"
+        return 1
+    end
+
+    set -l commit $argv[1]
+    set -l new_branch $argv[2]
+    set -l base_branch $argv[3]
+
+    echo "→ Fetching to base branch: $base_branch"
+    git fetch -p; or return 1
+
+    echo "→ Switching to base branch: $base_branch"
+    git checkout $base_branch; or return 1
+
+    echo "→ Pulling latest: $base_branch"
+    git pull origin $base_branch; or return 1
+
+    echo "→ Creating new branch: $new_branch"
+    git cobd $new_branch; or return 1
+
+    echo "→ Cherry-picking: $commit"
+    git cherry-pick $commit; or return 1
+
+    echo "→ Force pushing: $new_branch"
+    git push -f origin $new_branch; or return 1
+
+    echo ""
+    echo "✓ Done — $commit cherry-picked onto $new_branch (based on $base_branch)"
+end
+
 function mkcd --description 'Create directory and cd into it'
     mkdir -p $argv[1]; and cd $argv[1]
 end

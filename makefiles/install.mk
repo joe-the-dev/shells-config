@@ -189,6 +189,11 @@ _copy-git:
 		cp "gitconfig/.gitignore_global" "$$HOME/.gitignore_global"; \
 		COPIED=true; \
 	fi; \
+	for identity_file in gitconfig/.gitconfig-*; do \
+		if [ -f "$$identity_file" ]; then \
+			cp "$$identity_file" "$$HOME/$$(basename $$identity_file)"; \
+		fi; \
+	done; \
 	if [ "$$COPIED" = "true" ]; then \
 		echo "✅ Git config copied successfully" >> .parallel_log.tmp; \
 	else \

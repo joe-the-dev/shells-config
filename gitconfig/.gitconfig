@@ -1,17 +1,23 @@
 [core]
 	autocrlf = input
-	excludesfile = /Users/joe.ta/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 	eol = lf
 [user]
 	name = Joe Ta
-	email = joe.ta@pepperstone.com
+	email = dev.thanhdat@gmail.com
+
+# Identity overrides based on repo location
+# Work repos (~/work/)
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig-work
+# Personal/playground repos (~/Documents/Playground/)
+[includeIf "gitdir:~/Documents/Playground/"]
+	path = ~/.gitconfig-personal
 [pull]
 	rebase = false
 [credential]
-	helper = cache
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
+	helper = manager
 [alias]
 	fp = pull --rebase --autostash
 	fastpull = pull --rebase --autostash
