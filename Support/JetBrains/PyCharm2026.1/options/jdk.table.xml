@@ -1,0 +1,28 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Python 3.13 (PyCharmMiscProject)" />
+      <type value="Python SDK" />
+      <version value="Python 3.13.7" />
+      <homePath value="$USER_HOME$/PyCharmMiscProject/.venv/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file://$USER_HOME$/.asdf/installs/python/3.13.7t/lib/python3.13t" type="simple" />
+            <root url="file://$USER_HOME$/.asdf/installs/python/3.13.7t/lib/python3.13t/lib-dynload" type="simple" />
+            <root url="file://$USER_HOME$/PyCharmMiscProject/.venv/lib/python3.13t/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/JetBrains/PyCharm2025.2/python_stubs/-52889376" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python-ce/helpers/typeshed/stdlib" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional ASSOCIATED_PROJECT_PATH="$USER_HOME$/PyCharmMiscProject" SDK_UUID="a0bb09c4-97ca-4e0a-9420-f41887be94e3">
+        <setting name="FLAVOR_ID" value="VirtualEnvSdkFlavor" />
+        <setting name="FLAVOR_DATA" value="{}" />
+      </additional>
+    </jdk>
+  </component>
+</application>

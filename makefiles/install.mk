@@ -1,7 +1,7 @@
 # Installation and Restoration Makefile
 # Handles all installation targets and configuration restoration
 
-.PHONY: install install-minimal install-dev install-tools copy-configs restore restore-jetbrains restore-macos macos
+.PHONY: install install-minimal install-dev install-tools copy-configs restore restore-jetbrains
 .PHONY: brew asdf jetbrains iterm2 omf env set-fish-default
 .PHONY: _copy-omf _copy-karabiner _copy-hammerspoon _copy-brew _copy-asdf _copy-bash _copy-zsh _copy-git _copy-fish _copy-nvim
 
@@ -539,6 +539,19 @@ restore: copy-configs
 	@echo "✅ All configurations restored!"
 
 # Restore JetBrains IDEs configuration
+#
+# NOTE: each backup is restored ONLY into its own exact IDE_NAME directory
+# (e.g. jetbrains-ides/PyCharm2023.3/ -> .../JetBrains/PyCharm2023.3/). Do NOT
+# add logic that copies these files into other installed versions/editions
+# (e.g. matching a "PyCharm" product prefix across PyCharm2023.3, PyCharmCE2023.3,
+# PyCharm2024.1, ...) -- codestyles/options/keymaps/colors/templates/*.vmoptions
+# are raw files tied to a specific IDE build's internal schema, which changes
+# across versions and editions, so blindly cp -R'ing them into a different
+# version's directory can silently corrupt or drop settings. Plugins are the
+# one exception that genuinely migrates: install-jetbrains-plugins installs by
+# plugin ID via the currently-installed IDE executable, not by copying files,
+# so it naturally works across versions/editions. Anything else should go
+# through the IDE's own "Import Settings" instead.
 restore-jetbrains:
 	@echo "🧠 Enhanced JetBrains IDEs restore starting..."
 	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
@@ -610,144 +623,3 @@ restore-jetbrains:
 	@echo "1. Launch each IDE and reinstall plugins from the plugins_list.txt files"
 	@echo "2. Restart IDEs to ensure all configurations are loaded"
 	@echo "3. Verify your settings in each IDE's preferences"
-
-# Restore macOS system settings
-restore-macos:
-	@echo "🍎 Restoring macOS system settings..."
-	@if [ ! -d "macos" ]; then \
-		echo "⚠️  No macOS backup found"; \
-		echo "💡 Run 'make backup-macos' first to create a backup"; \
-		exit 0; \
-	fi
-	@echo "⚠️  WARNING: This will overwrite current system preferences"
-	@read -p "Continue? (y/N): " -n 1 -r response; \
-	echo; \
-	if [[ ! $$response =~ ^[Yy]$$ ]]; then \
-		echo "❌ Restore cancelled"; \
-		exit 0; \
-	fi
-	@echo "🖥️  Restoring Display Settings..."
-	@if [ -f "macos/display/display_preferences.plist" ]; then \
-		echo "  📊 Restoring com.apple.windowserver settings"; \
-		defaults import "com.apple.windowserver" "macos/display/display_preferences.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.windowserver settings"; \
-	else \
-		echo "  ⚠️  Backup file display_preferences.plist not found"; \
-	fi
-	@if [ -f "macos/display/display_services.plist" ]; then \
-		echo "  📊 Restoring com.apple.display.DisplayServices settings"; \
-		defaults import "com.apple.display.DisplayServices" "macos/display/display_services.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.display.DisplayServices settings"; \
-	else \
-		echo "  ⚠️  Backup file display_services.plist not found"; \
-	fi
-	@echo "🖱️  Restoring Dock Settings..."
-	@if [ -f "macos/dock/dock.plist" ]; then \
-		echo "  📊 Restoring com.apple.dock settings"; \
-		defaults import "com.apple.dock" "macos/dock/dock.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.dock settings"; \
-	else \
-		echo "  ⚠️  Backup file dock.plist not found"; \
-	fi
-	@echo "📁 Restoring Finder Settings..."
-	@if [ -f "macos/finder/finder.plist" ]; then \
-		echo "  📊 Restoring com.apple.finder settings"; \
-		defaults import "com.apple.finder" "macos/finder/finder.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.finder settings"; \
-	else \
-		echo "  ⚠️  Backup file finder.plist not found"; \
-	fi
-	@if [ -f "macos/finder/finder_sidebar.plist" ]; then \
-		echo "  📊 Restoring com.apple.sidebarlists settings"; \
-		defaults import "com.apple.sidebarlists" "macos/finder/finder_sidebar.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.sidebarlists settings"; \
-	else \
-		echo "  ⚠️  Backup file finder_sidebar.plist not found"; \
-	fi
-	@echo "⌨️  Restoring Keyboard Settings..."
-	@if [ -f "macos/keyboard/keyboard_layouts.plist" ]; then \
-		echo "  📊 Restoring com.apple.HIToolbox settings"; \
-		defaults import "com.apple.HIToolbox" "macos/keyboard/keyboard_layouts.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.HIToolbox settings"; \
-	else \
-		echo "  ⚠️  Backup file keyboard_layouts.plist not found"; \
-	fi
-	@if [ -f "macos/keyboard/symbolic_hotkeys.plist" ]; then \
-		echo "  📊 Restoring com.apple.symbolichotkeys settings"; \
-		defaults import "com.apple.symbolichotkeys" "macos/keyboard/symbolic_hotkeys.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.symbolichotkeys settings"; \
-	else \
-		echo "  ⚠️  Backup file symbolic_hotkeys.plist not found"; \
-	fi
-	@echo "🖲️  Restoring Trackpad Settings..."
-	@if [ -f "macos/trackpad/trackpad.plist" ]; then \
-		echo "  📊 Restoring com.apple.driver.AppleBluetoothMultitouch.trackpad settings"; \
-		defaults import "com.apple.driver.AppleBluetoothMultitouch.trackpad" "macos/trackpad/trackpad.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.driver.AppleBluetoothMultitouch.trackpad settings"; \
-	else \
-		echo "  ⚠️  Backup file trackpad.plist not found"; \
-	fi
-	@if [ -f "macos/trackpad/multitouch_trackpad.plist" ]; then \
-		echo "  📊 Restoring com.apple.AppleMultitouchTrackpad settings"; \
-		defaults import "com.apple.AppleMultitouchTrackpad" "macos/trackpad/multitouch_trackpad.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.AppleMultitouchTrackpad settings"; \
-	else \
-		echo "  ⚠️  Backup file multitouch_trackpad.plist not found"; \
-	fi
-	@echo "🚀 Restoring Mission Control Settings..."
-	@if [ -f "macos/mission_control/mission_control.plist" ]; then \
-		echo "  📊 Restoring com.apple.spaces settings"; \
-		defaults import "com.apple.spaces" "macos/mission_control/mission_control.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.spaces settings"; \
-	else \
-		echo "  ⚠️  Backup file mission_control.plist not found"; \
-	fi
-	@if [ -f "macos/mission_control/expose.plist" ]; then \
-		echo "  📊 Restoring com.apple.exposé settings"; \
-		defaults import "com.apple.exposé" "macos/mission_control/expose.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.exposé settings"; \
-	else \
-		echo "  ⚠️  Backup file expose.plist not found"; \
-	fi
-	@echo "🔊 Restoring Audio Settings..."
-	@if [ -f "macos/audio/audio_midi.plist" ]; then \
-		echo "  📊 Restoring com.apple.audio.AudioMIDISetup settings"; \
-		defaults import "com.apple.audio.AudioMIDISetup" "macos/audio/audio_midi.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.audio.AudioMIDISetup settings"; \
-	else \
-		echo "  ⚠️  Backup file audio_midi.plist not found"; \
-	fi
-	@if [ -f "macos/audio/system_sounds.plist" ]; then \
-		echo "  📊 Restoring com.apple.audio.SystemSoundServer-macOS settings"; \
-		defaults import "com.apple.audio.SystemSoundServer-macOS" "macos/audio/system_sounds.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.audio.SystemSoundServer-macOS settings"; \
-	else \
-		echo "  ⚠️  Backup file system_sounds.plist not found"; \
-	fi
-	@echo "♿ Restoring Accessibility Settings..."
-	@if [ -f "macos/accessibility/accessibility.plist" ]; then \
-		echo "  📊 Restoring com.apple.universalaccess settings"; \
-		defaults import "com.apple.universalaccess" "macos/accessibility/accessibility.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.universalaccess settings"; \
-	else \
-		echo "  ⚠️  Backup file accessibility.plist not found"; \
-	fi
-	@echo "⚙️  Restoring General System Settings..."
-	@if [ -f "macos/system/global_domain.plist" ]; then \
-		echo "  📊 Restoring NSGlobalDomain settings"; \
-		defaults import "NSGlobalDomain" "macos/system/global_domain.plist" 2>/dev/null || echo "  ⚠️  Failed to restore NSGlobalDomain settings"; \
-	else \
-		echo "  ⚠️  Backup file global_domain.plist not found"; \
-	fi
-	@if [ -f "macos/system/system_preferences.plist" ]; then \
-		echo "  📊 Restoring com.apple.systempreferences settings"; \
-		defaults import "com.apple.systempreferences" "macos/system/system_preferences.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.systempreferences settings"; \
-	else \
-		echo "  ⚠️  Backup file system_preferences.plist not found"; \
-	fi
-	@if [ -f "macos/system/menu_clock.plist" ]; then \
-		echo "  📊 Restoring com.apple.menuextra.clock settings"; \
-		defaults import "com.apple.menuextra.clock" "macos/system/menu_clock.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.menuextra.clock settings"; \
-	else \
-		echo "  ⚠️  Backup file menu_clock.plist not found"; \
-	fi
-	@if [ -f "macos/system/control_center.plist" ]; then \
-		echo "  📊 Restoring com.apple.controlcenter settings"; \
-		defaults import "com.apple.controlcenter" "macos/system/control_center.plist" 2>/dev/null || echo "  ⚠️  Failed to restore com.apple.controlcenter settings"; \
-	else \
-		echo "  ⚠️  Backup file control_center.plist not found"; \
-	fi
-	@echo "🔄 Restarting affected services..."
-	@killall Dock 2>/dev/null || true
-	@killall Finder 2>/dev/null || true
-	@killall SystemUIServer 2>/dev/null || true
-	@killall ControlCenter 2>/dev/null || true
-	@echo "✅ macOS settings restore complete!"
-	@echo "💡 Some changes may require a restart to take full effect"
-	@echo "🔧 For DisplayLink settings, restart the DisplayLink service or reboot"

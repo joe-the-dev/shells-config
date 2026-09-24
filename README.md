@@ -1,6 +1,6 @@
 # 🛠️ Development Environment Configuration
 
-A comprehensive configuration management system for macOS development environments, supporting automatic backup and restoration of all your development tools and system settings.
+A comprehensive configuration management system for macOS development environments, supporting automatic backup and restoration of all your development tools.
 
 ## 🚀 Quick Start
 
@@ -35,7 +35,6 @@ This configuration system manages settings for:
 - **🧠 JetBrains IDEs** - IntelliJ IDEA, PyCharm, WebStorm, DataGrip, etc.
 - **🖥️ iTerm2** - Terminal emulator preferences and profiles
 - **🔐 Environment Variables** - Secure .env template management
-- **🍎 macOS System Settings** - Comprehensive system preferences backup
 
 ## 🎯 Available Commands
 
@@ -47,15 +46,13 @@ This configuration system manages settings for:
 - `make update` - Update git repository to latest version
 
 ### Backup Operations
-- `make backup` - Complete backup (apps + macOS system settings)
+- `make backup` - Complete backup
 - `make backup-sync` - Complete backup + git commit/push
 - `make backup-apps` - Application configurations only
-- `make backup-macos` - macOS system settings only
 
 ### Restore Operations
 - `make restore` - Restore all configurations from backup
 - `make restore-jetbrains` - Restore only JetBrains IDEs configurations
-- `make restore-macos` - Restore macOS system settings
 
 ### Individual Components
 - `make brew` - Install Homebrew packages from Brewfile
@@ -108,36 +105,6 @@ make restore-jetbrains
 make restore
 ```
 
-## 🍎 macOS System Settings Backup
-
-### Comprehensive System Backup
-The system now includes comprehensive macOS system settings backup covering:
-
-- **🖥️ Display Settings** - Monitor configurations, DisplayLink settings
-- **🖱️ Dock & Menu Bar** - Dock preferences, menu bar settings
-- **📁 Finder** - Finder preferences and sidebar configurations
-- **⌨️ Keyboard & Input** - Keyboard layouts, shortcuts, emoji settings
-- **🖲️ Trackpad & Mouse** - Trackpad gestures and mouse settings
-- **🚀 Mission Control** - Spaces and Exposé configurations
-- **🌐 Network** - Network configurations (sanitized)
-- **🔊 Audio** - Audio devices and MIDI setup
-- **♿ Accessibility** - Accessibility preferences
-- **⚙️ System Preferences** - Global domain and system-wide settings
-- **🔧 Third-party Apps** - BetterZip, LuLu, and other supported apps
-
-### Automatic Restore Script Generation
-Each macOS backup automatically generates a restore script at `macos/restore_macos_settings.sh` that can:
-- Restore all backed up settings with confirmation prompts
-- Restart affected system services
-- Provide detailed restoration feedback
-
-### Usage
-```bash
-make backup-macos        # Backup macOS settings only
-make restore-macos       # Restore macOS settings
-./macos/restore_macos_settings.sh  # Direct restore script
-```
-
 ## 📂 Directory Structure
 
 ```
@@ -187,20 +154,6 @@ shells-config/
 │   ├── karabiner.json    # Main configuration
 │   └── automatic_backups/ # Recent backup files (2 most recent)
 │
-├── macos/                # macOS system settings
-│   ├── restore_macos_settings.sh # Auto-generated restore script
-│   ├── system_info.txt   # System information snapshot
-│   ├── display/          # Display and monitor settings
-│   ├── dock/             # Dock preferences
-│   ├── finder/           # Finder settings
-│   ├── keyboard/         # Keyboard and input settings
-│   ├── trackpad/         # Trackpad configurations
-│   ├── mission_control/  # Mission Control settings
-│   ├── audio/            # Audio device settings
-│   ├── accessibility/    # Accessibility preferences
-│   ├── system/           # System-wide preferences
-│   └── third_party/      # Third-party app settings
-│
 ├── nvim/                 # Neovim configuration
 ├── omf/                  # Oh My Fish framework
 └── zsh/                  # Zsh shell configuration
@@ -217,17 +170,14 @@ make backup-sync
 
 # This will:
 # 1. Backup all application configurations
-# 2. Backup comprehensive macOS system settings
-# 3. Generate restore scripts automatically
-# 4. Commit changes with timestamp
-# 5. Push to remote repository
+# 2. Commit changes with timestamp
+# 3. Push to remote repository
 ```
 
 ### Individual Backup Operations
 ```bash
 make backup-apps         # Applications only (fast)
-make backup-macos        # macOS system settings only
-make backup              # Everything (apps + macOS)
+make backup              # Everything
 ```
 
 ### Restore on New Machine
@@ -247,7 +197,6 @@ make install
 # 5. Setup ASDF tools and language versions
 # 6. Configure all JetBrains IDEs with plugins
 # 7. Setup iTerm2, OMF, and environment variables
-# 8. Optionally restore macOS system settings
 ```
 
 ## 🏗️ Architecture
@@ -292,7 +241,6 @@ The system uses a modular architecture for better maintainability:
 ### Modifying Backup Behavior
 Edit the appropriate Makefile module:
 - **Application backups**: `makefiles/backup.mk`
-- **macOS settings**: `makefiles/backup.mk` (backup-macos target)
 - **Installation logic**: `makefiles/install.mk`
 - **Git sync behavior**: `makefiles/backup.mk` (backup-sync target)
 
@@ -330,7 +278,6 @@ _copy-myapp:
 - Environment variables are handled securely with proper file permissions
 - Sensitive data uses template approach (never commit actual secrets)
 - Git configurations exclude sensitive files
-- macOS system backups sanitize sensitive network information
 
 ### Plugin Management
 - **JetBrains plugins are listed but not automatically installed**
@@ -338,16 +285,9 @@ _copy-myapp:
 - This ensures compatibility and proper licensing
 - Plugin IDs are extracted for easier CLI installation
 
-### macOS System Settings
-- **Review before restoring**: macOS settings backups include system-wide preferences
-- **Restart may be required**: Some settings require logout/restart to take effect
-- **DisplayLink support**: Special handling for DisplayLink monitor configurations
-- **Third-party apps**: Automatically detects and backs up supported third-party applications
-
 ### Version Compatibility
 - The system detects and backs up multiple IDE versions automatically
-- Restoration preserves version-specific configurations
-- Cross-version compatibility is maintained where possible
+- Each version restores only into its own matching directory (no cross-version copying — JetBrains config formats differ across versions/editions); reinstalling plugins by ID is the one thing that genuinely works across versions
 - Only the latest version of each JetBrains IDE is backed up to reduce storage
 
 ## 📊 System Information

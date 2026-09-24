@@ -5,10 +5,9 @@ This document provides comprehensive guidance for AI agents to effectively maint
 ## 🎯 Project Overview
 
 This is a modular configuration management system for macOS development environments that supports:
-- Automatic backup and restoration of development tools and system settings
+- Automatic backup and restoration of development tool configs
 - Modular Makefile architecture for maintainability
 - Support for 15+ development tools and applications
-- Comprehensive macOS system settings backup
 - Git-based configuration synchronization
 
 ### Core Philosophy
@@ -87,20 +86,6 @@ All Makefiles follow consistent patterns:
 | PhpStorm | `jetbrains-ides/PhpStorm*/` | `~/Library/Application Support/JetBrains/PhpStorm*/` | PHP IDE |
 | Rider | `jetbrains-ides/Rider*/` | `~/Library/Application Support/JetBrains/Rider*/` | .NET IDE |
 
-### macOS System Settings
-| Category | Source Directory | Backup Scope | Restore Method |
-|----------|------------------|---------------|----------------|
-| Display | `macos/display/` | Monitor configs, DisplayLink | System restart may be required |
-| Dock | `macos/dock/` | Dock preferences, position | Dock restart automatic |
-| Finder | `macos/finder/` | Finder settings, sidebar | Finder restart automatic |
-| Keyboard | `macos/keyboard/` | Layouts, shortcuts, emoji | Logout required |
-| Trackpad | `macos/trackpad/` | Gestures, sensitivity | Immediate effect |
-| Mission Control | `macos/mission_control/` | Spaces, Exposé | Immediate effect |
-| Audio | `macos/audio/` | Audio devices, MIDI | Immediate effect |
-| Accessibility | `macos/accessibility/` | Accessibility features | Immediate effect |
-| System | `macos/system/` | Global preferences | Mixed restart requirements |
-| Third-party | `macos/third_party/` | BetterZip, LuLu, etc. | App-specific |
-
 ## 📋 Common Maintenance Tasks
 
 ### Adding a New Application
@@ -146,26 +131,7 @@ make restore          # Should restore the configuration
 ### Modifying Backup Behavior
 
 **For application configs**: Edit `makefiles/backup.mk`
-**For system settings**: Edit the `backup-macos` target in `makefiles/backup.mk`
 **For installation logic**: Edit `makefiles/install.mk`
-
-### Adding New macOS System Settings
-
-1. **Identify the preference domain**:
-```bash
-defaults domains | tr ',' '\n' | grep -i "appname"
-```
-
-2. **Add to appropriate category** in `makefiles/backup.mk`:
-```makefile
-# In _backup-macos-category target
-if defaults read com.company.appname >/dev/null 2>&1; then \
-	echo "📋 Backing up AppName preferences..."; \
-	defaults export com.company.appname "$$category_dir/appname.plist"; \
-fi
-```
-
-3. **Add restore command** to auto-generated restore script logic.
 
 ## 🐛 Troubleshooting Guide
 
@@ -200,15 +166,6 @@ ls -la ~/Library/Application\ Support/JetBrains/
 sudo chown -R $USER:staff ~/.config/
 # Fix permissions
 chmod -R 755 ~/.config/
-```
-
-#### 4. macOS Settings Not Restoring
-**Symptoms**: System settings unchanged after restore
-**Diagnosis**: Check if restart is required
-**Solution**:
-```bash
-# Some settings require logout/restart
-sudo shutdown -r now
 ```
 
 ### Debugging Makefile Issues
@@ -306,14 +263,12 @@ make backup-sync      # Test full workflow
 ### Storage Management
 - JetBrains: Only backup latest version to save space
 - Karabiner: Keep only 2 most recent automatic backups
-- macOS: Compress large preference files when possible
 
 ## 🔐 Security Considerations
 
 ### Sensitive Data Handling
 - **Environment variables**: Use template approach, never commit actual secrets
 - **Git config**: Exclude sensitive files in .gitignore
-- **Network settings**: Sanitize before backup
 - **Certificates**: Exclude from backups
 
 ### File Permissions
@@ -322,11 +277,6 @@ make backup-sync      # Test full workflow
 - Protect sensitive config files (600 for SSH keys, etc.)
 
 ## 📚 References and Resources
-
-### macOS Preference Domains
-- System preferences: `com.apple.*`
-- Third-party apps: Use `defaults domains` to discover
-- Location: `~/Library/Preferences/`
 
 ### JetBrains Configuration Paths
 - macOS: `~/Library/Application Support/JetBrains/`

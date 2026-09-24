@@ -1,0 +1,8 @@
+<application>
+  <component name="LafManager">
+    <laf themeId="223399fb-a716-46c7-876e-31e09657e24c" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="ExperimentalDark" scheme="_@user_Solarized Dark (Darcula)" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>

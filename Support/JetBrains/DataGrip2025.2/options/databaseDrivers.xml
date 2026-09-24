@@ -1,0 +1,7 @@
+<application>
+  <component name="LocalDatabaseDriverManager" version="201">
+    <driver id="mysql_aurora.aws_wrapper">
+      <artifact id="AWS JDBC Wrapper for MySQL" name="AWS JDBC Wrapper for MySQL" use="true" version="2.3.7" />
+    </driver>
+  </component>
+</application>
