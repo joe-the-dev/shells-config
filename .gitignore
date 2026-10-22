@@ -57,3 +57,4 @@ ENV/
 
 # Fish shell temporary files
 fish/fish_history
+.envrc
