@@ -16,7 +16,7 @@ else if test -x /usr/local/bin/brew
 end
 
 # Conditional tool loading
-command -q direnv; and eval (direnv hook fish)
+command -q direnv; and direnv hook fish | source
 test -f (brew --prefix asdf 2>/dev/null)/libexec/asdf.fish; and source (brew --prefix asdf)/libexec/asdf.fish
 
 # Better terminal and display settings
@@ -79,13 +79,7 @@ if type -q eza
     alias lta "lt -a"
 end
 
-# Better FZF integration
-if type -q fzf
-    set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
-    if type -q fd
-        set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden --follow --exclude .git"
-    end
-end
+# FZF_DEFAULT_OPTS / FZF_DEFAULT_COMMAND are configured in fzf.fish (sourced below)
 
 # Enhanced functions with error handling
 function __check_nvmrc --on-variable PWD --description 'Auto-use Node version from .nvmrc'
@@ -290,21 +284,7 @@ function myip --description 'Get public IP address'
     curl -s ifconfig.me
 end
 
-# Enhanced AWS/ECS function
-function ecs-cluster --description 'Select ECS cluster interactively'
-    if test (count $argv) -eq 0
-        echo "Usage: ecs-cluster <profile>"
-        return 1
-    end
-
-    set cluster (aws ecs list-clusters --query 'clusterArns[]' --output text --profile $argv[1] 2>/dev/null | sed 's#.*/##' | fzf --prompt="Select ECS cluster: ")
-    if test -n "$cluster"
-        echo $cluster
-    else
-        echo "❌ No cluster selected or AWS CLI error"
-        return 1
-    end
-end
+# ECS cluster picker: see fecs (fzf.fish) / pecs (peco.fish)
 
 # Better abbreviations
 abbr --add zz 'fg'
@@ -319,8 +299,9 @@ else
     set _asdf_shims "$ASDF_DATA_DIR/shims"
 end
 
-if test -d $_asdf_shims; and not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
+# Always move shims to the front so asdf wins over Homebrew's node
+if test -d $_asdf_shims
+    set -gx PATH $_asdf_shims (string match -v -- $_asdf_shims $PATH)
 end
 set --erase _asdf_shims
 
@@ -330,3 +311,92 @@ for config_file in ~/.config/fish/fzf.fish ~/.config/fish/peco.fish
         source $config_file
     end
 end
+
+function fish_right_prompt
+end
+
+function ssh_hx_dev
+  eval (ssh-agent -c)
+  ssh-add /Users/joevu/Documents/Projects/Freelance/HX/developer-squawk.pem
+  ssh -A -L 27018:integ-gateway-docdb-v930-dev.cluster-c8a9tzii8dpq.eu-west-2.docdb.amazonaws.com:27017 developer@3.11.27.52
+end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+# ============================================================
+# Cloudflare WARP Service Management (macOS)
+# Commands:
+#   warp-on      - Start WARP and connect
+#   warp-off     - Stop WARP service
+#   warp-status  - Check service and VPN status
+#   warp-restart - Restart WARP service
+# ============================================================
+
+set -g WARP_SERVICE "com.cloudflare.1dot1dot1dot1.macos.warp.daemon"
+set -g WARP_PLIST "/Library/LaunchDaemons/$WARP_SERVICE.plist"
+
+# Stop Cloudflare WARP
+function warp-off --description "Stop Cloudflare WARP service"
+    echo "Stopping Cloudflare WARP..."
+
+    if not launchctl print "system/$WARP_SERVICE" >/dev/null 2>&1
+        echo "WARP service is already stopped."
+        return 0
+    end
+
+    sudo launchctl bootout system "$WARP_PLIST"
+
+    if test $status -eq 0
+        echo "✓ Cloudflare WARP stopped."
+    else
+        echo "✗ Failed to stop WARP."
+        return 1
+    end
+end
+
+# Start Cloudflare WARP
+function warp-on --description "Start Cloudflare WARP service"
+    echo "Starting Cloudflare WARP..."
+
+    if not launchctl print "system/$WARP_SERVICE" >/dev/null 2>&1
+        sudo launchctl bootstrap system "$WARP_PLIST"
+
+        if test $status -ne 0
+            echo "✗ Failed to start WARP."
+            return 1
+        end
+    end
+
+    # Wait for daemon initialization
+    sleep 2
+
+    warp-cli connect
+
+    if test $status -eq 0
+        echo "✓ Cloudflare WARP connection requested."
+    else
+        echo "✗ Failed to connect WARP."
+        return 1
+    end
+end
+
+# Check WARP status
+function warp-status --description "Check Cloudflare WARP status"
+    if launchctl print "system/$WARP_SERVICE" >/dev/null 2>&1
+        echo "✓ WARP daemon: Running"
+        echo ""
+        warp-cli status
+    else
+        echo "✗ WARP daemon: Stopped"
+    end
+end
+
+# Restart WARP
+function warp-restart --description "Restart Cloudflare WARP"
+    warp-off; or return 1
+    sleep 1
+    warp-on
+end
+
+# dockyard-tools update-deps.sh writes $NVM_DIR/default-packages; nvm itself is not used (asdf is)
+set -gx NVM_DIR $HOME/.nvm

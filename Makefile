@@ -4,7 +4,6 @@
 # Configuration variables
 HOME_DIR := $(HOME)
 CONFIG_DIR := $(HOME_DIR)/.config
-JETBRAINS_DIR := $(HOME_DIR)/Library/Application Support/JetBrains
 ITERM2_APP_SUPPORT := $(HOME_DIR)/Library/Application Support/iTerm2
 BACKUP_TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
 
@@ -36,7 +35,7 @@ include makefiles/utils.mk
 include makefiles/dependencies.mk
 
 # Export variables to sub-makefiles
-export HOME_DIR CONFIG_DIR JETBRAINS_DIR ITERM2_APP_SUPPORT BACKUP_TIMESTAMP
+export HOME_DIR CONFIG_DIR ITERM2_APP_SUPPORT BACKUP_TIMESTAMP
 export SRC_BREW SRC_ASDF_RC SRC_ASDF_TOOLS SRC_GITCONFIG SRC_GITIGNORE
 export TARGET_BREWFILE TARGET_ASDF_RC TARGET_ASDF_TOOLS TARGET_GITCONFIG TARGET_GITIGNORE
 export BLUE GREEN YELLOW RED RESET
@@ -54,7 +53,7 @@ help:
 	@echo "  all              - Install all configurations (default)"
 	@echo "  install          - Same as 'all'"
 	@echo "  install-minimal  - Install only essential configs (git, fish, nvim)"
-	@echo "  install-dev      - Install development tools (brew, asdf, jetbrains)"
+	@echo "  install-dev      - Install development tools (brew, asdf)"
 	@echo "  install-tools    - Install productivity tools (karabiner, hammerspoon, iterm2)"
 	@echo "  install-smart    - Smart install with automatic dependency resolution"
 	@echo "  show-dependency-graph - Show the installation dependency graph"
@@ -63,7 +62,6 @@ help:
 	@echo "  copy-configs     - Copy dotfiles to home directory"
 	@echo "  brew             - Install Homebrew packages"
 	@echo "  asdf             - Install asdf plugins and tools"
-	@echo "  jetbrains        - Install JetBrains IDEs configuration"
 	@echo "  iterm2           - Install iTerm2 configuration"
 	@echo "  omf              - Install Oh My Fish configuration"
 	@echo "  env              - Setup environment variables"
@@ -73,7 +71,6 @@ help:
 	@echo "  backup           - Run complete backup"
 	@echo "  backup-apps      - Backup application configurations only"
 	@echo "  restore          - Restore all configurations"
-	@echo "  restore-jetbrains - Restore only JetBrains IDEs configuration"
 	@echo ""
 	@echo "🛠️  Utilities & Maintenance:"
 	@echo "  update           - Update git repository"

@@ -12,7 +12,6 @@ DEPENDENCY_MAP := \
 	_copy-fish: copy-configs \
 	asdf: brew _copy-fish \
 	omf: _copy-fish \
-	jetbrains: brew \
 	iterm2: brew \
 	env: _copy-env \
 	set-fish-default: _copy-fish omf
@@ -21,7 +20,7 @@ DEPENDENCY_MAP := \
 PHASE_1_TARGETS := update _copy-git _copy-env
 PHASE_2_TARGETS := brew copy-configs
 PHASE_3_TARGETS := _copy-fish asdf
-PHASE_4_TARGETS := omf jetbrains iterm2 env
+PHASE_4_TARGETS := omf iterm2 env
 PHASE_5_TARGETS := set-fish-default
 
 # Function to check if target needs to be skipped
@@ -163,7 +162,6 @@ show-dependency-graph:
 	@echo ""
 	@echo "Phase 4 (Applications & Environments):"
 	@echo "  └── omf (depends: _copy-fish)"
-	@echo "  └── jetbrains (depends: brew)"
 	@echo "  └── iterm2 (depends: brew)"
 	@echo "  └── env (depends: _copy-env)"
 	@echo ""

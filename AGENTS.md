@@ -30,7 +30,6 @@ Makefile (80 lines)           # Main orchestrator and help system
 ```makefile
 HOME_DIR := $(HOME)
 CONFIG_DIR := $(HOME_DIR)/.config
-JETBRAINS_DIR := $(HOME_DIR)/Library/Application Support/JetBrains
 ITERM2_APP_SUPPORT := $(HOME_DIR)/Library/Application Support/iTerm2
 BACKUP_TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
 
@@ -72,19 +71,6 @@ All Makefiles follow consistent patterns:
 | iTerm2 | `iterm2/` | `~/Library/Application Support/iTerm2/` | `_backup-iterm2` |
 | Homebrew | `brew/` | `~/.Brewfile` | `_backup-brew` |
 | Environment | `env/` | `~/.env` | `_backup-env` |
-
-### JetBrains IDEs
-| IDE | Source Directory | Target Location | Special Notes |
-|-----|------------------|-----------------|---------------|
-| IntelliJ IDEA | `jetbrains-ides/IntelliJIdea*/` | `~/Library/Application Support/JetBrains/IntelliJIdea*/` | Auto-detects versions |
-| PyCharm | `jetbrains-ides/PyCharm*/` | `~/Library/Application Support/JetBrains/PyCharm*/` | Professional/Community |
-| WebStorm | `jetbrains-ides/WebStorm*/` | `~/Library/Application Support/JetBrains/WebStorm*/` | Latest version only |
-| DataGrip | `jetbrains-ides/DataGrip*/` | `~/Library/Application Support/JetBrains/DataGrip*/` | Database IDE |
-| CLion | `jetbrains-ides/CLion*/` | `~/Library/Application Support/JetBrains/CLion*/` | C/C++ IDE |
-| GoLand | `jetbrains-ides/GoLand*/` | `~/Library/Application Support/JetBrains/GoLand*/` | Go IDE |
-| RubyMine | `jetbrains-ides/RubyMine*/` | `~/Library/Application Support/JetBrains/RubyMine*/` | Ruby IDE |
-| PhpStorm | `jetbrains-ides/PhpStorm*/` | `~/Library/Application Support/JetBrains/PhpStorm*/` | PHP IDE |
-| Rider | `jetbrains-ides/Rider*/` | `~/Library/Application Support/JetBrains/Rider*/` | .NET IDE |
 
 ## 📋 Common Maintenance Tasks
 
@@ -148,16 +134,7 @@ git pull origin main
 make backup-sync
 ```
 
-#### 2. JetBrains Backup Missing
-**Symptoms**: IDE configurations not backed up
-**Diagnosis**: Check if IDE directories exist
-**Solution**:
-```bash
-ls -la ~/Library/Application\ Support/JetBrains/
-# Verify IDE names match patterns in backup script
-```
-
-#### 3. Permission Denied Errors
+#### 2. Permission Denied Errors
 **Symptoms**: Cannot copy files to system locations
 **Diagnosis**: Check file permissions and ownership
 **Solution**:
@@ -261,7 +238,6 @@ make backup-sync      # Test full workflow
 - Parallelize independent operations where possible
 
 ### Storage Management
-- JetBrains: Only backup latest version to save space
 - Karabiner: Keep only 2 most recent automatic backups
 
 ## 🔐 Security Considerations
@@ -277,11 +253,6 @@ make backup-sync      # Test full workflow
 - Protect sensitive config files (600 for SSH keys, etc.)
 
 ## 📚 References and Resources
-
-### JetBrains Configuration Paths
-- macOS: `~/Library/Application Support/JetBrains/`
-- Config subdirectories: `options/`, `codestyles/`, `keymaps/`
-- Version detection: Look for `build.txt` files
 
 ### Common Shell Configuration Paths
 - Fish: `~/.config/fish/`

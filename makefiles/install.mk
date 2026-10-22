@@ -1,12 +1,12 @@
 # Installation and Restoration Makefile
 # Handles all installation targets and configuration restoration
 
-.PHONY: install install-minimal install-dev install-tools copy-configs restore restore-jetbrains
-.PHONY: brew asdf jetbrains iterm2 omf env set-fish-default
+.PHONY: install install-minimal install-dev install-tools copy-configs restore
+.PHONY: brew asdf iterm2 omf env set-fish-default
 .PHONY: _copy-omf _copy-karabiner _copy-hammerspoon _copy-brew _copy-asdf _copy-bash _copy-zsh _copy-git _copy-fish _copy-nvim
 
 # Main installation target
-install: update copy-configs brew asdf jetbrains iterm2 omf env set-fish-default
+install: update copy-configs brew asdf iterm2 omf env set-fish-default
 	@echo "✅ All configurations installed successfully!"
 
 # Minimal installation (essential configs only)
@@ -18,8 +18,8 @@ install-minimal: update
 # Development tools installation
 install-dev: update
 	@echo "🛠️  Installing development tools..."
-	@$(MAKE) -s brew asdf jetbrains
-	@echo "✅ Development tools installed (brew, asdf, jetbrains)!"
+	@$(MAKE) -s brew asdf
+	@echo "✅ Development tools installed (brew, asdf)!"
 
 # Productivity tools installation
 install-tools: update
@@ -270,71 +270,6 @@ asdf:
 		echo "ℹ️  asdf/plugins.txt not found - skipping plugin installation"; \
 	fi
 
-# Install JetBrains IDEs configuration
-jetbrains:
-	@echo "🧠 Installing JetBrains IDEs configuration..."
-	@if [ ! -d "jetbrains-ides" ]; then \
-		echo "⚠️  No JetBrains backup found at jetbrains-ides/"; \
-		echo "💡 Run 'make backup' first to create a backup"; \
-		exit 0; \
-	fi
-	@$(MAKE) -s restore-jetbrains
-	@$(MAKE) -s install-jetbrains-plugins
-	@echo "✅ JetBrains IDEs configuration and plugins installed!"
-
-# Install JetBrains plugins automatically using CLI
-install-jetbrains-plugins:
-	@echo "🔌 Installing JetBrains plugins from backup..."
-	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
-	JETBRAINS_BACKUP_DIR="jetbrains-ides"; \
-	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
-		echo "⚠️  No JetBrains backup found"; \
-		exit 0; \
-	fi; \
-	for backup_dir in "$$JETBRAINS_BACKUP_DIR"/*/; do \
-		if [ -d "$$backup_dir" ]; then \
-			IDE_NAME=$$(basename "$$backup_dir"); \
-			if [[ "$$IDE_NAME" == .* ]]; then \
-				continue; \
-			fi; \
-			echo "🔌 Installing plugins for $$IDE_NAME..."; \
-			if [ -f "$$backup_dir/plugins_manifest.txt" ]; then \
-				PLUGIN_COUNT=0; \
-				while IFS= read -r plugin_id || [ -n "$$plugin_id" ]; do \
-					if [[ -z "$$plugin_id" || "$$plugin_id" =~ ^[[:space:]]*# ]]; then \
-						continue; \
-					fi; \
-					echo "  📦 Installing plugin: $$plugin_id"; \
-					if [[ "$$IDE_NAME" == *"IntelliJ"* ]]; then \
-						IDE_EXECUTABLE="/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"; \
-					elif [[ "$$IDE_NAME" == *"WebStorm"* ]]; then \
-						IDE_EXECUTABLE="/Applications/WebStorm.app/Contents/MacOS/webstorm"; \
-					elif [[ "$$IDE_NAME" == *"PyCharm"* ]]; then \
-						IDE_EXECUTABLE="/Applications/PyCharm.app/Contents/MacOS/pycharm"; \
-					elif [[ "$$IDE_NAME" == *"DataGrip"* ]]; then \
-						IDE_EXECUTABLE="/Applications/DataGrip.app/Contents/MacOS/datagrip"; \
-					else \
-						echo "    ⚠️  Unknown IDE type for $$IDE_NAME, skipping plugin installation"; \
-						continue; \
-					fi; \
-					if [ -f "$$IDE_EXECUTABLE" ]; then \
-						"$$IDE_EXECUTABLE" installPlugins "$$plugin_id" 2>/dev/null || \
-						echo "    ⚠️  Failed to install $$plugin_id (may already be installed)"; \
-						PLUGIN_COUNT=$$((PLUGIN_COUNT + 1)); \
-					else \
-						echo "    ⚠️  $$IDE_NAME executable not found, skipping plugin installation"; \
-					fi; \
-				done < "$$backup_dir/plugins_manifest.txt"; \
-				echo "  ✅ Processed $$PLUGIN_COUNT plugins for $$IDE_NAME"; \
-			elif [ -f "$$backup_dir/plugins_list.txt" ]; then \
-				echo "  💡 Found plugins_list.txt but no plugins_manifest.txt"; \
-				echo "     Run 'make backup' to generate plugin manifest for CLI installation"; \
-			else \
-				echo "  ℹ️  No plugin manifest found for $$IDE_NAME"; \
-			fi; \
-		fi; \
-	done
-
 # Install iTerm2 configuration
 iterm2:
 	@echo "🖥️  Installing iTerm2 configuration..."
@@ -534,92 +469,5 @@ set-fish-default:
 
 # Restore all configurations
 restore: copy-configs
-	@echo "🔄 Restoring all configurations..."
-	@$(MAKE) -s restore-jetbrains
 	@echo "✅ All configurations restored!"
 
-# Restore JetBrains IDEs configuration
-#
-# NOTE: each backup is restored ONLY into its own exact IDE_NAME directory
-# (e.g. jetbrains-ides/PyCharm2023.3/ -> .../JetBrains/PyCharm2023.3/). Do NOT
-# add logic that copies these files into other installed versions/editions
-# (e.g. matching a "PyCharm" product prefix across PyCharm2023.3, PyCharmCE2023.3,
-# PyCharm2024.1, ...) -- codestyles/options/keymaps/colors/templates/*.vmoptions
-# are raw files tied to a specific IDE build's internal schema, which changes
-# across versions and editions, so blindly cp -R'ing them into a different
-# version's directory can silently corrupt or drop settings. Plugins are the
-# one exception that genuinely migrates: install-jetbrains-plugins installs by
-# plugin ID via the currently-installed IDE executable, not by copying files,
-# so it naturally works across versions/editions. Anything else should go
-# through the IDE's own "Import Settings" instead.
-restore-jetbrains:
-	@echo "🧠 Enhanced JetBrains IDEs restore starting..."
-	@JETBRAINS_DIR="$$HOME/Library/Application Support/JetBrains"; \
-	JETBRAINS_BACKUP_DIR="jetbrains-ides"; \
-	if [ ! -d "$$JETBRAINS_BACKUP_DIR" ]; then \
-		echo "⚠️  No JetBrains backup found at $$JETBRAINS_BACKUP_DIR"; \
-		echo "💡 Run 'make backup' first to create a backup"; \
-		exit 0; \
-	fi; \
-	mkdir -p "$$JETBRAINS_DIR"; \
-	echo "📋 Restoring JetBrains IDEs configurations..."; \
-	for backup_dir in "$$JETBRAINS_BACKUP_DIR"/*/; do \
-		if [ -d "$$backup_dir" ]; then \
-			IDE_NAME=$$(basename "$$backup_dir"); \
-			if [[ "$$IDE_NAME" == .* ]]; then \
-				continue; \
-			fi; \
-			TARGET_DIR="$$JETBRAINS_DIR/$$IDE_NAME"; \
-			echo "🔄 Restoring $$IDE_NAME → $$TARGET_DIR"; \
-			mkdir -p "$$TARGET_DIR"; \
-			if [ -d "$$backup_dir/codestyles" ]; then \
-				echo "  🎨 Restoring code styles"; \
-				cp -R "$$backup_dir/codestyles" "$$TARGET_DIR/"; \
-			fi; \
-			if [ -d "$$backup_dir/options" ]; then \
-				echo "  ⚙️  Restoring IDE options"; \
-				cp -R "$$backup_dir/options" "$$TARGET_DIR/"; \
-			fi; \
-			if [ -d "$$backup_dir/keymaps" ]; then \
-				echo "  ⌨️  Restoring custom keymaps"; \
-				cp -R "$$backup_dir/keymaps" "$$TARGET_DIR/"; \
-			fi; \
-			if [ -d "$$backup_dir/colors" ]; then \
-				echo "  🌈 Restoring color schemes"; \
-				cp -R "$$backup_dir/colors" "$$TARGET_DIR/"; \
-			fi; \
-			if [ -d "$$backup_dir/templates" ]; then \
-				echo "  📝 Restoring file templates"; \
-				cp -R "$$backup_dir/templates" "$$TARGET_DIR/"; \
-			fi; \
-			if [ -f "$$backup_dir/disabled_plugins.txt" ]; then \
-				echo "  🚫 Restoring disabled plugins list"; \
-				cp "$$backup_dir/disabled_plugins.txt" "$$TARGET_DIR/"; \
-			fi; \
-			for vm_file in "$$backup_dir"/*.vmoptions; do \
-				if [ -f "$$vm_file" ]; then \
-					echo "  🚀 Restoring VM options: $$(basename "$$vm_file")"; \
-					cp "$$vm_file" "$$TARGET_DIR/"; \
-				fi; \
-			done; \
-			if [ -f "$$backup_dir/plugins_list.txt" ]; then \
-				echo "  🔌 Plugin list available for $$IDE_NAME"; \
-				echo "    💡 Manually reinstall plugins from: $$backup_dir/plugins_list.txt"; \
-			fi; \
-			echo "  ✅ $$IDE_NAME restoration complete"; \
-		fi; \
-	done; \
-	if [ -f "$$JETBRAINS_BACKUP_DIR/.ideavimrc" ]; then \
-		echo "⌨️  Restoring shared .ideavimrc"; \
-		cp "$$JETBRAINS_BACKUP_DIR/.ideavimrc" "$$HOME/"; \
-	fi; \
-	if [ -f "$$JETBRAINS_BACKUP_DIR/idea.vmoptions" ]; then \
-		echo "🚀 Restoring global VM options"; \
-		cp "$$JETBRAINS_BACKUP_DIR/idea.vmoptions" "$$JETBRAINS_DIR/"; \
-	fi
-	@echo "✅ Enhanced JetBrains IDEs restore complete!"
-	@echo ""
-	@echo "📋 Manual steps required:"
-	@echo "1. Launch each IDE and reinstall plugins from the plugins_list.txt files"
-	@echo "2. Restart IDEs to ensure all configurations are loaded"
-	@echo "3. Verify your settings in each IDE's preferences"

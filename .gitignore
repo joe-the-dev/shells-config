@@ -13,35 +13,6 @@
 ehthumbs.db
 Thumbs.db
 
-# JetBrains IDEs - Cache and temporary files
-jetbrains-ides/**/vim_settings_local.xml
-jetbrains-ides/**/recentProjects.xml
-jetbrains-ides/**/window.*.xml
-jetbrains-ides/**/actionSummary.xml
-jetbrains-ides/**/contributorSummary.xml
-jetbrains-ides/**/features.usage.statistics.xml
-jetbrains-ides/**/dailyLocalStatistics.xml
-jetbrains-ides/**/log-categories.xml
-jetbrains-ides/**/EventLog*.xml
-jetbrains-ides/**/DontShowAgain*.xml
-jetbrains-ides/**/CommonFeedback*.xml
-jetbrains-ides/**/AIOnboarding*.xml
-jetbrains-ides/**/McpToolsStore*.xml
-jetbrains-ides/**/usage.statistics.xml
-jetbrains-ides/**/statistics.xml
-jetbrains-ides/**/event-log-whitelist.xml
-jetbrains-ides/**/inline.factors.completion.xml
-jetbrains-ides/**/ConversationToolStoreService.xml
-jetbrains-ides/**/vcs-inputs.xml
-jetbrains-ides/**/github.xml
-jetbrains-ides/**/trusted-paths.xml
-jetbrains-ides/**/*_backup_*.xml
-jetbrains-ides/**/*.backup
-
-# Keep only the latest version of each JetBrains IDE
-# (Old versions get cleaned up by make clean)
-# Note: You may want to manually add specific old versions here
-
 # Karabiner automatic backups (keep only recent ones)
 # Note: You may want to manually track only the most recent backups
 # karabiner/automatic_backups/karabiner_*.json

@@ -1,4 +1,0 @@
-# JetBrains Plugin Manifest
-# Generated on Tue Oct 28 12:31:29 +07 2025
-# Format: PluginID (for CLI installation)
-

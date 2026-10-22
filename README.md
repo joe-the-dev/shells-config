@@ -32,7 +32,6 @@ This configuration system manages settings for:
 - **🐚 Bash/Zsh** - Traditional shell configurations
 - **📝 Git** - Global git configuration and aliases
 - **🍺 Homebrew** - Package manager with complete Brewfile
-- **🧠 JetBrains IDEs** - IntelliJ IDEA, PyCharm, WebStorm, DataGrip, etc.
 - **🖥️ iTerm2** - Terminal emulator preferences and profiles
 - **🔐 Environment Variables** - Secure .env template management
 
@@ -52,12 +51,10 @@ This configuration system manages settings for:
 
 ### Restore Operations
 - `make restore` - Restore all configurations from backup
-- `make restore-jetbrains` - Restore only JetBrains IDEs configurations
 
 ### Individual Components
 - `make brew` - Install Homebrew packages from Brewfile
 - `make asdf` - Install asdf plugins and language versions
-- `make jetbrains` - Setup JetBrains IDEs configurations
 - `make iterm2` - Install iTerm2 preferences and profiles
 - `make omf` - Setup Oh My Fish with themes and packages
 - `make env` - Setup environment variables template
@@ -69,41 +66,6 @@ This configuration system manages settings for:
 - `make status` - Show configuration status
 - `make validate-config` - Check configuration syntax
 - `make help` - Show detailed help for all commands
-
-## 🧠 JetBrains IDEs Support
-
-### Supported IDEs
-- IntelliJ IDEA
-- PyCharm 
-- WebStorm
-- PhpStorm
-- CLion
-- GoLand
-- RubyMine
-- DataGrip
-- Rider
-
-### What's Backed Up
-- **Code Styles** - Custom formatting rules
-- **IDE Options** - All IDE preferences and settings
-- **Keymaps** - Custom keyboard shortcuts
-- **Color Schemes** - Custom themes and syntax highlighting
-- **File Templates** - Custom file and code templates
-- **Plugin Lists** - Installed plugins (for manual re-installation)
-- **VM Options** - JVM settings and performance tuning
-- **IdeaVim Config** - Vim emulation settings (`.ideavimrc`)
-
-### Usage
-```bash
-# Backup all JetBrains IDEs
-make backup
-
-# Restore all JetBrains IDEs  
-make restore-jetbrains
-
-# Or restore everything
-make restore
-```
 
 ## 📂 Directory Structure
 
@@ -142,13 +104,6 @@ shells-config/
 │   ├── com.googlecode.iterm2.plist # Main preferences
 │   ├── DynamicProfiles/  # Dynamic profile configurations
 │   └── Scripts/          # iTerm2 automation scripts
-│
-├── jetbrains-ides/       # All JetBrains IDEs
-│   ├── IntelliJIdea2025.2/
-│   ├── PyCharm2025.2/
-│   ├── WebStorm2025.2/
-│   ├── DataGrip2025.2/
-│   └── .ideavimrc        # Shared IdeaVim configuration
 │
 ├── karabiner/            # Keyboard customization
 │   ├── karabiner.json    # Main configuration
@@ -195,8 +150,7 @@ make install
 # 3. Copy all configuration files to proper locations
 # 4. Install Homebrew packages from Brewfile
 # 5. Setup ASDF tools and language versions
-# 6. Configure all JetBrains IDEs with plugins
-# 7. Setup iTerm2, OMF, and environment variables
+# 6. Setup iTerm2, OMF, and environment variables
 ```
 
 ## 🏗️ Architecture
@@ -227,7 +181,6 @@ The system uses a modular architecture for better maintainability:
 
 ### Optional
 - **ASDF** - Multi-language version manager
-- **JetBrains IDEs** - Any JetBrains development environments
 
 ## 🎨 Customization
 
@@ -278,17 +231,6 @@ _copy-myapp:
 - Environment variables are handled securely with proper file permissions
 - Sensitive data uses template approach (never commit actual secrets)
 - Git configurations exclude sensitive files
-
-### Plugin Management
-- **JetBrains plugins are listed but not automatically installed**
-- After restoration, manually reinstall plugins from the generated `plugins_manifest.txt` files
-- This ensures compatibility and proper licensing
-- Plugin IDs are extracted for easier CLI installation
-
-### Version Compatibility
-- The system detects and backs up multiple IDE versions automatically
-- Each version restores only into its own matching directory (no cross-version copying — JetBrains config formats differ across versions/editions); reinstalling plugins by ID is the one thing that genuinely works across versions
-- Only the latest version of each JetBrains IDE is backed up to reduce storage
 
 ## 📊 System Information
 

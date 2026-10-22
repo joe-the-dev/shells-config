@@ -4,8 +4,8 @@
 	editor = vim
 	eol = lf
 [user]
-	name = Joe Ta
-	email = dev.thanhdat@gmail.com
+	name = joe-the-dev
+	email = vuthanhdat.dev@gmail.com
 
 # Identity overrides based on repo location
 # Work repos (~/work/)
@@ -14,16 +14,17 @@
 # Personal/playground repos (~/Documents/Playground/)
 [includeIf "gitdir:~/Documents/Playground/"]
 	path = ~/.gitconfig-personal
+# HX freelance repos (~/Documents/Projects/Freelance/HX/)
+[includeIf "gitdir:~/Documents/Projects/Freelance/HX/"]
+	path = ~/.gitconfig-hx
 [pull]
 	rebase = false
-[credential]
-	helper = manager
 [alias]
 	fp = pull --rebase --autostash
 	fastpull = pull --rebase --autostash
 	unchanged = update-index --assume-unchanged
 	fastlog = log --oneline --graph
-	fast-reset-soft = reset --soft HEAD~1
+	fast-reset-soft = "!f() { git reset --soft HEAD~${1:-1}; }; f"
 	mark-unchange = "update-index --assume-unchanged "
 	mark-change = "update-index --no-assume-unchanged "
 	fastpush = "!git push -f origin $(git rev-parse --abbrev-ref HEAD)"
@@ -66,5 +67,19 @@
     fi; \
     git checkout -b $branch_name $current_branch; \
   }; f"
+	fast-reset-hard = "!f() { git reset --hard HEAD~${1:-1}; }; f"
+	rsh = !git fast-reset-hard \"$@\"
+	rss = !git fast-reset-soft \"$@\"
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true

@@ -61,78 +61,6 @@ clean:
 	@find . -name "*.tmp" -delete 2>/dev/null || true
 	@find . -name ".DS_Store" -delete 2>/dev/null || true
 	@CLEANED_COUNT=0; \
-	if [ -d "jetbrains-ides" ]; then \
-		echo "🧠 Cleaning up old JetBrains IDE versions..."; \
-		cd jetbrains-ides; \
-		for ide_base in DataGrip IntelliJIdea PyCharm WebStorm PhpStorm CLion GoLand RubyMine Rider; do \
-			IDE_DIRS=$$(find . -maxdepth 1 -type d -name "$$ide_base*" | sort -V); \
-			if [ -n "$$IDE_DIRS" ]; then \
-				IDE_COUNT=$$(echo "$$IDE_DIRS" | wc -l | tr -d ' '); \
-				if [ "$$IDE_COUNT" -gt 1 ]; then \
-					LATEST_DIR=$$(echo "$$IDE_DIRS" | tail -1); \
-					echo "  📂 Found $$IDE_COUNT versions of $$ide_base, keeping latest: $$(basename "$$LATEST_DIR")"; \
-					echo "$$IDE_DIRS" | while read -r dir; do \
-						if [ "$$dir" != "$$LATEST_DIR" ] && [ -d "$$dir" ]; then \
-							OLD_FILES_COUNT=$$(find "$$dir" -type f | wc -l | tr -d ' '); \
-							echo "    🗑️  Removing old version: $$(basename "$$dir") ($$OLD_FILES_COUNT files)"; \
-							rm -rf "$$dir"; \
-							CLEANED_COUNT=$$((CLEANED_COUNT + OLD_FILES_COUNT)); \
-						fi; \
-					done; \
-				else \
-					echo "  ℹ️  Only 1 version of $$ide_base found, keeping it"; \
-				fi; \
-			fi; \
-		done; \
-		cd ..; \
-		echo "🧠 Cleaning cache and unnecessary files from JetBrains IDEs configurations..."; \
-		REMOVED_FILE_COUNT=0; \
-		for file_pattern in \
-			"vim_settings_local.xml" \
-			"recentProjects.xml" \
-			"window.*.xml" \
-			"actionSummary.xml" \
-			"contributorSummary.xml" \
-			"features.usage.statistics.xml" \
-			"dailyLocalStatistics.xml" \
-			"log-categories.xml" \
-			"EventLog*.xml" \
-			"DontShowAgain*.xml" \
-			"CommonFeedback*.xml" \
-			"AIOnboarding*.xml" \
-			"McpToolsStore*.xml" \
-			"usage.statistics.xml" \
-			"statistics.xml" \
-			"event-log-whitelist.xml" \
-			"inline.factors.completion.xml" \
-			"ConversationToolStoreService.xml" \
-			"vcs-inputs.xml" \
-			"github.xml" \
-			"trusted-paths.xml" \
-			"*_backup_*.xml" \
-			"*.backup" \
-		; do \
-			FOUND_FILES=$$(find jetbrains-ides -name "$$file_pattern" 2>/dev/null || true); \
-			if [ -n "$$FOUND_FILES" ]; then \
-				FILE_COUNT=$$(echo "$$FOUND_FILES" | wc -l | tr -d ' '); \
-				echo "$$FOUND_FILES" | xargs rm -f; \
-				REMOVED_FILE_COUNT=$$((REMOVED_FILE_COUNT + FILE_COUNT)); \
-			fi; \
-		done; \
-		if [ "$$REMOVED_FILE_COUNT" -gt 0 ]; then \
-			echo "  ✅ Removed $$REMOVED_FILE_COUNT unnecessary files from jetbrains-ides/"; \
-			CLEANED_COUNT=$$((CLEANED_COUNT + REMOVED_FILE_COUNT)); \
-		else \
-			echo "  ℹ️  No unnecessary files found in jetbrains-ides/"; \
-		fi; \
-		echo "🧠 Cleaning empty directories in JetBrains IDEs configurations..."; \
-		EMPTY_DIRS=$$(find jetbrains-ides -type d -empty 2>/dev/null || true); \
-		if [ -n "$$EMPTY_DIRS" ]; then \
-			EMPTY_DIR_COUNT=$$(echo "$$EMPTY_DIRS" | wc -l | tr -d ' '); \
-			echo "$$EMPTY_DIRS" | xargs rmdir 2>/dev/null || true; \
-			echo "  ✅ Removed $$EMPTY_DIR_COUNT empty directories"; \
-		fi; \
-	fi; \
 	if [ -d "karabiner/automatic_backups" ]; then \
 		echo "⌨️  Cleaning old Karabiner automatic backups..."; \
 		BACKUP_COUNT=$$(ls -1 karabiner/automatic_backups/karabiner_*.json 2>/dev/null | wc -l | tr -d ' '); \
@@ -176,22 +104,6 @@ status:
 	@printf "  %-20s " "Hammerspoon config:"; [ -d "$(HOME_DIR)/.hammerspoon" ] && echo "✅ Exists" || echo "❌ Missing"
 	@printf "  %-20s " "Brewfile:"; [ -f "$(TARGET_BREWFILE)" ] && echo "✅ Exists" || echo "❌ Missing"
 	@printf "  %-20s " "asdf config:"; [ -f "$(TARGET_ASDF_RC)" ] && echo "✅ Exists" || echo "❌ Missing"
-	@echo ""
-	@echo "🧠 JetBrains IDEs:"
-	@if [ -d "$(JETBRAINS_DIR)" ]; then \
-		IDE_COUNT=$$(find "$(JETBRAINS_DIR)" -maxdepth 1 -type d -name "*20*" | wc -l | tr -d ' '); \
-		if [ "$$IDE_COUNT" -gt 0 ]; then \
-			echo "  📦 Found $$IDE_COUNT IDE configurations:"; \
-			find "$(JETBRAINS_DIR)" -maxdepth 1 -type d -name "*20*" | while read -r ide_dir; do \
-				IDE_NAME=$$(basename "$$ide_dir"); \
-				echo "    ✅ $$IDE_NAME"; \
-			done; \
-		else \
-			echo "  ⚠️  No IDE configurations found"; \
-		fi; \
-	else \
-		echo "  ❌ JetBrains directory not found"; \
-	fi
 	@echo ""
 	@echo "🐚 Current Shell:"
 	@CURRENT_SHELL=$$(dscl . -read /Users/$$(whoami) UserShell 2>/dev/null | awk '{print $$2}' || echo "unknown"); \

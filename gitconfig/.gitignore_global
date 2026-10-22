@@ -579,3 +579,5 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/intellij
 
 
+
+**/.claude/settings.local.json

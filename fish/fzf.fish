@@ -51,7 +51,7 @@ end
 
 # Enhanced directory changer
 function fcd --description "Change directory with fzf"
-    set -l dir (fd --type d --hidden --follow --exclude .git 2>/dev/null | fzf --preview 'if command -q tree; tree -C {} | head -100; else ls -la {} 2>/dev/null; end')
+    set -l dir (command fd --type d --hidden --follow --exclude .git 2>/dev/null | fzf --preview 'if command -q tree; tree -C {} | head -100; else ls -la {} 2>/dev/null; end')
     if test -n "$dir"
         cd "$dir"
         commandline -f repaint
@@ -306,7 +306,6 @@ end
 
 # Short aliases for commonly used functions
 alias fif ff          # Find files
-alias fd fcd          # Change directory (note: conflicts with fd command, use fcd directly)
 alias fgit fgl        # Git log browser
 alias pk fkill        # Process killer
 alias hist fh         # History search
